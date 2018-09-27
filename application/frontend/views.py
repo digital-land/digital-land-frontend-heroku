@@ -10,6 +10,9 @@ frontend = Blueprint('frontend', __name__, template_folder='templates')
 def index():
     return render_template('index.html')
 
+@frontend.route('/buttons')
+def buttons():
+    return render_template('buttons.html')
 
 # set the assetPath variable for use in 
 # jinja templates
