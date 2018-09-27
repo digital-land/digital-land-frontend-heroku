@@ -14,7 +14,14 @@ Requirements
 Getting Started
 ===============
 
+Install Flask and python dependencies
+
+    pip install -r requirements.txt
+
 Install front end build tool (gulp)
 
     npm install && gulp scss
 
+Run the app
+
+    flask run
