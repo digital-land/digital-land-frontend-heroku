@@ -1,0 +1,24 @@
+{
+  "name": "digital-land-frontend",
+  "version": "0.1.0",
+  "description": "Frontend code used in digital land projects",
+  "main": "index.js",
+  "scripts": {
+    "scss": "gulp scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/communitiesuk/digital-land-frontend"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/communitiesuk/digital-land-frontend/issues"
+  },
+  "homepage": "https://github.com/communitiesuk/digital-land-frontend#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
