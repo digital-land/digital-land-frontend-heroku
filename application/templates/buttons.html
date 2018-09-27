@@ -1,5 +1,22 @@
 {% extends "dlf-base.html" %}
 
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Buttons"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
 {% block content %}
 <span class="govuk-caption-xl">Component</span>
 <h1 class="govuk-heading-xl">
