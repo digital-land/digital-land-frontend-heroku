@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "govuk-jinja-components/phase-banner/macro.jinja" import govukPhaseBanner %}
+
+{% block head %}
+<link href="/static/stylesheets/govuk-frontend/all.css" rel="stylesheet" />
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  "tag": {
+    "text": "styleguide"
+  },
+  "html": 'This is a styleguide for digital land projects'
+}) }}
+{% endblock %}

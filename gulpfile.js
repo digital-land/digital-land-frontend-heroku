@@ -6,7 +6,7 @@ const gulp = require("gulp"),
 
 // set paths ...
 const config = {
-	scssPath: "src/scss",
+	scssPath: "src/{govuk-frontend,scss}",
 	destPath: "application/static/stylesheets",
   govukAssetPath: "application/static/govuk-frontend/assets"
 }
