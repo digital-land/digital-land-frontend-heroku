@@ -14,6 +14,10 @@ def index():
 def buttons():
     return render_template('buttons.html')
 
+@frontend.route('/hero')
+def hero():
+    return render_template('hero.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor
