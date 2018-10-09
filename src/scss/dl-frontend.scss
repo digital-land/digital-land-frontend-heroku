@@ -4,3 +4,47 @@
 // import Digital Land styles
 @import "components/buttons";
 @import "components/hero";
+
+
+// STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
+// ===================================================================================
+
+.module-example {
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.module-example,
+.module-code {
+  font-family: $govuk-font-family-nta;
+  border: 4px solid $govuk-border-colour;
+  position: relative;
+
+  &:before {
+    content: 'example';
+
+    //@include core-16;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 4px 6px 6px 2px;
+    background: $govuk-border-colour;
+    color: govuk-colour("blue");
+  }
+}
+
+.module-code:before {
+  content: 'HTML';
+}
+
+pre {
+  margin: 30px 0;
+  word-wrap: break-word;
+}
+
+code {
+  font-size: 16px;
+  font-family: 'Courier' monospace;
+  line-height: 1.1;
+}

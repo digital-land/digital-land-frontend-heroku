@@ -23,17 +23,19 @@
 <h1 class="govuk-heading-l">Hero</h1>
 
 <h2 class="govuk-heading-m">Example</h2>
-<div class="dl-example-wrap">
+<div class="module-example">
   {% include 'partials/hero.html' %}
 </div>
 
 <h2 class="govuk-heading-m">The HTML you need</h2>
+<div class="module-code">
 <pre>
 <code>
-  {% filter forceescape %}
-  {% include 'partials/hero.html' %}
-  {% endfilter %}
+  {%- filter forceescape -%}
+    {%- include 'partials/hero.html' -%}
+  {%- endfilter -%}
 </code>
 </pre>
+</div>
 
 {% endblock %}
