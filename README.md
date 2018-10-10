@@ -25,3 +25,9 @@ Install front end build tool (gulp)
 Run the app
 
     flask run
+
+
+To do list
+===============
+
+* alter script to also fetch compiled govuk-frontend js [see repo](https://github.com/alphagov/govuk-frontend/tree/master/dist)

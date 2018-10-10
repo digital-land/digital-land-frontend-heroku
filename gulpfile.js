@@ -6,8 +6,9 @@ const gulp = require("gulp"),
 
 // set paths ...
 const config = {
-	scssPath: "src/scss",
-	destPath: "application/static/stylesheets",
+  scssPath: "src/scss",
+  jsDestPath: "application/static/javascripts",
+  destPath: "application/static/stylesheets",
   govukAssetPath: "application/static/govuk-frontend/assets"
 }
 
@@ -34,6 +35,11 @@ gulp.task("watch", ["scss"], function () {
 gulp.task('copy-assets', function() {
   gulp.src('src/govuk-frontend/assets/**/*')
     .pipe(gulp.dest(config.govukAssetPath));
+});
+
+gulp.task('copy-frontend-js', function() {
+  gulp.src('src/js/govuk-frontend/*.js')
+    .pipe(gulp.dest(`${config.jsDestPath}/govuk-frontend`));
 });
 
 // Set watch as default task

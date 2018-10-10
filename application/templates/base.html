@@ -58,6 +58,10 @@
       {{ govukFooter({}) }}
     {% endblock %}
 
+    <script src="static/javascripts/govuk-frontend/govuk-frontend-2.1.0.min.js"></script>
+      <script>
+        window.GOVUKFrontend.initAll();
+      </script>
     {% block bodyEnd %}{% endblock %}
   </body>
 </html>
