@@ -4,7 +4,12 @@
 // import Digital Land styles
 @import "components/buttons";
 @import "components/hero";
+@import "components/task-list";
 
+
+a {
+  @extend .govuk-link;
+}
 
 // STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
 // ===================================================================================

@@ -18,6 +18,10 @@ def buttons():
 def hero():
     return render_template('hero.html')
 
+@frontend.route('/task-list')
+def task_list():
+    return render_template('task-list.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor
