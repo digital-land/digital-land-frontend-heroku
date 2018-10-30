@@ -1,0 +1,7 @@
+<script>
+  // initialise MHCLGMaps with mapbox access token
+  const mhclgMaps = new MHCLGMaps({mapbox_token: '{{ config.MAPBOX_TOKEN }}'});
+  const map = mhclgMaps.createMap("map-container");
+  mhclgMaps.setMapContainerHeight(map);
+  map.setView(new L.LatLng(54.00366, -2.547855), 7);
+</script>

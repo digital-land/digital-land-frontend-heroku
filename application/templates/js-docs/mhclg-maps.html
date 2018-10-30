@@ -1,0 +1,50 @@
+{% extends "leaflet-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+  <a href="/" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-xl">JS script</span>
+<h1 class="govuk-heading-xl">
+  MHCLG Maps
+</h1>
+
+<p class="govuk-body">A wrapper for leafletJS that makes it quicker to render a map.</p>
+
+<h2 class="govuk-heading-l">How to use</h2>
+
+<p class="govuk-body">You need to include the script before the closing body tag. E.g.</p>
+<p class="govuk-body">
+  <pre><code>{{ "<script src='/static/javascripts/mhclg-maps.js'></script>"|forceescape }}</code></pre>
+</p>
+
+<p class="govuk-body">
+  You then initialise it with:
+</p>
+
+<p class="govuk-body">
+  <pre><code>
+  {%- filter forceescape -%}
+    {%- include 'js-docs/examples/mhclg-basic.html' -%}
+  {%- endfilter -%}</code></pre>
+</p>
+
+<div class="govuk-body">Where <code>map-container</code> is an element on the page that will contain the map.</div>
+
+{% from "govuk-jinja-components/warning-text/macro.jinja" import govukWarningText %}
+{{ govukWarningText({
+  "text": "Remember to set up your pages to use Leaflet properly",
+  "iconFallbackText": "Warning"
+}) }}
+
+<h2 class="govuk-heading-l">Example usage</h2>
+
+
+<div id="map-container" style="height: 400px;"></div>
+<script src='/static/javascripts/mhclg/mhclg-maps.js'></script>
+{% include 'js-docs/examples/mhclg-basic.html' %}
+
+{% endblock %}

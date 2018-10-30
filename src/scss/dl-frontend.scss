@@ -53,3 +53,15 @@ code {
   font-family: 'Courier' monospace;
   line-height: 1.1;
 }
+
+.dlf-list-item {
+  .dlf-list-item__heading {
+    margin-bottom: 5px;
+  }
+  p:first-of-type {
+    margin-top: 5px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

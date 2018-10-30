@@ -22,6 +22,10 @@ def hero():
 def task_list():
     return render_template('task-list.html')
 
+@frontend.route('/js/mhclg-maps')
+def mhclg_maps():
+    return render_template('js-docs/mhclg-maps.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor
