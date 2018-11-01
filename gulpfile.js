@@ -33,6 +33,8 @@ gulp.task("watch", ["scss"], function () {
 });
 
 gulp.task('copy-assets', function() {
+  gulp.src('src/stylesheets/**/*')
+    .pipe(gulp.dest(config.destPath));
   gulp.src('src/govuk-frontend/assets/**/*')
     .pipe(gulp.dest(config.govukAssetPath));
 });

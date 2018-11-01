@@ -26,6 +26,10 @@ def task_list():
 def mhclg_maps():
     return render_template('js-docs/mhclg-maps.html')
 
+@frontend.route('/js/accessible-autocomplete')
+def accessible_autocomplete():
+    return render_template('js-docs/accessible-autocomplete.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor

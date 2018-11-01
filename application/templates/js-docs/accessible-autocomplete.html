@@ -1,0 +1,51 @@
+{% extends "leaflet-base.html" %}
+
+{% block headEnd %}
+  {{ super() }}
+  <link rel="stylesheet" href="/static/stylesheets/vendor/govuk-accessible-autocomplete.min.css" />
+{% endblock %}
+
+{% block beforeContent %}
+ {{ super() }}
+  <a href="/" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-xl">JS script</span>
+<h1 class="govuk-heading-xl">
+  Accessible Autocomplete
+</h1>
+
+<h2 class="govuk-heading-l">Example usage</h2>
+
+<form class="form pub-search-form column-half">
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="pub-picker">Find a Local Authority</label>
+    <select class="govuk-select" name="pub-picker" id="pub-picker">
+      <option value="">Select Locl Authority</option>
+      <option value="Adur District Council">Adur District Council</option>
+      <option value="Adur District Council">Dacorum Borough Council</option>
+      <option value="Adur District Council">Harrogate Borough Council</option>
+      <option value="Adur District Council">London Borough of Lambeth</option>
+      <option value="Adur District Council">Winchester City Council</option>
+    </select>
+    
+  </div>
+  <div class="govuk-form-group">
+    <a href="#" class="govuk-button">Save and continue</a>
+  </div>
+</form>
+
+{% endblock %}
+
+{% block bodyEnd %}
+<script src="/static/javascripts/vendor/govuk-accessible-autocomplete.min.js"></script>
+<script>
+  accessibleAutocomplete.enhanceSelectElement({
+    defaultValue: '',
+    confirmOnBlur: true,
+    selectElement: document.querySelector('#pub-picker')
+  });
+</script>
+{% endblock %}

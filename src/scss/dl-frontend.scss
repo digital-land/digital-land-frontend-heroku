@@ -14,6 +14,16 @@ a {
   @extend .govuk-link;
 }
 
+// required for the Autocomplete if using
+// Govuk design system
+// --------------------------------------
+.autocomplete__menu {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
 // STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
 // ===================================================================================
 

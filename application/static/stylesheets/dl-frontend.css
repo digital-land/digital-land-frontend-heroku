@@ -5550,6 +5550,13 @@
   }
 }
 
+.autocomplete__menu {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
 .module-example {
   margin-bottom: 30px;
   padding: 30px;
