@@ -19,7 +19,7 @@ gulp.task('clean-css', function () {
 });
 
 // compile scss to CSS
-gulp.task("scss", ['clean-css', 'copy-assets'], function() {
+gulp.task("scss", ['copy-assets'], function() {
 	return gulp.src( config.scssPath + '/*.scss')
 	.pipe(sass({outputStyle: 'expanded',
 		includePaths: [ 'src/scss',
@@ -32,7 +32,7 @@ gulp.task("watch", ["scss"], function () {
   gulp.watch("src/scss/**/*", ["scss"])
 });
 
-gulp.task('copy-assets', function() {
+gulp.task('copy-assets', ['clean-css'], function() {
   gulp.src('src/stylesheets/**/*')
     .pipe(gulp.dest(config.destPath));
   gulp.src('src/govuk-frontend/assets/**/*')
