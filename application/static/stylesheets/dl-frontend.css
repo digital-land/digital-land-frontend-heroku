@@ -5558,6 +5558,19 @@
   }
 }
 
+* {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
+}
+
+.govuk-warning-text__icon {
+  line-height: 26px;
+}
+
+.govuk-button--start {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .autocomplete__menu {
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
