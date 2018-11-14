@@ -18,7 +18,7 @@
 
 <p class="govuk-body">You need to include the script before the closing body tag. E.g.</p>
 <p class="govuk-body">
-  <pre><code>{{ "<script src='/static/javascripts/mhclg-maps.js'></script>"|forceescape }}</code></pre>
+  <p><code>{{ "<script src='/static/javascripts/mhclg-maps.js'></script>"|forceescape }}</code></p>
 </p>
 
 <p class="govuk-body">
@@ -26,13 +26,14 @@
 </p>
 
 <p class="govuk-body">
+  {% from 'js-docs/examples/mhclg-basic.html' import mhclgMapBasic %}
   <pre><code>
   {%- filter forceescape -%}
-    {%- include 'js-docs/examples/mhclg-basic.html' -%}
+    {{- mhclgMapBasic() -}}
   {%- endfilter -%}</code></pre>
 </p>
 
-<div class="govuk-body">Where <code>map-container</code> is an element on the page that will contain the map.</div>
+<p class="govuk-body">Where <code>#map-container</code> is an element on the page that will contain the map.</p>
 
 {% from "govuk-jinja-components/warning-text/macro.jinja" import govukWarningText %}
 {{ govukWarningText({
@@ -45,6 +46,7 @@
 
 <div id="map-container" style="height: 400px;"></div>
 <script src='/static/javascripts/mhclg/mhclg-maps.js'></script>
-{% include 'js-docs/examples/mhclg-basic.html' %}
+{% set token = config.MAPBOX_TOKEN %}
+{{ mhclgMapBasic(token=token) }}
 
 {% endblock %}

@@ -1,7 +1,13 @@
+{% macro mhclgMapBasic(token) -%}
 <script>
   // initialise MHCLGMaps with mapbox access token
-  const mhclgMaps = new MHCLGMaps({mapbox_token: '{{ config.MAPBOX_TOKEN }}'});
+  {% if token -%}
+  const mhclgMaps = new MHCLGMaps({mapbox_token: '{{ token }}'});
+  {%- else -%}
+  const mhclgMaps = new MHCLGMaps({mapbox_token: '<<your mapbox token goes here>>'});
+  {%- endif %}
   const map = mhclgMaps.createMap("map-container");
   mhclgMaps.setMapContainerHeight(map);
   map.setView(new L.LatLng(54.00366, -2.547855), 7);
 </script>
+{%- endmacro %}
