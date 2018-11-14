@@ -42,6 +42,8 @@ gulp.task('copy-assets', ['clean-css'], function() {
 gulp.task('copy-frontend-js', function() {
   gulp.src('src/js/govuk-frontend/*.js')
     .pipe(gulp.dest(`${config.jsDestPath}/govuk-frontend`));
+  gulp.src('src/js/vendor/*.js')
+    .pipe(gulp.dest(`${config.jsDestPath}/vendor`));
 });
 
 // Set watch as default task

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.govuk-link, a {
+.govuk-link {
   font-family: "nta", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,39 +43,39 @@
 }
 
 @media print {
-  .govuk-link, a {
+  .govuk-link {
     font-family: sans-serif;
   }
 }
 
-.govuk-link:focus, a:focus {
+.govuk-link:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
   background-color: #ffbf47;
 }
 
-.govuk-link:link, a:link {
+.govuk-link:link {
   color: #005ea5;
 }
 
-.govuk-link:visited, a:visited {
+.govuk-link:visited {
   color: #4c2c92;
 }
 
-.govuk-link:hover, a:hover {
+.govuk-link:hover {
   color: #2b8cc4;
 }
 
-.govuk-link:active, a:active {
+.govuk-link:active {
   color: #2b8cc4;
 }
 
-.govuk-link:focus, a:focus {
+.govuk-link:focus {
   color: #0b0c0c;
 }
 
 @media print {
-  .govuk-link[href^="/"]::after, a[href^="/"]::after, .govuk-link[href^="http://"]::after, a[href^="http://"]::after, .govuk-link[href^="https://"]::after, a[href^="https://"]::after {
+  .govuk-link[href^="/"]::after, .govuk-link[href^="http://"]::after, .govuk-link[href^="https://"]::after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;
@@ -5571,71 +5571,93 @@
   padding-bottom: 8px;
 }
 
-p {
-  max-width: 30em;
-}
+/*
 
-.autocomplete__menu {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-}
+Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 
-.module-example {
-  margin-bottom: 30px;
-  padding: 30px;
-}
-
-.module-example,
-.module-code {
-  font-family: "nta", Arial, sans-serif;
-  border: 4px solid #bfc1c3;
-  position: relative;
-}
-
-.module-example:before,
-.module-code:before {
-  content: 'example';
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 4px 6px 6px 2px;
-  background: #bfc1c3;
-  color: #005ea5;
-}
-
-.module-code:before {
-  content: 'HTML';
-}
-
-pre {
-  margin: 30px 0;
-  word-wrap: break-word;
-}
-
-code {
-  font-size: 19px;
-  font-family: monospace;
-  line-height: 1.31579em;
-}
-
-p code {
-  font-family: monospace;
-  font-size: 19px;
-  padding: 0 5px;
-  color: #d14;
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
   background-color: #f8f8f8;
+  font-family: monospace;
 }
 
-.dlf-list-item .dlf-list-item__heading {
-  margin-bottom: 5px;
+/* Base color: saturation 0; */
+.hljs-comment {
+  color: #888888;
 }
 
-.dlf-list-item p:first-of-type {
-  margin-top: 5px;
+.hljs-tag,
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-meta-keyword,
+.hljs-doctag,
+.hljs-name {
+  color: #000080;
+  font-weight: normal;
 }
 
-.dlf-list-item p:last-child {
-  margin-bottom: 0;
+.hljs-tag .hljs-attr {
+  color: #007F80;
+}
+
+/* User color: hue: 0 */
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #BC6060;
+}
+
+/* Language color: hue: 90; */
+.hljs-literal {
+  color: #78A960;
+}
+
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #397300;
+}
+
+/* Meta color: hue: 200 */
+.hljs-meta {
+  color: #1f7199;
+}
+
+.hljs-meta-string {
+  color: #4d99bf;
+}
+
+/* Misc effects */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }

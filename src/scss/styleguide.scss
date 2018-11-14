@@ -1,0 +1,18 @@
+$govuk-fonts-path: '/static/govuk-frontend/assets/fonts/';
+$govuk-images-path: '/static/govuk-frontend/assets/images/';
+
+// import all GOVUK Frontend scss
+@import "all";
+
+// import Digital Land styles
+@import "components/buttons";
+@import "components/hero";
+@import "components/govuk-tags";
+@import "components/task-list";
+
+@import "common/helvetica-fixes";
+
+// STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
+// ===================================================================================
+
+@import "styleguide/highlight-style";
