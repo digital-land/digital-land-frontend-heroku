@@ -5559,7 +5559,7 @@
 }
 
 * {
-  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 }
 
 .govuk-warning-text__icon {
@@ -5569,6 +5569,10 @@
 .govuk-button--start {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+p {
+  max-width: 30em;
 }
 
 .autocomplete__menu {
@@ -5612,8 +5616,16 @@ pre {
 
 code {
   font-size: 16px;
-  font-family: 'Courier' monospace;
+  font-family: 'Courier', monospace;
   line-height: 1.1;
+}
+
+p code {
+  font-family: monospace;
+  font-size: 1em;
+  padding: 0 5px;
+  color: #d14;
+  background-color: #f8f8f8;
 }
 
 .dlf-list-item .dlf-list-item__heading {

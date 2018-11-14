@@ -16,6 +16,10 @@ a {
   @extend .govuk-link;
 }
 
+p {
+  max-width: 30em;
+}
+
 // required for the Autocomplete if using
 // Govuk design system
 // --------------------------------------
@@ -65,9 +69,18 @@ pre {
 
 code {
   font-size: 16px;
-  font-family: 'Courier' monospace;
+  font-family: 'Courier', monospace;
   line-height: 1.1;
 }
+
+p code {
+  font-family: monospace;
+  font-size: 1em;
+  padding: 0 5px;
+  color: #d14;
+  background-color: #f8f8f8;
+}
+
 
 .dlf-list-item {
   .dlf-list-item__heading {
