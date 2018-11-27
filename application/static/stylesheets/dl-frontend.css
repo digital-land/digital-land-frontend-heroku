@@ -5336,6 +5336,10 @@
   padding-bottom: 8px;
 }
 
+.mhclg .govuk-header__container {
+  border-color: #37836e;
+}
+
 .govuk-width-container-full {
   max-width: 1280px;
   margin: 0 15px;
