@@ -5323,6 +5323,40 @@
   }
 }
 
+* {
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+}
+
+.govuk-warning-text__icon {
+  line-height: 26px;
+}
+
+.govuk-button--start {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.govuk-width-container-full {
+  max-width: 1280px;
+  margin: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-width-container-full {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .govuk-width-container-full {
+    margin: 0 auto;
+  }
+}
+
+.govuk-header__container.govuk-width-container-full {
+  margin-bottom: -10px;
+}
+
 /*
 * Mixin for creating different coloured buttons in the style of the 
 * GOVUK ones
@@ -5556,19 +5590,6 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-}
-
-* {
-  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
-}
-
-.govuk-warning-text__icon {
-  line-height: 26px;
-}
-
-.govuk-button--start {
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 p {

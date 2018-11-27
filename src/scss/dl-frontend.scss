@@ -4,13 +4,16 @@ $govuk-images-path: '/static/govuk-frontend/assets/images/';
 // import all GOVUK Frontend scss
 @import "all";
 
-// import Digital Land styles
+// Import common Digital Land styles
+@import "common/helvetica-fixes";
+@import "common/site-full-width-container";
+
+// import Digital Land components
 @import "components/buttons";
 @import "components/hero";
 @import "components/govuk-tags";
 @import "components/task-list";
 
-@import "common/helvetica-fixes";
 
 a {
   @extend .govuk-link;
