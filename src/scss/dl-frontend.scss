@@ -11,6 +11,7 @@ $govuk-images-path: '/static/govuk-frontend/assets/images/';
 
 // import Digital Land components
 @import "components/buttons";
+@import "components/contribution-bar";
 @import "components/hero";
 @import "components/govuk-tags";
 @import "components/task-list";

@@ -5408,6 +5408,119 @@
   background-color: #d0d3d6;
 }
 
+.contribution-category-row {
+  margin-bottom: 15px;
+}
+
+.contribution-category-row .cb-floating-figure {
+  display: none;
+}
+
+.contribution-category-heading {
+  line-height: 42px;
+  margin-bottom: 0;
+}
+
+.contribution-bar {
+  background: #bfc1c3;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 11px 10px 7px 10px;
+  float: left;
+  overflow: hidden;
+}
+
+.contribution-bar .data-item {
+  line-height: 1 !important;
+}
+
+.contribution-bar--small {
+  position: relative;
+}
+
+.contribution-bar--small > .data-item {
+  visibility: hidden;
+}
+
+.contribution-bar--small + .cb-floating-figure {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 11px 10px 7px 25px;
+  line-height: 1 !important;
+}
+
+.cb-floating-figure {
+  color: #bfc1c3;
+}
+
+.cb-floating-figure:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  background: #bfc1c3;
+  left: 0;
+  top: 50%;
+  top: calc(50% - 1px);
+}
+
+.categories-set--received .contribution-bar {
+  background: #005ea5;
+}
+
+.categories-set--received .cb-floating-figure {
+  color: #005ea5;
+}
+
+.categories-set--received .cb-floating-figure:after {
+  background: #005ea5;
+}
+
+.categories-set--spent .contribution-bar {
+  background: #006435;
+}
+
+.categories-set--spent .cb-floating-figure {
+  color: #006435;
+}
+
+.categories-set--spent .cb-floating-figure:after {
+  background: #006435;
+}
+
+.categories-set--not-received .contribution-bar {
+  background: #6f777b;
+}
+
+.categories-set--not-received .cb-floating-figure {
+  color: #6f777b;
+}
+
+.categories-set--not-received .cb-floating-figure:after {
+  background: #6f777b;
+}
+
+.contribution-bar-container:hover .contribution-bar--small,
+.contribution-bar:hover {
+  background: #f8f8f8;
+  border: 2px solid #0b0c0c;
+  color: #0b0c0c;
+  padding: 9px 8px 5px 8px;
+}
+
+.contribution-bar-container:hover {
+  cursor: pointer;
+}
+
+.contribution-bar-container:hover .cb-floating-figure {
+  color: #0b0c0c;
+}
+
+.contribution-bar-container:hover .cb-floating-figure:after {
+  background: #0b0c0c;
+}
+
 .with-hero #global-header-bar {
   display: none;
 }
