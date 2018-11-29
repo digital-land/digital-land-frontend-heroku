@@ -26,18 +26,7 @@
 <p class="govuk-body">You can add inline bars like this</p>
 
 <div class="module-example">
-  <div class="govuk-grid-row contribution-category-row">
-    <div class="govuk-grid-column-one-third">
-      <h4 class="govuk-heading-s contribution-category-heading">Highways</h4>
-    </div>
-    <div class="govuk-grid-column-two-thirds contribution-bar-container">
-    
-      <div class="contribution-bar" style="width: 53%;">
-        <span class="govuk-!-font-size-24 govuk-!-font-weight-bold data-item">£4,565,817</span>
-      </div>
-      <div class="govuk-!-font-size-24 data-item cb-floating-figure">£4,565,817</div>
-    </div>
-  </div>
+  {% include 'partials/contribution-bar.html' %}
 </div>
 
 <p class="govuk-body">Using:</p>
@@ -46,18 +35,25 @@
 <pre>
 <code class="html">
   {%- filter forceescape -%}
-    <div class="govuk-grid-row contribution-category-row">
-      <div class="govuk-grid-column-one-third">
-        <h4 class="govuk-heading-s contribution-category-heading">Highways</h4>
-      </div>
-      <div class="govuk-grid-column-two-thirds contribution-bar-container">
-    
-        <div class="contribution-bar" style="width: 53%;">
-          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold data-item">£4,565,817</span>
-        </div>
-        <div class="govuk-!-font-size-24 data-item cb-floating-figure">£4,565,817</div>
-      </div>
-    </div>
+    {%- include 'partials/contribution-bar.html' -%}
+  {%- endfilter -%}
+</code>
+</pre>
+</div>
+
+<p class="govuk-body">Smaller bars can be handled by adding the <code>.contribution-bar--small</code> class. E.g.</p>
+
+<div class="module-example">
+  {% include 'partials/contribution-bar-small.html' %}
+</div>
+
+<p class="govuk-body">Using:</p>
+
+<div class="module-code">
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {%- include 'partials/contribution-bar-small.html' -%}
   {%- endfilter -%}
 </code>
 </pre>
