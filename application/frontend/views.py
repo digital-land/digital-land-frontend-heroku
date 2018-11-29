@@ -14,6 +14,10 @@ def index():
 def buttons():
     return render_template('buttons.html')
 
+@frontend.route('/contribution-bars')
+def contribution_bars():
+    return render_template('contribution-bars.html')
+
 @frontend.route('/hero')
 def hero():
     return render_template('hero.html')

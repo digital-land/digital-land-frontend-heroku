@@ -1,0 +1,66 @@
+{% extends "dlf-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Contribution bars"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Component</span>
+<h1 class="govuk-heading-xl">
+  Contribution bars
+</h1>
+
+<p class="govuk-body">You can add inline bars like this</p>
+
+<div class="module-example">
+  <div class="govuk-grid-row contribution-category-row">
+    <div class="govuk-grid-column-one-third">
+      <h4 class="govuk-heading-s contribution-category-heading">Highways</h4>
+    </div>
+    <div class="govuk-grid-column-two-thirds contribution-bar-container">
+    
+      <div class="contribution-bar" style="width: 53%;">
+        <span class="govuk-!-font-size-24 govuk-!-font-weight-bold data-item">£4,565,817</span>
+      </div>
+      <div class="govuk-!-font-size-24 data-item cb-floating-figure">£4,565,817</div>
+    </div>
+  </div>
+</div>
+
+<p class="govuk-body">Using:</p>
+
+<div class="module-code">
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    <div class="govuk-grid-row contribution-category-row">
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s contribution-category-heading">Highways</h4>
+      </div>
+      <div class="govuk-grid-column-two-thirds contribution-bar-container">
+    
+        <div class="contribution-bar" style="width: 53%;">
+          <span class="govuk-!-font-size-24 govuk-!-font-weight-bold data-item">£4,565,817</span>
+        </div>
+        <div class="govuk-!-font-size-24 data-item cb-floating-figure">£4,565,817</div>
+      </div>
+    </div>
+  {%- endfilter -%}
+</code>
+</pre>
+</div>
+
+{% endblock %}
