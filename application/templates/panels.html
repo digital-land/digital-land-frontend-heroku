@@ -1,0 +1,101 @@
+{% extends "dlf-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Panels"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Component</span>
+<h1 class="govuk-heading-l">Panels</h1>
+
+<p class="govuk-body">These examples show how the various status panels should look. There are 3 types. 1 each for error, warning and success states.</p>
+
+{% macro statusPanel(class, text) -%}
+<div class="govuk-panel {{ class }}">
+  <h2 class="govuk-panel__title">Validation {{ text }}</h2>
+  {% if caller %} {{ caller() }} {% endif %}
+</div>
+{% endmacro %}
+
+<h2 class="govuk-heading-m">Error panel example</h2>
+<div class="module-example">
+  {%- call statusPanel("govuk-panel--error", "found errors") %}
+  <div class="govuk-panel__body">
+    <p>For<br><strong class="url">Borchester Council</strong></p>
+  </div>
+  {% endcall %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {% call statusPanel("govuk-panel--error", "found errors") -%}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {%- endcall %}
+  {%- endfilter -%}
+</code>
+</pre>
+
+
+<h2 class="govuk-heading-m">Warning panel example</h2>
+<div class="module-example">
+  {%- call statusPanel("govuk-panel--warning", "found warnings") %}
+  <div class="govuk-panel__body">
+    <p>For<br><strong class="url">Borchester Council</strong></p>
+  </div>
+  {% endcall %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {% call statusPanel("govuk-panel--warning", "found warnings") -%}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {%- endcall %}
+  {%- endfilter -%}
+</code>
+</pre>
+
+<h2 class="govuk-heading-m">Success panel example</h2>
+<div class="module-example">
+  {%- call statusPanel("govuk-panel--confirmation", "complete") %}
+  <div class="govuk-panel__body">
+    <p>For<br><strong class="url">Borchester Council</strong></p>
+  </div>
+  {% endcall %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {% call statusPanel("govuk-panel--confirmation", "complete") -%}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {%- endcall %}
+  {%- endfilter -%}
+</code>
+</pre>
+
+{% endblock %}

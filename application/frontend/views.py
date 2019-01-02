@@ -22,6 +22,10 @@ def contribution_bars():
 def hero():
     return render_template('hero.html')
 
+@frontend.route('/panels')
+def panels():
+    return render_template('panels.html')
+
 @frontend.route('/task-list')
 def task_list():
     return render_template('task-list.html')

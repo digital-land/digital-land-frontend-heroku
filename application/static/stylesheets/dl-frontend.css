@@ -5566,6 +5566,18 @@
   background-color: #ffbf47;
 }
 
+.govuk-panel--error {
+  border: 8px solid #b10e1e;
+  background: #dee0e2;
+  color: #0b0c0c;
+}
+
+.govuk-panel--warning {
+  border: 8px solid #ffbf47;
+  background: #dee0e2;
+  color: #0b0c0c;
+}
+
 .app-task-list {
   list-style-type: none;
   padding-left: 0;
