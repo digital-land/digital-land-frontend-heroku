@@ -25,7 +25,7 @@
 }
 
 .hero_content {
-	width: $govuk-page-width;
+	max-width: $govuk-page-width;
 	padding: 25px $govuk-gutter-half 15px;
 	@include govuk-media-query($from: tablet) {
 		padding: 40px $govuk-gutter-half 30px;
