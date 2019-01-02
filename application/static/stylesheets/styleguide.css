@@ -5374,7 +5374,7 @@
   display: none;
 }
 
-.with-hero .phase-banner {
+.with-hero .govuk-phase-banner {
   border-bottom: none;
 }
 
@@ -5391,7 +5391,7 @@
 }
 
 .hero_content {
-  width: 960px;
+  max-width: 960px;
   padding: 25px 15px 15px;
 }
 
@@ -5660,4 +5660,76 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.module-example {
+  margin-bottom: 30px;
+  padding: 50px 30px;
+}
+
+.module-example,
+.module-code {
+  font-family: "nta", Arial, sans-serif;
+  border: 4px solid #bfc1c3;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.module-example:before,
+.module-code:before {
+  content: 'Example';
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 4px 6px 6px 2px;
+  background: #bfc1c3;
+  color: #005ea5;
+}
+
+pre {
+  margin: 30px 0;
+  word-wrap: break-word;
+}
+
+.module-code:before {
+  content: 'HTML';
+}
+
+.module-code pre {
+  margin: 0;
+}
+
+code {
+  font-size: 19px;
+  font-family: monospace;
+  line-height: 1.31579em;
+}
+
+p code {
+  font-family: monospace;
+  font-size: 19px;
+  padding: 0 5px;
+  color: #d14;
+  background-color: #f8f8f8;
+}
+
+.dlf-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dlf-list-item {
+  margin-bottom: 10px;
+}
+
+.dlf-list-item .dlf-list-item__heading {
+  margin-bottom: 5px;
+}
+
+.dlf-list-item p:first-of-type {
+  margin-top: 5px;
+}
+
+.dlf-list-item p:last-child {
+  margin-bottom: 0;
 }
