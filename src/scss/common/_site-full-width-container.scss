@@ -3,6 +3,7 @@
 // ===========================================
 
 $govuk-page-width-full: 1280px;
+
 @mixin govuk-width-container-full {
   // Limit the width of the container to the page width
   max-width: $govuk-page-width-full;
@@ -25,6 +26,7 @@ $govuk-page-width-full: 1280px;
     margin: 0 auto;
   }
 }
+
 .govuk-width-container-full {
   @include govuk-width-container-full;
 }

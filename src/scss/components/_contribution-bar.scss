@@ -31,19 +31,20 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
 }
 
 .contribution-category-heading {
-  line-height: 42px;
   margin-bottom: 0;
+  line-height: 42px;
 }
 
 .contribution-bar {
-  background: govuk-colour("grey-2");
   box-sizing: border-box;
-  color: #fff;
   padding: $padding;
 
   // --inline ?
   float: left;
   overflow: hidden;
+
+  color: $dlf-white-colour;
+  background: govuk-colour("grey-2");
 
   .data-item {
     line-height: 1 !important;
@@ -60,33 +61,39 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
   & + .cb-floating-figure {
     display: inline-block;
     position: relative;
-    float: left;
     padding: $padding-top $padding-right $padding-bottom 25px;
+    float: left;
     line-height: 1 !important;
   }
 }
 
 .cb-floating-figure {
   color: govuk-colour("grey-2");
+
   &:after {
-    content: '';
+    // sass-lint:disable-block no-duplicate-properties
+    content: "";
     position: absolute;
-    height: $line-thickness;
-    width: 15px;
-    background: govuk-colour("grey-2");
-    left: 0;
     top: 50%; // fallback for browsers without calc()
     top: calc(50% - #{$line-thickness/2});
+    left: 0;
+
+    width: 15px;
+    height: $line-thickness;
+    background: govuk-colour("grey-2");
   }
 }
 
 // sets colour of bar and the floating text for smaller bars
 @mixin set-bar-color($color) {
+
   .contribution-bar {
     background: $color;
   }
+
   .cb-floating-figure {
     color: $color;
+
     &:after {
       background: $color;
     }
@@ -108,16 +115,18 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
 // alterations on hover
 .contribution-bar-container:hover .contribution-bar--small,
 .contribution-bar:hover {
-  background: govuk-colour("grey-4");
+  padding: $padding-with-border;
   border: $line-thickness solid $govuk-text-colour;
   color: $govuk-text-colour;
-  padding: $padding-with-border;
+  background: govuk-colour("grey-4");
 }
 
 .contribution-bar-container:hover {
   cursor: pointer;
+
   .cb-floating-figure {
     color: $govuk-text-colour;
+
     &:after {
       background: $govuk-text-colour;
     }

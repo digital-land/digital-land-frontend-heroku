@@ -2,6 +2,7 @@
 
 const gulp = require("gulp"),
       sass = require("gulp-sass"),
+      sassLint = require('gulp-sass-lint'),
       clean = require('gulp-clean');
 
 // set paths ...
@@ -44,6 +45,16 @@ gulp.task('copy-frontend-js', function() {
     .pipe(gulp.dest(`${config.jsDestPath}/govuk-frontend`));
   gulp.src('src/js/vendor/*.js')
     .pipe(gulp.dest(`${config.jsDestPath}/vendor`));
+});
+
+gulp.task('scss-lint', function () {
+  return gulp.src('src/scss/**/*.s+(a|c)ss')
+    .pipe(sassLint({
+      files: {ignore: 'src/scss/styleguide/_highlight-style.scss'},
+      configFile: '.sass-lint.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 // Set watch as default task

@@ -1,10 +1,11 @@
-$govuk-fonts-path: '/static/govuk-frontend/assets/fonts/';
-$govuk-images-path: '/static/govuk-frontend/assets/images/';
+$govuk-fonts-path: "/static/govuk-frontend/assets/fonts/";
+$govuk-images-path: "/static/govuk-frontend/assets/images/";
 
 // import all GOVUK Frontend scss
 @import "all";
 
 // Import common Digital Land styles
+@import "common/colours";
 @import "common/helvetica-fixes";
 @import "common/mhclg-branding";
 @import "common/site-full-width-container";
@@ -19,7 +20,7 @@ $govuk-images-path: '/static/govuk-frontend/assets/images/';
 
 
 a {
-  @extend .govuk-link;
+  @extend %govuk-link;
 }
 
 p {
@@ -31,7 +32,7 @@ p {
 // --------------------------------------
 .autocomplete__menu {
   font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
 }

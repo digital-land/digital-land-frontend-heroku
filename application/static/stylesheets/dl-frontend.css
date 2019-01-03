@@ -5361,18 +5361,9 @@
   margin-bottom: -10px;
 }
 
-/*
-* Mixin for creating different coloured buttons in the style of the 
-* GOVUK ones
-*
-* Simple usage:
-*   .button-filter-table {
-*     @include govuk-style-button($button-colour:  govuk-colour(blue));
-*   }
-*/
 .dlf-load-button,
 .dlf-filter-button {
-  color: #fff;
+  color: #ffffff;
   background-color: #005ea5;
   box-shadow: 0 2px 0 #003259;
   margin-top: 5px;
@@ -5383,7 +5374,7 @@
 .dlf-filter-button:visited,
 .dlf-filter-button:active,
 .dlf-filter-button:hover {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -5417,17 +5408,17 @@
 }
 
 .contribution-category-heading {
-  line-height: 42px;
   margin-bottom: 0;
+  line-height: 42px;
 }
 
 .contribution-bar {
-  background: #bfc1c3;
   box-sizing: border-box;
-  color: #fff;
   padding: 11px 10px 7px 10px;
   float: left;
   overflow: hidden;
+  color: #ffffff;
+  background: #bfc1c3;
 }
 
 .contribution-bar .data-item {
@@ -5445,8 +5436,8 @@
 .contribution-bar--small + .cb-floating-figure {
   display: inline-block;
   position: relative;
-  float: left;
   padding: 11px 10px 7px 25px;
+  float: left;
   line-height: 1 !important;
 }
 
@@ -5455,14 +5446,14 @@
 }
 
 .cb-floating-figure:after {
-  content: '';
+  content: "";
   position: absolute;
-  height: 2px;
-  width: 15px;
-  background: #bfc1c3;
-  left: 0;
   top: 50%;
   top: calc(50% - 1px);
+  left: 0;
+  width: 15px;
+  height: 2px;
+  background: #bfc1c3;
 }
 
 .categories-set--received .contribution-bar {
@@ -5503,10 +5494,10 @@
 
 .contribution-bar-container:hover .contribution-bar--small,
 .contribution-bar:hover {
-  background: #f8f8f8;
+  padding: 9px 8px 5px 8px;
   border: 2px solid #0b0c0c;
   color: #0b0c0c;
-  padding: 9px 8px 5px 8px;
+  background: #f8f8f8;
 }
 
 .contribution-bar-container:hover {
@@ -5526,35 +5517,35 @@
 }
 
 .with-hero .govuk-phase-banner {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .hero {
-  background: #005ea5;
   color: #ffffff;
+  background: #005ea5;
 }
 
 @media (min-width: 40.0625em) {
   .hero {
-    margin: -15px;
+    margin: 0 -15px;
     margin-bottom: 30px;
   }
 }
 
-.hero_content {
+.hero__content {
   max-width: 960px;
   padding: 25px 15px 15px;
 }
 
 @media (min-width: 40.0625em) {
-  .hero_content {
+  .hero__content {
     padding: 40px 15px 30px;
   }
 }
 
-.hero_content .govuk-heading-xl,
-.hero_content .govuk-heading-l,
-.hero_content .govuk-body-l {
+.hero__content .govuk-heading-xl,
+.hero__content .govuk-heading-l,
+.hero__content .govuk-body-l {
   color: #ffffff;
 }
 
@@ -5566,16 +5557,91 @@
   background-color: #ffbf47;
 }
 
+.govuk-panel__body {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.04167;
+}
+
+@media print {
+  .govuk-panel__body {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-panel__body {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.11111;
+  }
+}
+
+@media print {
+  .govuk-panel__body {
+    font-size: 24pt;
+    line-height: 1.05;
+  }
+}
+
+.govuk-panel__body p:last-child {
+  margin-bottom: 0;
+}
+
+.govuk-panel .govuk-panel__link {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+}
+
+@media print {
+  .govuk-panel .govuk-panel__link {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-panel .govuk-panel__link {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .govuk-panel .govuk-panel__link {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+.govuk-panel .govuk-panel__link:link, .govuk-panel .govuk-panel__link:visited {
+  color: #ffffff;
+}
+
+.govuk-panel--confirmation {
+  color: #ffffff;
+  background: govuk-color("turquoise");
+}
+
 .govuk-panel--error {
   border: 8px solid #b10e1e;
-  background: #dee0e2;
   color: #0b0c0c;
+  background: #dee0e2;
 }
 
 .govuk-panel--warning {
   border: 8px solid #ffbf47;
-  background: #dee0e2;
   color: #0b0c0c;
+  background: #dee0e2;
 }
 
 .app-task-list {
@@ -5727,7 +5793,7 @@ p {
 
 .autocomplete__menu {
   font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
 }

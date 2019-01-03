@@ -1,5 +1,5 @@
-$govuk-fonts-path: '/static/govuk-frontend/assets/fonts/';
-$govuk-images-path: '/static/govuk-frontend/assets/images/';
+$govuk-fonts-path: "/static/govuk-frontend/assets/fonts/";
+$govuk-images-path: "/static/govuk-frontend/assets/images/";
 
 // import all GOVUK Frontend scss
 @import "all";
@@ -30,22 +30,21 @@ $govuk-images-path: '/static/govuk-frontend/assets/images/';
 
 .module-example,
 .module-code {
-  font-family: $govuk-font-family-nta;
-  border: 4px solid $govuk-border-colour;
   position: relative;
   margin-bottom: $govuk-gutter;
+  border: 4px solid $govuk-border-colour;
+
+  font-family: $govuk-font-family-nta;
 
   &:before {
-    content: 'Example';
-
-    //@include core-16;
-
+    content: "Example";
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     padding: 4px 6px 6px 2px;
-    background: $govuk-border-colour;
+
     color: govuk-colour("blue");
+    background: $govuk-border-colour;
   }
 }
 
@@ -56,33 +55,38 @@ pre {
 
 .module-code {
   &:before {
-    content: 'HTML';
+    content: "HTML";
   }
+
   pre {
     margin: 0;
   }
 }
 
 code {
-  font-size: 19px;
   font-family: monospace;
+  font-size: 19px;
   line-height: govuk-em(25, 19);
 }
 
+$code-block-text-colour: #dd1144;
+$code-block-bg-colour: #f8f8f8;
+
 p code {
+  padding: 0 5px;
+
+  color: $code-block-text-colour;
+  background-color: $code-block-bg-colour;
   font-family: monospace;
   font-size: 19px;
-  padding: 0 5px;
-  color: #d14;
-  background-color: #f8f8f8;
 }
 
 // List items on index page
 // =============================================
 
 .dlf-list {
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 .dlf-list-item {
@@ -91,9 +95,11 @@ p code {
   .dlf-list-item__heading {
     margin-bottom: 5px;
   }
+
   p:first-of-type {
     margin-top: 5px;
   }
+
   p:last-child {
     margin-bottom: 0;
   }
