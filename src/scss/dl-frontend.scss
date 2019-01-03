@@ -5,6 +5,7 @@ $govuk-images-path: "/static/govuk-frontend/assets/images/";
 @import "all";
 
 // Import common Digital Land styles
+@import "common/colours";
 @import "common/helvetica-fixes";
 @import "common/mhclg-branding";
 @import "common/site-full-width-container";

@@ -6,30 +6,32 @@
 // ===================
 
 .with-hero {
-	#global-header-bar {
-		display: none;
-	}
+  #global-header-bar { // sass-lint:disable-line no-ids
+    display: none;
+  }
+
   .govuk-phase-banner {
-    border-bottom: none;
+    border-bottom: 0;
   }
 }
 
 .hero {
-	background: govuk-colour("blue");
-	color: $govuk-body-background-colour;
-	@include govuk-media-query($from: tablet) {
-    margin: 0 -($govuk-gutter-half);
-		margin-bottom: $govuk-gutter;
-    
-	}
+  color: $govuk-body-background-colour;
+  background: govuk-colour("blue");
+
+  @include govuk-media-query($from: tablet) {
+    margin: 0 (0 - $govuk-gutter-half);
+    margin-bottom: $govuk-gutter;
+  }
 }
 
-.hero_content {
-	max-width: $govuk-page-width;
-	padding: 25px $govuk-gutter-half 15px;
-	@include govuk-media-query($from: tablet) {
-		padding: 40px $govuk-gutter-half 30px;
-	}
+.hero__content {
+  max-width: $govuk-page-width;
+  padding: 25px $govuk-gutter-half 15px;
+
+  @include govuk-media-query($from: tablet) {
+    padding: 40px $govuk-gutter-half 30px;
+  }
 
   .govuk-heading-xl,
   .govuk-heading-l,
