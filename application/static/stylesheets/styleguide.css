@@ -5407,10 +5407,10 @@
 }
 
 .app-task-list {
-  list-style-type: none;
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 @media (min-width: 40.0625em) {
@@ -5471,8 +5471,8 @@
   font-size: 1rem;
   line-height: 1.25;
   margin-bottom: 40px;
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 @media print {
@@ -5509,10 +5509,10 @@
 }
 
 .app-task-list__item {
-  border-bottom: 1px solid #bfc1c3;
   margin-bottom: 0 !important;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid #bfc1c3;
 }
 
 .app-task-list__item:after {
@@ -5531,8 +5531,8 @@
 
 @media (min-width: 28.125em) {
   .app-task-list__task-name {
-    float: left;
     width: 75%;
+    float: left;
   }
 }
 
@@ -5543,9 +5543,9 @@
 
 @media (min-width: 28.125em) {
   .app-task-list__task-completed {
-    float: right;
     margin-top: 0;
     margin-bottom: 0;
+    float: right;
   }
 }
 

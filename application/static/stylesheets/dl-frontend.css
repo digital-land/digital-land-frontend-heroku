@@ -5645,10 +5645,10 @@
 }
 
 .app-task-list {
-  list-style-type: none;
-  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 @media (min-width: 40.0625em) {
@@ -5709,8 +5709,8 @@
   font-size: 1rem;
   line-height: 1.25;
   margin-bottom: 40px;
-  list-style: none;
   padding-left: 0;
+  list-style: none;
 }
 
 @media print {
@@ -5747,10 +5747,10 @@
 }
 
 .app-task-list__item {
-  border-bottom: 1px solid #bfc1c3;
   margin-bottom: 0 !important;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid #bfc1c3;
 }
 
 .app-task-list__item:after {
@@ -5769,8 +5769,8 @@
 
 @media (min-width: 28.125em) {
   .app-task-list__task-name {
-    float: left;
     width: 75%;
+    float: left;
   }
 }
 
@@ -5781,10 +5781,122 @@
 
 @media (min-width: 28.125em) {
   .app-task-list__task-completed {
-    float: right;
     margin-top: 0;
     margin-bottom: 0;
+    float: right;
   }
+}
+
+.contents-section {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contents-section:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+  background: #bfc1c3;
+}
+
+@media (min-width: 40.0625em) {
+  .contents-section {
+    padding-bottom: 0;
+  }
+  .contents-section:before {
+    display: none;
+  }
+}
+
+.contents-section ul {
+  margin-top: 5px !important;
+  padding-left: 25px;
+}
+
+.contents-section li {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  list-style: none;
+  line-height: 1.3;
+}
+
+@media print {
+  .contents-section li {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .contents-section li {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .contents-section li {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.contents-section li:before {
+  content: "— ";
+  margin-left: -25px;
+  padding-right: 5px;
+}
+
+.contents-section li a {
+  text-decoration: none;
+}
+
+.contents-section p {
+  margin: 0;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .contents-section p {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .contents-section p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .contents-section p {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.has-side-contents h1:first-child,
+.has-side-contents h2:first-child,
+.has-side-contents h3:first-child,
+.has-side-contents h4:first-child,
+.has-side-contents p:first-child {
+  margin-top: 0;
 }
 
 p {

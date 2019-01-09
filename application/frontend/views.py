@@ -22,6 +22,10 @@ def contribution_bars():
 def hero():
     return render_template('hero.html')
 
+@frontend.route('/contents-section')
+def contents_section():
+    return render_template('contents.html')
+
 @frontend.route('/panels')
 def panels():
     return render_template('panels.html')
