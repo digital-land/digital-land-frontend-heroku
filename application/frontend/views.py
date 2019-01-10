@@ -30,6 +30,10 @@ def contents_section():
 def panels():
     return render_template('panels.html')
 
+@frontend.route('/search')
+def search():
+    return render_template('search.html')
+
 @frontend.route('/task-list')
 def task_list():
     return render_template('task-list.html')
