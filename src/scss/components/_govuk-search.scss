@@ -3,14 +3,14 @@
 
 $icon-size: 40px;
 
-.search-box-container {
+.search-box {
   max-width: 100%;
   @include govuk-media-query($from: desktop) {
     width: 450px;
   }
 }
 
-.search-box-wrapper {
+.search-box__wrapper {
   display: block;
   position: relative;
   height: $icon-size;
@@ -18,7 +18,7 @@ $icon-size: 40px;
   background-size: $icon-size $icon-size;
 }
 
-.search-box-input {
+.search-box__input {
   @include govuk-font($size: 19);
   box-sizing: border-box;
   position: relative;
