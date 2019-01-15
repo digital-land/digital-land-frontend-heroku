@@ -19,10 +19,11 @@
 
 {% block content %}
 
-<span class="govuk-caption-l">Component</span>
-<h1 class="govuk-heading-l">Search</h1>
+<span class="govuk-caption-xl">Component</span>
+<h1 class="govuk-heading-xl">Search</h1>
 
-<h2 class="govuk-heading-m">Example</h2>
+<h2 class="govuk-heading-l">Standard size search box</h2>
+<p class="govuk-body">This is the standard searchbox component. It is a maximum of 450px wide. See below if you'd like search boxes with different widths.</p>
 <div class="module-example">
   {% include 'partials/search-input.html' %}
 </div>
@@ -36,4 +37,23 @@
 </code>
 </pre>
 
+<h2 class="govuk-heading-l">Alternative sizes</h2>
+<p class="govuk-body">You can create your own search box sizes by using the <code>@search-box</code> mixin. E.g.</p>
+<pre>
+<code class="scss">.search-box--small {
+  @include search-box($max-with: 300px);
+}
+</code>
+</pre>
+<p class="govuk-body">This will result in a smaller search box used via a <code>.search-box--small</code> class.</p>
+<div class="module-example">
+  {% include 'partials/search-input-small.html' %}
+</div>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {%- include 'partials/search-input-small.html' -%}
+  {%- endfilter -%}
+</code>
+</pre>
 {% endblock %}

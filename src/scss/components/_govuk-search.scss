@@ -3,10 +3,10 @@
 
 $icon-size: 40px;
 
-.search-box {
+@mixin search-box($max-with: 450px) {
   max-width: 100%;
   @include govuk-media-query($from: desktop) {
-    width: 450px;
+    width: $max-with;
   }
 }
 
@@ -36,4 +36,12 @@ $icon-size: 40px;
     outline: 3px solid govuk-colour("yellow");
     outline-offset: none;
   }
+}
+
+.search-box {
+  @include search-box;
+}
+
+.search-box--small {
+  @include search-box($max-with: 300px);
 }

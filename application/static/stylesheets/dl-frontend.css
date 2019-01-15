@@ -5899,16 +5899,6 @@
   margin-top: 0;
 }
 
-.search-box {
-  max-width: 100%;
-}
-
-@media (min-width: 48.0625em) {
-  .search-box {
-    width: 450px;
-  }
-}
-
 .search-box__wrapper {
   display: block;
   position: relative;
@@ -5962,6 +5952,26 @@
   border: 0;
   outline: 3px solid #ffbf47;
   outline-offset: none;
+}
+
+.search-box {
+  max-width: 100%;
+}
+
+@media (min-width: 48.0625em) {
+  .search-box {
+    width: 450px;
+  }
+}
+
+.search-box--small {
+  max-width: 100%;
+}
+
+@media (min-width: 48.0625em) {
+  .search-box--small {
+    width: 300px;
+  }
 }
 
 p {
