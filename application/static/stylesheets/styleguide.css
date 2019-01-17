@@ -5406,6 +5406,17 @@
   background-color: #ffbf47;
 }
 
+.dl-tag {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #dee0e2;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .app-task-list {
   margin-top: 0;
   margin-bottom: 0;

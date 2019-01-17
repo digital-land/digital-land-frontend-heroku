@@ -38,6 +38,10 @@ def panels():
 def search():
     return render_template('search.html')
 
+@frontend.route('/tags')
+def tags():
+    return render_template('tags.html')
+
 @frontend.route('/task-list')
 def task_list():
     return render_template('task-list.html')
