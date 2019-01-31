@@ -35,7 +35,12 @@
 
   .govuk-heading-xl,
   .govuk-heading-l,
-  .govuk-body-l {
+  .govuk-body-l,
+  a {
     color: $govuk-body-background-colour;
+  }
+
+  a:hover {
+    color: govuk-colour("grey-3");
   }
 }
