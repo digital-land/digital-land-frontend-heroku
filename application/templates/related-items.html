@@ -1,0 +1,39 @@
+{% extends "dlf-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Related items"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Component</span>
+<h1 class="govuk-heading-l">Related items</h1>
+
+<h2 class="govuk-heading-m">Example</h2>
+<div class="module-example">
+  {% include 'partials/related-items.html' %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {%- include 'partials/related-items.html' -%}
+  {%- endfilter -%}
+</code>
+</pre>
+
+{% endblock %}

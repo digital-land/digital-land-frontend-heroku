@@ -34,6 +34,10 @@ def contents_section():
 def panels():
     return render_template('panels.html')
 
+@frontend.route('/related-items')
+def related_items():
+    return render_template('related-items.html')
+
 @frontend.route('/search')
 def search():
     return render_template('search.html')

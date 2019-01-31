@@ -5545,8 +5545,13 @@
 
 .hero__content .govuk-heading-xl,
 .hero__content .govuk-heading-l,
-.hero__content .govuk-body-l {
+.hero__content .govuk-body-l,
+.hero__content a {
   color: #ffffff;
+}
+
+.hero__content a:hover {
+  color: #dee0e2;
 }
 
 .govuk-tag--error {
@@ -6091,6 +6096,19 @@
   display: block;
   margin-left: -15px;
   padding-left: 65px;
+}
+
+.app-related-items {
+  padding-top: 10px;
+  border-top: 10px solid #005ea5;
+}
+
+.app-related-items .govuk-heading-m {
+  margin-top: 0;
+}
+
+.app-related-items .govuk-list > li {
+  margin-bottom: 10px;
 }
 
 p {

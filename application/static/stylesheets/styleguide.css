@@ -5394,8 +5394,13 @@
 
 .hero__content .govuk-heading-xl,
 .hero__content .govuk-heading-l,
-.hero__content .govuk-body-l {
+.hero__content .govuk-body-l,
+.hero__content a {
   color: #ffffff;
+}
+
+.hero__content a:hover {
+  color: #dee0e2;
 }
 
 .govuk-tag--error {
