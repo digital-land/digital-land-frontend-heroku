@@ -132,3 +132,60 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
     }
   }
 }
+
+.contribution-box {
+  box-sizing: border-box;
+  padding: 15px;
+  color: govuk-colour("white");
+  background: govuk-colour("grey-1");
+
+  &:hover {
+    padding: 10px;
+    border: 5px solid govuk-colour("black");
+    color: govuk-colour("black");
+    background: govuk-colour("grey-3");
+    cursor: pointer;
+  }
+
+  .data-item {
+    display: block;
+  }
+}
+
+.contribution-box--small {
+  width: 15%;
+  margin-bottom: 100px;
+  padding: 0;
+  color: govuk-colour("grey-1");
+
+  .data {
+    position: relative;
+    padding: 15px;
+    transform: translateY(100%);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 30px;
+      background: govuk-colour("grey-1");
+    }
+  }
+
+  &:hover {
+    padding: 0;
+
+    .data {
+      padding: 10px;
+      transform: translateY(calc(100% + 10px));
+    }
+
+    .data:after {
+      top: -5px;
+      left: -5px;
+      background: govuk-colour("black");
+    }
+  }
+}
