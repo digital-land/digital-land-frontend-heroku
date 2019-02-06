@@ -6214,6 +6214,10 @@
   color: #0b0c0c !important;
 }
 
+.highlight-box--flush {
+  margin-left: 0;
+}
+
 p {
   max-width: 30em;
 }
