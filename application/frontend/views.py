@@ -22,6 +22,10 @@ def contribution_bars():
 def hero():
     return render_template('hero.html')
 
+@frontend.route('/highlight-box')
+def highlight_box():
+    return render_template('highlight-box.html')
+
 @frontend.route('/info-text')
 def info_text():
     return render_template('info-text.html')

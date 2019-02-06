@@ -1,0 +1,41 @@
+{% extends "dlf-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Highlight box"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Component</span>
+<h1 class="govuk-heading-l">Highlight box</h1>
+
+<p class="govuk-body">Used to highlight an action the user could take. An example being when we are offering something for the user to download.</p>
+
+<h2 class="govuk-heading-m">Example</h2>
+<div class="module-example">
+  {% include 'partials/highlight-box.html' %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {%- include 'partials/highlight-box.html' -%}
+  {%- endfilter -%}
+</code>
+</pre>
+
+{% endblock %}
