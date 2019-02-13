@@ -46,6 +46,10 @@ def related_items():
 def search():
     return render_template('search.html')
 
+@frontend.route('/tabs')
+def tabs():
+    return render_template('tabs.html')
+
 @frontend.route('/tags')
 def tags():
     return render_template('tags.html')
