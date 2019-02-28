@@ -23,6 +23,7 @@ $govuk-images-path: "/static/govuk-frontend/assets/images/";
 @import "components/related-items";
 @import "components/highlight-box";
 
+@import "components/local-plans";
 
 a {
   @extend %govuk-link;
