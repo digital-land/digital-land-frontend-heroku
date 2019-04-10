@@ -5399,6 +5399,78 @@
   background-color: #d0d3d6;
 }
 
+.link-align-btn,
+.cancel-btn {
+  display: none;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  width: 100%;
+  padding: 14px 10px 11px;
+  border: 0;
+  color: #005ea5;
+  background: transparent;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+@media print {
+  .link-align-btn,
+  .cancel-btn {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .link-align-btn,
+  .cancel-btn {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+@media print {
+  .link-align-btn,
+  .cancel-btn {
+    font-size: 14pt;
+    line-height: 16px;
+  }
+}
+
+.link-align-btn:focus,
+.cancel-btn:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .link-align-btn,
+  .cancel-btn {
+    width: auto;
+  }
+}
+
+.link-align-btn:link, .link-align-btn:visited, .link-align-btn:active, .link-align-btn:hover,
+.cancel-btn:link,
+.cancel-btn:visited,
+.cancel-btn:active,
+.cancel-btn:hover {
+  color: #005ea5;
+  text-decoration: underline;
+}
+
+.js-enabled .link-align-btn, .js-enabled
+.cancel-btn {
+  display: inline-block;
+}
+
 .contribution-category-row {
   margin-bottom: 15px;
 }
@@ -6172,7 +6244,7 @@
   box-sizing: border-box;
   display: block;
   max-width: 30em;
-  margin: 0 15px;
+  margin: 0 15px 30px;
   padding: 20px;
   border: 1px solid #bfc1c3;
   background: #f8f8f8;
