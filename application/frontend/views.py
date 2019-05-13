@@ -71,3 +71,16 @@ def accessible_autocomplete():
 @frontend.context_processor
 def asset_path_context_processor():
     return {'assetPath': '/static/govuk-frontend/assets'}
+
+# test and example pages
+@frontend.route('/local-plans')
+def local_plans():
+    return render_template('local-plans.html')
+
+####################
+# Publishing components
+####################
+
+@frontend.route('/publishing/pagination')
+def pagination():
+    return render_template('publishing-components/pagination.html')
