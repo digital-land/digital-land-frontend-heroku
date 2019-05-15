@@ -1,0 +1,33 @@
+{% extends "dlf-base.html" %}
+
+{% block beforeContent %}
+ {{ super() }}
+
+ {{ govukBreadcrumbs({
+   "items": [
+     {
+       "text": "Styleguide",
+       "href": url_for("frontend.index")
+     },
+     {
+       "text": "Tags"
+     }
+   ]
+ }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Guidance components</h1>
+
+<p class="govuk-body">We had added a number of components that can be used when creating guidance pages.</p>
+<p class="govuk-body">Some have been taken from govspeak for consistency with the guidance pages on <a href="http://gov.uk">GOV.UK</a>.</p>
+
+<h2 class="govuk-heading-m">Inset text</h2>
+<h2 class="govuk-heading-m">Contents sections</h2>
+<h2 class="govuk-heading-m">Pagination</h2>
+<h2 class="govuk-heading-m">CTA highlight box</h2>
+<h2 class="govuk-heading-m">Feedback element</h2>
+
+{% endblock %}

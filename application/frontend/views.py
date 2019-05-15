@@ -84,3 +84,7 @@ def local_plans():
 @frontend.route('/publishing/pagination')
 def pagination():
     return render_template('publishing-components/pagination.html')
+
+@frontend.route('/publishing')
+def publishing_components():
+    return render_template('guidance-components.html')
