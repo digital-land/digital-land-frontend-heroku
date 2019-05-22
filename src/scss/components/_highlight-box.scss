@@ -3,11 +3,24 @@
 // A clickable box, should be a link
 // as seen on: https://www.registers.service.gov.uk/registers/local-authority-eng;
 
+@mixin dlf-highlight-box-base {
+  display: block;
+  max-width: 30em;
+  margin: $govuk-gutter-half 0;
+  padding: 20px;
+  border: 1px solid govuk-colour("grey-2");
+  background: govuk-colour("grey-4");
+  @include govuk-media-query($from: tablet) {
+    margin: $govuk-gutter 0;
+    padding: $govuk-gutter;
+  }
+}
+
 .highlight-box {
   box-sizing: border-box;
   display: block;
   max-width: 30em;
-  margin: 0 $govuk-gutter-half;
+  margin: 0 $govuk-gutter-half $govuk-gutter;
   padding: 20px;
   border: 1px solid govuk-colour("grey-2");
   background: govuk-colour("grey-4");
@@ -76,5 +89,9 @@
       color: $govuk-text-colour;
     }
   }
+}
+
+.highlight-box--cta {
+  @include dlf-highlight-box-base;
 }
 

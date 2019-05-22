@@ -52,4 +52,21 @@
 </code>
 </pre>
 
+<h2 class="govuk-heading-m">Call to action example</h2>
+<p class="govuk-body">Use the call to action version when you want to bring a user's attention to something they can do.</p>
+<p class="govuk-body">Should only be used once on a page</p>
+<p class="govuk-body">We mainly use it on our project pages</p>
+<div class="module-example">
+  {% include 'partials/highlight-box-cta.html' %}
+</div>
+
+<h2 class="govuk-heading-m">The HTML you need</h2>
+<pre>
+<code class="html">
+  {%- filter forceescape -%}
+    {%- include 'partials/highlight-box-cta.html' -%}
+  {%- endfilter -%}
+</code>
+</pre>
+
 {% endblock %}
