@@ -5,12 +5,12 @@
 
 $using-helvetica: true !default;
 
-* {
-  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
-}
-
 // required if using helvetica, not NTA
 @if $using-helvetica == true {
+  * {
+    font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+  }
+
   .govuk-warning-text__icon {
     line-height: 26px;
   }

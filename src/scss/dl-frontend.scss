@@ -4,6 +4,8 @@ $govuk-images-path: "/static/govuk-frontend/assets/images/";
 // import all GOVUK Frontend scss
 @import "all";
 
+$using-helvetica: false;
+
 // Import common Digital Land styles
 @import "common/colours";
 @import "common/helvetica-fixes";
