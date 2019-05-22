@@ -31,3 +31,12 @@
 <h2 class="govuk-heading-m">Feedback element</h2>
 
 {% endblock %}
+
+{% block footer %}
+  <div class="dlf-pg-feedback">
+    <div class="dlf-pg-feedback__prompt">
+      <a href="#" class="dlf-pg-feedback__link">Do you have feedback about this page?</a>
+    </div>
+  </div>
+  {{ super() }}
+{% endblock %}
