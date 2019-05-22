@@ -6286,16 +6286,24 @@
   box-sizing: border-box;
   display: block;
   max-width: 30em;
-  margin: 0 15px 30px;
+  margin: 15px 0;
   padding: 20px;
   border: 1px solid #bfc1c3;
   background: #f8f8f8;
+  margin: 0 15px 30px;
   text-decoration: none;
 }
 
 @media (min-width: 40.0625em) {
   .highlight-box {
+    margin: 30px 0;
     padding: 30px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .highlight-box {
+    margin: 0 15px 30px;
   }
 }
 

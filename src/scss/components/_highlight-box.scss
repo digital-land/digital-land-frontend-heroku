@@ -18,16 +18,12 @@
 
 .highlight-box {
   box-sizing: border-box;
-  display: block;
-  max-width: 30em;
+  @include dlf-highlight-box-base;
   margin: 0 $govuk-gutter-half $govuk-gutter;
-  padding: 20px;
-  border: 1px solid govuk-colour("grey-2");
-  background: govuk-colour("grey-4");
   text-decoration: none;
 
   @include govuk-media-query($from: tablet) {
-    padding: $govuk-gutter;
+    margin: 0 $govuk-gutter-half $govuk-gutter;
   }
 
   &:hover {
