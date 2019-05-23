@@ -58,6 +58,9 @@ local_settings.py
 instance/
 .webassets-cache
 
+application/static/stylesheets/vendor/
+application/static/javascripts/vendor/
+
 # Scrapy stuff:
 .scrapy
 
