@@ -44,6 +44,30 @@ To complete step 1 you must be able to create or amend .csv files, for example b
 </pre>
 
 <h2 class="govuk-heading-m">Contents sections</h2>
+
+<div class="module-example">
+  <div class="contents-section contents-section--multi-page">
+    Contents
+    <ul>
+      <li><a href="http://localhost:1313/guidance/developer-contributions/">Publish your developer contributions data</a></li>
+      <li>Step 1: Create your .csv files</li>
+      <li><a href="http://localhost:1313/guidance/developer-contributions/update-your-developer-contributions-web-page/">Step 2: Update your developer contributions web page</a></li>
+    </ul>
+  </div>
+</div>
+
+<h3 class="govuk-heading-s">What to put in your markdown</h3>
+<pre>
+<code class="markdown">
+{%- raw -%}
+{{% contents %}}
+- [Publish your developer contributions data]({{< ref "_index.md" >}})
+- Step 1: Create your .csv files
+- [Step 2: Update your developer contributions web page]({{< ref "update-your-developer-contributions-web-page.md" >}})
+{{% /contents %}}
+{%- endraw -%}
+</code>
+</pre>
 <h2 class="govuk-heading-m">Pagination</h2>
 
 <p class="govuk-body">Use the pagination component when associated content is split across multiple screens into a linear flow.</p>
