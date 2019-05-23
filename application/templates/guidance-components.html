@@ -27,6 +27,27 @@
 <h2 class="govuk-heading-m">Inset text</h2>
 <h2 class="govuk-heading-m">Contents sections</h2>
 <h2 class="govuk-heading-m">Pagination</h2>
+
+<p class="govuk-body">Use the pagination component when associated content is split across multiple screens into a linear flow.</p>
+
+<p class="govuk-body">We use it on guidance pages, such as on the <a href="https://digital-land.github.io/guidance/developer-contributions/" class="govuk-link">developer contributions guidance</a>.</p>
+
+<div class="module-example">
+  {% include 'partials/pagination.html' %}
+</div>
+
+<h3 class="govuk-heading-s">What to put in your markdown</h3>
+<pre>
+<code class="markdown">
+{%- raw -%}
+{{% pagination-component %}}
+  {{% pagination-prev href="_index.md" text="Publish your developer contributions data" %}}
+  {{% pagination-next href="update-your-developer-contributions-web-page.md" text="Step 2: Update your developer contributions web page" %}}
+{{% /pagination-component %}}
+{%- endraw -%}
+</code>
+</pre>
+
 <h2 class="govuk-heading-m">CTA highlight box</h2>
 <h2 class="govuk-heading-m">Feedback element</h2>
 
