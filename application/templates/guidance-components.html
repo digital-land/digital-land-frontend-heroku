@@ -49,6 +49,22 @@
 </pre>
 
 <h2 class="govuk-heading-m">CTA highlight box</h2>
+
+<div class="module-example">
+  {% include 'partials/highlight-box-cta.html' %}
+</div>
+
+<h3 class="govuk-heading-s">What to put in your markdown</h3>
+<pre>
+<code class="markdown">
+{%- raw -%}
+{{% cta-box %}}
+Read the latest guidance on [Brownfield site registers](#some-url).
+{{% /cta-box %}}
+{%- endraw -%}
+</code>
+</pre>
+
 <h2 class="govuk-heading-m">Feedback element</h2>
 
 {% endblock %}
