@@ -65,7 +65,21 @@ Read the latest guidance on [Brownfield site registers](#some-url).
 </code>
 </pre>
 
-<h2 class="govuk-heading-m">Feedback element</h2>
+<h2 class="govuk-heading-m">Page feedback</h2>
+
+<div class="module-example">
+  <div class="dlf-pg-feedback">
+    <div class="dlf-pg-feedback__prompt">
+      <a href="#" class="dlf-pg-feedback__link">Do you have feedback about this page?</a>
+    </div>
+  </div>
+</div>
+
+<h3 class="govuk-heading-s">What to put in your markdown</h3>
+<p class="govuk-body">To add to a page you need to add a <code>pageFeedback</code> attribute to the frontmatter of the markdown file. E.g.</p>
+<pre>
+<code class="markdown">pageFeedback: true</code>
+</pre>
 
 {% endblock %}
 

@@ -5364,7 +5364,7 @@
 }
 
 .dlf-pg-feedback__prompt {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 10px 15px 0;
   outline: 0;
