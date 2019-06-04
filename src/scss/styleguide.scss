@@ -16,10 +16,14 @@ $using-helvetica: false;
 
 @import "common/helvetica-fixes";
 
+// styleguide-specific variables
+$app-light-grey: #f8f8f8;
+
 // STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
 // ===================================================================================
 
 @import "styleguide/highlight-style";
+@import "styleguide/app-nav";
 
 
 // wide page width settings
@@ -30,7 +34,8 @@ $using-helvetica: false;
     border-bottom: 10px solid govuk-colour("blue");
   }
 
-  .govuk-header__container {
+  .govuk-header__container,
+  .govuk-phase-banner {
     border-bottom: 0;
   }
 }

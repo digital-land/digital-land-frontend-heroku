@@ -46,12 +46,10 @@
     {% endblock %}
 
     {% block main %}
-      <div class="govuk-width-container">
         {% block beforeContent %}{% endblock %}
-        <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+        <main class="govuk-main-wrapper govuk-width-container {{ mainClasses }}" id="main-content" role="main">
           {% block content %}{% endblock %}
         </main>
-      </div>
     {% endblock %}
 
     {% block footer %}

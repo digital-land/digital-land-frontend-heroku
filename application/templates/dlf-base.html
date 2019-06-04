@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "govuk-jinja-components/phase-banner/macro.jinja" import govukPhaseBanner %}
 {% from "govuk-jinja-components/breadcrumbs/macro.jinja" import govukBreadcrumbs %}
+{% from "dl-macros/nav-macros.html" import toplevelNavItem %}
 
 {% set htmlClasses = "dlf-page-wide" %}
 
@@ -16,12 +17,30 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukPhaseBanner({
-  "tag": {
-    "text": "styleguide"
-  },
-  "html": 'This is a styleguide for digital land projects'
-}) }}
+	{{ govukPhaseBanner({
+	  "classes": "govuk-width-container",
+	  "tag": {
+	    "text": "styleguide"
+	  },
+	  "html": 'This is a styleguide for digital land projects'
+	}) }}
+
+	{% block topLevelNav %}
+	<div class="app-nav">
+		<nav class="app-nav__wrap govuk-clearfix">
+		  <ul class="app-nav__wrap__list govuk-width-container">
+
+			{{ toplevelNavItem("Get started", "/", true) }}
+			{{ toplevelNavItem("Components", "/components") }}
+			{{ toplevelNavItem("Content", "/publishing") }}
+			{{ toplevelNavItem("Jinja", "/jinja") }}
+			{{ toplevelNavItem("Javascripts", "/javascripts") }}
+		    
+		  </ul>
+		</nav>
+	</div>
+	{% endblock %}
+
 {% endblock %}
 
 {% block bodyEnd %}

@@ -1,0 +1,5 @@
+{% macro toplevelNavItem(text, url, current_page=false) %}
+<li {% if current_page %}class="app-nav--current-page"{% endif %}>
+	<a class="govuk-link" href="{{ url }}" data-topnav="{{ text | upper }}">{{ text }}</a>
+</li>
+{% endmacro %}
