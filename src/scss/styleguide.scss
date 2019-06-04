@@ -1,6 +1,8 @@
 $govuk-fonts-path: "/static/govuk-frontend/assets/fonts/";
 $govuk-images-path: "/static/govuk-frontend/assets/images/";
 
+$govuk-page-width: 1100px !default;
+
 // import all GOVUK Frontend scss
 @import "all";
 
@@ -18,7 +20,6 @@ $using-helvetica: false;
 // ===================================================================================
 
 @import "styleguide/highlight-style";
-
 
 
 // Example and code panels

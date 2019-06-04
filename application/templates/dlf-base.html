@@ -3,8 +3,14 @@
 {% from "govuk-jinja-components/breadcrumbs/macro.jinja" import govukBreadcrumbs %}
 
 {% block head %}
-<link href="/static/stylesheets/styleguide.css" rel="stylesheet" />
 <link href="/static/stylesheets/dl-frontend.css" rel="stylesheet" />
+<link href="/static/stylesheets/styleguide.css" rel="stylesheet" />
+{% endblock %}
+
+{% block header %}
+	{{ govukHeader({
+		"productName": 'Digital Land Design'
+	}) }}
 {% endblock %}
 
 {% block beforeContent %}

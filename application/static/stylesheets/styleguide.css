@@ -924,7 +924,7 @@
 }
 
 .govuk-width-container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 15px;
 }
 
@@ -934,7 +934,7 @@
   }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1160px) {
   .govuk-width-container {
     margin: 0 auto;
   }
@@ -5454,7 +5454,7 @@
 }
 
 .hero__content {
-  max-width: 960px;
+  max-width: 1100px;
   padding: 25px 15px 15px;
 }
 
