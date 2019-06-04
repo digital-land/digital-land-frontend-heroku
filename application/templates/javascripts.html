@@ -1,0 +1,27 @@
+{% extends "dlf-base.html" %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Javascripts
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">There are a few javascript components used with Digital land projects.</p>
+
+    <ul class="dlf-list">
+      <li class="dlf-list-item">
+        <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.mhclg_maps') }}">MHCLG Maps</a></h4>
+        <p class="govuk-body">A wrapper for leafletJS that makes it quicker to render a map.</p>
+      </li>
+      <li class="dlf-list-item">
+        <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.accessible_autocomplete') }}">Accessible Autocomplete</a></h4>
+        <p class="govuk-body">Turns select elements into autocomplete fields.</p>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

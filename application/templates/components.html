@@ -1,0 +1,35 @@
+{% extends "dlf-base.html" %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Components
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">DL Frontend styles</h2>
+
+    <p class="govuk-body">The following components have been created to be used with digital land prototypes and projects.</p>
+
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="{{ url_for('frontend.buttons') }}">Buttons</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.contents_section') }}">Contents section</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.contribution_bars') }}">Contribution bars</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.hero') }}">Hero</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.highlight_box') }}">Highlight box</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.info_text') }}">Info text</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.panels') }}">Panels</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.related_items') }}">Related items</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.search') }}">Search</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.tabs') }}">Tabs</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.task_list') }}">Task List</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.local_plans') }}">Local plans example</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.pagination') }}">Pagination</a></li>
+      <li><a class="govuk-link" href="{{ url_for('frontend.publishing_components') }}">Publishing components</a></li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -10,6 +10,18 @@ frontend = Blueprint('frontend', __name__, template_folder='templates')
 def index():
     return render_template('index.html')
 
+@frontend.route('/components')
+def components():
+    return render_template('components.html')
+
+@frontend.route('/jinja')
+def jinja():
+    return render_template('jinja.html')
+
+@frontend.route('/javascripts')
+def javascripts():
+    return render_template('javascripts.html')
+
 @frontend.route('/buttons')
 def buttons():
     return render_template('buttons.html')
