@@ -5794,11 +5794,11 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   border-bottom: 4px solid #2b8cc4;
 }
 
-.app-nav__wrap__list > li.app-navigation--current-page {
+.app-nav__wrap__list > li.app-nav--current-page {
   border-bottom: 4px solid #005ea5 !important;
 }
 
-.app-nav__wrap__list > li.app-navigation--current-page a:hover {
+.app-nav__wrap__list > li.app-nav--current-page a:hover {
   color: #005ea5;
 }
 

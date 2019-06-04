@@ -3,3 +3,9 @@
 	<a class="govuk-link" href="{{ url }}" data-topnav="{{ text | upper }}">{{ text }}</a>
 </li>
 {% endmacro %}
+
+{% macro sublevelNavItem(text, url, current_page=false) %}
+<li class="app-subnav__section-item {% if current_page %}app-subnav__section-item--current{% endif %}">
+	<a class="app-subnav__link govuk-link" href="{{ url }}">{{ text }}</a>
+</li>
+{% endmacro %}

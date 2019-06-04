@@ -90,6 +90,14 @@ def local_plans():
     return render_template('local-plans.html')
 
 ####################
+# Guides
+####################
+
+@frontend.route('/guide/how-to-use-own-projects')
+def include_in_projects():
+    return render_template('guides/include-dl-frontend.html')
+
+####################
 # Publishing components
 ####################
 

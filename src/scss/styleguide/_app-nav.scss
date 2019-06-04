@@ -36,7 +36,7 @@ $toc-width-tablet: 210px;
         border-bottom: 4px solid govuk-colour("light-blue");
       }
 
-      &.app-navigation--current-page {
+      &.app-nav--current-page {
         border-bottom: 4px solid govuk-colour("blue") !important;
 
         a:hover {
