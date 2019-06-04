@@ -5728,6 +5728,15 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   font-weight: bold;
 }
 
+.dlf-page-wide .govuk-header {
+  padding-bottom: 7px;
+  border-bottom: 10px solid #005ea5;
+}
+
+.dlf-page-wide .govuk-header__container {
+  border-bottom: 0;
+}
+
 .module-example {
   margin-bottom: 30px;
   padding: 50px 30px;

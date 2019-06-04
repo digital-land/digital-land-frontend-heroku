@@ -22,6 +22,19 @@ $using-helvetica: false;
 @import "styleguide/highlight-style";
 
 
+// wide page width settings
+
+.dlf-page-wide {
+  .govuk-header {
+    padding-bottom: 7px;
+    border-bottom: 10px solid govuk-colour("blue");
+  }
+
+  .govuk-header__container {
+    border-bottom: 0;
+  }
+}
+
 // Example and code panels
 // Styles needed for the example and code panels
 // =============================================
