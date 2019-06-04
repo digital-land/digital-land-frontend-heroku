@@ -1,10 +1,37 @@
 {% extends "dlf-base.html" %}
 
 {% block content %}
-<h1 class="govuk-heading-xl">
-  Digital land frontend
-</h1>
 
-<p class="govuk-body-l">A collection of resources and reusable parts created for the <a href="https://digital-land.github.io/" class="govuk-link">digial land</a> team.</p>
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
+      <h4 class="app-subnav__heading">Guides</h4>
+
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item">
+          <a class="app-subnav__link govuk-link" href="/styles/images">Include in your flask app</a>
+        </li>
+      
+        <li class="app-subnav__section-item">
+          <a class="app-subnav__link govuk-link" href="#">Difference between DL frontend and GOVUK design system</a>
+        </li>
+      </ul> 
+
+    </nav>
+  </div>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          Digital land frontend
+        </h1>
+      </div>
+
+      <p class="govuk-body-l">A collection of resources and reusable parts created for the <a href="https://digital-land.github.io/" class="govuk-link">digial land</a> team.</p>
+  
+    </main>
+  </div>
+</div>
 {% endblock %}

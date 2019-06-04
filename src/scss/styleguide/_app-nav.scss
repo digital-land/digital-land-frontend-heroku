@@ -1,3 +1,6 @@
+$toc-width: 260px;
+$toc-width-tablet: 210px;
+
 .app-nav {
   @include govuk-media-query($from: tablet) {
     display: flex;
@@ -59,5 +62,120 @@
         }
       }
     }
+  }
+}
+
+.app-nav__body {
+  @include govuk-media-query($from: tablet) {
+    display: flex;
+    position: relative;
+    min-height: 0;
+    overflow: inherit;
+  }
+
+  @include govuk-media-query(1160px) {
+    width: 100%;
+  }
+}
+
+.app-nav__subnav {
+  @include govuk-media-query($from: tablet) {
+    width: $toc-width-tablet;
+    flex: 0 0 auto;
+  }
+  @include govuk-media-query($from: desktop) {
+    width: $toc-width;
+  }
+}
+
+.app-nav__content {
+  @include govuk-media-query($from: tablet) {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 100%;
+    flex-direction: column;
+  }
+}
+
+.no-flexbox {
+  .app-nav {
+    height: auto;
+    overflow: visible;
+    @include govuk-clearfix;
+  }
+
+  .app-nav__body {
+    display: block;
+  }
+
+  .app-nav__subnav {
+    width: $toc-width;
+    float: left;
+    overflow-x: hidden;
+    border-right: 0;
+  }
+
+  .app-nav__content {
+    margin-left: -1px;
+    overflow-x: hidden;
+  }
+}
+
+.app-subnav {
+  padding: govuk-spacing(6) govuk-spacing(3) 0 0;
+  @include govuk-font(16);
+
+  @include govuk-media-query($from: tablet) {
+    margin-left: -(govuk-spacing(3));
+  }
+}
+
+.app-subnav__section {
+  margin: 0 0 govuk-spacing(4);
+  padding: 0;
+  list-style-type: none;
+}
+
+.app-subnav__link {
+  display: block;
+  padding: 8px govuk-spacing(6) 8px govuk-spacing(2);
+  border-left: 4px solid transparent;
+  text-decoration: none;
+
+  &:focus {
+    background: inherit;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $govuk-link-colour;
+  }
+
+  &:hover {
+    border-left-color: $govuk-link-hover-colour;
+  }
+}
+
+.app-subnav__section-item--current .app-subnav__link {
+  border-left-color: $govuk-link-colour;
+  background: $app-light-grey;
+  font-weight: bold;
+}
+
+.app-subnav__heading {
+  margin: 0;
+  padding: govuk-spacing(2) govuk-spacing(3);
+  color: govuk-colour("grey-1");
+  @include govuk-font(19);
+}
+
+.app-content {
+
+  padding: govuk-spacing(3) govuk-spacing(0);
+
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(6);
+    padding-right: 0;
   }
 }
