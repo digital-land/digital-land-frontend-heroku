@@ -1,34 +1,51 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-xl">
-  Components
-</h1>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
-    <h2 class="govuk-heading-l">DL Frontend styles</h2>
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Buttons", url_for('frontend.buttons')) }}
+        {{ sublevelNavItem("Contents section", url_for('frontend.contents_section')) }}
+        {{ sublevelNavItem("Contribution bars", url_for('frontend.contribution_bars')) }}
+        {{ sublevelNavItem("Hero", url_for('frontend.hero')) }}
+        {{ sublevelNavItem("Highlight box", url_for('frontend.highlight_box')) }}
+        {{ sublevelNavItem("Info text", url_for('frontend.info_text')) }}
+        {{ sublevelNavItem("Pagination", url_for('frontend.pagination')) }}
+        {{ sublevelNavItem("Panels", url_for('frontend.panels')) }}
+        {{ sublevelNavItem("Related items", url_for('frontend.related_items')) }}
+        {{ sublevelNavItem("Search", url_for('frontend.search')) }}
+        {{ sublevelNavItem("Tabs", url_for('frontend.tabs')) }}
+        {{ sublevelNavItem("Task List", url_for('frontend.task_list')) }}
+      </ul> 
 
-    <p class="govuk-body">The following components have been created to be used with digital land prototypes and projects.</p>
+    </nav>
+  </div>
 
-    <ul class="govuk-list">
-      <li><a class="govuk-link" href="{{ url_for('frontend.buttons') }}">Buttons</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.contents_section') }}">Contents section</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.contribution_bars') }}">Contribution bars</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.hero') }}">Hero</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.highlight_box') }}">Highlight box</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.info_text') }}">Info text</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.panels') }}">Panels</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.related_items') }}">Related items</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.search') }}">Search</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.tabs') }}">Tabs</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.task_list') }}">Task List</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.local_plans') }}">Local plans example</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.pagination') }}">Pagination</a></li>
-      <li><a class="govuk-link" href="{{ url_for('frontend.publishing_components') }}">Publishing components</a></li>
-    </ul>
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          Components
+        </h1>
+      </div>
 
+    <h2 class="govuk-heading-l">DL frontend styles</h2>
+
+    <p class="govuk-body">A number of components have been created to be used with digital land prototypes and projects.</p>
+
+    </main>  
   </div>
 </div>
 
