@@ -1,38 +1,41 @@
 {% extends "dlf-base.html" %}
-
-{% block beforeContent %}
- {{ super() }}
-
- {{ govukBreadcrumbs({
-   "items": [
-     {
-       "text": "Styleguide",
-       "href": url_for("frontend.index")
-     },
-     {
-       "text": "Tags"
-     }
-   ]
- }) }}
-
-{% endblock %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block content %}
 
-<h1 class="govuk-heading-l">Guidance components</h1>
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
-<p class="govuk-body">We had added a number of components that can be used when creating guidance pages.</p>
-<p class="govuk-body">Some have been taken from govspeak for consistency with the guidance pages on <a href="http://gov.uk">GOV.UK</a>.</p>
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Inset text", "#inset-text") }}
+        {{ sublevelNavItem("Contents section", "#contents-section") }}
+        {{ sublevelNavItem("Pagination", "#pagination") }}
+        {{ sublevelNavItem("CTA highlight box", "#cta-highlight-box") }}
+        {{ sublevelNavItem("Page feedback", "#page-feedback") }}
+      </ul> 
 
-<h2 class="govuk-heading-m">Inset text</h2>
-
-<div class="module-example">
-  <div class="govuk-inset-text">
-    <p>To complete step 1 you must be able to create or amend .csv files, for example by using spreadsheet software.</p>
+    </nav>
   </div>
-</div>
 
-<h3 class="govuk-heading-s">What to put in your markdown</h3>
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">Publishing components</h1>
+      </div>
+
+      <p class="govuk-body">We have added a number of components that can be used when creating guidance pages.</p>
+      <p class="govuk-body">Some have been taken from govspeak for consistency with the guidance pages on <a href="http://gov.uk">GOV.UK</a>.</p>
+
+      <h2 class="govuk-heading-m" id="inset-text">Inset text</h2>
+
+      <div class="module-example">
+        <div class="govuk-inset-text">
+          <p>To complete step 1 you must be able to create or amend .csv files, for example by using spreadsheet software.</p>
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-s">What to put in your markdown</h3>
 <pre>
 <code class="markdown">
 {%- raw -%}
@@ -43,20 +46,20 @@ To complete step 1 you must be able to create or amend .csv files, for example b
 </code>
 </pre>
 
-<h2 class="govuk-heading-m">Contents sections</h2>
+      <h2 class="govuk-heading-m" id="contents-section">Contents sections</h2>
 
-<div class="module-example">
-  <div class="contents-section contents-section--multi-page">
-    Contents
-    <ul>
-      <li><a href="http://localhost:1313/guidance/developer-contributions/">Publish your developer contributions data</a></li>
-      <li>Step 1: Create your .csv files</li>
-      <li><a href="http://localhost:1313/guidance/developer-contributions/update-your-developer-contributions-web-page/">Step 2: Update your developer contributions web page</a></li>
-    </ul>
-  </div>
-</div>
+      <div class="module-example">
+        <div class="contents-section contents-section--multi-page">
+          Contents
+          <ul>
+            <li><a href="http://localhost:1313/guidance/developer-contributions/">Publish your developer contributions data</a></li>
+            <li>Step 1: Create your .csv files</li>
+            <li><a href="http://localhost:1313/guidance/developer-contributions/update-your-developer-contributions-web-page/">Step 2: Update your developer contributions web page</a></li>
+          </ul>
+        </div>
+      </div>
 
-<h3 class="govuk-heading-s">What to put in your markdown</h3>
+      <h3 class="govuk-heading-s">What to put in your markdown</h3>
 <pre>
 <code class="markdown">
 {%- raw -%}
@@ -68,17 +71,19 @@ To complete step 1 you must be able to create or amend .csv files, for example b
 {%- endraw -%}
 </code>
 </pre>
-<h2 class="govuk-heading-m">Pagination</h2>
 
-<p class="govuk-body">Use the pagination component when associated content is split across multiple screens into a linear flow.</p>
 
-<p class="govuk-body">We use it on guidance pages, such as on the <a href="https://digital-land.github.io/guidance/developer-contributions/" class="govuk-link">developer contributions guidance</a>.</p>
+      <h2 class="govuk-heading-m" id="pagination">Pagination</h2>
 
-<div class="module-example">
-  {% include 'partials/pagination.html' %}
-</div>
+      <p class="govuk-body">Use the pagination component when associated content is split across multiple screens into a linear flow.</p>
 
-<h3 class="govuk-heading-s">What to put in your markdown</h3>
+      <p class="govuk-body">We use it on guidance pages, such as on the <a href="https://digital-land.github.io/guidance/developer-contributions/" class="govuk-link">developer contributions guidance</a>.</p>
+
+      <div class="module-example">
+        {% include 'partials/pagination.html' %}
+      </div>
+
+      <h3 class="govuk-heading-s">What to put in your markdown</h3>
 <pre>
 <code class="markdown">
 {%- raw -%}
@@ -90,13 +95,13 @@ To complete step 1 you must be able to create or amend .csv files, for example b
 </code>
 </pre>
 
-<h2 class="govuk-heading-m">CTA highlight box</h2>
+      <h2 class="govuk-heading-m" id="cta-highlight-box">CTA highlight box</h2>
 
-<div class="module-example">
-  {% include 'partials/highlight-box-cta.html' %}
-</div>
+      <div class="module-example">
+        {% include 'partials/highlight-box-cta.html' %}
+      </div>
 
-<h3 class="govuk-heading-s">What to put in your markdown</h3>
+      <h3 class="govuk-heading-s">What to put in your markdown</h3>
 <pre>
 <code class="markdown">
 {%- raw -%}
@@ -107,21 +112,26 @@ Read the latest guidance on [Brownfield site registers](#some-url).
 </code>
 </pre>
 
-<h2 class="govuk-heading-m">Page feedback</h2>
+      <h2 class="govuk-heading-m" id="page-feedback">Page feedback</h2>
 
-<div class="module-example">
-  <div class="dlf-pg-feedback">
-    <div class="dlf-pg-feedback__prompt">
-      <a href="#" class="dlf-pg-feedback__link">Do you have feedback about this page?</a>
-    </div>
-  </div>
-</div>
+      <div class="module-example">
+        <div class="dlf-pg-feedback">
+          <div class="dlf-pg-feedback__prompt">
+            <a href="#" class="dlf-pg-feedback__link">Do you have feedback about this page?</a>
+          </div>
+        </div>
+      </div>
 
-<h3 class="govuk-heading-s">What to put in your markdown</h3>
-<p class="govuk-body">To add to a page you need to add a <code>pageFeedback</code> attribute to the frontmatter of the markdown file. E.g.</p>
+      <h3 class="govuk-heading-s">What to put in your markdown</h3>
+      <p class="govuk-body">To add to a page you need to add a <code>pageFeedback</code> attribute to the frontmatter of the markdown file. E.g.</p>
 <pre>
 <code class="markdown">pageFeedback: true</code>
 </pre>
+  
+    </main>
+  </div>
+</div>
+
 
 {% endblock %}
 
