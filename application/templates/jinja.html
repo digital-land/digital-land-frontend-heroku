@@ -1,30 +1,47 @@
 {% extends "dlf-base.html" %}
 
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja", true) }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
 {% block content %}
-<h1 class="govuk-heading-xl">
-  Jinja
-</h1>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
-    <p class="govuk-body">There are some differences between Nunjucks and Jinja templates. These differences mean the GOVUK design system components need to be altered to work with Jinja.</p>
-
-    <p class="govuk-body">The following have been altered:</p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Breadcrumbs</li>
-      <li>Footer</li>
-      <li>Header</li>
-      <li>Inset text</li>
-      <li>Phase banner</li>
-      <li>Skip link</li>
-      <li>Tabs</li>
-      <li>Tag</li>
-      <li>Warning text</li>
-    </ul>
-
+    </nav>
   </div>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          Jinja
+        </h1>
+      </div>
+
+      <p class="govuk-body">There are some differences between Nunjucks and Jinja templates. These differences mean the GOVUK design system components need to be altered to work with Jinja.</p>
+
+      <p class="govuk-body">The following have been altered:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Breadcrumbs</li>
+        <li>Footer</li>
+        <li>Header</li>
+        <li>Inset text</li>
+        <li>Phase banner</li>
+        <li>Skip link</li>
+        <li>Tabs</li>
+        <li>Tag</li>
+        <li>Warning text</li>
+      </ul>
+
+  </main>
 </div>
 
 {% endblock %}
