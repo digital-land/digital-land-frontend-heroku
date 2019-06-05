@@ -1,41 +1,70 @@
 {% extends "leaflet-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block headEnd %}
   {{ super() }}
   <link rel="stylesheet" href="/static/stylesheets/vendor/govuk-accessible-autocomplete.min.css" />
 {% endblock %}
 
-{% block beforeContent %}
- {{ super() }}
-  <a href="/" class="govuk-back-link">Back</a>
+
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts", true) }}
 {% endblock %}
 
 {% block content %}
 
-<span class="govuk-caption-xl">JS script</span>
-<h1 class="govuk-heading-xl">
-  Accessible Autocomplete
-</h1>
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
-<h2 class="govuk-heading-l">Example usage</h2>
+      <h4 class="app-subnav__heading">Available scripts</h4>
 
-<form class="form pub-search-form column-half">
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="pub-picker">Find a Local Authority</label>
-    <select class="govuk-select" name="pub-picker" id="pub-picker">
-      <option value="">Select Locl Authority</option>
-      <option value="Adur District Council">Adur District Council</option>
-      <option value="Adur District Council">Dacorum Borough Council</option>
-      <option value="Adur District Council">Harrogate Borough Council</option>
-      <option value="Adur District Council">London Borough of Lambeth</option>
-      <option value="Adur District Council">Winchester City Council</option>
-    </select>
-    
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("MHCLG Maps", url_for('frontend.mhclg_maps')) }}
+        {{ sublevelNavItem("Accessible Autocomplete", url_for('frontend.accessible_autocomplete'), true) }}
+      </ul> 
+
+    </nav>
   </div>
-  <div class="govuk-form-group">
-    <a href="#" class="govuk-button">Save and continue</a>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Javascripts</span>
+        <h1 class="govuk-heading-xl">
+          Accessible Autocomplete
+        </h1>
+      </div>
+
+      <h2 class="govuk-heading-l">Example usage</h2>
+
+      <div class="govuk-grid-row">
+        <form class="form pub-search-form govuk-grid-column-one-half">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="pub-picker">Find a Local Authority</label>
+            <select class="govuk-select" name="pub-picker" id="pub-picker">
+              <option value="">Select Locl Authority</option>
+              <option value="Adur District Council">Adur District Council</option>
+              <option value="Adur District Council">Dacorum Borough Council</option>
+              <option value="Adur District Council">Harrogate Borough Council</option>
+              <option value="Adur District Council">London Borough of Lambeth</option>
+              <option value="Adur District Council">Winchester City Council</option>
+            </select>
+            
+          </div>
+          <div class="govuk-form-group">
+            <a href="#" class="govuk-button">Save and continue</a>
+          </div>
+        </form>
+      </div>
+    </main>
   </div>
-</form>
+</div>
 
 {% endblock %}
 
