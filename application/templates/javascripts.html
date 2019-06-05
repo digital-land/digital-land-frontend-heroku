@@ -1,27 +1,52 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts", true) }}
+{% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-xl">
-  Javascripts
-</h1>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
 
-    <p class="govuk-body">There are a few javascript components used with Digital land projects.</p>
+      <h4 class="app-subnav__heading">Available scripts</h4>
 
-    <ul class="dlf-list">
-      <li class="dlf-list-item">
-        <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.mhclg_maps') }}">MHCLG Maps</a></h4>
-        <p class="govuk-body">A wrapper for leafletJS that makes it quicker to render a map.</p>
-      </li>
-      <li class="dlf-list-item">
-        <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.accessible_autocomplete') }}">Accessible Autocomplete</a></h4>
-        <p class="govuk-body">Turns select elements into autocomplete fields.</p>
-      </li>
-    </ul>
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("MHCLG Maps", url_for('frontend.mhclg_maps')) }}
+        {{ sublevelNavItem("Accessible Autocomplete", url_for('frontend.accessible_autocomplete')) }}
+      </ul> 
 
+    </nav>
   </div>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          Javascripts
+        </h1>
+      </div>
+
+      <p class="govuk-body">There are a few javascript components used with Digital land projects.</p>
+
+      <ul class="dlf-list">
+        <li class="dlf-list-item">
+          <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.mhclg_maps') }}">MHCLG Maps</a></h4>
+          <p class="govuk-body">A wrapper for leafletJS that makes it quicker to render a map.</p>
+        </li>
+        <li class="dlf-list-item">
+          <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.accessible_autocomplete') }}">Accessible Autocomplete</a></h4>
+          <p class="govuk-body">Turns select elements into autocomplete fields.</p>
+        </li>
+      </ul>
+
+  </main>
 </div>
 
 {% endblock %}
