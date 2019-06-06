@@ -5637,6 +5637,93 @@
   }
 }
 
+.govuk-panel__body {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.04167;
+}
+
+@media print {
+  .govuk-panel__body {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-panel__body {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.11111;
+  }
+}
+
+@media print {
+  .govuk-panel__body {
+    font-size: 24pt;
+    line-height: 1.05;
+  }
+}
+
+.govuk-panel__body p:last-child {
+  margin-bottom: 0;
+}
+
+.govuk-panel .govuk-panel__link {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+}
+
+@media print {
+  .govuk-panel .govuk-panel__link {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-panel .govuk-panel__link {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .govuk-panel .govuk-panel__link {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+.govuk-panel .govuk-panel__link:link, .govuk-panel .govuk-panel__link:visited {
+  color: #ffffff;
+}
+
+.govuk-panel--confirmation {
+  color: #ffffff;
+  background: govuk-color("turquoise");
+}
+
+.govuk-panel--error {
+  border: 8px solid #b10e1e;
+  color: #0b0c0c;
+  background: #dee0e2;
+}
+
+.govuk-panel--warning {
+  border: 8px solid #ffbf47;
+  color: #0b0c0c;
+  background: #dee0e2;
+}
+
 /*
 
 Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>

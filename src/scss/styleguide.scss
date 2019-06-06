@@ -12,6 +12,11 @@ $govuk-page-width: 1100px !default;
 @import "components/tags";
 @import "components/task-list";
 
+// these components are needed otherwise
+// things are overwritten by other
+// included styles from govuk frontend
+@import "components/panels";
+
 $using-helvetica: false;
 
 @import "common/helvetica-fixes";
