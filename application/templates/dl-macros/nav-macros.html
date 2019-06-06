@@ -4,8 +4,8 @@
 </li>
 {% endmacro %}
 
-{% macro sublevelNavItem(text, url, current_page=false) %}
-<li class="app-subnav__section-item {% if current_page %}app-subnav__section-item--current{% endif %}">
+{% macro sublevelNavItem(text, url) %}
+<li class="app-subnav__section-item {% if request.path == url %}app-subnav__section-item--current{% endif %}">
 	<a class="app-subnav__link govuk-link" href="{{ url }}">{{ text }}</a>
 </li>
 {% endmacro %}
