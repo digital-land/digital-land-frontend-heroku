@@ -10,7 +10,7 @@ frontend = Blueprint('frontend', __name__, template_folder='templates')
 def index():
     return render_template('index.html')
 
-@frontend.route('/components')
+@frontend.route('/component')
 def components():
     return render_template('components.html')
 
@@ -21,54 +21,6 @@ def jinja():
 @frontend.route('/javascripts')
 def javascripts():
     return render_template('javascripts.html')
-
-@frontend.route('/buttons')
-def buttons():
-    return render_template('buttons.html')
-
-@frontend.route('/contribution-bars')
-def contribution_bars():
-    return render_template('contribution-bars.html')
-
-@frontend.route('/hero')
-def hero():
-    return render_template('hero.html')
-
-@frontend.route('/highlight-box')
-def highlight_box():
-    return render_template('highlight-box.html')
-
-@frontend.route('/info-text')
-def info_text():
-    return render_template('info-text.html')
-
-@frontend.route('/contents-section')
-def contents_section():
-    return render_template('contents.html')
-
-@frontend.route('/panels')
-def panels():
-    return render_template('panels.html')
-
-@frontend.route('/related-items')
-def related_items():
-    return render_template('related-items.html')
-
-@frontend.route('/search')
-def search():
-    return render_template('search.html')
-
-@frontend.route('/tabs')
-def tabs():
-    return render_template('tabs.html')
-
-@frontend.route('/tags')
-def tags():
-    return render_template('tags.html')
-
-@frontend.route('/task-list')
-def task_list():
-    return render_template('task-list.html')
 
 @frontend.route('/js/mhclg-maps')
 def mhclg_maps():
@@ -100,10 +52,6 @@ def include_in_projects():
 ####################
 # Publishing components
 ####################
-
-@frontend.route('/publishing/pagination')
-def pagination():
-    return render_template('publishing-components/pagination.html')
 
 @frontend.route('/publishing')
 def publishing_components():

@@ -28,6 +28,8 @@ def register_errorhandlers(app):
 
 
 def register_blueprints(app):
-    from application.frontend.views import frontend
+    from application.blueprints.frontend.views import frontend
     app.register_blueprint(frontend)
+    from application.blueprints.components.views import components
+    app.register_blueprint(components)
 
