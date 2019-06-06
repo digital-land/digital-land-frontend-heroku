@@ -1,62 +1,44 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
-{% block beforeContent %}
- {{ super() }}
-
- {{ govukBreadcrumbs({
-   "items": [
-     {
-       "text": "Styleguide",
-       "href": url_for("frontend.index")
-     },
-     {
-       "text": "Info text"
-     }
-   ]
- }) }}
-
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
 
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/component-menu.html' -%}
 
-<div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
-		<nav class="dlf-pagination" role="navigation" aria-label="Pagination">
-		  <ul class="dlf-pagination__list" data-module="track-click">
-		      <li class="dlf-pagination__item dlf-pagination__item--previous">
-		        <a href="/benefit-cap" class="dlf-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/benefit-cap" data-track-dimension="previous" data-track-dimension-index="29">
-		          <span class="dlf-pagination__link-title">
-		            <svg class="dlf-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-		              <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-		            </svg>
-		            <span class="dlf-pagination__link-text">
-		              Previous
-		            </span>
-		          </span>
-		            <span class="dlf-pagination__link-divider visually-hidden">:</span>
-		            <span class="dlf-pagination__link-label">Benefits affected by the cap</span>
-		        </a>
-		      </li>
-		      <li class="dlf-pagination__item dlf-pagination__item--next">
-		        <a href="/benefit-cap/benefit-cap-amounts" class="dlf-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/benefit-cap/benefit-cap-amounts" data-track-dimension="next" data-track-dimension-index="29">
-		          <span class="dlf-pagination__link-title">
-		            <svg class="dlf-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-		              <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-		            </svg>
-		            <span class="dlf-pagination__link-text">
-		              Next
-		            </span>
-		          </span>
-		            <span class="dlf-pagination__link-divider visually-hidden">:</span>
-		            <span class="dlf-pagination__link-label">Benefit cap amounts</span>
-		        </a>
-		      </li>
-		  </ul>
-		</nav>
-	</div>
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Component</span>
+        <h1 class="govuk-heading-xl">
+          Pagination
+        </h1>
+      </div>
+
+      <h2 class="govuk-heading-m">Example</h2>
+      <div class="module-example">
+        {% include 'partials/pagination.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/pagination.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+    </main>
+  </div>
 </div>
-
-
 
 {% endblock %}
