@@ -1,76 +1,80 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
-{% block beforeContent %}
- {{ super() }}
-
- {{ govukBreadcrumbs({
-   "items": [
-     {
-       "text": "Styleguide",
-       "href": url_for("frontend.index")
-     },
-     {
-       "text": "Contribution bars"
-     }
-   ]
- }) }}
-
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Component</span>
-<h1 class="govuk-heading-xl">
-  Contribution bars
-</h1>
 
-<p class="govuk-body">You can add inline bars like this</p>
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/component-menu.html' -%}
 
-<div class="module-example">
-  {% include 'partials/contribution-bar.html' %}
-</div>
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Component</span>
+        <h1 class="govuk-heading-xl">
+          Contribution bars
+        </h1>
+      </div>
 
-<p class="govuk-body">Using:</p>
+      <p class="govuk-body">You can add inline bars like this</p>
 
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/contribution-bar.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
+      <div class="module-example">
+        {% include 'partials/contribution-bar.html' %}
+      </div>
 
-<p class="govuk-body">Smaller bars can be handled by adding the <code>.contribution-bar--small</code> class. E.g.</p>
+      <p class="govuk-body">Using:</p>
 
-<div class="module-example">
-  {% include 'partials/contribution-bar-small.html' %}
-</div>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/contribution-bar.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
 
-<p class="govuk-body">Using:</p>
+      <p class="govuk-body">Smaller bars can be handled by adding the <code>.contribution-bar--small</code> class. E.g.</p>
 
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/contribution-bar-small.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
+      <div class="module-example">
+        {% include 'partials/contribution-bar-small.html' %}
+      </div>
 
-<div class="module-example">
+      <p class="govuk-body">Using:</p>
 
-  <div data-amount-type="not-received" class="contribution-box contribution-box--not-received">
-    <div class="data">
-      <span class="data-item govuk-!-font-size-36 govuk-!-font-weight-bold">£11,333,401</span>
-      <span class="data-item bold-xsmall govuk-!-font-size-16 govuk-!-font-weight-bold">Not received</span>
-    </div>
-  </div>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/contribution-bar-small.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
 
-  <br />
+      <div class="module-example">
 
-  <div data-amount-type="not-received" class="contribution-box contribution-box--small contribution-box--not-received">
-    <div class="data">
-      <span class="data-item govuk-!-font-size-36 govuk-!-font-weight-bold">£11,333,401</span>
-      <span class="data-item bold-xsmall govuk-!-font-size-16 govuk-!-font-weight-bold">Not received</span>
-    </div>
+        <div data-amount-type="not-received" class="contribution-box contribution-box--not-received">
+          <div class="data">
+            <span class="data-item govuk-!-font-size-36 govuk-!-font-weight-bold">£11,333,401</span>
+            <span class="data-item bold-xsmall govuk-!-font-size-16 govuk-!-font-weight-bold">Not received</span>
+          </div>
+        </div>
+
+        <br />
+
+        <div data-amount-type="not-received" class="contribution-box contribution-box--small contribution-box--not-received">
+          <div class="data">
+            <span class="data-item govuk-!-font-size-36 govuk-!-font-weight-bold">£11,333,401</span>
+            <span class="data-item bold-xsmall govuk-!-font-size-16 govuk-!-font-weight-bold">Not received</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
   </div>
 </div>
 

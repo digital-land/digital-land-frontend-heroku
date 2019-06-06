@@ -1,39 +1,44 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
-{% block beforeContent %}
- {{ super() }}
-
- {{ govukBreadcrumbs({
-   "items": [
-     {
-       "text": "Styleguide",
-       "href": url_for("frontend.index")
-     },
-     {
-       "text": "Related items"
-     }
-   ]
- }) }}
-
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
 
-<span class="govuk-caption-l">Component</span>
-<h1 class="govuk-heading-l">Related items</h1>
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/component-menu.html' -%}
 
-<h2 class="govuk-heading-m">Example</h2>
-<div class="module-example">
-  {% include 'partials/related-items.html' %}
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Component</span>
+        <h1 class="govuk-heading-xl">
+          Related items
+        </h1>
+      </div>
+
+      <h2 class="govuk-heading-m">Example</h2>
+      <div class="module-example">
+        {% include 'partials/related-items.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/related-items.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+    </main>
+  </div>
 </div>
-
-<h2 class="govuk-heading-m">The HTML you need</h2>
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/related-items.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
 
 {% endblock %}

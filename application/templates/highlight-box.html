@@ -1,72 +1,77 @@
 {% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
-{% block beforeContent %}
- {{ super() }}
-
- {{ govukBreadcrumbs({
-   "items": [
-     {
-       "text": "Styleguide",
-       "href": url_for("frontend.index")
-     },
-     {
-       "text": "Highlight box"
-     }
-   ]
- }) }}
-
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
 
-<span class="govuk-caption-l">Component</span>
-<h1 class="govuk-heading-l">Highlight box</h1>
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/component-menu.html' -%}
 
-<p class="govuk-body">Used to highlight an action the user could take. An example being when we are offering something for the user to download.</p>
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Component</span>
+        <h1 class="govuk-heading-xl">
+          Highlight box
+        </h1>
+      </div>
 
-<h2 class="govuk-heading-m">Example</h2>
-<div class="module-example">
-  {% include 'partials/highlight-box.html' %}
+      <p class="govuk-body">Used to highlight an action the user could take. An example being when we are offering something for the user to download.</p>
+
+      <h2 class="govuk-heading-m">Example</h2>
+      <div class="module-example">
+        {% include 'partials/highlight-box.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/highlight-box.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+      <h2 class="govuk-heading-m">Example</h2>
+      <div class="module-example">
+        {% include 'partials/highlight-box-gap.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/highlight-box-gap.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+      <h2 class="govuk-heading-m">Call to action example</h2>
+      <p class="govuk-body">Use the call to action version when you want to bring a user's attention to something they can do.</p>
+      <p class="govuk-body">Should only be used once on a page</p>
+      <p class="govuk-body">We mainly use it on our project pages</p>
+      <div class="module-example">
+        {% include 'partials/highlight-box-cta.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/highlight-box-cta.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+    </main>
+  </div>
 </div>
-
-<h2 class="govuk-heading-m">The HTML you need</h2>
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/highlight-box.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
-
-<h2 class="govuk-heading-m">Example</h2>
-<div class="module-example">
-  {% include 'partials/highlight-box-gap.html' %}
-</div>
-
-<h2 class="govuk-heading-m">The HTML you need</h2>
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/highlight-box-gap.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
-
-<h2 class="govuk-heading-m">Call to action example</h2>
-<p class="govuk-body">Use the call to action version when you want to bring a user's attention to something they can do.</p>
-<p class="govuk-body">Should only be used once on a page</p>
-<p class="govuk-body">We mainly use it on our project pages</p>
-<div class="module-example">
-  {% include 'partials/highlight-box-cta.html' %}
-</div>
-
-<h2 class="govuk-heading-m">The HTML you need</h2>
-<pre>
-<code class="html">
-  {%- filter forceescape -%}
-    {%- include 'partials/highlight-box-cta.html' -%}
-  {%- endfilter -%}
-</code>
-</pre>
 
 {% endblock %}
