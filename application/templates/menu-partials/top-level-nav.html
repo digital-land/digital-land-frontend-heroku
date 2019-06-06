@@ -1,0 +1,13 @@
+<div class="app-nav">
+	<nav class="app-nav__wrap govuk-clearfix">
+	  <ul class="app-nav__wrap__list govuk-width-container">
+		{% block topLevelNavItems %}
+		{{ toplevelNavItem("Get started", "/") }}
+		{{ toplevelNavItem("Components", "/component") }}
+		{{ toplevelNavItem("Content", "/publishing") }}
+		{{ toplevelNavItem("Jinja", "/jinja") }}
+		{{ toplevelNavItem("Javascripts", "/javascripts") }}
+	    {% endblock %}
+	  </ul>
+	</nav>
+</div>

@@ -13,6 +13,7 @@ def create_app(config_filename):
     app.config.from_object(config_filename)
     register_errorhandlers(app)
     register_blueprints(app)
+    register_filters(app)
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 10
     return app
 
@@ -33,3 +34,7 @@ def register_blueprints(app):
     from application.blueprints.components.views import components
     app.register_blueprint(components)
 
+
+def register_filters(app):
+    from application.filters import reduce_url_to_parent
+    app.add_template_filter(reduce_url_to_parent)
