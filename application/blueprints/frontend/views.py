@@ -49,6 +49,11 @@ def local_plans():
 def include_in_projects():
     return render_template('guides/include-dl-frontend.html')
 
+
+@frontend.route('/guide/difference-between-digital-land-frontend-and-govuk-design-system')
+def difference_between_dlf_gds():
+    return render_template('guides/difference-between-dlf-govuk-ds.html')
+
 ####################
 # Publishing components
 ####################
