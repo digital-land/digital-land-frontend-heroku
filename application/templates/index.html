@@ -4,18 +4,7 @@
 {% block content %}
 
 <div class="app-nav__body govuk-width-container">
-  <div class="app-nav__subnav app-hide-mobile">
-    <nav class="app-subnav">
-
-      <h4 class="app-subnav__heading">Guides</h4>
-
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("Include in your flask app", url_for("frontend.include_in_projects")) }}
-        {{ sublevelNavItem("Difference between DL frontend and GOVUK design system", url_for("frontend.difference_between_dlf_gds")) }}
-      </ul> 
-
-    </nav>
-  </div>
+  {%- include 'menu-partials/guide-menu.html' -%}
 
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">
