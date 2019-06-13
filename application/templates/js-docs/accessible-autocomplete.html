@@ -41,6 +41,14 @@
         </h1>
       </div>
 
+      <p class="govuk-body">
+        This is the <a href="https://github.com/alphagov/accessible-autocomplete">accessible autocomplete</a> module created by GDS.
+      </p>
+
+      <p class="govuk-body">
+        GDS have written about their <a href="https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/">motivations for creating the module</a>.
+      </p>
+
       <h2 class="govuk-heading-l">Example usage</h2>
 
       <div class="govuk-grid-row">
@@ -62,6 +70,18 @@
           </div>
         </form>
       </div>
+
+      <h2 class="govuk-heading-l">How to use</h2>
+      <pre><code class="js">
+        {%- filter forceescape -%}
+<script>
+  accessibleAutocomplete.enhanceSelectElement({
+    defaultValue: '',
+    confirmOnBlur: false,
+    selectElement: document.querySelector('#pub-picker')
+  });
+</script>
+        {%- endfilter -%}</code></pre>
     </main>
   </div>
 </div>
@@ -69,6 +89,7 @@
 {% endblock %}
 
 {% block bodyEnd %}
+{{ super() }}
 <script src="/static/javascripts/vendor/govuk-accessible-autocomplete.min.js"></script>
 <script>
   accessibleAutocomplete.enhanceSelectElement({
