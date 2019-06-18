@@ -2,7 +2,7 @@
 
 {% from "./govuk-jinja-components/date-input/macro.jinja" import govukDateInput -%}
 
-{% block govukComponentName %}Date input{% endblock %}
+{% block govukComponentName %}Error message{% endblock %}
 
 {% block govukComponentContent %}
 
@@ -15,39 +15,30 @@
       "isPageHeading": true,
       "classes": "govuk-fieldset__legend--xl"
     }
-  }, 
+  },
   "hint": {
     "text": "For example, 12 11 2007"
-  }
-}) }}
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
-
-{{ govukDateInput({
-  "id": "passport-issued",
-  "namePrefix": "passport-issued",
-  "fieldset": {
-    "legend": {
-      "text": "When was your passport issued?",
-      "isPageHeading": true,
-      "classes": "govuk-fieldset__legend--xl"
-    }
-  }, 
-  "hint": {
-    "text": "For example, 12 11"
+  },
+  "errorMessage": {
+    "text": "The date your passport was issued must be in the past"
   },
   "parts": [
-  {
+    {
+    "classes": "govuk-input--width-2 govuk-input--error",
     "name": "day",
-    "classes": "govuk-input--width-2"
-  },
-  {
+    "value": "6"
+    },
+    {
+    "classes": "govuk-input--width-2 govuk-input--error",
     "name": "month",
-    "classes": "govuk-input--width-2"
-  }
+    "value": "3"
+    },
+    {
+    "classes": "govuk-input--width-4 govuk-input--error",
+    "name": "year",
+    "value": "2076"
+    }
   ]
-
 }) }}
-
 
 {% endblock %}

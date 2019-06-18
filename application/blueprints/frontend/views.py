@@ -73,3 +73,11 @@ def port_to_jinja():
 @frontend.route('/jinja/govuk-components/date-input')
 def date_input():
     return render_template('govuk-jinja-component-examples/date-input.html')
+
+@frontend.route('/jinja/govuk-components/error-message')
+def error_message():
+    return render_template('govuk-jinja-component-examples/error-message.html')
+
+@frontend.route('/jinja/govuk-components/fieldset')
+def fieldset():
+    return render_template('govuk-jinja-component-examples/fieldset.html')
