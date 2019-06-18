@@ -1,0 +1,121 @@
+{% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Intro", url_for('frontend.jinja')) }}
+        {{ sublevelNavItem("Port to Jinja", url_for('frontend.port_to_jinja')) }}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          How to port nunjucks macro to jinja
+        </h1>
+      </div>
+
+      <p class="govuk-body">The govuk design system includes a number of macros that help you to quickly generate components. These macros are nunjucks macros, created to be used with node/javascript applications.</p>
+
+      <p class="govuk-body">We create a lot of our apps and prototypes using flask. Flask makes use of jinja templates, which are similar to nunjucks. However there are a few differences that need to be resolved before being able to use them with flask.</p>
+
+      <p class="govuk-body">A number have been ported across. The remaining ones will follow shortly.</p>
+
+      <p class="govuk-body">Below is a list of the differences.</p>
+
+      <h2 class="govuk-heading-m">Paths</h2>
+
+      <p class="govuk-body">The nunjucks macros make use of relative paths, such as <code>./template.njk</code>.</p><p class="govuk-body">These need to be changed for jinja macros to be relative to the <span class="govuk-!-font-weight-bold">/templates</span> directory, such as <code>./govuk-jinja-components/button/template.jinja</code></p>
+
+      <h2 class="govuk-heading-m">If else loops</h2>
+
+      <p class="govuk-body">Update instances of <code>{% raw %}{% elseif ... %}{% endraw %}</code> with <code>{% raw %}{% elif ... %}{% endraw %}</code>.</p>
+
+      <h2 class="govuk-heading-m">Key:value pairs</h2>
+
+      <p class="govuk-body">These macros make use of key value pairs when being called. The documentation for the nunjuck versions does not wrap the keys in quotes. This causes a problem for jinja macros so we need to make sure they are quoted.</p>
+
+      <p class="govuk-body">For example, this macro call</p>
+
+<pre><code class="nunjucks">{% raw %}{{ govukInput({
+  label: {
+    text: "Event name"
+  },
+  id: "event-name",
+  name: "event-name"
+}) }}{% endraw %}</code></pre>
+
+      <p class="govuk-body">becomes</p>
+
+<pre><code class="jinja">{% raw %}{{ govukInput({
+  "label": {
+    "text": "Event name"
+  },
+  "id": "event-name",
+  "name": "event-name"
+}) }}{% endraw %}</code></pre>
+
+    <h2 class="govuk-heading-m">Items is a reserved word</h2>
+
+    <p class="govuk-body">In jinja <code>items</code> is a reserved word. It is used to iterate over a dict. For example:</p>
+
+    <pre><code class="py">for attribute, value in params.attributes.items()</code></pre>
+
+    <p class="govuk-body">The govuk macros, e.g. <a href="https://design-system.service.gov.uk/components/date-input/">govukDateInput</a>, uses items as an optional parameter.</p>
+
+    <p class="govuk-body">In these situations we have renamed the <code>items</code> parameter to <code>parts</code>.</p>
+
+    <h2 class="govuk-heading-m">Unpack dict items</h2>
+
+    <p class="govuk-body">There are situation where key:value pairs need to be unpacked to then be used in the macro.</p>
+
+    <p class="govuk-body">In nunjucks this is done using:</p>
+    <pre><code>{% raw %}{%- for attribute, value in params.attributes %}{% endraw %}</code></pre>
+
+    <p class="govuk-body">This will cause jinja to throw an error. To make it work we need to use the available <code>.items()</code> method. E.g.</p>
+    <pre><code>{% raw %}{%- for attribute, value in params.attributes.items() %}{% endraw %}</code></pre>
+
+    <h2 class="govuk-heading-m">Using caller()</h2>
+
+    <p class="govuk-body"><code>call</code> blocks and the <code>caller()</code> function are used in macros such as <a href="https://design-system.service.gov.uk/components/fieldset/">govukFieldset</a>, however an error is thrown when ported to jinja.</p>
+
+    <p class="govuk-body">The error seems to be caused by the structure of the macros; the macro imports the core of the template, with the template making use of <code>caller()</code>.</p>
+
+    <p class="govuk-body">To get arorund this we set a variable, <code>caller_content</code> before the include, then reference this variable in the template part. For example, a macro will look similar to this:</p>
+
+<pre><code class="jinja">{% raw %}{% macro govukFieldset(params) %}
+  {% if caller %}
+    {% set caller_content = caller() %}
+  {% endif %}
+    {%- include "./govuk-jinja-components/fieldset/template.jinja" -%}
+{% endmacro %}{% endraw %}</code></pre>
+
+    <p class="govuk-body">And we can use it in the body of a template like this:</p>
+
+    <pre><code class="jinja">{% raw %}{{ caller_content if caller_content }}{% endraw %}</code></pre>
+
+    <h2 class="govuk-heading-m">Less forgiving</h2>
+
+    <p class="govuk-body">Jinja seems a little less forgiving than nunjucks. It fails if you reference an attribute or parameter that isn’t defined. We can avoid this by adding checks to see if an attribute is defined.</p>
+
+    <p class="govuk-body">An example is wrapping <code>{% raw %}{%- for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endraw %}</code> with an if defined test.</p>
+
+    <p class="govuk-body">This now becomes:</p>
+
+<pre><code class="jinja">{% raw %}{%- if params.attributes is defined -%}
+  {%- for attribute, value in params.attributes.items() %}
+    {{attribute}}="{{value}}"
+  {% endfor %}
+{% endif %}{% endraw %}</code></pre>
+
+    </main>
+  </div>
+</div>
+
+{% endblock %}

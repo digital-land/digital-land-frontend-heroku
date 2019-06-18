@@ -18,6 +18,10 @@ def components():
 def jinja():
     return render_template('jinja.html')
 
+@frontend.route('/jinja/port-nunjucks-macro-to-jinja')
+def port_to_jinja():
+    return render_template('guides/nunjucks-to-jinja.html')
+
 @frontend.route('/javascripts')
 def javascripts():
     return render_template('javascripts.html')
@@ -61,3 +65,4 @@ def difference_between_dlf_gds():
 @frontend.route('/publishing')
 def publishing_components():
     return render_template('guidance-components.html')
+
