@@ -14,14 +14,6 @@ def index():
 def components():
     return render_template('components.html')
 
-@frontend.route('/jinja')
-def jinja():
-    return render_template('jinja.html')
-
-@frontend.route('/jinja/port-nunjucks-macro-to-jinja')
-def port_to_jinja():
-    return render_template('guides/nunjucks-to-jinja.html')
-
 @frontend.route('/javascripts')
 def javascripts():
     return render_template('javascripts.html')
@@ -66,3 +58,18 @@ def difference_between_dlf_gds():
 def publishing_components():
     return render_template('guidance-components.html')
 
+####################
+# Govuk jinja components
+####################
+
+@frontend.route('/jinja')
+def jinja():
+    return render_template('jinja.html')
+
+@frontend.route('/jinja/port-nunjucks-macro-to-jinja')
+def port_to_jinja():
+    return render_template('guides/nunjucks-to-jinja.html')
+
+@frontend.route('/jinja/govuk-components/date-input')
+def date_input():
+    return render_template('govuk-jinja-component-examples/date-input.html')

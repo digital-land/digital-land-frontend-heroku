@@ -6,9 +6,18 @@
 <div class="app-nav__body govuk-width-container">
   <div class="app-nav__subnav app-hide-mobile">
     <nav class="app-subnav">
+
+      <h4 class="app-subnav__heading">Guides</h4>
+
       <ul class="app-subnav__section">
         {{ sublevelNavItem("Intro", url_for('frontend.jinja')) }}
         {{ sublevelNavItem("Port to Jinja", url_for('frontend.port_to_jinja')) }}
+      </ul>
+
+      <h4 class="app-subnav__heading">Components</h4>
+
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Date input", url_for('frontend.date_input')) }}
       </ul>
     </nav>
   </div>

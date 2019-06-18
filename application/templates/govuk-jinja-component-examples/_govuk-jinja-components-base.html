@@ -1,0 +1,56 @@
+{% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  <div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
+
+      <h4 class="app-subnav__heading">Guides</h4>
+
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Intro", url_for('frontend.jinja')) }}
+        {{ sublevelNavItem("Port to Jinja", url_for('frontend.port_to_jinja')) }}
+      </ul>
+
+      <h4 class="app-subnav__heading">Components</h4>
+
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("Date input", url_for('frontend.date_input')) }}
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          {% block govukComponentName %}{% endblock %}
+        </h1>
+      </div>
+
+      {% block govukComponentContent %}
+      <p class="govuk-body">There are some differences between Nunjucks and Jinja templates. These differences mean the GOVUK design system components need to be altered to work with Jinja.</p>
+
+      <p class="govuk-body">The following have been altered:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Breadcrumbs</li>
+        <li>Footer</li>
+        <li>Header</li>
+        <li>Inset text</li>
+        <li>Phase banner</li>
+        <li>Skip link</li>
+        <li>Tabs</li>
+        <li>Tag</li>
+        <li>Warning text</li>
+      </ul>
+      {% endblock %}
+
+    </main>
+  </div>
+</div>
+
+{% endblock %}
