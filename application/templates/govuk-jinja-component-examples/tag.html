@@ -1,0 +1,17 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/tag/macro.jinja" import govukTag -%}
+
+{% block govukComponentName %}Tag{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukTag({
+  "text": "prototype"
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukTag({
+  "text": "prototype"
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

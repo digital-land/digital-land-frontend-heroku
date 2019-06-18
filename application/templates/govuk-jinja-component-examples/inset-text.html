@@ -1,0 +1,17 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/inset-text/macro.jinja" import govukInsetText -%}
+
+{% block govukComponentName %}Inset text{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukInsetText({
+  "text": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukInsetText({
+  "text": "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

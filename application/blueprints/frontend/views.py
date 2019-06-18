@@ -81,3 +81,31 @@ def error_message():
 @frontend.route('/jinja/govuk-components/fieldset')
 def fieldset():
     return render_template('govuk-jinja-component-examples/fieldset.html')
+
+@frontend.route('/jinja/govuk-components/footer')
+def footer():
+    return render_template('govuk-jinja-component-examples/footer.html')
+
+@frontend.route('/jinja/govuk-components/header')
+def header():
+    return render_template('govuk-jinja-component-examples/header.html')
+
+@frontend.route('/jinja/govuk-components/inset-text')
+def inset_text():
+    return render_template('govuk-jinja-component-examples/inset-text.html')
+
+@frontend.route('/jinja/govuk-components/phase-banner')
+def phase_banner():
+    return render_template('govuk-jinja-component-examples/phase-banner.html')
+
+@frontend.route('/jinja/govuk-components/tabs')
+def tabs():
+    return render_template('govuk-jinja-component-examples/tabs.html')
+
+@frontend.route('/jinja/govuk-components/tag')
+def tag():
+    return render_template('govuk-jinja-component-examples/tag.html')
+
+@frontend.route('/jinja/govuk-components/warning-text')
+def warning_text():
+    return render_template('govuk-jinja-component-examples/warning-text.html')

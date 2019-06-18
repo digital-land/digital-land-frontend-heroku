@@ -1,0 +1,17 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/header/macro.jinja" import govukHeader -%}
+
+{% block govukComponentName %}Header{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukHeader({
+  "homepageUrl": "#"
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukHeader({
+  "homepageUrl": "#"
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

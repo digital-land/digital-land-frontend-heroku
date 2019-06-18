@@ -1,0 +1,23 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/phase-banner/macro.jinja" import govukPhaseBanner -%}
+
+{% block govukComponentName %}Phase banner{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukPhaseBanner({
+  "tag": {
+    "text": "alpha"
+  },
+  "html": 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukPhaseBanner({
+  "tag": {
+    "text": "alpha"
+  },
+  "html": 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
