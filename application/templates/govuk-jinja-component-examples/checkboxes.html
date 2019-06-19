@@ -1,0 +1,67 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/checkboxes/macro.jinja" import govukCheckboxes -%}
+
+{% block govukComponentName %}Checkboxes{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukCheckboxes({
+  "idPrefix": "waste",
+  "name": "waste",
+  "fieldset": {
+    "legend": {
+      "text": "Which types of waste do you transport?",
+      "isPageHeading": true,
+      "classes": "govuk-fieldset__legend--xl"
+    }
+  },
+  "hint": {
+    "text": "Select all that apply."
+  },
+  "items": [
+    {
+      "value": "carcasses",
+      "text": "Waste from animal carcasses"
+    },
+    {
+      "value": "mines",
+      "text": "Waste from mines or quarries"
+    },
+    {
+      "value": "farm",
+      "text": "Farm or agricultural waste"
+    }
+  ]
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukCheckboxes({
+  "idPrefix": "waste",
+  "name": "waste",
+  "fieldset": {
+    "legend": {
+      "text": "Which types of waste do you transport?",
+      "isPageHeading": true,
+      "classes": "govuk-fieldset__legend--xl"
+    }
+  },
+  "hint": {
+    "text": "Select all that apply."
+  },
+  "items": [
+    {
+      "value": "carcasses",
+      "text": "Waste from animal carcasses"
+    },
+    {
+      "value": "mines",
+      "text": "Waste from mines or quarries"
+    },
+    {
+      "value": "farm",
+      "text": "Farm or agricultural waste"
+    }
+  ]
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

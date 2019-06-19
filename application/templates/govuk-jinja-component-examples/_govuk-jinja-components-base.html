@@ -17,7 +17,9 @@
       <h4 class="app-subnav__heading">Components</h4>
 
       <ul class="app-subnav__section">
+        {{ sublevelNavItem("Back link", url_for('frontend.back_link')) }}
         {{ sublevelNavItem("Button", url_for('frontend.button')) }}
+        {{ sublevelNavItem("Checkboxes", url_for('frontend.checkboxes')) }}
         {{ sublevelNavItem("Date input", url_for('frontend.date_input')) }}
         {{ sublevelNavItem("Details", url_for('frontend.details')) }}
         {{ sublevelNavItem("Error message", url_for('frontend.error_message')) }}

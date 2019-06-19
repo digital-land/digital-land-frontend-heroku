@@ -1,0 +1,19 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/back-link/macro.jinja" import govukBackLink -%}
+
+{% block govukComponentName %}Back link{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukBackLink({
+  "text": "Back",
+  "href": "#"
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukBackLink({
+  "text": "Back",
+  "href": "#"
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
