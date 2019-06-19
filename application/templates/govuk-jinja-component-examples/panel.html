@@ -1,0 +1,19 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/panel/macro.jinja" import govukPanel -%}
+
+{% block govukComponentName %}Panel{% endblock %}Panel
+
+{% block govukComponentContent %}
+
+{{ govukPanel({
+  "titleText": "Application complete",
+  "html": "Your reference number<br><strong>HDJ2123F</strong>"
+}) }}
+
+<pre><code class="nunjucks">{%- filter forceescape -%}{% raw %}{{ govukPanel({
+  "titleText": "Application complete",
+  "html": "Your reference number<br><strong>HDJ2123F</strong>"
+}) }}{% endraw %}{%- endfilter -%}</code></pre>
+
+{% endblock %}

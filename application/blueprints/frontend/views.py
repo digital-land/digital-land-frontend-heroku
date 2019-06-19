@@ -94,6 +94,10 @@ def header():
 def inset_text():
     return render_template('govuk-jinja-component-examples/inset-text.html')
 
+@frontend.route('/jinja/govuk-components/panel')
+def panel():
+    return render_template('govuk-jinja-component-examples/panel.html')
+
 @frontend.route('/jinja/govuk-components/phase-banner')
 def phase_banner():
     return render_template('govuk-jinja-component-examples/phase-banner.html')
@@ -109,6 +113,10 @@ def tag():
 @frontend.route('/jinja/govuk-components/textarea')
 def textarea():
     return render_template('govuk-jinja-component-examples/textarea.html')
+
+@frontend.route('/jinja/govuk-components/text-input')
+def text_input():
+    return render_template('govuk-jinja-component-examples/text-input.html')
 
 @frontend.route('/jinja/govuk-components/warning-text')
 def warning_text():

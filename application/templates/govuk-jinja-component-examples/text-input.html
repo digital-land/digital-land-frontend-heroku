@@ -1,0 +1,25 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/input/macro.jinja" import govukInput -%}
+
+{% block govukComponentName %}Text input{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukInput({
+  "label": {
+    "text": "Event name"
+  },
+  "id": "event-name",
+  "name": "event-name"
+}) }}
+
+<pre><code class="nunjucks">{%- raw -%}{{ govukInput({
+  "label": {
+    "text": "Event name"
+  },
+  "id": "event-name",
+  "name": "event-name"
+}) }}{%- endraw %}</code></pre>
+
+{% endblock %}
