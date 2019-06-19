@@ -106,6 +106,10 @@ def tabs():
 def tag():
     return render_template('govuk-jinja-component-examples/tag.html')
 
+@frontend.route('/jinja/govuk-components/textarea')
+def textarea():
+    return render_template('govuk-jinja-component-examples/textarea.html')
+
 @frontend.route('/jinja/govuk-components/warning-text')
 def warning_text():
     return render_template('govuk-jinja-component-examples/warning-text.html')

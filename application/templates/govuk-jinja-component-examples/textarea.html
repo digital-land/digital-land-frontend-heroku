@@ -1,0 +1,31 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/textarea/macro.jinja" import govukTextarea -%}
+
+{% block govukComponentName %}Textarea{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukTextarea({
+  "name": "more-detail",
+  "id": "more-detail",
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Do not include personal or financial information, like your National Insurance number or credit card details."
+  }
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukTextarea({
+  "name": "more-detail",
+  "id": "more-detail",
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Do not include personal or financial information, like your National Insurance number or credit card details."
+  }
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
