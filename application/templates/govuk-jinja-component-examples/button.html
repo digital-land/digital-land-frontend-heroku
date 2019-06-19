@@ -1,0 +1,17 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/button/macro.jinja" import govukButton -%}
+
+{% block govukComponentName %}Button{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukButton({
+  "text": "Save and continue"
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukButton({
+  "text": "Save and continue"
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

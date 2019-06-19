@@ -70,9 +70,21 @@ def jinja():
 def port_to_jinja():
     return render_template('guides/nunjucks-to-jinja.html')
 
+@frontend.route('/jinja/govuk-components/button')
+def button():
+    return render_template('govuk-jinja-component-examples/button.html')
+
 @frontend.route('/jinja/govuk-components/date-input')
 def date_input():
     return render_template('govuk-jinja-component-examples/date-input.html')
+
+@frontend.route('/jinja/govuk-components/details')
+def details():
+    return render_template('govuk-jinja-component-examples/details.html')
+
+@frontend.route('/jinja/govuk-components/error-summary')
+def error_summary():
+    return render_template('govuk-jinja-component-examples/error-summary.html')
 
 @frontend.route('/jinja/govuk-components/error-message')
 def error_message():

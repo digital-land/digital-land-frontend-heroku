@@ -17,8 +17,11 @@
       <h4 class="app-subnav__heading">Components</h4>
 
       <ul class="app-subnav__section">
+        {{ sublevelNavItem("Button", url_for('frontend.button')) }}
         {{ sublevelNavItem("Date input", url_for('frontend.date_input')) }}
+        {{ sublevelNavItem("Details", url_for('frontend.details')) }}
         {{ sublevelNavItem("Error message", url_for('frontend.error_message')) }}
+        {{ sublevelNavItem("Error summary", url_for('frontend.error_summary')) }}
         {{ sublevelNavItem("Fieldset", url_for('frontend.fieldset')) }}
         {{ sublevelNavItem("Footer", url_for('frontend.footer')) }}
         {{ sublevelNavItem("Header", url_for('frontend.header')) }}

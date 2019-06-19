@@ -1,0 +1,19 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/details/macro.jinja" import govukDetails -%}
+
+{% block govukComponentName %}Details{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukDetails({
+  "summaryText": "Help with nationality",
+  "text": "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukDetails({
+  "summaryText": "Help with nationality",
+  "text": "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

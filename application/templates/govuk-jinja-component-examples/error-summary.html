@@ -1,0 +1,37 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/error-summary/macro.jinja" import govukErrorSummary -%}
+
+{% block govukComponentName %}Error summary{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukErrorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "The date your passport was issued must be in the past",
+      "href": "#passport-issued-error"
+    },
+    {
+      "text": "Enter a postcode, like AA1 1AA",
+      "href": "#postcode-error"
+    }
+  ]
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukErrorSummary({
+  "titleText": "There is a problem",
+  "errorList": [
+    {
+      "text": "The date your passport was issued must be in the past",
+      "href": "#passport-issued-error"
+    },
+    {
+      "text": "Enter a postcode, like AA1 1AA",
+      "href": "#postcode-error"
+    }
+  ]
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
