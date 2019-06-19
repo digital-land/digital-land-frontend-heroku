@@ -102,6 +102,10 @@ def error_message():
 def fieldset():
     return render_template('govuk-jinja-component-examples/fieldset.html')
 
+@frontend.route('/jinja/govuk-components/file-upload')
+def file_upload():
+    return render_template('govuk-jinja-component-examples/file-upload.html')
+
 @frontend.route('/jinja/govuk-components/footer')
 def footer():
     return render_template('govuk-jinja-component-examples/footer.html')
@@ -121,6 +125,10 @@ def panel():
 @frontend.route('/jinja/govuk-components/phase-banner')
 def phase_banner():
     return render_template('govuk-jinja-component-examples/phase-banner.html')
+
+@frontend.route('/jinja/govuk-components/radios')
+def radios():
+    return render_template('govuk-jinja-component-examples/radios.html')
 
 @frontend.route('/jinja/govuk-components/tabs')
 def tabs():

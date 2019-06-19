@@ -1,0 +1,25 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/file-upload/macro.jinja" import govukFileUpload -%}
+
+{% block govukComponentName %}File upload{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukFileUpload({
+  "id": "file-upload-1",
+  "name": "file-upload-1",
+  "label": {
+    "text": "Upload a file"
+  }
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukFileUpload({
+  "id": "file-upload-1",
+  "name": "file-upload-1",
+  "label": {
+    "text": "Upload a file"
+  }
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}

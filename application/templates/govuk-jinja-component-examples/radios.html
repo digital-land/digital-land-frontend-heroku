@@ -1,0 +1,61 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/radios/macro.jinja" import govukRadios -%}
+
+{% block govukComponentName %}Radios{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukRadios({
+  "classes": "govuk-radios--inline",
+  "idPrefix": "changed-name",
+  "name": "changed-name",
+  "fieldset": {
+    "legend": {
+      "text": "Have you changed your name?",
+      "isPageHeading": true,
+      "classes": "govuk-fieldset__legend--xl"
+    }
+  },
+  "hint": {
+    "text": "This includes changing your last name or spelling your name differently."
+  },
+  "items": [
+    {
+      "value": "yes",
+      "text": "Yes"
+    },
+    {
+      "value": "no",
+      "text": "No"
+    }
+  ]
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukRadios({
+  "classes": "govuk-radios--inline",
+  "idPrefix": "changed-name",
+  "name": "changed-name",
+  "fieldset": {
+    "legend": {
+      "text": "Have you changed your name?",
+      "isPageHeading": true,
+      "classes": "govuk-fieldset__legend--xl"
+    }
+  },
+  "hint": {
+    "text": "This includes changing your last name or spelling your name differently."
+  },
+  "items": [
+    {
+      "value": "yes",
+      "text": "Yes"
+    },
+    {
+      "value": "no",
+      "text": "No"
+    }
+  ]
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
