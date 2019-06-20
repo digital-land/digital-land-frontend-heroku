@@ -130,9 +130,17 @@ def phase_banner():
 def radios():
     return render_template('govuk-jinja-component-examples/radios.html')
 
+@frontend.route('/jinja/govuk-components/select')
+def select():
+    return render_template('govuk-jinja-component-examples/select.html')
+
 @frontend.route('/jinja/govuk-components/tabs')
 def tabs():
     return render_template('govuk-jinja-component-examples/tabs.html')
+
+@frontend.route('/jinja/govuk-components/table')
+def table():
+    return render_template('govuk-jinja-component-examples/table.html')
 
 @frontend.route('/jinja/govuk-components/tag')
 def tag():

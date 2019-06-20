@@ -1,0 +1,63 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/select/macro.jinja" import govukSelect -%}
+
+{% block govukComponentName %}Select{% endblock %}
+
+{% block govukComponentContent %}
+
+{{ govukSelect({
+  "id": "sort",
+  "name": "sort",
+  "label": {
+    "text": "Sort by"
+  },
+  "items": [
+    {
+      "value": "published",
+      "text": "Recently published"
+    },
+    {
+      "value": "updated",
+      "text": "Recently updated",
+      "selected": true
+    },
+    {
+      "value": "views",
+      "text": "Most views"
+    },
+    {
+      "value": "comments",
+      "text": "Most comments"
+    }
+  ]
+}) }}
+
+<pre><code class="nunjucks">{% raw %}{{ govukSelect({
+  "id": "sort",
+  "name": "sort",
+  "label": {
+    "text": "Sort by"
+  },
+  "items": [
+    {
+      "value": "published",
+      "text": "Recently published"
+    },
+    {
+      "value": "updated",
+      "text": "Recently updated",
+      "selected": true
+    },
+    {
+      "value": "views",
+      "text": "Most views"
+    },
+    {
+      "value": "comments",
+      "text": "Most comments"
+    }
+  ]
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
