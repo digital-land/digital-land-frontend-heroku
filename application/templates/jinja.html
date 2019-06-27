@@ -4,14 +4,7 @@
 {% block content %}
 
 <div class="app-nav__body govuk-width-container">
-  <div class="app-nav__subnav app-hide-mobile">
-    <nav class="app-subnav">
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("Intro", url_for('frontend.jinja')) }}
-        {{ sublevelNavItem("Port to Jinja", url_for('frontend.port_to_jinja')) }}
-      </ul>
-    </nav>
-  </div>
+  {%- include 'menu-partials/jinja-components-menu.html' -%}
 
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">

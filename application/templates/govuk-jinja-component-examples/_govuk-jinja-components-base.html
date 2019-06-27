@@ -4,45 +4,7 @@
 {% block content %}
 
 <div class="app-nav__body govuk-width-container">
-  <div class="app-nav__subnav app-hide-mobile">
-    <nav class="app-subnav">
-
-      <h4 class="app-subnav__heading">Guides</h4>
-
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("Intro", url_for('frontend.jinja')) }}
-        {{ sublevelNavItem("Port to Jinja", url_for('frontend.port_to_jinja')) }}
-      </ul>
-
-      <h4 class="app-subnav__heading">Components</h4>
-
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("Back link", url_for('frontend.back_link')) }}
-        {{ sublevelNavItem("Button", url_for('frontend.button')) }}
-        {{ sublevelNavItem("Checkboxes", url_for('frontend.checkboxes')) }}
-        {{ sublevelNavItem("Date input", url_for('frontend.date_input')) }}
-        {{ sublevelNavItem("Details", url_for('frontend.details')) }}
-        {{ sublevelNavItem("Error message", url_for('frontend.error_message')) }}
-        {{ sublevelNavItem("Error summary", url_for('frontend.error_summary')) }}
-        {{ sublevelNavItem("Fieldset", url_for('frontend.fieldset')) }}
-        {{ sublevelNavItem("File upload", url_for('frontend.file_upload')) }}
-        {{ sublevelNavItem("Footer", url_for('frontend.footer')) }}
-        {{ sublevelNavItem("Header", url_for('frontend.header')) }}
-        {{ sublevelNavItem("Inset text", url_for('frontend.inset_text')) }}
-        {{ sublevelNavItem("Panel", url_for('frontend.panel')) }}
-        {{ sublevelNavItem("Phase banner", url_for('frontend.phase_banner')) }}
-        {{ sublevelNavItem("Radios", url_for('frontend.radios')) }}
-        {{ sublevelNavItem("Select", url_for('frontend.select')) }}
-        {{ sublevelNavItem("Tabs", url_for('frontend.tabs')) }}
-        {{ sublevelNavItem("Table", url_for('frontend.table')) }}
-        {{ sublevelNavItem("Tag", url_for('frontend.tag')) }}
-        {{ sublevelNavItem("Textarea", url_for('frontend.textarea')) }}
-        {{ sublevelNavItem("Text input", url_for('frontend.text_input')) }}
-        {{ sublevelNavItem("Warning text", url_for('frontend.warning_text')) }}
-      </ul>
-
-    </nav>
-  </div>
+  {%- include 'menu-partials/jinja-components-menu.html' -%}
 
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">
