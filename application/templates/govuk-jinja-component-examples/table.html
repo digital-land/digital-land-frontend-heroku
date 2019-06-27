@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Table{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukTable({
   "caption": "Dates and amounts",
@@ -44,6 +44,10 @@
     ]
   ]
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukTable({
   "caption": "Dates and amounts",

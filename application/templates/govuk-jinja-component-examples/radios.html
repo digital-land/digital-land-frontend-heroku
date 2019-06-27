@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Radios{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukRadios({
   "classes": "govuk-radios--inline",
@@ -31,6 +31,10 @@
     }
   ]
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukRadios({
   "classes": "govuk-radios--inline",

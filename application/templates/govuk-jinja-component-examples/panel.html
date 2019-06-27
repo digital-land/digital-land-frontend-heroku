@@ -4,12 +4,16 @@
 
 {% block govukComponentName %}Panel{% endblock %}Panel
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukPanel({
   "titleText": "Application complete",
   "html": "Your reference number<br><strong>HDJ2123F</strong>"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{%- filter forceescape -%}{% raw %}{{ govukPanel({
   "titleText": "Application complete",

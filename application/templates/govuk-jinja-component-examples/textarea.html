@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Textarea{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukTextarea({
   "name": "more-detail",
@@ -16,6 +16,10 @@
     "text": "Do not include personal or financial information, like your National Insurance number or credit card details."
   }
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukTextarea({
   "name": "more-detail",

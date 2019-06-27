@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Phase banner{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukPhaseBanner({
   "tag": {
@@ -12,6 +12,10 @@
   },
   "html": 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukPhaseBanner({
   "tag": {

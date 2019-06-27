@@ -4,12 +4,16 @@
 
 {% block govukComponentName %}Back link{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukBackLink({
   "text": "Back",
   "href": "#"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukBackLink({
   "text": "Back",

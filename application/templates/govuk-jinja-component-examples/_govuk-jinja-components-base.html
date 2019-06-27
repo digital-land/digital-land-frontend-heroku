@@ -53,21 +53,13 @@
       </div>
 
       {% block govukComponentContent %}
-      <p class="govuk-body">There are some differences between Nunjucks and Jinja templates. These differences mean the GOVUK design system components need to be altered to work with Jinja.</p>
+      <div class="module-example">
+        {% block govukComponentExample %}{% endblock %}
+      </div>
 
-      <p class="govuk-body">The following have been altered:</p>
+      <h2 class="govuk-heading-m">Jinja you need</h2>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Breadcrumbs</li>
-        <li>Footer</li>
-        <li>Header</li>
-        <li>Inset text</li>
-        <li>Phase banner</li>
-        <li>Skip link</li>
-        <li>Tabs</li>
-        <li>Tag</li>
-        <li>Warning text</li>
-      </ul>
+      {% block govukComponentJinja %}{% endblock %}
       {% endblock %}
 
     </main>

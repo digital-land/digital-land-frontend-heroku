@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Text input{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukInput({
   "label": {
@@ -13,6 +13,10 @@
   "id": "event-name",
   "name": "event-name"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{%- raw -%}{{ govukInput({
   "label": {

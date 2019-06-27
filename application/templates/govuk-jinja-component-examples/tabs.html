@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Tabs{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {% set pastDayHtml %}
 <h2 class="govuk-heading-l">Past day</h2>
@@ -58,6 +58,10 @@
     }
   ]
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukTabs({
   "items": [

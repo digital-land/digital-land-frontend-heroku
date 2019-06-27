@@ -4,11 +4,15 @@
 
 {% block govukComponentName %}Header{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukHeader({
   "homepageUrl": "#"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukHeader({
   "homepageUrl": "#"

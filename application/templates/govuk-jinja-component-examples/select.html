@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}Select{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukSelect({
   "id": "sort",
@@ -32,6 +32,10 @@
     }
   ]
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukSelect({
   "id": "sort",

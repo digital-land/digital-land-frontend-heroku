@@ -4,11 +4,15 @@
 
 {% block govukComponentName %}Tag{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukTag({
   "text": "prototype"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukTag({
   "text": "prototype"

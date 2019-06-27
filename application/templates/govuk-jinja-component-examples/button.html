@@ -4,11 +4,15 @@
 
 {% block govukComponentName %}Button{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukButton({
   "text": "Save and continue"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukButton({
   "text": "Save and continue"

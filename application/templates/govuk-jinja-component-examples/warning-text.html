@@ -4,12 +4,16 @@
 
 {% block govukComponentName %}Warning text{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukWarningText({
   "text": "You can be fined up to £5,000 if you do not register.",
   "iconFallbackText": "Warning"
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukWarningText({
   "text": "You can be fined up to £5,000 if you do not register.",

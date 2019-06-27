@@ -4,7 +4,7 @@
 
 {% block govukComponentName %}File upload{% endblock %}
 
-{% block govukComponentContent %}
+{% block govukComponentExample %}
 
 {{ govukFileUpload({
   "id": "file-upload-1",
@@ -13,6 +13,10 @@
     "text": "Upload a file"
   }
 }) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukFileUpload({
   "id": "file-upload-1",
