@@ -134,6 +134,10 @@ def radios():
 def select():
     return render_template('govuk-jinja-component-examples/select.html')
 
+@frontend.route('/jinja/govuk-components/summary-list')
+def summary_list():
+    return render_template('govuk-jinja-component-examples/summary-list.html')
+
 @frontend.route('/jinja/govuk-components/tabs')
 def tabs():
     return render_template('govuk-jinja-component-examples/tabs.html')

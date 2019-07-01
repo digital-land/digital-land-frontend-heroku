@@ -27,8 +27,6 @@ $using-helvetica: false;
 @import "components/highlight-box";
 @import "components/pagination";
 
-@import "components/local-plans";
-
 a {
   @extend %govuk-link;
 }
