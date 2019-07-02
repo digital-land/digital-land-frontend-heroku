@@ -54,6 +54,18 @@
   "name": "event-name"
 }) }}{% endraw %}</code></pre>
 
+    <h2 class="govuk-heading-m">Using built in filters</h2>
+
+    <p class="govuk-body">In Nunjucks, built in filters can be used either via dot notation, <code>x.y</code> or by using the vertical bar notation, <code>x&vert;y</code>. For example:</p>
+
+<pre><code class="jinja">row.actions['items'].length
+or
+row.actions['items']|length</code></pre>
+
+    <p class="govuk-body">Jinja only accepts the vertical bar (&vert;) approach. We, therefore need to look out for these and switch how they are used.</p>
+
+    <p class="govuk-body">An example is the <a href="https://github.com/alphagov/govuk-frontend/blob/master/src/govuk/components/summary-list/template.njk#L25">length filter used in the govukSummaryList macro</a>.</p>
+
     <h2 class="govuk-heading-m">Items is a reserved word</h2>
 
     <p class="govuk-body">In jinja <code>items</code> is a reserved word. It is used to iterate over a dict. For example:</p>
