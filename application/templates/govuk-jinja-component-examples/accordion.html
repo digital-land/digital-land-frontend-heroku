@@ -88,13 +88,156 @@
 
 {% endblock %}
 
+{% block extraContent %}
+<h3 class="govuk-heading-m">Javacript to include</h3>
+
+<p class="govuk-body">The accordion module needs to be initalised. Add the following javascript to initalise all accordions on the page.</p>
+
+<pre><code class="js">{%- filter forceescape -%}
+var Accordion = window.GOVUKFrontend.Accordion;
+var $accordions = document.querySelectorAll('[data-module="govuk-accordion"]');
+if ($accordions.length) {
+	$accordions.forEach(function($accordion) {
+		new Accordion($accordion).init();
+	});
+}
+{%- endfilter %}</code></pre>
+
+<h2 class="govuk-heading-l">Example with item summaries</h2>
+
+<div class="module-example">
+{{ govukAccordion({
+  "id": "accordion-with-summary-sections",
+  "items": [
+    {
+      "heading": {
+        "text": "Understanding agile project management"
+      },
+      "summary": {
+        "text": "Introductions, methods, core features."
+      },
+      "content": {
+        "html": 
+        '<ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">Agile and government services: an introduction</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Agile methods: an introduction</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Core principles of agile</a>
+            </li>
+        </ul>'
+      }
+    },
+        {
+      "heading": {
+        "text": "Working with agile methods"
+      },
+      "summary": {
+        "text": "Workspaces, tools and techniques, user stories, planning."
+      },
+      "content": {
+        "html":
+        '<ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">Creating an agile working environment</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Agile tools and techniques</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Set up a team wall</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Writing user stories</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Planning in agile</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Deciding on priorities</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Developing a roadmap</a>
+            </li>
+        </ul>'
+      }
+    },
+            {
+      "heading": {
+        "text": "Governing agile services"
+      },
+      "summary": {
+        "text": "Principles, measuring progress, spending money."
+      },
+      "content": {
+        "html":
+        '<ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">Governance principles for agile service delivery</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Measuring and reporting progress</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Spend controls: check if you need approval to spend money on a service</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Spend controls: apply for approval to spend money on a service</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Spend controls: the new pipeline process</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Working across organisational boundaries</a>
+            </li>
+        </ul>'
+      }
+    },
+                {
+      "heading": {
+        "text": "Phases of an agile project"
+      },
+      "summary": {
+        "text": "Discovery, alpha, beta, live and retirement."
+      },
+      "content": {
+        "html":
+        '<ul class="govuk-list">
+            <li>
+              <a class="govuk-link" href="#">How the discovery phase works</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">How the alpha phase works</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">How the beta phase works</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">How the live phase works</a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Retiring your service</a>
+            </li>
+        </ul>'
+      }
+    }
+  ]
+}) }}
+</div>
+{% endblock %}
+
 {% block bodyEnd %}
 {{ super() }}
 <script>
 	var Accordion = window.GOVUKFrontend.Accordion;
-	var $accordion = document.querySelector('[data-module="govuk-accordion"]');
-	if ($accordion) {
-		new Accordion($accordion).init();
+	var $accordions = document.querySelectorAll('[data-module="govuk-accordion"]');
+	if ($accordions.length) {
+		$accordions.forEach(function($accordion) {
+			new Accordion($accordion).init();
+		});
 	}
 </script>
 {% endblock %}
