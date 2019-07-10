@@ -70,6 +70,10 @@ def jinja():
 def port_to_jinja():
     return render_template('guides/nunjucks-to-jinja.html')
 
+@frontend.route('/jinja/govuk-components/accordion')
+def accordion():
+    return render_template('govuk-jinja-component-examples/accordion.html')
+
 @frontend.route('/jinja/govuk-components/back-link')
 def back_link():
     return render_template('govuk-jinja-component-examples/back-link.html')
