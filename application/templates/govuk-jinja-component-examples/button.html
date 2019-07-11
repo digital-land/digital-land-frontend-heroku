@@ -7,7 +7,10 @@
 {% block govukComponentExample %}
 
 {{ govukButton({
-  "text": "Save and continue"
+  "text": "Save and continue",
+  "attributes": {
+    "data-test": "this is a value"
+	}
 }) }}
 
 {% endblock %}
@@ -15,7 +18,10 @@
 {% block govukComponentJinja %}
 
 <pre><code class="nunjucks">{% raw %}{{ govukButton({
-  "text": "Save and continue"
+  "text": "Save and continue",
+  "attributes": {
+    "data-test": "this is a value"
+  }
 }) }}{% endraw %}</code></pre>
 
 {% endblock %}
