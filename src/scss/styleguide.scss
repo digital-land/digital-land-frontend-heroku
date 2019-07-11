@@ -58,7 +58,7 @@ $app-light-grey: #f8f8f8;
 .module-code {
   position: relative;
   margin-bottom: $govuk-gutter;
-  border: 4px solid $govuk-border-colour;
+  border: 2px solid $govuk-border-colour;
 
   font-family: $govuk-font-family-nta;
 
@@ -67,10 +67,10 @@ $app-light-grey: #f8f8f8;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 4px 6px 6px 2px;
+    padding: 5px 10px;
 
     color: govuk-colour("blue");
-    background: $govuk-border-colour;
+    background: govuk-colour("grey-3");
   }
 }
 
