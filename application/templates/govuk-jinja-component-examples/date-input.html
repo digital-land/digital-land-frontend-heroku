@@ -25,9 +25,7 @@
 
 {% block govukComponentJinja %}
 
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible" />
-
-{{ govukDateInput({
+<pre><code class="nunjucks">{% raw %}{{ govukDateInput({
   "id": "passport-issued",
   "namePrefix": "passport-issued",
   "fieldset": {
@@ -39,19 +37,8 @@
   }, 
   "hint": {
     "text": "For example, 12 11"
-  },
-  "parts": [
-  {
-    "name": "day",
-    "classes": "govuk-input--width-2"
-  },
-  {
-    "name": "month",
-    "classes": "govuk-input--width-2"
   }
-  ]
-
-}) }}
+}) }}{% endraw %}</code></pre>
 
 
 {% endblock %}
