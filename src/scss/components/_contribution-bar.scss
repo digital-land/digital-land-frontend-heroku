@@ -44,7 +44,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
   overflow: hidden;
 
   color: $dlf-white-colour;
-  background: govuk-colour("grey-2");
+  background: govuk-colour("mid-grey", $legacy: "grey-2");
 
   .data-item {
     line-height: 1 !important;
@@ -68,7 +68,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
 }
 
 .cb-floating-figure {
-  color: govuk-colour("grey-2");
+  color: govuk-colour("mid-grey", $legacy: "grey-2");
 
   &:after {
     // sass-lint:disable-block no-duplicate-properties
@@ -80,7 +80,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
 
     width: 15px;
     height: $line-thickness;
-    background: govuk-colour("grey-2");
+    background: govuk-colour("mid-grey", $legacy: "grey-2");
   }
 }
 
@@ -109,7 +109,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
 }
 
 .categories-set--not-received {
-  @include set-bar-color(govuk-colour("grey-1"));
+  @include set-bar-color(govuk-colour("dark-grey", $legacy: "grey-1"));
 }
 
 // alterations on hover
@@ -118,7 +118,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
   padding: $padding-with-border;
   border: $line-thickness solid $govuk-text-colour;
   color: $govuk-text-colour;
-  background: govuk-colour("grey-4");
+  background: govuk-colour("light-grey", $legacy: "grey-4");
 }
 
 .contribution-bar-container:hover {
@@ -137,13 +137,13 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
   box-sizing: border-box;
   padding: 15px;
   color: govuk-colour("white");
-  background: govuk-colour("grey-1");
+  background: govuk-colour("dark-grey", $legacy: "grey-1");
 
   &:hover {
     padding: 10px;
     border: 5px solid govuk-colour("black");
     color: govuk-colour("black");
-    background: govuk-colour("grey-3");
+    background: govuk-colour("light-grey", $legacy: "grey-3");
     cursor: pointer;
   }
 
@@ -156,7 +156,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
   width: 15%;
   margin-bottom: 100px;
   padding: 0;
-  color: govuk-colour("grey-1");
+  color: govuk-colour("dark-grey", $legacy: "grey-1");
 
   .data {
     position: relative;
@@ -170,7 +170,7 @@ $padding-with-border: #{$padding-top - $line-thickness} #{$padding-right - $line
       left: 0;
       width: 5px;
       height: 30px;
-      background: govuk-colour("grey-1");
+      background: govuk-colour("dark-grey", $legacy: "grey-1");
     }
   }
 

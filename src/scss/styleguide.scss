@@ -70,7 +70,7 @@ $app-light-grey: #f8f8f8;
     padding: 5px 10px;
 
     color: govuk-colour("blue");
-    background: govuk-colour("grey-3");
+    background: govuk-colour("light-grey", $legacy: "grey-3");
   }
 }
 
