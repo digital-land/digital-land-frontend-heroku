@@ -10,7 +10,7 @@ const config = {
   scssPath: "src/scss",
   jsDestPath: "application/static/javascripts",
   destPath: "application/static/stylesheets",
-  govukAssetPath: "application/static/govuk-frontend/assets"
+  govukAssetPath: "application/static/govuk/assets"
 }
 
 
@@ -27,7 +27,7 @@ const compileStylesheets = () =>
   gulp
     .src( config.scssPath + '/*.scss')
 	  .pipe(sass({outputStyle: 'expanded',
-		  includePaths: [ 'src/scss', 'src/govuk-frontend']}))
+		  includePaths: [ 'src/scss', 'src/govuk']}))
       .on('error', sass.logError)
     .pipe(gulp.dest(config.destPath));
 
@@ -52,7 +52,7 @@ const copyVendorStylesheets = () =>
 
 const copyGovukAssets = () => 
   gulp
-    .src('src/govuk-frontend/assets/**/*')
+    .src('src/govuk/assets/**/*')
     .pipe(gulp.dest(config.govukAssetPath));
 
 const copyVendorJS = () => 
@@ -62,8 +62,8 @@ const copyVendorJS = () =>
 
 const copyGovukJS = () => 
   gulp
-    .src('src/js/govuk-frontend/*.js')
-    .pipe(gulp.dest(`${config.jsDestPath}/govuk-frontend`));
+    .src('src/js/govuk/*.js')
+    .pipe(gulp.dest(`${config.jsDestPath}/govuk`));
 
 
 // Tasks to expose to CLI
