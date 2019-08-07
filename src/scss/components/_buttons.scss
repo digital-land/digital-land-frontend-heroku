@@ -43,7 +43,7 @@
 }
 
 .dlf-secondary-button {
-  @include govuk-style-button($button-text-colour: $govuk-text-colour, $button-colour:  govuk-colour("grey-3"));
+  @include govuk-style-button($button-text-colour: $govuk-text-colour, $button-colour:  govuk-colour("light-grey", $legacy: "grey-3"));
 }
 
 // Always you to align an anchor next to the button
@@ -53,7 +53,8 @@
   display: none;
 
   @include govuk-font($size: 16, $line-height: 16px);
-  @include govuk-focusable;
+  // Need to replade now that it is depricated in v3.0
+  // @include govuk-focusable;
 
   width: 100%;
   padding: 14px 10px 11px;

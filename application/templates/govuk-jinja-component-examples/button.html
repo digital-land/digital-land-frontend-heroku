@@ -24,4 +24,19 @@
   }
 }) }}{% endraw %}</code></pre>
 
+<h3 class="govuk-heading-m">Other button types</h3>
+
+{{ govukButton({
+  "text": "Start now",
+  "href": "#",
+  "isStartButton": true
+}) }}
+
+<br />
+
+{{ govukButton({
+  "text": "Find address",
+  "classes": "govuk-button--secondary"
+}) }}
+
 {% endblock %}

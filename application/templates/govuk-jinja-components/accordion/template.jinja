@@ -4,6 +4,7 @@
 <div class="govuk-accordion {%- if params.classes %} {{ params.classes }}{% endif -%}" data-module="govuk-accordion" id="{{ id }}"
 {%- if params.attributes %}{%- for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>
   {% for item in params['items'] %}
+    {% if item %}
     <div class="govuk-accordion__section {% if item.expanded %}govuk-accordion__section--expanded{% endif %}">
       <div class="govuk-accordion__section-header">
         <h{{ headingLevel }} class="govuk-accordion__section-heading">
@@ -23,5 +24,6 @@
         {{ item.content.html | safe if item.content.html else item.content.text }}
       </div>
     </div>
+    {% endif %}
   {% endfor %}
 </div>

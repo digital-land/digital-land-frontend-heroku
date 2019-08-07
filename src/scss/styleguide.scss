@@ -1,5 +1,5 @@
-$govuk-fonts-path: "/static/govuk-frontend/assets/fonts/";
-$govuk-images-path: "/static/govuk-frontend/assets/images/";
+$govuk-fonts-path: "/static/govuk/assets/fonts/";
+$govuk-images-path: "/static/govuk/assets/images/";
 
 $govuk-page-width: 1100px !default;
 
@@ -70,7 +70,7 @@ $app-light-grey: #f8f8f8;
     padding: 5px 10px;
 
     color: govuk-colour("blue");
-    background: govuk-colour("grey-3");
+    background: govuk-colour("light-grey", $legacy: "grey-3");
   }
 }
 

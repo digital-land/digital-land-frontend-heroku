@@ -22,7 +22,6 @@
 }
 
 .dlf-pg-feedback__link {
-  @include govuk-focusable-fill;
   font-weight: 400;
   text-decoration: underline;
 
@@ -44,5 +43,6 @@
 
   &:focus {
     color: $govuk-text-colour;
+    @include govuk-focused-text;
   }
 }
