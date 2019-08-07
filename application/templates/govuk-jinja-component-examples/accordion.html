@@ -234,16 +234,3 @@ if ($accordions.length) {
 }) }}
 </div>
 {% endblock %}
-
-{% block bodyEnd %}
-{{ super() }}
-<script>
-	var Accordion = window.GOVUKFrontend.Accordion;
-	var $accordions = document.querySelectorAll('[data-module="govuk-accordion"]');
-	if ($accordions.length) {
-		$accordions.forEach(function($accordion) {
-			new Accordion($accordion).init();
-		});
-	}
-</script>
-{% endblock %}
