@@ -6946,7 +6946,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .module-code {
   position: relative;
   margin-bottom: 30px;
-  border: 2px solid #b1b4b6;
+  border: 1px solid #b1b4b6;
   font-family: "nta", Arial, sans-serif;
 }
 
@@ -6956,9 +6956,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px 10px;
+  padding: 7px 10px 5px;
   color: #1d70b8;
   background: #f3f2f1;
+  font-weight: 200;
 }
 
 pre {
