@@ -65,6 +65,13 @@ const copyGovukJS = () =>
     .src('src/js/govuk/*.js')
     .pipe(gulp.dest(`${config.jsDestPath}/govuk`));
 
+// copy MHCLG specific js to application
+// To Do: build js in similar way to govuk frontend
+const copyMHCLGJS = () =>
+  gulp
+    .src('src/js/application.js')
+    .pipe(gulp.dest(`${config.jsDestPath}`));
+
 
 // Tasks to expose to CLI
 // ======================
@@ -72,7 +79,8 @@ const copyAllAssets = gulp.parallel(
   copyVendorStylesheets,
   copyGovukAssets,
   copyVendorJS,
-  copyGovukJS
+  copyGovukJS,
+  copyMHCLGJS
 );
 copyAllAssets.description = `Copy all vendor and 3rd party assets to application`;
 
@@ -95,3 +103,4 @@ watch.description = `Watch all project .scss for changes, then rebuild styleshee
 exports.default = watch;
 exports.stylesheets = latestStylesheets;
 exports.copyAssets = copyAllAssets;
+exports.copyJS = copyMHCLGJS;
