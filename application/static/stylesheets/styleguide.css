@@ -6927,6 +6927,21 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 }
 
+.app-back-to-top {
+  position: sticky;
+  top: 30px;
+  margin-bottom: 30px;
+}
+
+.app-back-to-top__icon {
+  display: inline-block;
+  width: .8em;
+  height: 1em;
+  margin-top: -5px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .dlf-page-wide .govuk-header {
   padding-bottom: 7px;
   border-bottom: 10px solid #1d70b8;
