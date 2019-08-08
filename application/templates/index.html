@@ -9,13 +9,23 @@
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">
       <div class="app-content__header">
+        <span class="govuk-caption-xl">Digital land frontend</span>
         <h1 class="govuk-heading-xl">
-          Digital land frontend
+          Get started
         </h1>
       </div>
 
-      <p class="govuk-body-l">A collection of resources and reusable parts created for the <a href="https://digital-land.github.io/" class="govuk-link">digial land</a> team.</p>
+      <p class="govuk-body">The Digital land frontend is collection of reusable frontend parts and examples created for the <a href="https://digital-land.github.io/" class="govuk-link">digital land</a> team.</p>
   
+      <p class="govuk-body">It builds on the <a href="https://design-system.service.gov.uk">GOV.UK Design System</a> and should be simple to use if you are familiar with that.</p>
+
+      <p class="govuk-body">It has 3 main components:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="{{ url_for('frontend.jinja') }}">Jinja components</a> - the GOV.UK Design System components as jinja macros.</li>
+        <li><a href="{{ url_for('frontend.components') }}">Components</a> - components specific to Digital Land.</li>
+        <li><a href="{{ url_for('frontend.javascripts') }}">Javascript</a> - scripts written to use with Digital Land prototypes and services.</li>
+      </ul>
     </main>
   </div>
 </div>
