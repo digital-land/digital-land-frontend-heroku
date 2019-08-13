@@ -82,6 +82,10 @@ def back_link():
 def button():
     return render_template('govuk-jinja-component-examples/button.html')
 
+@frontend.route('/jinja/govuk-components/character-count')
+def character_count():
+    return render_template('govuk-jinja-component-examples/char-count.html')
+
 @frontend.route('/jinja/govuk-components/checkboxes')
 def checkboxes():
     return render_template('govuk-jinja-component-examples/checkboxes.html')

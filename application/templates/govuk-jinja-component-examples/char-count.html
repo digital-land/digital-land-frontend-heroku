@@ -1,0 +1,37 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "./govuk-jinja-components/character-count/macro.jinja" import govukCharacterCount -%}
+
+{% block govukComponentName %}Character count{% endblock %}
+
+{% block govukComponentExample %}
+
+{{ govukCharacterCount({
+  "name": "with-hint",
+  "id": "with-hint",
+  "maxlength": 200,
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Do not include personal or financial information like your National Insurance number or credit card details."
+  }
+}) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
+
+<pre><code class="nunjucks">{% raw %}{{ govukCharacterCount({
+  "name": "with-hint",
+  "id": "with-hint",
+  "maxlength": 200,
+  "label": {
+    "text": "Can you provide more detail?"
+  },
+  "hint": {
+    "text": "Do not include personal or financial information like your National Insurance number or credit card details."
+  }
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
