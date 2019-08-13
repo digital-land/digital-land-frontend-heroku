@@ -11,7 +11,7 @@
       <div class="app-content__header">
         <span class="govuk-caption-xl">GOVUK component</span>
         <h1 class="govuk-heading-xl">
-          {% block govukComponentName %}{% endblock %}
+          {{ componentName }}
         </h1>
       </div>
 
@@ -26,6 +26,12 @@
       {% endblock %}
 
       {% block extraContent %}{% endblock %}
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h3 class="govuk-heading-m">Further information</h3>
+
+      <p class="govuk-body">For full details see <a href="https://design-system.service.gov.uk/components/{{ componentName | lower | replace(' ', '-') }}">{{ componentName }} component</a> on GOV.UK design system.</p>
 
     </main>
   </div>
