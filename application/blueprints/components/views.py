@@ -14,6 +14,10 @@ def buttons():
 def contribution_bars():
     return render_template('contribution-bars.html')
 
+@components.route('/filter-group')
+def filter_group():
+    return render_template('filter-group.html')
+
 @components.route('/hero')
 def hero():
     return render_template('hero.html')
