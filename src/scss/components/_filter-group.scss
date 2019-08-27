@@ -19,6 +19,10 @@
   &:hover {
     cursor: pointer;
   }
+
+  &:focus {
+    @include govuk-focused-text;
+  }
 }
 
 .filter-group__icon {
