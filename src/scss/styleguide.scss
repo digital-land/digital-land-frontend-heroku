@@ -4,7 +4,12 @@ $govuk-images-path: "/static/govuk/assets/images/";
 $govuk-page-width: 1100px !default;
 
 // import all GOVUK Frontend scss
-@import "all";
+@import "settings/all";
+@import "tools/all";
+@import "helpers/all";
+@import "objects/all";
+@import "utilities/all";
+
 
 // import Digital Land styles
 @import "components/buttons";
