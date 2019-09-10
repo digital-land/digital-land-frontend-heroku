@@ -45,6 +45,6 @@
 // Initialise back to top
 var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
 var $observedElement = document.querySelector('.app-subnav')
-new BackToTop($backToTop, { $observedElement: $observedElement }).init()
+new window.DLFrontend.BackToTop($backToTop, { $observedElement: $observedElement }).init()
 </script>
 {% endblock %}

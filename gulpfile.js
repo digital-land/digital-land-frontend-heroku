@@ -3,6 +3,7 @@
 const gulp = require("gulp"),
       sass = require("gulp-sass"),
       sassLint = require('gulp-sass-lint'),
+      rollup = require('gulp-better-rollup'),
       clean = require('gulp-clean');
 
 // set paths ...
@@ -71,6 +72,24 @@ const copyMHCLGJS = () =>
   gulp
     .src('src/js/application.js')
     .pipe(gulp.dest(`${config.jsDestPath}`));
+
+
+// Compile application.js
+// ======================
+gulp.task('js:compile', () => {
+  return gulp.src([
+    'src/js/dl-frontend.js'
+  ])
+    .pipe(rollup({
+      // set the 'window' global
+      name: 'DLFrontend',
+      // Legacy mode is required for IE8 support
+      legacy: true,
+      // UMD allows the published bundle to work in CommonJS and in the browser.
+      format: 'umd'
+    }))
+    .pipe(gulp.dest(`${config.jsDestPath}`))
+})
 
 
 // Tasks to expose to CLI

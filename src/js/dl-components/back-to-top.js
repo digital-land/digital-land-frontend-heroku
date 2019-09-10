@@ -1,16 +1,4 @@
-
-// Needs to come after GOV.UK js because makes use of:
-// 	* 'govuk-frontend/govuk/vendor/polyfills/Function/prototype/bind'
-// 	* 'govuk-frontend/govuk/common' {nodeListForEach}
-
-function nodeListForEach (nodes, callback) {
-  if (window.NodeList.prototype.forEach) {
-    return nodes.forEach(callback)
-  }
-  for (var i = 0; i < nodes.length; i++) {
-    callback.call(window, nodes[i], i, nodes)
-  }
-}
+import '../../govuk/vendor/polyfills/Function/prototype/bind';
 
 // Back to top module as seen in govuk-design-system
 // https://github.com/alphagov/govuk-design-system/blob/master/src/javascripts/components/back-to-top.js
@@ -72,3 +60,5 @@ BackToTop.prototype.hide = function () {
 BackToTop.prototype.show = function () {
   this.$module.classList.remove('app-back-to-top--hidden')
 }
+
+export default BackToTop
