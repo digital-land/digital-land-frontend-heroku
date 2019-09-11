@@ -1,0 +1,13 @@
+<div class="app-nav__subnav app-hide-mobile">
+    <nav class="app-subnav">
+
+      <h4 class="app-subnav__heading">Available scripts</h4>
+
+      <ul class="app-subnav__section">
+        {{ sublevelNavItem("DL Frontend", url_for('frontend.dl_frontend')) }}
+        {{ sublevelNavItem("MHCLG Maps", url_for('frontend.mhclg_maps')) }}
+        {{ sublevelNavItem("Accessible Autocomplete", url_for('frontend.accessible_autocomplete')) }}
+      </ul> 
+
+    </nav>
+</div>

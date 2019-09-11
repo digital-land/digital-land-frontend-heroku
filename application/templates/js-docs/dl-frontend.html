@@ -1,0 +1,65 @@
+{% extends "leaflet-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts", true) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  
+  {%- include 'menu-partials/javascripts-menu.html' -%}
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Javascripts</span>
+        <h1 class="govuk-heading-xl">
+          DL Frontend
+        </h1>
+      </div>
+
+      <p class="govuk-body-l">DLFrontend.js contains modules that progressively enhance components used in digital land services and prototypes.</p>
+
+      <h2 class="govuk-heading-l">How to use</h2>
+
+      <p class="govuk-body">Currently, you need to include the javascript at the end of your page. Before the closing body tag.</p>
+      <p class="govuk-body">
+        <pre><code class="html">{{ "<script src='/static/javascripts/dl-frontend.js'></script>"|forceescape }}</code></pre>
+      </p>
+
+      <p class="govuk-body">
+        Each component needs to be initalised individually.
+      </p>
+
+      <p class="govuk-body">
+        Each component should be initialised in a consistent way. A regular pattern is to add a <code>data-module</code> attribute associating the module to each HTML element you wish it to apply to.
+      </p>
+
+      <p class="govuk-body">
+        An example for the BackToTop module.
+        <pre><code class="html">
+        {%- filter forceescape -%}
+          <div class="some-classes" data-module="app-back-to-top">
+        {%- endfilter -%}</code></pre>
+      </p>
+
+      <p class="govuk-body">Each module then has an <code>init()</code> function that should be called to initalise it. If will often look something like this:</p>
+
+      <p class="govuk-body">
+        <pre><code class="js">
+        {%- filter forceescape -%}
+        new window.DLFrontend.<modulename>(<moduleEl>, { <options> }).init()
+        {%- endfilter -%}</code></pre>
+      </p>
+
+    </main>
+  </div>
+</div>
+
+{% endblock %}

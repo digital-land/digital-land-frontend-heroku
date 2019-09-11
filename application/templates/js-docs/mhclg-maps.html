@@ -12,18 +12,7 @@
 {% block content %}
 
 <div class="app-nav__body govuk-width-container">
-  <div class="app-nav__subnav app-hide-mobile">
-    <nav class="app-subnav">
-
-      <h4 class="app-subnav__heading">Available scripts</h4>
-
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("MHCLG Maps", url_for('frontend.mhclg_maps')) }}
-        {{ sublevelNavItem("Accessible Autocomplete", url_for('frontend.accessible_autocomplete')) }}
-      </ul> 
-
-    </nav>
-  </div>
+  {%- include 'menu-partials/javascripts-menu.html' -%}
 
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">

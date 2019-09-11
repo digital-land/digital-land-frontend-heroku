@@ -14,9 +14,17 @@ def index():
 def components():
     return render_template('components.html')
 
+####################
+# Javascripts
+####################
+
 @frontend.route('/javascripts')
 def javascripts():
     return render_template('javascripts.html')
+
+@frontend.route('/js/dl-frontend')
+def dl_frontend():
+    return render_template('js-docs/dl-frontend.html')
 
 @frontend.route('/js/mhclg-maps')
 def mhclg_maps():
