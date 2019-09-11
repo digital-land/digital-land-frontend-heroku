@@ -4,18 +4,7 @@
 {% block content %}
 
 <div class="app-nav__body govuk-width-container">
-  <div class="app-nav__subnav app-hide-mobile">
-    <nav class="app-subnav">
-
-      <h4 class="app-subnav__heading">Available scripts</h4>
-
-      <ul class="app-subnav__section">
-        {{ sublevelNavItem("MHCLG Maps", url_for('frontend.mhclg_maps')) }}
-        {{ sublevelNavItem("Accessible Autocomplete", url_for('frontend.accessible_autocomplete')) }}
-      </ul> 
-
-    </nav>
-  </div>
+  {%- include 'menu-partials/javascripts-menu.html' -%}
 
   <div class="app-nav__content">
     <main id="main-content" class="app-content" role="main">
@@ -28,6 +17,10 @@
       <p class="govuk-body">There are a few javascript components used with Digital land projects.</p>
 
       <ul class="dlf-list">
+        <li class="dlf-list-item">
+          <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.dl_frontend') }}">DL Frontend</a></h4>
+          <p class="govuk-body">A set of modules to progressively enhance components.</p>
+        </li>
         <li class="dlf-list-item">
           <h4 class="govuk-heading-s dlf-list-item__heading"><a class="govuk-link" href="{{ url_for('frontend.mhclg_maps') }}">MHCLG Maps</a></h4>
           <p class="govuk-body">A wrapper for leafletJS that makes it quicker to render a map.</p>

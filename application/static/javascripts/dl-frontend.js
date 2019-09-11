@@ -310,7 +310,222 @@
     this.$module.classList.remove('app-back-to-top--hidden');
   };
 
+  // ====================================
+  // Filter checkboxes module
+  // ====================================
+
+  // to do (see https://www.gov.uk/search/all?keywords=publications&content_purpose_supergroup%5B%5D=services&organisations%5B%5D=academy-for-social-justice&order=relevance)
+  // - aria-describedby, hidden span that counts how many options are showing and how many of them are selected
+  // - aria-controls, indicate that it controls the list of checkboxes
+  // - hide textbox when no js
+
+  function FilterCheckboxes($module) {
+    this.$module = $module;
+    this.$textbox = $module.querySelector('.filter-group__auto-filter__input');
+    this.checkboxArr = [...$module.querySelectorAll(".govuk-checkboxes__item")];
+  }
+
+  FilterCheckboxes.prototype.init = function() {
+    var $module = this.$module;
+    var $checkboxes = this.checkboxArr;
+
+    // if no checkboxes then return
+    if (!$checkboxes) {
+      return
+    }
+
+    // returns true is the item has been hidden with display:none
+    this.isDisplayNone = function(el) {
+      var style = window.getComputedStyle(el);
+      return ((style.display === 'none') || (style.visibility === 'hidden'))
+    };
+
+    // returns true if the item's checkbox is checked
+    this.isItemChecked = function(el) {
+      var chbx = el.querySelector("input");
+      return chbx.checked
+    };
+
+    this.ariaDescription = $module.querySelector('.filter-group__auto-filter__desc');
+    // To do: check it exists
+    // set initial aria message
+    var boundUpdateAriaDescribedBy = this.updateAriaDescribedBy.bind(this);
+    boundUpdateAriaDescribedBy();
+
+    // Bind event changes to the textarea
+    var boundInputEvents = this.bindInputEvents.bind(this);
+    boundInputEvents();
+  };
+
+  FilterCheckboxes.prototype.getCheckboxInput = function(el) {
+    return el.querySelector("input")
+  };
+
+  FilterCheckboxes.prototype.bindInputEvents = function() {
+    var $textbox = this.$textbox;
+    var checkboxArr = this.checkboxArr.map(this.getCheckboxInput);
+
+    $textbox.addEventListener('input', this.filterCheckboxes.bind(this));
+
+    var boundUpdateAriaDescribedBy = this.updateAriaDescribedBy.bind(this);
+    checkboxArr.forEach(chbxEl => chbxEl.addEventListener('change', boundUpdateAriaDescribedBy));
+  };
+
+  FilterCheckboxes.prototype.filterCheckboxes = function() {
+    var $textbox = this.$textbox;
+    var boundFilterCheckboxesArr = this.filterCheckboxesArr.bind(this);
+    // filter the array of checkboxes
+    var reducedArr = boundFilterCheckboxesArr($textbox.value);
+
+    var boundUpdateAriaDescribedBy = this.updateAriaDescribedBy.bind(this);
+
+    // show only those checkboxes remaining
+    var boundDisplayMatchingCheckboxes = this.displayMatchingCheckboxes.bind(this);
+    boundDisplayMatchingCheckboxes(reducedArr, boundUpdateAriaDescribedBy);
+
+  };
+
+  FilterCheckboxes.prototype.filterCheckboxesArr = function(query) {
+    var checkboxArr = this.checkboxArr;
+    return checkboxArr.filter(function(el) {
+      const checkbox = el.querySelector('label');
+      return checkbox.textContent.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+    })
+  };
+
+  FilterCheckboxes.prototype.displayMatchingCheckboxes = function(ckbxArr, cb) {
+    // hide all
+    this.checkboxArr.forEach((ckbx) => ckbx.style.display = 'none');
+    // re show those in filtered array
+    ckbxArr.forEach((ckbx) => ckbx.style.display = 'block');
+
+    if(cb) {
+      cb();
+    }
+  };
+
+  FilterCheckboxes.prototype.updateAriaDescribedBy = function() {
+    var checkboxArr = this.checkboxArr;
+    var displayedCheckboxes = checkboxArr.filter(chbx => !this.isDisplayNone(chbx));
+    var checkedAndDisplayed = displayedCheckboxes.filter(chbx => this.isItemChecked(chbx));
+
+    var boundGenerateAriaMessage = this.generateAriaMessage.bind(this);
+    boundGenerateAriaMessage(displayedCheckboxes.length, checkedAndDisplayed.length);
+  };
+
+  FilterCheckboxes.prototype.generateAriaMessage = function(optionCount, selectedCount) {
+    var ariaEl = this.ariaDescription;
+    var optionStr = ariaEl.dataset.single;
+    if(optionCount > 1) {
+      optionStr = ariaEl.dataset.multiple;
+    }
+
+    ariaEl.textContent = optionCount + " " + optionStr + ", " + selectedCount + " " + ariaEl.dataset.selected;
+  };
+
+  // ================================
+  // Selected counts for filters
+  // ================================
+
+  function SelectedCounter($module) {
+    this.$module = $module;
+    this.$fieldset = $module.querySelector("fieldset");
+    this.$inputs = this.$fieldset.querySelectorAll("input");
+  }
+
+  SelectedCounter.prototype.init = function() {
+    var $module = this.$module;
+    var $inputs = this.$inputs;
+
+    // if no inputs then return
+    if (!$inputs) {
+      return
+    }
+
+    //
+    var boundFetchCountElement = this.fetchCountElement.bind(this);
+    this.countMessage = boundFetchCountElement();
+
+    // if current count is 0 hide the message
+    this.message_is_hidden = false;
+    if(this.currentCount == 0) {
+      this.hideCountMessage();
+    }
+
+    // Bind event changes to the textarea
+    var boundChangeEvents = this.bindChangeEvents.bind(this);
+    boundChangeEvents();
+  };
+
+  SelectedCounter.prototype.fetchCountElement = function() {
+    var $module = this.$module;
+    var countMessage = $module.querySelector(".filter-group__selected-text");
+
+    // if the count message doesn;t exist, create one
+    if(!countMessage) {
+      countMessage = this.createCountElement();
+    }
+
+    this.countElement = countMessage.querySelector(".filter-group__selected-text__count");
+    this.currentCount = parseInt(this.countElement.textContent);
+
+    return countMessage
+  };
+
+  SelectedCounter.prototype.createCountElement = function() {
+    var $module = this.$module;
+    var $summary = $module.querySelector(".filter-group__summary");
+    var firstIcon = $summary.querySelector("svg");
+
+    var countMessage = document.createElement("span");
+    countMessage.classList.add("filter-group__selected-text");
+    countMessage.textContent = " selected";
+    firstIcon.insertAdjacentElement('beforebegin', countMessage);
+
+    countMessage.insertAdjacentHTML('afterbegin', '<span class="filter-group__selected-text__count">0</span>' );
+    
+    return countMessage
+  };
+
+  SelectedCounter.prototype.bindChangeEvents = function() {
+    var $inputs = this.$inputs;
+    //console.log(this)
+    $inputs.forEach(input => {
+      input.addEventListener('change', this.updateCount.bind(this));
+    });
+  };
+
+  SelectedCounter.prototype.updateCount = function() {
+    var $fieldset = this.$fieldset;
+    var count = $fieldset.querySelectorAll("input:checked").length;
+
+    // if 0 hide
+    if(count == 0) {
+      this.countElement.textContent = 0;
+      this.hideCountMessage();
+    } else if (count != this.currentCount) {
+      // if changed update
+      this.countElement.textContent = count;
+      this.showCountMessage();
+    }
+    // if same, do nothing ----
+    
+    this.currentCount = count;
+  };
+
+  SelectedCounter.prototype.hideCountMessage = function() {
+    this.countMessage.classList.add("govuk-visually-hidden");
+    this.message_is_hidden = true;
+  };
+
+  SelectedCounter.prototype.showCountMessage = function() {
+    this.countMessage.classList.remove("govuk-visually-hidden");
+    this.message_is_hidden = false;
+  };
+
   exports.BackToTop = BackToTop;
+  exports.FilterCheckboxes = FilterCheckboxes;
+  exports.SelectedCounter = SelectedCounter;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
