@@ -46,15 +46,14 @@
   @include govuk-style-button($button-text-colour: $govuk-text-colour, $button-colour:  govuk-colour("light-grey", $legacy: "grey-3"));
 }
 
-// Always you to align an anchor next to the button
-// Used for cancel like buttons
+// Allows you to align an anchor next to the button
+// Used for buttons such as form cancel/reset
 .link-align-btn,
 .cancel-btn {
   display: none;
 
   @include govuk-font($size: 16, $line-height: 16px);
-  // Need to replade now that it is depricated in v3.0
-  // @include govuk-focusable;
+  @include govuk-link-common;
 
   width: 100%;
   padding: 14px 10px 11px;
@@ -78,7 +77,8 @@
     text-decoration: underline;
   }
 
-  .js-enabled & {
+  .js-enabled &,
+  &.non-js-button {
     display: inline-block;
   }
 }

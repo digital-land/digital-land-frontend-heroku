@@ -338,6 +338,9 @@
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.14286;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 100%;
   padding: 14px 10px 11px;
   border: 0;
@@ -390,6 +393,22 @@
   }
 }
 
+@media print {
+  .link-align-btn,
+  .cancel-btn {
+    font-family: sans-serif;
+  }
+}
+
+.link-align-btn:focus,
+.cancel-btn:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
 @media (min-width: 40.0625em) {
   .link-align-btn,
   .cancel-btn {
@@ -406,8 +425,9 @@
   text-decoration: underline;
 }
 
-.js-enabled .link-align-btn, .js-enabled
-.cancel-btn {
+.js-enabled .link-align-btn, .link-align-btn.non-js-button, .js-enabled
+.cancel-btn,
+.cancel-btn.non-js-button {
   display: inline-block;
 }
 
