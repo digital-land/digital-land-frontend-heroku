@@ -36,7 +36,7 @@ $dl-info-colour: govuk-colour("blue");
   background: $dl-info-colour;
 
   font-size: 1.6em;
-  line-height: 29px;
+  line-height: 28px;
 
   text-align: center;
 
@@ -49,4 +49,11 @@ $dl-info-colour: govuk-colour("blue");
   display: block;
   margin-left: -$govuk-gutter-half;
   padding-left: 65px;
+}
+
+.dl-info-text--closer {
+  .dl-info-text__text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }

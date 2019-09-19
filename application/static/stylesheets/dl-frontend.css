@@ -7115,7 +7115,7 @@
   color: #ffffff;
   background: #1d70b8;
   font-size: 1.6em;
-  line-height: 29px;
+  line-height: 28px;
   text-align: center;
   user-select: none;
 }
@@ -7130,6 +7130,11 @@
   display: block;
   margin-left: -15px;
   padding-left: 65px;
+}
+
+.dl-info-text--closer .dl-info-text__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .app-related-items {
