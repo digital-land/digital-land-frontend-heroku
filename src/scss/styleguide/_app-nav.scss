@@ -27,6 +27,7 @@ $toc-width-tablet: 210px;
     & > li {
       box-sizing: border-box;
       height: $navigation-height;
+      padding: 0 govuk-spacing(3);
       float: left;
       line-height: $navigation-height;
       -moz-box-sizing: border-box;
@@ -42,12 +43,14 @@ $toc-width-tablet: 210px;
         a:hover {
           color: $govuk-link-colour;
         }
+
+        a:focus {
+          color: $govuk-focus-text-colour;
+        }
       }
 
       a {
         @include govuk-typography-weight-bold; // Override .govuk-link weight
-        display: block;
-        padding: 0 govuk-spacing(3);
         color: $govuk-link-colour;
         text-decoration: none;
 
@@ -55,10 +58,13 @@ $toc-width-tablet: 210px;
           color: $govuk-link-colour;
         }
 
-        &:hover,
+        &:hover {
+          text-decoration: underline;
+        }
+
         &:focus {
-          color: $govuk-link-hover-colour;
-          background-color: inherit;
+          @include govuk-focused-text;
+          color: $govuk-focus-text-colour;
         }
       }
     }
@@ -136,15 +142,14 @@ $toc-width-tablet: 210px;
   list-style-type: none;
 }
 
-.app-subnav__link {
-  display: block;
+.app-subnav__section-item {
   padding: 8px govuk-spacing(6) 8px govuk-spacing(2);
   border-left: 4px solid transparent;
-  text-decoration: none;
+}
 
-  &:focus {
-    background: inherit;
-  }
+.app-subnav__link {
+  //display: block;
+  text-decoration: none;
 
   &:hover,
   &:active,
@@ -153,11 +158,16 @@ $toc-width-tablet: 210px;
   }
 
   &:hover {
-    border-left-color: $govuk-link-hover-colour;
+    text-decoration: underline;
+  }
+
+  // put last so text colour not overridden by :hover state
+  &:focus {
+    @include govuk-focused-text;
   }
 }
 
-.app-subnav__section-item--current .app-subnav__link {
+.app-subnav__section-item--current {
   border-left-color: $govuk-link-colour;
   background: $app-light-grey;
   font-weight: bold;
@@ -171,7 +181,6 @@ $toc-width-tablet: 210px;
 }
 
 .app-content {
-
   padding: govuk-spacing(3) govuk-spacing(0);
 
   @include govuk-media-query($from: tablet) {

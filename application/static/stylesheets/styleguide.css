@@ -869,6 +869,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .app-nav__wrap__list > li {
   box-sizing: border-box;
   height: 53px;
+  padding: 0 15px;
   float: left;
   line-height: 53px;
   -moz-box-sizing: border-box;
@@ -887,10 +888,12 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   color: #1d70b8;
 }
 
+.app-nav__wrap__list > li.app-nav--current-page a:focus {
+  color: #0b0c0c;
+}
+
 .app-nav__wrap__list > li a {
   font-weight: 700;
-  display: block;
-  padding: 0 15px;
   color: #1d70b8;
   text-decoration: none;
 }
@@ -899,9 +902,17 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   color: #1d70b8;
 }
 
-.app-nav__wrap__list > li a:hover, .app-nav__wrap__list > li a:focus {
-  color: #003078;
-  background-color: inherit;
+.app-nav__wrap__list > li a:hover {
+  text-decoration: underline;
+}
+
+.app-nav__wrap__list > li a:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+  color: #0b0c0c;
 }
 
 @media (min-width: 40.0625em) {
@@ -1012,15 +1023,13 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   list-style-type: none;
 }
 
-.app-subnav__link {
-  display: block;
+.app-subnav__section-item {
   padding: 8px 30px 8px 10px;
   border-left: 4px solid transparent;
-  text-decoration: none;
 }
 
-.app-subnav__link:focus {
-  background: inherit;
+.app-subnav__link {
+  text-decoration: none;
 }
 
 .app-subnav__link:hover, .app-subnav__link:active, .app-subnav__link:visited {
@@ -1028,10 +1037,18 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 .app-subnav__link:hover {
-  border-left-color: #003078;
+  text-decoration: underline;
 }
 
-.app-subnav__section-item--current .app-subnav__link {
+.app-subnav__link:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
+.app-subnav__section-item--current {
   border-left-color: #1d70b8;
   background: #f8f8f8;
   font-weight: bold;
