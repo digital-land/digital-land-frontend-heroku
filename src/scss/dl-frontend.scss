@@ -27,6 +27,7 @@ $using-helvetica: false;
 @import "components/highlight-box";
 @import "components/pagination";
 @import "components/filter-group";
+@import "components/charts";
 
 a {
   @extend %govuk-link;

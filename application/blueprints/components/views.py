@@ -61,3 +61,7 @@ def tags():
 @components.route('/task-list')
 def task_list():
     return render_template('task-list.html')
+
+@components.route('/visualising-data')
+def visualising_data():
+    return render_template('visualising-data.html')

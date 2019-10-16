@@ -1,0 +1,45 @@
+.chart-bar {
+  position: relative;
+}
+
+.chart-bar__label {
+  padding-top: 10px;
+  line-height: govuk-em(22, 19);
+}
+
+.chart-bar__part {
+  box-sizing: border-box;
+  height: 44px;
+  float: left;
+  background: govuk-colour("turquoise");
+}
+
+.chart-bar__part--housing {
+  background: govuk-colour("light-pink");
+}
+
+.chart-bar__part--planning {
+  background: govuk-colour("light-blue");
+}
+
+.chart-bar__part--default,
+.chart-bar__part--development-corporation {
+  background: govuk-colour("mid-grey");
+}
+
+.chart-bar__part--inquiry {
+  background: govuk-colour("orange");
+}
+
+.chart-bar__value {
+  position: absolute;
+  top: 0;
+  left: 15px + 10px;
+  @include govuk-font($size: 24);
+  line-height: (44 / 24);
+
+  @include govuk-media-query($from: tablet) {
+    line-height: (44 / 24);
+  }
+}
+

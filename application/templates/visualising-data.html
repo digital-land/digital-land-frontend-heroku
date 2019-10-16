@@ -1,0 +1,104 @@
+{% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/component-menu.html' -%}
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Component</span>
+        <h1 class="govuk-heading-xl">
+          Visualising data
+        </h1>
+      </div>
+
+      <p class="govuk-body">You can add stacked bars</p>
+
+      <div class="module-example">
+        <div class="govuk-grid-row contribution-category-row">
+		  <div class="govuk-grid-column-one-quarter">
+		    <h4 class="govuk-heading-s chart-bar__label"><a href="/compulsory-purchase-order?year=2018">2018</a></h4>
+		  </div>
+		  <div class="govuk-grid-column-three-quarters chart-bar">
+
+		  		<div class="chart-bar__part chart-bar__part--housing" style="width: 40%;"></div>
+		  		<div class="chart-bar__part chart-bar__part--planning" style="width: 25%;"></div>
+		  	
+			<span class="govuk-!-font-weight-bold data-item chart-bar__value">76</span>
+		  </div>
+		</div>
+      </div>
+
+      <p class="govuk-body">You will need this HTML:</p>
+
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+<div class="govuk-grid-row contribution-category-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h4 class="govuk-heading-s chart-bar__label"><a href="/compulsory-purchase-order?year=2018">2018</a></h4>
+  </div>
+  <div class="govuk-grid-column-three-quarters chart-bar">
+
+  		<div class="chart-bar__part chart-bar__part--housing" style="width: 40%;"></div>
+  		<div class="chart-bar__part chart-bar__part--planning" style="width: 25%;"></div>
+  	
+	<span class="govuk-!-font-weight-bold data-item chart-bar__value">76</span>
+  </div>
+</div>
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+	<p class="govuk-body">Short bars will look like this</p>
+
+	<div class="module-example">
+		<div class="govuk-grid-row contribution-category-row">
+		  <div class="govuk-grid-column-one-quarter">
+		    <h4 class="govuk-heading-s contribution-category-heading"><a href="/compulsory-purchase-order?investigation=True">Inquiry</a></h4>
+		  </div>
+		  <div class="govuk-grid-column-three-quarters chart-bar">
+		  	
+		    <div class="chart-bar__part chart-bar__part--inquiry" style="width: 6%"></div>
+		    
+		    <span class="govuk-!-font-weight-bold data-item chart-bar__value">37</span>
+		  </div>
+		</div>
+	</div>
+
+	<p class="govuk-body">You will need this HTML:</p>
+
+	<pre>
+		<code class="html">
+        {%- filter forceescape -%}
+<div class="govuk-grid-row contribution-category-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h4 class="govuk-heading-s contribution-category-heading"><a href="/compulsory-purchase-order?investigation=True">Inquiry</a></h4>
+  </div>
+  <div class="govuk-grid-column-three-quarters chart-bar">
+  	
+    <div class="chart-bar__part chart-bar__part--inquiry" style="width: 6%"></div>
+    
+    <span class="govuk-!-font-weight-bold data-item chart-bar__value">37</span>
+  </div>
+</div>
+        {%- endfilter -%}
+		</code>
+	</pre>
+     
+    </main>
+  </div>
+</div>
+
+{% endblock %}

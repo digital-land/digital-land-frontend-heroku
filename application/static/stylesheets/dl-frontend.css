@@ -7513,6 +7513,80 @@
   }
 }
 
+.chart-bar {
+  position: relative;
+}
+
+.chart-bar__label {
+  padding-top: 10px;
+  line-height: 1.15789em;
+}
+
+.chart-bar__part {
+  box-sizing: border-box;
+  height: 44px;
+  float: left;
+  background: #28a197;
+}
+
+.chart-bar__part--housing {
+  background: #f499be;
+}
+
+.chart-bar__part--planning {
+  background: #5694ca;
+}
+
+.chart-bar__part--default,
+.chart-bar__part--development-corporation {
+  background: #b1b4b6;
+}
+
+.chart-bar__part--inquiry {
+  background: #f47738;
+}
+
+.chart-bar__value {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  line-height: 1.83333;
+}
+
+@media print {
+  .chart-bar__value {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .chart-bar__value {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .chart-bar__value {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .chart-bar__value {
+    line-height: 1.83333;
+  }
+}
+
 p {
   max-width: 38em;
 }
