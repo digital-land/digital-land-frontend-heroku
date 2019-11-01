@@ -34,6 +34,10 @@ def info_text():
 def contents_section():
     return render_template('contents.html')
 
+@components.route('/lists')
+def lists():
+    return render_template('lists.html')
+
 @components.route('/pagination')
 def pagination():
     return render_template('publishing-components/pagination.html')

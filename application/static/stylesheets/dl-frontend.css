@@ -6837,6 +6837,18 @@
   }
 }
 
+.org-count + .org-count {
+  margin-top: 45px;
+}
+
+.org-count__name {
+  margin-bottom: 0;
+}
+
+.org-count__wrapper {
+  margin-top: -5px;
+}
+
 .contents-section {
   position: relative;
   padding-bottom: 15px;
