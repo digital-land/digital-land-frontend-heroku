@@ -4,11 +4,6 @@
 
   summary {
     list-style-image: none;
-
-    &::-webkit-details-marker {
-      color: transparent;
-      background: none;
-    }
   }
 }
 
@@ -22,6 +17,10 @@
 
   &:focus {
     @include govuk-focused-text;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
   }
 }
 

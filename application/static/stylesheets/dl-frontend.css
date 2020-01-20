@@ -7424,11 +7424,6 @@
   list-style-image: none;
 }
 
-.filter-group summary::-webkit-details-marker {
-  color: transparent;
-  background: none;
-}
-
 .filter-group__summary {
   position: relative;
   padding: 5px 0;
@@ -7444,6 +7439,10 @@
   background-color: #ffdd00;
   box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
   text-decoration: none;
+}
+
+.filter-group__summary::-webkit-details-marker {
+  display: none;
 }
 
 .filter-group__icon {
@@ -7608,4 +7607,8 @@
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.highlight-text {
+  color: #1d70b8;
 }
