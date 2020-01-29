@@ -34,7 +34,8 @@ a {
   @extend %govuk-link;
 }
 
-.govuk-main-wrapper p {
+.govuk-main-wrapper p,
+.govuk-inset-text {
   max-width: 38em;
 }
 
