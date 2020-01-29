@@ -103,15 +103,27 @@
   <div class="module-example">
     {{ horizontalBar({
       "label": "text/csv",
+      "label_classes": "chart-bar__label--small-text",
       "value": 342,
       "total": 756
     }) }}
     {{ horizontalBar({
       "label": "text/xls",
+      "label_classes": "chart-bar__label--small-text",
       "value": 281,
       "total": 756,
       "classes": "chart-bar--blue"
     }) }}
+    <div class="govuk-grid-row chart-bar__row ">
+        <div class="govuk-grid-column-one-quarter">
+            <h4 class="govuk-heading-s chart-bar__label chart-bar__label--long chart-bar__label--small-text">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</h4>
+        </div>
+        <div class="govuk-grid-column-three-quarters chart-bar">
+            
+            <div class="chart-bar__part" style="width: 11%;"></div>
+            <span class="govuk-!-font-weight-bold data-item chart-bar__value">89</span>
+        </div>
+    </div>
   </div>
 
   <p class="govuk-body">You will need this jinja:</p>

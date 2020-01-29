@@ -12,12 +12,17 @@
 
 .chart-bar__label {
   margin-bottom: 0;
-  padding-top: 10px;
+  padding: 10px 0;
   line-height: govuk-em(22, 19);
 
+  &--small-text {
+    @include govuk-font($size: 16, $weight: bold);
+  }
+
   &--long {
+    padding: 2px 0;
     overflow-x: scroll;
-    border-right: 1px solid govuk-colour("light-grey");
+    box-shadow: inset -7px 0 6px -6px rgba(govuk-colour("dark-grey"), .45);
   }
 }
 

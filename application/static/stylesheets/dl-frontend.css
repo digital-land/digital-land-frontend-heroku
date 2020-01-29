@@ -7538,13 +7538,45 @@
 
 .chart-bar__label {
   margin-bottom: 0;
-  padding-top: 10px;
+  padding: 10px 0;
   line-height: 1.15789em;
 }
 
+.chart-bar__label--small-text {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .chart-bar__label--small-text {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .chart-bar__label--small-text {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .chart-bar__label--small-text {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
 .chart-bar__label--long {
+  padding: 2px 0;
   overflow-x: scroll;
-  border-right: 1px solid #f3f2f1;
+  box-shadow: inset -7px 0 6px -6px rgba(111, 119, 123, 0.45);
 }
 
 .chart-bar__part {
