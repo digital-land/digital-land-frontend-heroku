@@ -7638,3 +7638,18 @@
 .highlight-text {
   color: #1d70b8;
 }
+
+.block-text--green, .block-text--red {
+  padding: 2px 4px 1px;
+  font-weight: bold;
+}
+
+.block-text--green {
+  color: #ffffff;
+  background: #00703c;
+}
+
+.block-text--red {
+  color: #ffffff;
+  background: #d4351c;
+}

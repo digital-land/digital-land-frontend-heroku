@@ -51,3 +51,20 @@ a {
 .highlight-text {
   color: govuk-colour("blue");
 }
+
+%block-text {
+  padding: 2px 4px 1px;
+  font-weight: bold;
+}
+
+.block-text--green {
+  @extend %block-text;
+  color:  govuk-colour("white");
+  background: govuk-colour("green");
+}
+
+.block-text--red {
+  @extend %block-text;
+  color:  govuk-colour("white");
+  background: govuk-colour("red");
+}
