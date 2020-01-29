@@ -7524,13 +7524,27 @@
   }
 }
 
+.chart-bar__row {
+  margin-bottom: 5px;
+}
+
+.chart-bar__row--spaced {
+  margin-bottom: 15px;
+}
+
 .chart-bar {
   position: relative;
 }
 
 .chart-bar__label {
+  margin-bottom: 0;
   padding-top: 10px;
   line-height: 1.15789em;
+}
+
+.chart-bar__label--long {
+  overflow-x: scroll;
+  border-right: 1px solid #f3f2f1;
 }
 
 .chart-bar__part {
@@ -7555,6 +7569,18 @@
 
 .chart-bar__part--inquiry {
   background: #f47738;
+}
+
+.chart-bar--light-blue .chart-bar__part {
+  background: #5694ca;
+}
+
+.chart-bar--blue .chart-bar__part {
+  background: #1d70b8;
+}
+
+.chart-bar--dark-blue .chart-bar__part {
+  background: #003078;
 }
 
 .chart-bar__value {

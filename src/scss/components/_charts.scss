@@ -1,10 +1,24 @@
+.chart-bar__row {
+  margin-bottom: 5px;
+
+  &--spaced {
+    margin-bottom: 15px;
+  }
+}
+
 .chart-bar {
   position: relative;
 }
 
 .chart-bar__label {
+  margin-bottom: 0;
   padding-top: 10px;
   line-height: govuk-em(22, 19);
+
+  &--long {
+    overflow-x: scroll;
+    border-right: 1px solid govuk-colour("light-grey");
+  }
 }
 
 .chart-bar__part {
@@ -29,6 +43,24 @@
 
 .chart-bar__part--inquiry {
   background: govuk-colour("orange");
+}
+
+@mixin bar-color($color) {
+  .chart-bar__part {
+    background: govuk-colour($color);
+  }
+}
+
+.chart-bar--light-blue {
+  @include bar-color("light-blue");
+}
+
+.chart-bar--blue {
+  @include bar-color("blue");
+}
+
+.chart-bar--dark-blue {
+  @include bar-color("dark-blue");
 }
 
 .chart-bar__value {
