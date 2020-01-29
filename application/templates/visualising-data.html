@@ -1,5 +1,6 @@
 {% extends "dlf-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/chart-macros.html" import horizontalBar %}
 
 {% block topLevelNavItems %}
   {{ toplevelNavItem("Get started", "/") }}
@@ -95,10 +96,61 @@
 </div>
         {%- endfilter -%}
 		</code>
-	</pre>
-     
+  </pre>
+
+  <h3 class="govuk-heading-m">Horizontal bars</h3>
+
+  <div class="module-example">
+    {{ horizontalBar({
+      "label": "text/csv",
+      "value": 342,
+      "total": 756
+    }) }}
+    {{ horizontalBar({
+      "label": "text/xls",
+      "value": 281,
+      "total": 756,
+      "classes": "chart-bar--blue"
+    }) }}
+  </div>
+
+  <p class="govuk-body">You will need this jinja:</p>
+  <pre><code class="nunjucks">{%- raw -%}{{ horizontalBar({
+  "label": "text/csv",
+  "value": 342,
+  "total": 756
+}) }}
+
+{{ horizontalBar({
+  "label": "text/xls",
+  "value": 281,
+  "total": 756,
+  "classes": "chart-bar--blue"
+}) }}{%- endraw -%}</code></pre>
+
+<h3 class="govuk-heading-m">Data items with block backgrounds</h3>
+
+<div class="module-example">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p>
+        <span class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">797</span><br>
+        <span class="govuk-body-l block-text--red">False</span>
+      </p>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <p>
+        <span class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">9</span><br>
+        <span class="govuk-body-l block-text--green">True</span>
+      </p>
+    </div>
+  </div>
+</div>
+
     </main>
   </div>
 </div>
+
+
 
 {% endblock %}
