@@ -16,6 +16,7 @@ $using-helvetica: false;
 @import "components/page-feedback";
 @import "components/buttons";
 @import "components/contribution-bar";
+@import "components/definition-lists";
 @import "components/hero";
 @import "components/tags";
 @import "components/panels";
@@ -60,12 +61,12 @@ a {
 
 .block-text--green {
   @extend %block-text;
-  color:  govuk-colour("white");
+  color: govuk-colour("white");
   background: govuk-colour("green");
 }
 
 .block-text--red {
   @extend %block-text;
-  color:  govuk-colour("white");
+  color: govuk-colour("white");
   background: govuk-colour("red");
 }

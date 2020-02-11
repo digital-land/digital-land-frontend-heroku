@@ -6546,6 +6546,19 @@
   background: #0b0c0c;
 }
 
+.def-list--basic {
+  margin: 0;
+}
+
+.def-list--basic dt {
+  padding-right: 5px;
+  float: left;
+}
+
+.def-list--basic dd {
+  font-weight: bold;
+}
+
 .with-hero #global-header-bar {
   display: none;
 }
@@ -6692,6 +6705,40 @@
   border: 8px solid #ffdd00;
   color: #0b0c0c;
   background: #f3f2f1;
+}
+
+.metadata-panel {
+  padding: 20px 30px;
+  color: #ffffff;
+  background: #1d70b8;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+@media print {
+  .metadata-panel {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .metadata-panel {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media print {
+  .metadata-panel {
+    font-size: 14pt;
+    line-height: 24px;
+  }
 }
 
 .app-task-list {

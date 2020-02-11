@@ -33,3 +33,10 @@
   color: $govuk-text-colour;
   background: $govuk-canvas-background-colour;
 }
+
+.metadata-panel {
+  padding: 20px 30px;
+  color: govuk-colour("white");
+  background: govuk-colour("blue");
+  @include govuk-font($size: 16, $line-height: 24px);
+}

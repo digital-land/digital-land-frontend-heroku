@@ -2,11 +2,11 @@
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
-  {{ toplevelNavItem("Get started", "/") }}
-  {{ toplevelNavItem("Components", "/component", true) }}
-  {{ toplevelNavItem("Content", "/publishing") }}
-  {{ toplevelNavItem("Jinja", "/jinja") }}
-  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{{ toplevelNavItem("Get started", "/") }}
+{{ toplevelNavItem("Components", "/component", true) }}
+{{ toplevelNavItem("Content", "/publishing") }}
+{{ toplevelNavItem("Jinja", "/jinja") }}
+{{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,8 @@
         </h1>
       </div>
 
-      <p class="govuk-body">These examples show how the various status panels should look. There are 3 types. 1 each for error, warning and success states.</p>
+      <p class="govuk-body">These examples show how the various status panels should look. There are 3 types. 1 each for
+        error, warning and success states.</p>
 
       {% macro statusPanel(class, text) -%}
       <div class="govuk-panel {{ class }}">
@@ -98,6 +99,19 @@
         {%- endfilter -%}
       </code>
       </pre>
+
+      <h2 class="govuk-heading-m">Metadata panel</h2>
+      <p class="govuk-body">Used on guidance pages. E.g. <a
+          href="https://www.gov.uk/government/publications/brownfield-land-registers-data-standard"
+          class="govuk-link">Brownfield guidance</a>.</p>
+      <div class="module-example">
+        <div class="metadata-panel">
+          <dl class="def-list--basic">
+            <dt>Applies to:</dt>
+            <dd>England</dd>
+          </dl>
+        </div>
+      </div>
 
     </main>
   </div>
