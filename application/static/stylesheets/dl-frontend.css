@@ -6741,6 +6741,22 @@
   }
 }
 
+.metadata-panel a:visited {
+  color: #f2f2f2;
+}
+
+.metadata-panel a:link {
+  color: #ffffff;
+}
+
+.metadata-panel a:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
 .app-task-list {
   margin-top: 0;
   margin-bottom: 0;

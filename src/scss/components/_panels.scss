@@ -39,4 +39,18 @@
   color: govuk-colour("white");
   background: govuk-colour("blue");
   @include govuk-font($size: 16, $line-height: 24px);
+
+  a {
+    &:visited {
+      color: darken($govuk-body-background-colour, 5);
+    }
+
+    &:link {
+      color: $govuk-body-background-colour;
+    }
+
+    &:focus {
+      @include govuk-focused-text;
+    }
+  }
 }
