@@ -1,0 +1,379 @@
+{% extends "dlf-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+{{ toplevelNavItem("Get started", "/") }}
+{{ toplevelNavItem("Components", "/component", true) }}
+{{ toplevelNavItem("Content", "/publishing") }}
+{{ toplevelNavItem("Jinja", "/jinja") }}
+{{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+    {%- include 'menu-partials/component-menu.html' -%}
+
+    <div class="app-nav__content">
+        <main id="main-content" class="app-content" role="main">
+            <div class="app-content__header">
+                <span class="govuk-caption-xl">Component</span>
+                <h1 class="govuk-heading-xl">
+                    Panels
+                </h1>
+            </div>
+
+            <div class="data-table__wrapper">
+                <div class="data-table-left-shadow"></div>
+                <div class="wide-table">
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Deliverable</th>
+                                <th scope="col" class="govuk-table__header">EndDate</th>
+                                <th scope="col" class="govuk-table__header">FirstAddedDate</th>
+                                <th scope="col" class="govuk-table__header">GeoX</th>
+                                <th scope="col" class="govuk-table__header">GeoY</th>
+                                <th scope="col" class="govuk-table__header">HazardousSubstances</th>
+                                <th scope="col" class="govuk-table__header">Hectares</th>
+                                <th scope="col" class="govuk-table__header">LastUpdatedDate</th>
+                                <th scope="col" class="govuk-table__header">NetDwellingsRangeFrom</th>
+                                <th scope="col" class="govuk-table__header">NetDwellingsRangeTo</th>
+                                <th scope="col" class="govuk-table__header">Notes</th>
+                                <th scope="col" class="govuk-table__header">OrganisationURI</th>
+                                <th scope="col" class="govuk-table__header">OwnershipStatus</th>
+                                <th scope="col" class="govuk-table__header">PermissionDate</th>
+                                <th scope="col" class="govuk-table__header">PermissionType</th>
+                                <th scope="col" class="govuk-table__header">PlanningHistory</th>
+                                <th scope="col" class="govuk-table__header">PlanningStatus</th>
+                                <th scope="col" class="govuk-table__header">SiteNameAddress</th>
+                                <th scope="col" class="govuk-table__header">SiteReference</th>
+                                <th scope="col" class="govuk-table__header">SiteplanURL</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.347007</td>
+                                <td class="govuk-table__cell">51.441515</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.03</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2009-12-11</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=08/0225/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">Pouparts Yard And Land Rear Of 84A Hampton Road Twickenham
+                                </td>
+                                <td class="govuk-table__cell">RBR/17/0001</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.237988</td>
+                                <td class="govuk-table__cell">51.486913</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">17.98</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">46</td>
+                                <td class="govuk-table__cell">46</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-06-30</td>
+                                <td class="govuk-table__cell">outline planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=08/1760/EXT
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">St Paul's School, Lonsdale Road, Barnes</td>
+                                <td class="govuk-table__cell">RBR/17/0002</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.33455</td>
+                                <td class="govuk-table__cell">51.452894</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.03</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2014-10-20</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=10/1864/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">84 Whitton Road Twickenham TW1 1BS</td>
+                                <td class="govuk-table__cell">RBR/17/0006</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.309611</td>
+                                <td class="govuk-table__cell">51.413429</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.2</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">11</td>
+                                <td class="govuk-table__cell">11</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2011-03-07</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=11/0468/PS192
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">Becketts Wharf And Osbourne House Becketts Place Hampton
+                                    Wick
+                                </td>
+                                <td class="govuk-table__cell">RBR/17/0007</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.32931</td>
+                                <td class="govuk-table__cell">51.450536</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">1.18</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">115</td>
+                                <td class="govuk-table__cell">115</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2012-03-30</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=11/1443/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">Twickenham Railway Station London Road Twickenham</td>
+                                <td class="govuk-table__cell">RBR/17/0008</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.330368</td>
+                                <td class="govuk-table__cell">51.447961</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.01</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">7</td>
+                                <td class="govuk-table__cell">7</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2012-03-30</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=11/3248/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">37 Grosvenor Road Twickenham TW1 4AD</td>
+                                <td class="govuk-table__cell">RBR/17/0009</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.341675</td>
+                                <td class="govuk-table__cell">51.44769</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.02</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">9</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2015-06-23</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/0157/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">Lockcorp House 75 Norcutt Road Twickenham TW2 6SR</td>
+                                <td class="govuk-table__cell">RBR/17/0011</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.296573</td>
+                                <td class="govuk-table__cell">51.427997</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2.53</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">42</td>
+                                <td class="govuk-table__cell">42</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2015-01-05</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/0451/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">HMP Latchmere House Church Road Ham Richmond TW10 5HH</td>
+                                <td class="govuk-table__cell">RBR/17/0012</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.253709</td>
+                                <td class="govuk-table__cell">51.470539</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.1</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2014-12-18</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/2490/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">29 Charles Street Barnes London</td>
+                                <td class="govuk-table__cell">RBR/17/0014</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.339641</td>
+                                <td class="govuk-table__cell">51.425998</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.01</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2015-04-20</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/3011/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">2 Broad Street Teddington TW11 8RF</td>
+                                <td class="govuk-table__cell">RBR/17/0015</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.303943</td>
+                                <td class="govuk-table__cell">51.463588</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.12</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">8</td>
+                                <td class="govuk-table__cell">8</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2015-04-30</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/3780/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">Richmond Film Services Park Lane Richmond TW9 2RA</td>
+                                <td class="govuk-table__cell">RBR/17/0016</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">yes</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">-0.253471</td>
+                                <td class="govuk-table__cell">51.467703</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">0.01</td>
+                                <td class="govuk-table__cell">2017-12-13</td>
+                                <td class="govuk-table__cell">8</td>
+                                <td class="govuk-table__cell">8</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">
+                                    http://opendatacommunities.org/id/london-borough-council/richmond</td>
+                                <td class="govuk-table__cell">None</td>
+                                <td class="govuk-table__cell">2015-07-30</td>
+                                <td class="govuk-table__cell">full planning permission</td>
+                                <td class="govuk-table__cell">
+                                    http://www2.richmond.gov.uk/PlanData2/Planning_CaseNo.aspx?strCASENO=14/4721/FUL
+                                </td>
+                                <td class="govuk-table__cell">permissioned</td>
+                                <td class="govuk-table__cell">97A White Hart Lane Barnes London SW13 0JL</td>
+                                <td class="govuk-table__cell">RBR/17/0017</td>
+                                <td class="govuk-table__cell">https://maps.london.gov.uk/brownfield-site-register</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="data-table-right-shadow"></div>
+            </div>
+        </main>
+    </div>
+</div>
+{% endblock %}
