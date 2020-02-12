@@ -6708,6 +6708,7 @@
 }
 
 .metadata-panel {
+  margin-bottom: 10px;
   padding: 20px 30px;
   color: #ffffff;
   background: #1d70b8;
@@ -7748,4 +7749,35 @@
 .block-text--red {
   color: #ffffff;
   background: #d4351c;
+}
+
+.publishing-metadata {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+@media print {
+  .publishing-metadata {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .publishing-metadata {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+}
+
+@media print {
+  .publishing-metadata {
+    font-size: 14pt;
+    line-height: 1.45;
+  }
 }

@@ -70,3 +70,7 @@ a {
   color: govuk-colour("white");
   background: govuk-colour("red");
 }
+
+.publishing-metadata {
+  @include govuk-font($size: 16, $line-height: 1.45);
+}
