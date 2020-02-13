@@ -9,6 +9,30 @@
   overflow-x: scroll;
 }
 
+.data-table {
+  @include govuk-font($size: 16);
+
+  th {
+    position: relative;
+    background: govuk-colour("mid-grey");
+    font-weight: normal;
+    vertical-align: middle;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+
+  tr:nth-child(2n) td {
+    background: govuk-colour("light-grey");
+  }
+}
+
 .data-table-right-shadow,
 .data-table-left-shadow {
   position: absolute;

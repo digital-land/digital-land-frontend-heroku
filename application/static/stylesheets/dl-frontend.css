@@ -6557,6 +6557,57 @@
   overflow-x: scroll;
 }
 
+.data-table {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .data-table {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-table {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .data-table {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.data-table th {
+  position: relative;
+  background: #b1b4b6;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+}
+
+.data-table td {
+  white-space: nowrap;
+}
+
+.data-table tr:nth-child(2n) td {
+  background: #f3f2f1;
+}
+
 .data-table-right-shadow,
 .data-table-left-shadow {
   position: absolute;
