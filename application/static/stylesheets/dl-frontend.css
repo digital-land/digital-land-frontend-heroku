@@ -6617,13 +6617,24 @@
   height: 100%;
 }
 
+.data-table-right-shadow.with-transition,
+.data-table-left-shadow.with-transition {
+  transition: box-shadow .4s ease-out;
+}
+
 .data-table-left-shadow {
   left: 0;
+}
+
+.data-table-left-shadow.visible {
   box-shadow: inset 1px 0 0 0 #b1b4b6, inset 3px 0 2px 1px rgba(111, 119, 123, 0.4);
 }
 
 .data-table-right-shadow {
   right: 0;
+}
+
+.data-table-right-shadow.visible {
   box-shadow: inset -1px 0 0 0 #b1b4b6, inset -3px 0 2px 1px rgba(111, 119, 123, 0.4);
 }
 
