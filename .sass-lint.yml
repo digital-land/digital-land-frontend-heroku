@@ -11,12 +11,11 @@
 # Linter SpaceBeforeBrace, option "allow_single_line_padding"
 
 files:
-  include: '**/*.s+(a|c)ss'
+  include: "**/*.s+(a|c)ss"
 options:
   formatter: stylish
   merge-default-rules: true
 rules:
-
   # Rule bem-depth will enforce how many elements a BEM selector can contain.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/bem-depth.md
   bem-depth: 0
@@ -252,171 +251,163 @@ rules:
   property-sort-order:
     - 2
     - order:
-        - 'content'
-        - 'quotes'
+        - "content"
+        - "quotes"
         # Box-sizing - Allow here until global is decided
-        - 'box-sizing'
+        - "box-sizing"
         -
-        - 'display'
-        - 'visibility'
+        - "display"
+        - "visibility"
         -
-        - 'position'
-        - 'z-index'
-        - 'top'
-        - 'right'
-        - 'bottom'
-        - 'left'
+        - "position"
+        - "z-index"
+        - "top"
+        - "right"
+        - "bottom"
+        - "left"
         -
-        - 'width'
-        - 'min-width'
-        - 'max-width'
-        - 'height'
-        - 'min-height'
-        - 'max-height'
+        - "width"
+        - "min-width"
+        - "max-width"
+        - "height"
+        - "min-height"
+        - "max-height"
         -
-        - 'margin'
-        - 'margin-top'
-        - 'margin-right'
-        - 'margin-bottom'
-        - 'margin-left'
+        - "margin"
+        - "margin-top"
+        - "margin-right"
+        - "margin-bottom"
+        - "margin-left"
         -
-        - 'padding'
-        - 'padding-top'
-        - 'padding-right'
-        - 'padding-bottom'
-        - 'padding-left'
+        - "padding"
+        - "padding-top"
+        - "padding-right"
+        - "padding-bottom"
+        - "padding-left"
         -
-        - 'float'
-        - 'clear'
+        - "float"
+        - "clear"
         -
-        - 'overflow'
-        - 'overflow-x'
-        - 'overflow-y'
+        - "overflow"
+        - "overflow-x"
+        - "overflow-y"
         -
-        - 'clip'
-        - 'clip-path'
-        - 'zoom'
-        - 'resize'
+        - "clip"
+        - "clip-path"
+        - "zoom"
+        - "resize"
         -
-        - 'columns'
+        - "columns"
         -
-        - 'table-layout'
-        - 'empty-cells'
-        - 'caption-side'
-        - 'border-spacing'
-        - 'border-collapse'
+        - "table-layout"
+        - "empty-cells"
+        - "caption-side"
+        - "border-spacing"
+        - "border-collapse"
         -
-        - 'list-style'
-        - 'list-style-position'
-        - 'list-style-type'
-        - 'list-style-image'
+        - "list-style"
+        - "list-style-position"
+        - "list-style-type"
+        - "list-style-image"
         -
-        - 'transform'
-        - 'transition'
-        - 'animation'
+        - "transform"
+        - "transition"
+        - "animation"
         -
-        - 'border'
-        - 'border-top'
-        - 'border-right'
-        - 'border-bottom'
-        - 'border-left'
+        - "border"
+        - "border-top"
+        - "border-right"
+        - "border-bottom"
+        - "border-left"
         -
-        - 'border-width'
-        - 'border-top-width'
-        - 'border-right-width'
-        - 'border-bottom-width'
-        - 'border-left-width'
+        - "border-width"
+        - "border-top-width"
+        - "border-right-width"
+        - "border-bottom-width"
+        - "border-left-width"
         -
-        - 'border-style'
-        - 'border-top-style'
-        - 'border-right-style'
-        - 'border-bottom-style'
-        - 'border-left-style'
+        - "border-style"
+        - "border-top-style"
+        - "border-right-style"
+        - "border-bottom-style"
+        - "border-left-style"
         -
-        - 'border-radius'
-        - 'border-top-left-radius'
-        - 'border-top-right-radius'
-        - 'border-bottom-left-radius'
-        - 'border-bottom-right-radius'
+        - "border-radius"
+        - "border-top-left-radius"
+        - "border-top-right-radius"
+        - "border-bottom-left-radius"
+        - "border-bottom-right-radius"
         -
-        - 'border-color'
-        - 'border-top-color'
-        - 'border-right-color'
-        - 'border-bottom-color'
-        - 'border-left-color'
+        - "border-color"
+        - "border-top-color"
+        - "border-right-color"
+        - "border-bottom-color"
+        - "border-left-color"
         -
-        - 'outline'
-        - 'outline-color'
-        - 'outline-offset'
-        - 'outline-style'
-        - 'outline-width'
+        - "outline"
+        - "outline-color"
+        - "outline-offset"
+        - "outline-style"
+        - "outline-width"
         -
-        - 'opacity'
+        - "opacity"
         # Color has been moved to ensure it appears before background
-        - 'color'
-        - 'background'
-        - 'background-color'
-        - 'background-image'
-        - 'background-repeat'
-        - 'background-position'
-        - 'background-size'
-        - 'box-shadow'
-        - 'fill'
+        - "color"
+        - "background"
+        - "background-color"
+        - "background-image"
+        - "background-repeat"
+        - "background-position"
+        - "background-size"
+        - "box-shadow"
+        - "fill"
         -
-        - 'font'
-        - 'font-family'
-        - 'font-size'
-        - 'font-style'
-        - 'font-variant'
-        - 'font-weight'
+        - "font"
+        - "font-family"
+        - "font-size"
+        - "font-style"
+        - "font-variant"
+        - "font-weight"
         -
-        - 'font-emphasize'
+        - "font-emphasize"
         -
-        - 'letter-spacing'
-        - 'line-height'
-        - 'list-style'
-        - 'word-spacing'
+        - "letter-spacing"
+        - "line-height"
+        - "list-style"
+        - "word-spacing"
         -
-        - 'text-align'
-        - 'text-align-last'
-        - 'text-decoration'
-        - 'text-indent'
-        - 'text-justify'
-        - 'text-overflow'
-        - 'text-overflow-ellipsis'
-        - 'text-overflow-mode'
-        - 'text-rendering'
-        - 'text-outline'
-        - 'text-shadow'
-        - 'text-transform'
-        - 'text-wrap'
-        - 'word-wrap'
-        - 'word-break'
+        - "text-align"
+        - "text-align-last"
+        - "text-decoration"
+        - "text-indent"
+        - "text-justify"
+        - "text-overflow"
+        - "text-overflow-ellipsis"
+        - "text-overflow-mode"
+        - "text-rendering"
+        - "text-outline"
+        - "text-shadow"
+        - "text-transform"
+        - "text-wrap"
+        - "word-wrap"
+        - "word-break"
         -
-        - 'text-emphasis'
+        - "text-emphasis"
         -
-        - 'vertical-align'
-        - 'white-space'
-        - 'word-spacing'
-        - 'hyphens'
+        - "vertical-align"
+        - "white-space"
+        - "word-spacing"
+        - "hyphens"
         -
-        - 'src'
-        - 'cursor'
-        - '-webkit-appearance'
+        - "src"
+        - "cursor"
+        - "-webkit-appearance"
 
   # Rule property-units will disallow the use of units not specified in global or per-property.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/property-units.md
   property-units:
     - 2
-    - global: [
-        'cm',
-        'em',
-        'pt',
-        'px',
-        'rem',
-        'vh',
-        'ex'
-      ]
+    - global: ["cm", "em", "pt", "px", "rem", "vh", "ex", "s"]
 
   # Rule pseudo-element will enforce that:
   # - pseudo-elements must start with double colons
