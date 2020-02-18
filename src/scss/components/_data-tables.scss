@@ -1,7 +1,13 @@
+.data-table__viewer,
 .wide-table {
+  // To do: get rid of .wide-table class
   padding-left: 10px;
   overflow-x: auto;
   overflow-y: hidden;
+
+  .js-enabled & {
+    padding-left: 0;
+  }
 }
 
 .data-table__wrapper {

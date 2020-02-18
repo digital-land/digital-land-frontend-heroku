@@ -6546,10 +6546,16 @@
   background: #0b0c0c;
 }
 
+.data-table__viewer,
 .wide-table {
   padding-left: 10px;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+.js-enabled .data-table__viewer, .js-enabled
+.wide-table {
+  padding-left: 0;
 }
 
 .data-table__wrapper {
