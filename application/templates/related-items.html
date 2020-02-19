@@ -2,11 +2,11 @@
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
-  {{ toplevelNavItem("Get started", "/") }}
-  {{ toplevelNavItem("Components", "/component", true) }}
-  {{ toplevelNavItem("Content", "/publishing") }}
-  {{ toplevelNavItem("Jinja", "/jinja") }}
-  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{{ toplevelNavItem("Get started", "/") }}
+{{ toplevelNavItem("Components", "/component", true) }}
+{{ toplevelNavItem("Content", "/publishing") }}
+{{ toplevelNavItem("Jinja", "/jinja") }}
+{{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
 {% block content %}
@@ -33,6 +33,20 @@
       <code class="html">
         {%- filter forceescape -%}
           {%- include 'partials/related-items.html' -%}
+        {%- endfilter -%}
+      </code>
+      </pre>
+
+      <h2 class="govuk-heading-m">Example with smaller border</h2>
+      <div class="module-example">
+        {% include 'partials/related-items--small.html' %}
+      </div>
+
+      <h2 class="govuk-heading-m">The HTML you need</h2>
+      <pre>
+      <code class="html">
+        {%- filter forceescape -%}
+          {%- include 'partials/related-items--small.html' -%}
         {%- endfilter -%}
       </code>
       </pre>

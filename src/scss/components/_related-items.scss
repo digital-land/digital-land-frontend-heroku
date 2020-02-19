@@ -4,6 +4,11 @@
 .app-related-items {
   padding-top: 10px;
   border-top: 10px solid govuk-colour("blue");
+
+  &--small {
+    padding-top: 15px;
+    border-top-width: 2px;
+  }
 }
 
 // Below added because: Frontend breaking changes

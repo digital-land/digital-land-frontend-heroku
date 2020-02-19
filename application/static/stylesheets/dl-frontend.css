@@ -7403,6 +7403,11 @@
   border-top: 10px solid #1d70b8;
 }
 
+.app-related-items--small {
+  padding-top: 15px;
+  border-top-width: 2px;
+}
+
 .app-related-items .govuk-heading-m {
   margin-top: 0;
 }
