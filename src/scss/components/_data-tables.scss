@@ -36,10 +36,16 @@
 
   tr:nth-child(2n) td {
     background: govuk-colour("light-grey");
+
+    .data-table__missing__label {
+      border-right: 1px solid govuk-colour("light-grey");
+      border-bottom: 1px solid govuk-colour("light-grey");
+      border-left: 1px solid govuk-colour("light-grey");
+    }
   }
 
   .data-table__missing {
-    padding: 30px 0 0;
+    padding: 29px 0 0;
     text-align: center;
 
     // for putting banner at the top
@@ -82,8 +88,11 @@
   display: block;
   padding: 0 15px;
   @include govuk-font($size: 14);
+  border-right: 1px solid govuk-colour("white");
+  border-bottom: 1px solid govuk-colour("white");
+  border-left: 1px solid govuk-colour("white");
   color: govuk-colour("white");
-  background: govuk-colour("red");
+  background: rgba(darken(govuk-colour("red"), 5), .9);
   text-transform: uppercase;
 }
 

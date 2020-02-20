@@ -6614,8 +6614,14 @@
   background: #f3f2f1;
 }
 
+.data-table tr:nth-child(2n) td .data-table__missing__label {
+  border-right: 1px solid #f3f2f1;
+  border-bottom: 1px solid #f3f2f1;
+  border-left: 1px solid #f3f2f1;
+}
+
 .data-table .data-table__missing {
-  padding: 30px 0 0;
+  padding: 29px 0 0;
   text-align: center;
 }
 
@@ -6659,8 +6665,11 @@
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1.25;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
   color: #ffffff;
-  background: #d4351c;
+  background: rgba(189, 47, 25, 0.9);
   text-transform: uppercase;
 }
 
