@@ -37,6 +37,16 @@
   tr:nth-child(2n) td {
     background: govuk-colour("light-grey");
   }
+
+  .data-table__missing {
+    padding: 30px 0 0;
+    text-align: center;
+
+    // for putting banner at the top
+    // &--v2 {
+    //   padding: 0 0 30px;
+    // }
+  }
 }
 
 .data-table-right-shadow,
@@ -67,3 +77,22 @@
     box-shadow: inset -1px 0 0 0 govuk-colour("mid-grey"), inset -3px 0 2px 1px rgba(govuk-colour("dark-grey"), .4);
   }
 }
+
+.data-table__missing__label {
+  display: block;
+  padding: 0 15px;
+  @include govuk-font($size: 14);
+  color: govuk-colour("white");
+  background: govuk-colour("red");
+  text-transform: uppercase;
+}
+
+// .data-table__missing__label--v2 {
+//   border-bottom: 2px solid govuk-colour("red");
+//   color: $govuk-secondary-text-colour;
+//   background: transparent;
+// }
+
+// .data-table__missing__label--v3 {
+//   background: $govuk-secondary-text-colour;
+// }

@@ -6614,6 +6614,11 @@
   background: #f3f2f1;
 }
 
+.data-table .data-table__missing {
+  padding: 30px 0 0;
+  text-align: center;
+}
+
 .data-table-right-shadow,
 .data-table-left-shadow {
   position: absolute;
@@ -6642,6 +6647,42 @@
 
 .data-table-right-shadow.visible {
   box-shadow: inset -1px 0 0 0 #b1b4b6, inset -3px 0 2px 1px rgba(111, 119, 123, 0.4);
+}
+
+.data-table__missing__label {
+  display: block;
+  padding: 0 15px;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: #ffffff;
+  background: #d4351c;
+  text-transform: uppercase;
+}
+
+@media print {
+  .data-table__missing__label {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-table__missing__label {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .data-table__missing__label {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
 }
 
 .def-list--basic {
