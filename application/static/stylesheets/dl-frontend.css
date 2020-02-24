@@ -6629,14 +6629,21 @@
 .data-table-left-shadow {
   position: absolute;
   z-index: 200;
-  top: 0;
+  top: 2px;
   width: 5px;
   height: 100%;
+  height: calc(100% - 4px);
 }
 
 .data-table-right-shadow.with-transition,
 .data-table-left-shadow.with-transition {
   transition: box-shadow .4s ease-out;
+}
+
+.table-sort--active .data-table-right-shadow, .table-sort--active
+.data-table-left-shadow {
+  top: 22px;
+  height: calc(100% - 1.5em);
 }
 
 .data-table-left-shadow {
@@ -7957,6 +7964,103 @@
 @media (min-width: 40.0625em) {
   .chart-bar__value {
     line-height: 1.83333;
+  }
+}
+
+[aria-sort] button,
+[aria-sort] button:hover {
+  position: relative;
+  margin: 0;
+  padding: 0 10px 0 0;
+  border-width: 0;
+  color: #0b0c0c;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-size: 1em;
+  font-weight: inherit;
+  text-align: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+[aria-sort] button:focus {
+  outline: none;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+}
+
+[aria-sort]:first-child button {
+  right: auto;
+}
+
+[aria-sort] button:before {
+  content: " \25bc";
+  position: absolute;
+  top: 9px;
+  right: -1px;
+  font-size: .5em;
+}
+
+[aria-sort] button:after {
+  content: " \25b2";
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  font-size: .5em;
+}
+
+[aria-sort="ascending"] button:before,
+[aria-sort="descending"] button:before {
+  content: none;
+}
+
+[aria-sort="ascending"] button:after {
+  content: " \25b2";
+  position: absolute;
+  top: 2px;
+  right: -5px;
+  font-size: .8em;
+}
+
+[aria-sort="descending"] button:after {
+  content: " \25bc";
+  position: absolute;
+  top: 2px;
+  right: -5px;
+  font-size: .8em;
+}
+
+.sortable-table__status {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .sortable-table__status {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .sortable-table__status {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .sortable-table__status {
+    font-size: 14pt;
+    line-height: 1.2;
   }
 }
 

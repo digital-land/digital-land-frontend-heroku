@@ -68,6 +68,13 @@
   &.with-transition {
     transition: box-shadow .4s ease-out;
   }
+
+  .table-sort--active & {
+    $status-component-height: 20px + 2px;
+    $status-component-height-w-border: 20px + 4px;
+    top: $status-component-height;
+    height: calc(100% - #{govuk-em($status-component-height-w-border, 16)});
+  }
 }
 
 .data-table-left-shadow {

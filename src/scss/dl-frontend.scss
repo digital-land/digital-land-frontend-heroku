@@ -32,6 +32,9 @@ $using-helvetica: false;
 @import "components/filter-group";
 @import "components/charts";
 
+// import components from elsewhere e.g. MOJ
+@import "vendor-components/moj-sortable-table";
+
 a {
   @extend %govuk-link;
 }
