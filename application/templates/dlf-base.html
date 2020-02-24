@@ -40,6 +40,9 @@
 
 
 {% block bodyEnd %}
+{% if includeJQuery == "true" %}
+<script src="/static/javascripts/vendor/jquery-3.4.1.min.js"></script>
+{% endif %}
 <script src="/static/javascripts/govuk/govuk-frontend-3.0.0.min.js"></script>
 <script>
 	// initiate all GOVUK components
