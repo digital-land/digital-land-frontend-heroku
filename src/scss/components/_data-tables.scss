@@ -57,11 +57,13 @@
 
 .data-table-right-shadow,
 .data-table-left-shadow {
+  // sass-lint:disable-block no-duplicate-properties
   position: absolute;
   z-index: 200;
-  top: 0;
+  top: 2px;
   width: 5px;
   height: 100%;
+  height: calc(100% - 4px);
 
   &.with-transition {
     transition: box-shadow .4s ease-out;
