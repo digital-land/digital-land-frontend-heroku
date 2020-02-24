@@ -140,8 +140,10 @@ MOJFrontend.SortableTable.prototype.sort = function(
 MOJFrontend.SortableTable.prototype.getCellValue = function(cell) {
   var val = cell.attr("data-sort-value");
   val = val || cell.html();
-  if ($.isNumeric(val)) {
-    val = parseInt(val, 10);
+  // isNumeric is deprecated. So using native isNaN
+  if (!isNaN(val)) {
+    // keep floats as floats. +val casts to number
+    return +val;
   }
   return val;
 };
