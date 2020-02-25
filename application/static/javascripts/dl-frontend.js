@@ -581,8 +581,11 @@
     this.data_table = this.$module.querySelector("table");
     this.data_table_head = this.data_table.querySelector("thead tr");
     this.data_table_body = this.data_table.querySelector("tbody");
+    this.rows = this.data_table.querySelectorAll("tbody tr");
 
     this.addLinkColumn();
+    // do I need to delay this?
+    this.initialSelected();
   };
 
   LinkableTable.prototype.setupOptions = function(params) {
@@ -606,6 +609,7 @@
 
   LinkableTable.prototype.createCell = function(params) {
     params = params || {};
+    var boundLinkToRowHandler = this.linkToRowHandler.bind(this);
     var cell =
       params.type == "head"
         ? document.createElement("th")
@@ -614,10 +618,18 @@
       var _link = document.createElement("a");
       _link.setAttribute("href", "#" + this.idPrefix + params.linkIdx);
       _link.textContent = "#" + params.linkIdx;
+      _link.addEventListener("click", boundLinkToRowHandler);
       console.log(_link);
       cell.append(_link);
     }
     return cell;
+  };
+
+  LinkableTable.prototype.linkToRowHandler = function(e) {
+    //e.preventDefault();
+    this.deselectRows();
+    this.selectRow(e.currentTarget.closest("tr"));
+    console.log(e.currentTarget);
   };
 
   LinkableTable.prototype.addCellToRow = function(row, cell) {
@@ -633,6 +645,25 @@
       rows.push(trs[i]);
     }
     return rows;
+  };
+
+  LinkableTable.prototype.deselectRows = function() {
+    this.rows.forEach(row => {
+      row.classList.remove("data-table__row-selected");
+    });
+  };
+
+  LinkableTable.prototype.selectRow = function(row) {
+    row.classList.add("data-table__row-selected");
+  };
+
+  LinkableTable.prototype.initialSelected = function() {
+    if (window.location.hash) {
+      const link = document.querySelector(`[href='${window.location.hash}']`);
+      const row = link.closest("tr");
+      this.selectRow(row);
+      row.scrollIntoView({ block: "center" });
+    }
   };
 
   exports.BackToTop = BackToTop;

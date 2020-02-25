@@ -53,6 +53,23 @@
     //   padding: 0 0 30px;
     // }
   }
+
+  tr.data-table__row-selected { // sass-lint:disable-line no-qualifying-elements
+
+    td {
+      background: $warning-tint-colour;
+    }
+
+    td:first-child {
+      background: govuk-colour("yellow");
+
+      a {
+        color: govuk-colour("black");
+        box-shadow: 0 -2px govuk-colour("yellow"), 0 4px govuk-colour("black");
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .data-table-right-shadow,
@@ -114,3 +131,9 @@
 // .data-table__missing__label--v3 {
 //   background: $govuk-secondary-text-colour;
 // }
+
+.data-table__row-link {
+  a {
+    color: govuk-colour("black") !important;
+  }
+}

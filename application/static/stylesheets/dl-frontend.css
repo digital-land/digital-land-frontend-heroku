@@ -6625,6 +6625,20 @@
   text-align: center;
 }
 
+.data-table tr.data-table__row-selected td {
+  background: #fff7bf;
+}
+
+.data-table tr.data-table__row-selected td:first-child {
+  background: #ffdd00;
+}
+
+.data-table tr.data-table__row-selected td:first-child a {
+  color: #0b0c0c;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
 .data-table-right-shadow,
 .data-table-left-shadow {
   position: absolute;
@@ -6699,6 +6713,10 @@
     font-size: 12pt;
     line-height: 1.2;
   }
+}
+
+.data-table__row-link a {
+  color: #0b0c0c !important;
 }
 
 .def-list--basic {
