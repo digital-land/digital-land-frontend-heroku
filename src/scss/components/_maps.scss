@@ -1,0 +1,13 @@
+// 25% tint of govuk-colour('yellow')
+$warning-tint-colour: #fff7bf;
+
+.map__site-count {
+  @include govuk-font($size: 16);
+  display: inline-block;
+  padding: 5px 8px;
+  background: govuk-colour("light-grey");
+
+  &--warning {
+    background: $warning-tint-colour;
+  }
+}
