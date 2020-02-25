@@ -450,12 +450,19 @@
 <script>
 (function($) {
     $(function() {
+        // bad
+        const $tables = $('table');
         var sTable = new MOJFrontend.SortableTable({
-            table: $('table')[1],
+            table: $tables[1],
             statusVisible: true,
             tableWrapperSelector: ".data-table__wrapper"
         });
-        console.log(sTable);
+
+        var sTable2 = new MOJFrontend.SortableTable({
+            table: $tables[2],
+            statusVisible: true,
+            tableWrapperSelector: ".data-table__wrapper"
+        });
     });
 }(jQuery));
 </script>
