@@ -1,0 +1,50 @@
+{% extends "leaflet-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts", true) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/javascripts-menu.html' -%}
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Javascripts</span>
+        <h1 class="govuk-heading-xl">
+          Helpers
+        </h1>
+      </div>
+
+      <p class="govuk-body">A few options for setting up JS components.</p>
+
+      <h2 class="govuk-heading-l">Using jQuery</h2>
+
+      <p class="govuk-body">Digital land frontend has a version available. To include it in a template set the <code>includeJQuery</code> jinja variable to 'true'.</p>
+      
+      <p class="govuk-body">
+        <pre><code class="html">
+        {%- filter forceescape -%}{%- raw -%}
+        {% set includeJQuery = "true" %}
+        {%- endraw -%}{%- endfilter -%}</code></pre>
+      </p>
+
+      <p class="govuk-body">This will include version 3.4.1.</p>
+
+      <h2 class="govuk-heading-l">Google analytics</h2>
+
+      <p class="govuk-body">Google analytics for Digital Land is included by default. 
+        If you want to change the GA setup or exclude you can do so by changing the <code>{%- raw -%}{% block googleAnalytics %}{% endblock %}{%- endraw -%}</code> jinja block (see dlf-base template).</p>
+      
+    </main>
+  </div>
+</div>
+
+{% endblock %}

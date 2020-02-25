@@ -26,6 +26,10 @@ def javascripts():
 def dl_frontend():
     return render_template('js-docs/dl-frontend.html')
 
+@frontend.route('/js/helpers')
+def js_helpers():
+    return render_template('js-docs/js-helpers.html')
+
 @frontend.route('/js/mhclg-maps')
 def mhclg_maps():
     return render_template('js-docs/mhclg-maps.html')

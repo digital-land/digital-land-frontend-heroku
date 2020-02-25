@@ -40,18 +40,39 @@
 
 
 {% block bodyEnd %}
-{% if includeJQuery == "true" %}
-<script src="/static/javascripts/vendor/jquery-3.4.1.min.js"></script>
-{% endif %}
-<script src="/static/javascripts/govuk/govuk-frontend-3.0.0.min.js"></script>
-<script>
-	// initiate all GOVUK components
-	window.GOVUKFrontend.initAll();
-</script>
-{# needs to come after govuk frontend #}
-<script src="/static/javascripts/dl-frontend.js"></script>
+	{%- block googleAnalytics -%}
+	<!-- google analytics -->
+	<script type="application/javascript">
+		var doNotTrack = false;
+		if (!doNotTrack) {
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-127566551-1', 'auto');
+			
+			ga('send', 'pageview');
+		}
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+	{% endblock googleAnalytics %}
 
-{# required for on page syntax highlighting #}
-<script src='/static/javascripts/vendor/highlight.pack.js'></script>
-<script>hljs.initHighlightingOnLoad();</script>
+	{#- optional jQuery include -#}
+	{%- if includeJQuery == "true" -%}
+	<script src="/static/javascripts/vendor/jquery-3.4.1.min.js"></script>
+	{% endif %}
+
+	<script src="/static/javascripts/govuk/govuk-frontend-3.0.0.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	{% block bodyEndScripts %}
+	{# needs to come after govuk frontend #}
+	<script src="/static/javascripts/dl-frontend.js"></script>
+
+	{# required for on page syntax highlighting #}
+	<script src='/static/javascripts/vendor/highlight.pack.js'></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	{% endblock %}
+
 {% endblock %}
