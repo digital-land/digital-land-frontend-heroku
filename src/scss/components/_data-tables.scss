@@ -134,6 +134,8 @@
 
 .data-table__row-link {
   a {
+    @include govuk-font($size: 14);
+    padding: govuk-em(2, 14);
     color: govuk-colour("black") !important;
   }
 }
