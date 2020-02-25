@@ -614,6 +614,8 @@
       params.type == "head"
         ? document.createElement("th")
         : document.createElement("td");
+    cell.classList.add("data-table__row-link");
+
     if (params.linkIdx) {
       var _link = document.createElement("a");
       _link.setAttribute("href", "#" + this.idPrefix + params.linkIdx);

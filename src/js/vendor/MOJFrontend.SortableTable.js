@@ -17,7 +17,7 @@ MOJFrontend.SortableTable.prototype.setupOptions = function(params) {
   this.descendingText = params.descendingText || "descending";
   this.statusVisible = params.statusVisible || false;
   this.tableWrapper = params.tableWrapperSelector
-    ? $(params.tableWrapperSelector)
+    ? this.table.closest(params.tableWrapperSelector)
     : this.table.parent();
 };
 
