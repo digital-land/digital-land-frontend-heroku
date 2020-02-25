@@ -383,19 +383,53 @@
 
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+            <h2 class="govuk-heading-l">Sortable tables</h2>
+            <p class="govuk-body">You can make any number of the columns in a table sortable. Sorting a table by a column will attempt to reorder all the rows.</p>
             <div>
                 <div class="data-table__wrapper" data-module="data-table">
                     {% include "partials/data-tables.html" %}
                 </div>
             </div>
 
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">How to use sortable tables</h3>
+            <p class="govuk-body">Sorting is an enhancement and is applied to a table using javascript. Instantiate a table with:</p>
+
+            <pre><code class="js">
+            {%- filter forceescape -%}
+<script>
+(function($) {
+    $(function() {
+        var sTable = new MOJFrontend.SortableTable({
+            table: $('table')[1],
+            statusVisible: true,
+            tableWrapperSelector: ".data-table__wrapper"
+        });
+    });
+}(jQuery));
+</script>
+            {%- endfilter -%}</code></pre>
+
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+            <h2 class="govuk-heading-l">Link to rows in a table</h2>
+            <p class="govuk-body">You can progressively enhance a data table to make each row linkable. This helps with collaborating on a table.</p>
+            <p class="govuk-body">Try clicking on one of the row reference links (e.g. #1).</p>
             <div>
                 <div class="data-table__wrapper" data-module="data-table data-linkable-table">
                     {% include "partials/data-tables.html" %}
                 </div>
             </div>
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">How to make a table linkable</h3>
+            <p class="govuk-body">You need to add the following:</p>
+            <pre><code class="js">
+            {%- filter forceescape -%}
+<script>
+    var $linkable_tables = document.querySelectorAll('[data-module*="data-linkable-table"]')
+    $linkable_tables.forEach(linkable_table => {
+        new window.DLFrontend.LinkableTable(linkable_table).init()
+    })
+</script>
+            {%- endfilter -%}</code></pre>
         </main>
     </div>
 </div>
