@@ -2,7 +2,7 @@
 .wide-table {
   // To do: get rid of .wide-table class
   padding-left: 10px;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
 
   .js-enabled & {
@@ -12,7 +12,6 @@
 
 .data-table__wrapper {
   position: relative;
-  overflow-x: scroll;
 }
 
 .data-table {
