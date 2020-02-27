@@ -79,3 +79,11 @@ a {
 .publishing-metadata {
   @include govuk-font($size: 16, $line-height: 1.45);
 }
+
+.secondary-text {
+  color: $govuk-secondary-text-colour;
+}
+
+.hidden-text {
+  color: transparent;
+}
