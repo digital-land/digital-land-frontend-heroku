@@ -6747,6 +6747,65 @@
   }
 }
 
+.data-table__issue {
+  position: relative;
+}
+
+.data-table__issue:after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border: 8px solid #b1b4b6;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.data-table__issue .data-table__issue__item {
+  display: none;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -1px;
+  padding: 5px;
+  border: 1px solid #6f777b;
+  background: #ffffff;
+  box-shadow: 0 1px 4px 1px rgba(111, 119, 123, 0.25);
+}
+
+.data-table__issue:hover, .data-table__issue:focus {
+  padding-left: 14px;
+  border-left: 1px solid #6f777b;
+  background: #c7dbed !important;
+}
+
+.data-table__issue:hover:after, .data-table__issue:focus:after {
+  left: 0;
+  border-bottom-color: #6f777b;
+  border-left-color: #6f777b;
+}
+
+.data-table__issue:hover .data-table__issue__item, .data-table__issue:focus .data-table__issue__item {
+  display: block;
+}
+
+.data-table__issue__info {
+  display: block;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #6f777b;
+}
+
+.data-table__issue__item__text {
+  display: block;
+}
+
+.data-table__issue__item__text .secondary-text {
+  padding-right: 5px;
+}
+
 .def-list--basic {
   margin: 0;
 }
@@ -8208,4 +8267,12 @@
     font-size: 14pt;
     line-height: 1.45;
   }
+}
+
+.secondary-text {
+  color: #6f777b;
+}
+
+.hidden-text {
+  color: transparent;
 }

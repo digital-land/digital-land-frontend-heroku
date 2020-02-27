@@ -138,3 +138,65 @@
     color: govuk-colour("black") !important;
   }
 }
+
+$triangle-size: 8px;
+
+.data-table__issue {
+  position: relative;
+
+  &:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    width: $triangle-size;
+    height: $triangle-size;
+    border: $triangle-size solid govuk-colour("mid-grey");
+    border-top-color: transparent;
+    border-right-color: transparent;
+  }
+
+  .data-table__issue__item {
+    display: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: -1px;
+    padding: 5px;
+    border: 1px solid govuk-colour("dark-grey");
+    background: govuk-colour("white");
+    box-shadow: 0 1px 4px 1px rgba(govuk-colour("dark-grey"), .25);
+  }
+
+  &:hover,
+  &:focus {
+    padding-left: 14px;
+    border-left: 1px solid govuk-colour("dark-grey");
+    background: $govuk-blue-25 !important;
+
+    &:after {
+      left: 0;
+      border-bottom-color: govuk-colour("dark-grey");
+      border-left-color: govuk-colour("dark-grey");
+    }
+
+    .data-table__issue__item {
+      display: block;
+    }
+  }
+}
+
+.data-table__issue__info {
+  display: block;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid govuk-colour("dark-grey");
+}
+
+.data-table__issue__item__text {
+  display: block;
+
+  .secondary-text {
+    padding-right: 5px;
+  }
+}
