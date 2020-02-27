@@ -6767,6 +6767,7 @@
 .data-table__issue .data-table__issue__item {
   display: none;
   position: absolute;
+  z-index: 10;
   top: calc(100% - 1px);
   left: -1px;
   padding: 5px;
