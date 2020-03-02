@@ -207,9 +207,12 @@ $triangle-size: 8px;
   white-space: normal;
 }
 
-.issue__part--wide {
-  min-width: 30em;
+.data-table__cell--min-width {
+  .issue__part {
+    min-width: 30em;
+  }
 }
+
 
 .issue__part__label {
   flex-shrink: 0;

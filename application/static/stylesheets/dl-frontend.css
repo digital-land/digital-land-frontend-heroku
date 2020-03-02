@@ -6812,7 +6812,7 @@
   white-space: normal;
 }
 
-.issue__part--wide {
+.data-table__cell--min-width .issue__part {
   min-width: 30em;
 }
 
