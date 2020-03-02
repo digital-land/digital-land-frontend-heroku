@@ -6807,6 +6807,10 @@
   padding-right: 5px;
 }
 
+.data-table__cell--min-width {
+  min-width: 30em;
+}
+
 .def-list--basic {
   margin: 0;
 }
