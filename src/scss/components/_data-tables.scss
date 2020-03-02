@@ -202,6 +202,12 @@ $triangle-size: 8px;
   }
 }
 
-.data-table__cell--min-width {
+.issue__part {
+  display: flex;
   min-width: 30em;
+  white-space: normal;
+}
+
+.issue__part__label {
+  flex-shrink: 0;
 }
