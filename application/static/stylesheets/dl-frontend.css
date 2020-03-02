@@ -6809,8 +6809,11 @@
 
 .issue__part {
   display: flex;
-  min-width: 30em;
   white-space: normal;
+}
+
+.issue__part--wide {
+  min-width: 30em;
 }
 
 .issue__part__label {
