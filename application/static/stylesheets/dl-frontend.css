@@ -6799,6 +6799,12 @@
   border-top: 1px solid #6f777b;
 }
 
+.data-table__issue__info:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .data-table__issue__item__text {
   display: block;
 }
