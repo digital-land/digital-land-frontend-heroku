@@ -661,10 +661,13 @@
 
   LinkableTable.prototype.initialSelected = function() {
     if (window.location.hash) {
-      const link = document.querySelector(`[href='${window.location.hash}']`);
-      const row = link.closest("tr");
-      this.selectRow(row);
-      row.scrollIntoView({ block: "center" });
+      // uses ES6 includes, need to make sure works widely
+      if (window.location.hash.includes(this.idPrefix)) {
+        const link = document.querySelector(`[href='${window.location.hash}']`);
+        const row = link.closest("tr");
+        this.selectRow(row);
+        row.scrollIntoView({ block: "center" });
+      }
     }
   };
 
