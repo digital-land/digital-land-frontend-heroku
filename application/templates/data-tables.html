@@ -415,7 +415,7 @@
             <p class="govuk-body">You can progressively enhance a data table to make each row linkable. This helps with collaborating on a table.</p>
             <p class="govuk-body">Try clicking on one of the row reference links (e.g. #1).</p>
             <div>
-                <div class="data-table__wrapper" data-module="data-table data-linkable-table">
+                <div class="data-table__wrapper" data-module="data-table data-linkable-table" data-linkable-prefix="hltable">
                     {% include "partials/data-tables.html" %}
                 </div>
             </div>
@@ -438,7 +438,7 @@
             <p class="govuk-body"></p>
 
             <div>
-                <div class="data-table__wrapper" data-module="data-table data-linkable-table">
+                <div class="data-table__wrapper" data-module="data-table data-linkable-table" data-linkable-prefix="overlaytable">
                     {% include "partials/data-tables-issues.html" %}
                 </div>
             </div>
@@ -476,7 +476,10 @@
 <script>
 var $linkable_tables = document.querySelectorAll('[data-module*="data-linkable-table"]')
 $linkable_tables.forEach(linkable_table => {
-    new window.DLFrontend.LinkableTable(linkable_table).init()
+    const prefix = linkable_table.dataset.linkablePrefix;
+    new window.DLFrontend.LinkableTable(linkable_table).init({
+        idPrefix: prefix
+    })
 })
 </script>
 
