@@ -261,3 +261,21 @@ $triangle-size: 8px;
 .issue__part__label {
   flex-shrink: 0;
 }
+
+.data-table__notes-cell {
+  white-space: normal !important;
+
+  .govuk-details {
+    margin-bottom: 0;
+    @include govuk-font($size: 16);
+  }
+
+  .govuk-details__summary::before {
+    left: -2px;
+  }
+
+  .govuk-details__text {
+    margin-left: 2px;
+    padding-right: 12px;
+  }
+}
