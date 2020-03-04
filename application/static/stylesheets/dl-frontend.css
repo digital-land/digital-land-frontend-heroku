@@ -6776,23 +6776,22 @@
   position: absolute;
   z-index: 10;
   top: calc(100% - 1px);
-  left: -1px;
+  left: 0;
   padding: 5px;
-  border: 1px solid #6f777b;
+  border-top: 1px solid #6f777b;
   background: #ffffff;
-  box-shadow: 0 1px 4px 1px rgba(111, 119, 123, 0.25);
+  box-shadow: 0 1px 4px 1px rgba(111, 119, 123, 0.4);
 }
 
 .data-table__issue:hover, .data-table__issue:focus {
   padding-left: 14px;
-  border-left: 1px solid #6f777b;
   background: #c7dbed !important;
 }
 
 .data-table__issue:hover:after, .data-table__issue:focus:after {
   left: 0;
-  border-bottom-color: #6f777b;
-  border-left-color: #6f777b;
+  border-bottom-color: #0b0c0c;
+  border-left-color: #0b0c0c;
 }
 
 .data-table__issue:hover .data-table__issue__item, .data-table__issue:focus .data-table__issue__item {
@@ -6806,6 +6805,17 @@
 
 .data-table__issue--wide .data-table__issue__info {
   white-space: normal;
+}
+
+.data-table__row--bottom .data-table__issue:hover, .data-table__row--bottom .data-table__issue:focus {
+  left: -1px;
+  border-left: 1px solid #0b0c0c;
+}
+
+.data-table__row--bottom .data-table__issue:hover .data-table__issue__item, .data-table__row--bottom .data-table__issue:focus .data-table__issue__item {
+  left: -1px;
+  border-top: 0;
+  border-left: 1px solid #0b0c0c;
 }
 
 .data-table__row--bottom .data-table__issue__item {
