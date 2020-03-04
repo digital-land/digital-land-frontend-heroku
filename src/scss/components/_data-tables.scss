@@ -53,6 +53,12 @@
     // }
   }
 
+  .data-table__cell--max-width {
+    box-sizing: content-box;
+    max-width: govuk-em(330, 16);
+    white-space: break-spaces;
+  }
+
   tr.data-table__row-selected { // sass-lint:disable-line no-qualifying-elements
 
     td {
@@ -218,7 +224,6 @@ $triangle-size: 8px;
     min-width: 30em;
   }
 }
-
 
 .issue__part__label {
   flex-shrink: 0;

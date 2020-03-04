@@ -6624,6 +6624,12 @@
   text-align: center;
 }
 
+.data-table .data-table__cell--max-width {
+  box-sizing: content-box;
+  max-width: 20.625em;
+  white-space: break-spaces;
+}
+
 .data-table tr.data-table__row-selected td {
   background: #fff7bf;
 }
