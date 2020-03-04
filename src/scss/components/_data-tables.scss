@@ -194,6 +194,17 @@ $triangle-size: 8px;
   }
 }
 
+.data-table__issue--wide {
+  .data-table__issue__item {
+    min-width: govuk-em(420, 16);
+    max-width: govuk-em(500, 16);
+  }
+
+  .data-table__issue__info {
+    white-space: normal;
+  }
+}
+
 .data-table__row--bottom {
   .data-table__issue__item {
     top: unset;
