@@ -55,6 +55,7 @@
 
   .data-table__cell--max-width {
     box-sizing: content-box;
+    min-width: govuk-em(270, 16);
     max-width: govuk-em(330, 16);
     white-space: break-spaces;
   }
