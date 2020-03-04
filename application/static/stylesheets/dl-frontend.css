@@ -6799,6 +6799,11 @@
   display: block;
 }
 
+.data-table__row--bottom .data-table__issue__item {
+  top: unset;
+  bottom: 100%;
+}
+
 .data-table__issue__info {
   display: block;
   margin-top: 5px;
