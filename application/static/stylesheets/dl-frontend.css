@@ -6912,6 +6912,8 @@
 }
 
 .def-list--basic dd {
+  display: inline-block;
+  margin-left: .35em;
   font-weight: bold;
 }
 
