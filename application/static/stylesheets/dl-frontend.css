@@ -7358,11 +7358,13 @@
   margin-top: -5px;
 }
 
+.dl-contents-section,
 .contents-section {
   position: relative;
   padding-bottom: 15px;
 }
 
+.dl-contents-section:before,
 .contents-section:before {
   content: "";
   position: absolute;
@@ -7374,19 +7376,23 @@
 }
 
 @media (min-width: 40.0625em) {
+  .dl-contents-section,
   .contents-section {
     padding-bottom: 0;
   }
+  .dl-contents-section:before,
   .contents-section:before {
     display: none;
   }
 }
 
+.dl-contents-section ul,
 .contents-section ul {
   margin-top: 5px !important;
   padding-left: 25px;
 }
 
+.dl-contents-section li,
 .contents-section li {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7400,12 +7406,14 @@
 }
 
 @media print {
+  .dl-contents-section li,
   .contents-section li {
     font-family: sans-serif;
   }
 }
 
 @media (min-width: 40.0625em) {
+  .dl-contents-section li,
   .contents-section li {
     font-size: 16px;
     font-size: 1rem;
@@ -7414,22 +7422,26 @@
 }
 
 @media print {
+  .dl-contents-section li,
   .contents-section li {
     font-size: 14pt;
     line-height: 1.2;
   }
 }
 
+.dl-contents-section li:before,
 .contents-section li:before {
   content: "— ";
   margin-left: -25px;
   padding-right: 5px;
 }
 
+.dl-contents-section li a,
 .contents-section li a {
   text-decoration: none;
 }
 
+.dl-contents-section p,
 .contents-section p {
   margin: 0;
   font-family: "GDS Transport", Arial, sans-serif;
@@ -7442,12 +7454,14 @@
 }
 
 @media print {
+  .dl-contents-section p,
   .contents-section p {
     font-family: sans-serif;
   }
 }
 
 @media (min-width: 40.0625em) {
+  .dl-contents-section p,
   .contents-section p {
     font-size: 16px;
     font-size: 1rem;
@@ -7456,6 +7470,7 @@
 }
 
 @media print {
+  .dl-contents-section p,
   .contents-section p {
     font-size: 14pt;
     line-height: 1.2;
