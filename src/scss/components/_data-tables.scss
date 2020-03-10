@@ -196,8 +196,8 @@ $triangle-size: 8px;
 
 .data-table__issue--wide {
   .data-table__issue__item {
-    min-width: govuk-em(420, 16);
-    max-width: govuk-em(500, 16);
+    min-width: govuk-em(450, 16);
+    max-width: govuk-em(540, 16);
   }
 
   .data-table__issue__info {
@@ -227,10 +227,14 @@ $triangle-size: 8px;
 }
 
 .data-table__issue__info {
+  // sass-lint:disable-block no-duplicate-properties
   display: block;
   margin-top: 5px;
   padding-top: 5px;
   border-top: 1px solid govuk-colour("dark-grey");
+  // use flex if available
+  display: flex;
+  align-items: flex-start;
 }
 
 .data-table__issue__info:first-child {

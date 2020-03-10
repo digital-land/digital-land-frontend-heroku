@@ -6799,8 +6799,8 @@
 }
 
 .data-table__issue--wide .data-table__issue__item {
-  min-width: 26.25em;
-  max-width: 31.25em;
+  min-width: 28.125em;
+  max-width: 33.75em;
 }
 
 .data-table__issue--wide .data-table__issue__info {
@@ -6828,6 +6828,8 @@
   margin-top: 5px;
   padding-top: 5px;
   border-top: 1px solid #6f777b;
+  display: flex;
+  align-items: flex-start;
 }
 
 .data-table__issue__info:first-child {
