@@ -8215,6 +8215,130 @@
   }
 }
 
+.bfs {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .bfs {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .bfs {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .bfs {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.bfs__header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f3f2f1;
+}
+
+.bfs__header .bfs__addr {
+  margin-bottom: 5px;
+}
+
+.bfs__key-data dt,
+.bfs__key-data dd {
+  display: block;
+  text-align: center;
+}
+
+.bfs__key-data dd {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-left: 0;
+}
+
+@media print {
+  .bfs__key-data dd {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .bfs__key-data dd {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .bfs__key-data dd {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.bfs__meta dl {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+@media print {
+  .bfs__meta dl {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .bfs__meta dl {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .bfs__meta dl {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
+.bfs__meta dt,
+.bfs__meta dd {
+  display: inline-block;
+}
+
+.bfs__meta dt {
+  color: #6f777b;
+}
+
+.bfs__meta dd {
+  margin-left: 5px;
+}
+
 .map__site-count {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

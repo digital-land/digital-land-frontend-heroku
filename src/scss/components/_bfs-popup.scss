@@ -1,0 +1,46 @@
+.bfs {
+  @include govuk-font($size: 16);
+}
+
+.bfs__header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid govuk-colour("light-grey");
+
+  .bfs__addr {
+    margin-bottom: 5px;
+  }
+}
+
+.bfs__key-data {
+  dt,
+  dd {
+    display: block;
+    text-align: center;
+  }
+
+  dd {
+    @include govuk-font($size: 19, $weight: bold);
+    margin-left: 0;
+  }
+}
+
+.bfs__meta {
+  dl {
+    @include govuk-font($size: 14);
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  dt,
+  dd {
+    display: inline-block;
+  }
+
+  dt {
+    color: $govuk-secondary-text-colour;
+  }
+
+  dd {
+    margin-left: 5px;
+  }
+}
