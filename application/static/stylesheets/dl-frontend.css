@@ -8215,6 +8215,10 @@
   }
 }
 
+.bfs-popup .leaflet-popup-content-wrapper {
+  border-radius: 4px;
+}
+
 .bfs {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -8244,6 +8248,16 @@
     font-size: 14pt;
     line-height: 1.2;
   }
+}
+
+.bfs__end-banner {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  color: #594d00;
+  background: #fff7bf;
+  font-weight: 700;
+  text-align: center;
 }
 
 .bfs__header {

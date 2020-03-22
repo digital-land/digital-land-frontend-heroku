@@ -1,5 +1,22 @@
+// for overiding some leaflet popup defaults
+.bfs-popup {
+  .leaflet-popup-content-wrapper {
+    border-radius: 4px;
+  }
+}
+
 .bfs {
   @include govuk-font($size: 16);
+}
+
+.bfs__end-banner {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  color: $warning-tag-text;
+  background: $warning-tag-bg;
+  font-weight: 700;
+  text-align: center;
 }
 
 .bfs__header {
