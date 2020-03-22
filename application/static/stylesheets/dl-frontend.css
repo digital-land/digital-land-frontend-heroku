@@ -8269,6 +8269,40 @@
   margin-bottom: 5px;
 }
 
+.bfs__footer {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #f3f2f1;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .bfs__footer {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .bfs__footer {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .bfs__footer {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
 .bfs__key-data dt,
 .bfs__key-data dd {
   display: block;

@@ -28,6 +28,13 @@
   }
 }
 
+.bfs__footer {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid govuk-colour("light-grey");
+  @include govuk-font($size: 14);
+}
+
 .bfs__key-data {
   dt,
   dd {
