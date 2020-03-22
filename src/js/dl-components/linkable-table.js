@@ -106,8 +106,11 @@ LinkableTable.prototype.initialSelected = function() {
       this.selectRow(row);
       row.scrollIntoView({ block: "center" });
     } else if (document.getElementById(hashless_hash)) {
-      var row = document.getElementById(hashless_hash);
-      this.selectRow(row);
+      // make sure element with id from hash is inside the table
+      var el = document.getElementById(hashless_hash);
+      if (this.data_table_body.contains(el)) {
+        this.selectRow(el);
+      }
     }
   }
 };
