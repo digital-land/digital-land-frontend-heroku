@@ -32,7 +32,14 @@ LinkableTable.prototype.addLinkColumn = function() {
   rows.forEach((row, idx) => {
     console.log(idx);
     idx = idx + 1;
-    this.addCellToRow(row, this.createCell({ linkIdx: idx.toString() }));
+    var href = "#" + this.idPrefix + idx.toString();
+    if (row.id) {
+      href = "#" + row.id;
+    }
+    this.addCellToRow(
+      row,
+      this.createCell({ linkIdx: idx.toString(), linkHref: href })
+    );
   });
 };
 
@@ -47,7 +54,7 @@ LinkableTable.prototype.createCell = function(params) {
 
   if (params.linkIdx) {
     var _link = document.createElement("a");
-    _link.setAttribute("href", "#" + this.idPrefix + params.linkIdx);
+    _link.setAttribute("href", params.linkHref);
     _link.textContent = "#" + params.linkIdx;
     _link.addEventListener("click", boundLinkToRowHandler);
     console.log(_link);
@@ -90,12 +97,17 @@ LinkableTable.prototype.selectRow = function(row) {
 
 LinkableTable.prototype.initialSelected = function() {
   if (window.location.hash) {
+    var hash = window.location.hash;
+    var hashless_hash = hash.replace("#", "");
     // uses ES6 includes, need to make sure works widely
-    if (window.location.hash.includes(this.idPrefix)) {
-      const link = document.querySelector(`[href='${window.location.hash}']`);
+    if (hash.includes(this.idPrefix)) {
+      const link = document.querySelector(`[href='${hash}']`);
       const row = link.closest("tr");
       this.selectRow(row);
       row.scrollIntoView({ block: "center" });
+    } else if (document.getElementById(hashless_hash)) {
+      var row = document.getElementById(hashless_hash);
+      this.selectRow(row);
     }
   }
 };
