@@ -666,24 +666,36 @@
     row.classList.add("data-table__row-selected");
   };
 
-  LinkableTable.prototype.initialSelected = function() {
-    if (window.location.hash) {
-      var hash = window.location.hash;
-      var hashless_hash = hash.replace("#", "");
-      // uses ES6 includes, need to make sure works widely
-      if (hash.includes(this.idPrefix)) {
-        const link = document.querySelector(`[href='${hash}']`);
-        const row = link.closest("tr");
-        this.selectRow(row);
-        row.scrollIntoView({ block: "center" });
-      } else if (document.getElementById(hashless_hash)) {
-        // make sure element with id from hash is inside the table
-        var el = document.getElementById(hashless_hash);
-        if (this.data_table_body.contains(el)) {
-          this.selectRow(el);
-        }
+  LinkableTable.prototype.highlightHashed = function(hash) {
+    var hashless_hash = hash.replace("#", "");
+
+    if (hash.includes(this.idPrefix)) {
+      const link = document.querySelector(`[href='${hash}']`);
+      const row = link.closest("tr");
+      this.selectRow(row);
+      row.scrollIntoView({ block: "center" });
+    } else if (document.getElementById(hashless_hash)) {
+      // make sure element with id from hash is inside the table
+      var el = document.getElementById(hashless_hash);
+      if (this.data_table_body.contains(el)) {
+        this.selectRow(el);
       }
     }
+  };
+
+  LinkableTable.prototype.hashChangeHandler = function() {
+    this.deselectRows();
+    this.highlightHashed(window.location.hash);
+  };
+
+  LinkableTable.prototype.initialSelected = function() {
+    if (window.location.hash) {
+      this.highlightHashed(window.location.hash);
+    }
+
+    // add event listener for URL hash changes
+    const boundHashChangeHandler = this.hashChangeHandler.bind(this);
+    window.addEventListener("hashchange", boundHashChangeHandler);
   };
 
   exports.BackToTop = BackToTop;
