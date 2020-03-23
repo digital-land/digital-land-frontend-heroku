@@ -48,7 +48,8 @@
   }
 }
 
-.bfs__meta {
+.bfs__meta,
+.bfs__property-list {
   dl {
     @include govuk-font($size: 14);
     margin-top: 0;

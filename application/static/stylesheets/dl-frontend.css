@@ -8341,7 +8341,8 @@
   }
 }
 
-.bfs__meta dl {
+.bfs__meta dl,
+.bfs__property-list dl {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8354,13 +8355,15 @@
 }
 
 @media print {
-  .bfs__meta dl {
+  .bfs__meta dl,
+  .bfs__property-list dl {
     font-family: sans-serif;
   }
 }
 
 @media (min-width: 40.0625em) {
-  .bfs__meta dl {
+  .bfs__meta dl,
+  .bfs__property-list dl {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.42857;
@@ -8368,22 +8371,27 @@
 }
 
 @media print {
-  .bfs__meta dl {
+  .bfs__meta dl,
+  .bfs__property-list dl {
     font-size: 12pt;
     line-height: 1.2;
   }
 }
 
 .bfs__meta dt,
-.bfs__meta dd {
+.bfs__meta dd,
+.bfs__property-list dt,
+.bfs__property-list dd {
   display: inline-block;
 }
 
-.bfs__meta dt {
+.bfs__meta dt,
+.bfs__property-list dt {
   color: #6f777b;
 }
 
-.bfs__meta dd {
+.bfs__meta dd,
+.bfs__property-list dd {
   margin-left: 5px;
 }
 
