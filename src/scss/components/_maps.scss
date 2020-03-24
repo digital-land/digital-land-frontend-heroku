@@ -27,7 +27,7 @@ $bfs-brown: #594d00;
   left: 10px;
   padding: 10px;
   background: govuk-colour("white");
-  box-shadow: 0 0 3px 0 rgba(govuk-colour("black"), .75);
+  box-shadow: 0 0 3px 0 rgba(govuk-colour("dark-grey"), .75);
   @include govuk-font($size: 14);
 
   .bfs-pt__container {
