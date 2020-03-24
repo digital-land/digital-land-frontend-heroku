@@ -8433,6 +8433,91 @@
   background: #fff7bf;
 }
 
+.map-key {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .map-key {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .map-key {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .map-key {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
+.map-key .bfs-pt__container {
+  display: flex;
+  padding-bottom: 10px;
+  align-items: flex-end;
+}
+
+.map-key .bfs-pt__container .ellipsis {
+  padding: 0 15px;
+  color: #b1b4b6;
+  font-size: 48px;
+  line-height: 24px;
+}
+
+.map-key .bfs-pt {
+  box-sizing: border-box;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border: 4px solid #594d00;
+  border-radius: 50%;
+  background: rgba(89, 77, 0, 0.2);
+}
+
+.map-key .bfs-pt:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -4px;
+  width: calc(100% + 7px);
+  height: 5px;
+  border: 1px solid #b1b4b6;
+  border-top-width: 0;
+}
+
+.map-key .bfs-pt--small {
+  border-width: 3px;
+}
+
+.map-key .bfs-pt--small:after {
+  left: -3px;
+  width: calc(100% + 4px);
+  height: 4px;
+}
+
+.map-key .bfs-pt--large {
+  width: 30px;
+  height: 30px;
+}
+
+.map-key .map-key__entry__label {
+  margin-top: 2px;
+  font-weight: 700;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;

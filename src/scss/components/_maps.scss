@@ -13,3 +13,65 @@ $warning-tint-colour: #fff7bf;
     background: $warning-tint-colour;
   }
 }
+
+$bfs-brown: #594d00;
+
+.map-key {
+  @include govuk-font($size: 14);
+
+  .bfs-pt__container {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: flex-end;
+
+    .ellipsis {
+      padding: 0 15px;
+      color: govuk-colour("mid-grey");
+      font-size: 48px;
+      line-height: 24px;
+    }
+  }
+
+  .bfs-pt {
+    box-sizing: border-box;
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border: 4px solid $bfs-brown;
+    border-radius: 50%;
+    background: rgba($bfs-brown, .2);
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: -4px;
+      width: calc(100% + 7px);
+      height: 5px;
+      border: 1px solid govuk-colour("mid-grey");
+      border-top-width: 0;
+    }
+
+    &--small {
+      border-width: 3px;
+
+      &:after {
+        //bottom: -11px;
+        left: -3px;
+        width: calc(100% + 4px);
+        height: 4px;
+      }
+    }
+
+    &--large {
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+
+  .map-key__entry__label {
+    margin-top: 2px;
+    font-weight: 700;
+  }
+}
