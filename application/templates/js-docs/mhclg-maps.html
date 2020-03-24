@@ -54,10 +54,24 @@
 
       <h2 class="govuk-heading-l">Example usage</h2>
 
-
-      <div id="map-container" style="height: 400px;"></div>
-      <div class="map__site-count map__site-count--warning govuk-!-margin-bottom-9">
-          All 5 sites plotted.</div>
+      <div class="map-wrapper">
+        <div id="map-container" style="height: 600px;"></div>
+        <div class="map__site-count map__site-count--warning govuk-!-margin-bottom-9">
+            All 5 sites plotted.</div>
+        <div class="map-key">
+          <h4 class="govuk-heading-s govuk-visually-hidden">Key</h4>
+          <div class="map-key__entry">
+            <div class="map-key__entry__item">
+              <div class="bfs-pt__container">
+                <div class="bfs-pt bfs-pt--small"></div>
+                <span class="ellipsis">&hellip;</span>
+                <div class="bfs-pt bfs-pt--large"></div>
+              </div>
+            </div>
+            <p class="map-key__entry__label">Sites sized by hectares</p>
+          </div>
+        </div>
+      </div>
       <script src='/static/javascripts/mhclg/mhclg-maps.js'></script>
       {% set token = config.MAPBOX_TOKEN %}
       {{ mhclgMapBasic(token=token) }}

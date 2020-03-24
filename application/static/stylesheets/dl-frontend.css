@@ -8395,6 +8395,10 @@
   margin-left: 5px;
 }
 
+.map-wrapper {
+  position: relative;
+}
+
 .map__site-count {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -8434,6 +8438,13 @@
 }
 
 .map-key {
+  position: absolute;
+  z-index: 1000;
+  bottom: 100px;
+  left: 10px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 3px 0 rgba(11, 12, 12, 0.75);
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8468,6 +8479,7 @@
   display: flex;
   padding-bottom: 10px;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .map-key .bfs-pt__container .ellipsis {
@@ -8515,6 +8527,7 @@
 
 .map-key .map-key__entry__label {
   margin-top: 2px;
+  margin-bottom: 0;
   font-weight: 700;
 }
 

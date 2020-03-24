@@ -3,6 +3,10 @@
 // 25% tint of govuk-colour('yellow')
 $warning-tint-colour: #fff7bf;
 
+.map-wrapper {
+  position: relative;
+}
+
 .map__site-count {
   @include govuk-font($size: 16);
   display: inline-block;
@@ -17,12 +21,20 @@ $warning-tint-colour: #fff7bf;
 $bfs-brown: #594d00;
 
 .map-key {
+  position: absolute;
+  z-index: 1000;
+  bottom: 100px;
+  left: 10px;
+  padding: 10px;
+  background: govuk-colour("white");
+  box-shadow: 0 0 3px 0 rgba(govuk-colour("black"), .75);
   @include govuk-font($size: 14);
 
   .bfs-pt__container {
     display: flex;
     padding-bottom: 10px;
     align-items: flex-end;
+    justify-content: center;
 
     .ellipsis {
       padding: 0 15px;
@@ -72,6 +84,7 @@ $bfs-brown: #594d00;
 
   .map-key__entry__label {
     margin-top: 2px;
+    margin-bottom: 0;
     font-weight: 700;
   }
 }
