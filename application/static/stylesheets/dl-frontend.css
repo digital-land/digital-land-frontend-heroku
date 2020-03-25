@@ -8215,6 +8215,10 @@
   }
 }
 
+.bfs-sidebar {
+  max-width: 350px !important;
+}
+
 .bfs-popup .leaflet-popup-content-wrapper {
   border-radius: 4px;
 }
