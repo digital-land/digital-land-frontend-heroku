@@ -87,3 +87,7 @@ a {
 .hidden-text {
   color: transparent;
 }
+
+.long-link {
+  word-break: break-all;
+}
