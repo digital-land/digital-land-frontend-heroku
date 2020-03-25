@@ -2,7 +2,7 @@
 .bfs-sidebar {
   max-width: 350px !important;
 
-  > .leaflet-control {
+  & > .leaflet-control {
     padding: 15px;
   }
 }
