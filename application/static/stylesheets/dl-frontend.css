@@ -8219,6 +8219,10 @@
   max-width: 350px !important;
 }
 
+.bfs-sidebar > .leaflet-control {
+  padding: 15px;
+}
+
 .bfs-popup .leaflet-popup-content-wrapper {
   border-radius: 4px;
 }

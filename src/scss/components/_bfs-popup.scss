@@ -1,6 +1,10 @@
 // overriding Sidebar plugin defaults
 .bfs-sidebar {
   max-width: 350px !important;
+
+  > .leaflet-control {
+    padding: 15px;
+  }
 }
 
 // for overiding some leaflet popup defaults
