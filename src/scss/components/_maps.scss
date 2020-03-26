@@ -5,15 +5,24 @@ $warning-tint-colour: #fff7bf;
 
 .map-wrapper {
   position: relative;
+  padding-top: 30px;
 }
 
+$govuk-tag-dark-blue: #144e81;
+$govuk-tag-light-blue: #d2e2f1;
+
 .map__site-count {
-  @include govuk-font($size: 16);
   display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include govuk-font($size: 16);
   padding: 5px 8px;
-  background: govuk-colour("light-grey");
+  //color: $govuk-tag-dark-blue;
+  background: $govuk-tag-light-blue;
 
   &--warning {
+    color: $govuk-text-colour;
     background: $warning-tint-colour;
   }
 }
@@ -23,7 +32,7 @@ $bfs-brown: #594d00;
 .map-key {
   position: absolute;
   z-index: 1000;
-  bottom: 100px;
+  bottom: 10px;
   left: 10px;
   padding: 10px;
   background: govuk-colour("white");

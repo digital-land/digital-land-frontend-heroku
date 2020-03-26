@@ -8405,9 +8405,14 @@
 
 .map-wrapper {
   position: relative;
+  padding-top: 30px;
 }
 
 .map__site-count {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8415,9 +8420,8 @@
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.14286;
-  display: inline-block;
   padding: 5px 8px;
-  background: #f3f2f1;
+  background: #d2e2f1;
 }
 
 @media print {
@@ -8442,13 +8446,14 @@
 }
 
 .map__site-count--warning {
+  color: #0b0c0c;
   background: #fff7bf;
 }
 
 .map-key {
   position: absolute;
   z-index: 1000;
-  bottom: 100px;
+  bottom: 10px;
   left: 10px;
   padding: 10px;
   background: #ffffff;
