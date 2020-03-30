@@ -36,6 +36,11 @@ $using-helvetica: false;
 // import components from elsewhere e.g. MOJ
 @import "vendor-components/moj-sortable-table";
 
+// usually added to html element
+.smooth-scroll-enabled {
+  scroll-behavior: smooth;
+}
+
 a {
   @extend %govuk-link;
 }

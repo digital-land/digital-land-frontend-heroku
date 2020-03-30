@@ -8641,6 +8641,10 @@
   }
 }
 
+.smooth-scroll-enabled {
+  scroll-behavior: smooth;
+}
+
 .govuk-main-wrapper p,
 .govuk-inset-text {
   max-width: 38em;
