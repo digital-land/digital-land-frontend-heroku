@@ -97,3 +97,11 @@ a {
 .long-link {
   word-break: break-all;
 }
+
+// for covid-19 project
+
+.hub__la-list {
+  .found {
+    @include govuk-focused-text;
+  }
+}
