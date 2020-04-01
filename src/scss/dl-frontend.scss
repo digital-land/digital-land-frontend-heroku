@@ -111,7 +111,7 @@ a {
 // for covid-19 project
 
 .js-enabled {
-  .hub-list__separator {
+  .hub-list__separator:first-of-type {
     display: none;
   }
 

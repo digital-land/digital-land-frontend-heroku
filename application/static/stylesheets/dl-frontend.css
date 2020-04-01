@@ -8739,7 +8739,7 @@
   word-break: break-all;
 }
 
-.js-enabled .hub-list__separator {
+.js-enabled .hub-list__separator:first-of-type {
   display: none;
 }
 
