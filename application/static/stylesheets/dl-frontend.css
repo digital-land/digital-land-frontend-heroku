@@ -8739,6 +8739,14 @@
   word-break: break-all;
 }
 
+.js-enabled .hub-list__separator {
+  display: none;
+}
+
+.js-enabled .hub:first-of-type {
+  margin-top: 50px;
+}
+
 .hub__la-list .found {
   outline: 3px solid transparent;
   color: #0b0c0c;

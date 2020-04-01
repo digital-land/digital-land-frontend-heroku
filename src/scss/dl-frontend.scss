@@ -110,6 +110,16 @@ a {
 
 // for covid-19 project
 
+.js-enabled {
+  .hub-list__separator {
+    display: none;
+  }
+
+  .hub:first-of-type {
+    margin-top: 50px;
+  }
+}
+
 .hub__la-list {
   .found {
     @include govuk-focused-text;
