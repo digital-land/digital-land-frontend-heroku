@@ -8657,6 +8657,14 @@
   scroll-behavior: smooth;
 }
 
+.hide-if-no-js {
+  display: none;
+}
+
+.js-enabled .hide-if-no-js {
+  display: block;
+}
+
 .govuk-main-wrapper p,
 .govuk-inset-text {
   max-width: 38em;
