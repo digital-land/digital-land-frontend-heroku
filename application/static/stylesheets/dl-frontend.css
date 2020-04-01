@@ -8544,6 +8544,18 @@
   font-weight: 700;
 }
 
+.hub-list__separator {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .hub-list__separator {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
