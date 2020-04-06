@@ -6252,6 +6252,56 @@
   text-decoration: none;
 }
 
+.back-to-top {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 40.0625em) {
+  .back-to-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+  .js-enabled .back-to-top--fixed {
+    position: fixed;
+    top: calc(100% - 50px);
+    bottom: auto;
+    left: auto;
+  }
+  .js-enabled .back-to-top--hidden .back-to-top__link {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+  }
+  .js-enabled .back-to-top--hidden .back-to-top__link:active, .js-enabled .back-to-top--hidden .back-to-top__link:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    white-space: inherit !important;
+  }
+}
+
+.back-to-top__icon {
+  display: inline-block;
+  width: .8em;
+  height: 1em;
+  margin-top: -5px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .dlf-load-button,
 .dlf-filter-button {
   color: #ffffff;

@@ -14,6 +14,7 @@ $using-helvetica: false;
 
 // import Digital Land components
 @import "components/page-feedback";
+@import "components/back-to-top";
 @import "components/buttons";
 @import "components/contribution-bar";
 @import "components/data-tables";
@@ -135,3 +136,4 @@ a {
     @include govuk-focused-text;
   }
 }
+

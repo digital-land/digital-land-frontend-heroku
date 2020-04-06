@@ -30,6 +30,10 @@ def hero():
 def highlight_box():
     return render_template('highlight-box.html')
 
+@components.route('/hub')
+def hub():
+    return render_template('hub.html')
+
 @components.route('/info-text')
 def info_text():
     return render_template('info-text.html')
