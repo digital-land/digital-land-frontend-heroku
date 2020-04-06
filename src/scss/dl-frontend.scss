@@ -118,6 +118,16 @@ a {
   .hub:first-of-type {
     margin-top: 50px;
   }
+
+  .govuk-error-message {
+    display: none;
+  }
+
+  .govuk-form-group--error {
+    .govuk-error-message {
+      display: block;
+    }
+  }
 }
 
 .hub__la-list {

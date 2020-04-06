@@ -8747,6 +8747,14 @@
   margin-top: 50px;
 }
 
+.js-enabled .govuk-error-message {
+  display: none;
+}
+
+.js-enabled .govuk-form-group--error .govuk-error-message {
+  display: block;
+}
+
 .hub__la-list .found {
   outline: 3px solid transparent;
   color: #0b0c0c;
