@@ -38,6 +38,14 @@ def mhclg_maps():
 def accessible_autocomplete():
     return render_template('js-docs/accessible-autocomplete.html')
 
+@frontend.route('/js/back-to-top')
+def back_to_top():
+    return render_template('js-docs/back-to-top.html')
+
+@frontend.route('/js/back-to-top/example')
+def back_to_top_example():
+    return render_template('js-docs/examples/back-to-top-example.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor

@@ -1,0 +1,64 @@
+{% extends "leaflet-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/components") }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts", true) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/javascripts-menu.html' -%}
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <span class="govuk-caption-xl">Javascripts</span>
+        <h1 class="govuk-heading-xl">
+          Back to top
+        </h1>
+      </div>
+
+      <p class="govuk-body">A component to help the user get back to the top of a long page.</p>
+
+      <h2 class="govuk-heading-l">Back to top banner example</h2>
+
+      <p class="govuk-body">Here is an example of a long page with the back to top component a banner that is visible to the user as they scroll down the page. It works by defining a head and footer element. When the user scolls between these elements the banner will be displayed.</p>
+
+      <div class="app-example-wrapper">
+        <div class="app-example">
+          <iframe 
+            title="Linking from the error summary to an answer that uses multiple fields example"
+            data-module="app-example-frame"
+            class="app-example__frame app-example__frame--resizable app-example__frame--l"
+            src="/js/back-to-top/example" loading="lazy" id="iFrameResizer3"
+            scrolling="auto" frameborder="0"></iframe>
+        </div>
+        <div class="app-tabs__heading">
+          <span>JS</span>
+        </div>
+        <div class="app-tabs__container">
+          <pre><code class="html">
+              {%- filter forceescape -%}
+<script>
+  var $btt = document.querySelector('[data-module*="back-to-top"]')
+  new window.DLFrontend.BackToTop($btt).init({
+    footer_selector: ".govuk-footer",
+    head_selector: ".test-hub",
+    classes: "back-to-top--banner"
+  });
+</script>
+              {%- endfilter -%}
+            </code></pre>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+{% endblock %}
