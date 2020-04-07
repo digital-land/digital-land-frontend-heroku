@@ -32,3 +32,20 @@
   margin-right: govuk-spacing(2);
   vertical-align: middle;
 }
+
+.js-enabled {
+  .back-to-top--banner {
+    //box-sizing: content-box;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 15px;
+    transition: background .15s ease-in;
+    background: govuk-colour("light-grey");
+    @include govuk-media-query($from: tablet) {
+      padding: 10px 45px;
+    }
+  }
+}
