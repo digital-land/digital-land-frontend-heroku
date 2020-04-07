@@ -109,6 +109,14 @@ a {
   word-break: break-all;
 }
 
+.govuk-caption-s {
+  @include govuk-font($size: 16);
+
+  display: block;
+
+  color: $govuk-secondary-text-colour;
+}
+
 // for covid-19 project
 
 .js-enabled {
