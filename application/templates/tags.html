@@ -23,19 +23,26 @@
         </h1>
       </div>
 
-      <h2 class="govuk-heading-m">Example</h2>
-      <div class="module-example">
-        {% include 'partials/tags.html' %}
+      <div class="app-example-wrapper">
+        <div class="app-example">
+          <iframe 
+            title="Linking from the error summary to an answer that uses multiple fields example"
+            data-module="app-example-frame"
+            class="app-example__frame app-example__frame--resizable app-example__frame--s"
+            src="/component/tags/example" loading="lazy" id="iFrameResizer3"
+            scrolling="auto" frameborder="0"></iframe>
+        </div>
+        <div class="app-tabs__heading">
+          <span>HTML</span>
+        </div>
+        <div class="app-tabs__container">
+          <pre><code class="html">
+              {%- filter forceescape -%}
+                {%- include 'partials/tags.html' -%}
+              {%- endfilter -%}
+            </code></pre>
+        </div>
       </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {%- include 'partials/tags.html' -%}
-        {%- endfilter -%}
-      </code>
-      </pre>
 
     </main>
   </div>

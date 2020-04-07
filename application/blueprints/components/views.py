@@ -77,3 +77,7 @@ def task_list():
 @components.route('/visualising-data')
 def visualising_data():
     return render_template('visualising-data.html')
+
+@components.route('/tags/example')
+def tags_example():
+    return render_template('iframe-base.html', partial_name='partials/tags.html')
