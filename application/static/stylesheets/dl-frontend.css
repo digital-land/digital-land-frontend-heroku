@@ -6303,6 +6303,7 @@
 }
 
 .js-enabled .back-to-top--banner {
+  box-sizing: border-box;
   top: auto;
   bottom: 0;
   left: 0;
