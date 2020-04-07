@@ -15,8 +15,8 @@ BackToTop.prototype.init = function (params) {
     return this.$module.classList.remove('back-to-top--hidden')
   }
 
-  var $footer = document.querySelector(this.footer_class)
-  var $subNav = document.querySelector(this.head_class)
+  var $footer = document.querySelector(this.footer_selector)
+  var $subNav = document.querySelector(this.head_selector)
 
   // Check if there is anything to observe
   if (!$footer || !$subNav) {
@@ -67,8 +67,8 @@ BackToTop.prototype.init = function (params) {
 
 BackToTop.prototype.setupOptions = function(params) {
   params = params || {};
-  this.footer_class = params.footer_class || ".app-footer";
-  this.head_class = params.head_class || ".app-subnav";
+  this.footer_selector = params.footer_selector || ".app-footer";
+  this.head_selector = params.head_selector || ".app-subnav";
   this.classes = params.classes || "";
 };
 

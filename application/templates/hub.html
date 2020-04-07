@@ -27,7 +27,7 @@
 
       <hr class="govuk-section-break hub-list__separator govuk-section-break--visible">
 
-      <div class="govuk-grid-row hub">
+      <div class="govuk-grid-row hub test-hub">
         <div class="govuk-grid-column-full">
           <span class="govuk-caption-l">Hub</span>
           <h2 class="govuk-heading-l">Kent County Council</h2>
@@ -262,7 +262,8 @@
 <script>
 var $btt = document.querySelector('[data-module*="back-to-top"]')
 new window.DLFrontend.BackToTop($btt).init({
-  footer_class: ".govuk-footer",
+  footer_selector: ".govuk-footer",
+  head_selector: ".test-hub",
   classes: "back-to-top--banner"
 });
 </script>

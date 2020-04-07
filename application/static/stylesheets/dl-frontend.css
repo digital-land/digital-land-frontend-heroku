@@ -6302,6 +6302,23 @@
   vertical-align: middle;
 }
 
+.js-enabled .back-to-top--banner {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  transition: background .15s ease-in;
+  background: #f3f2f1;
+}
+
+@media (min-width: 40.0625em) {
+  .js-enabled .back-to-top--banner {
+    padding: 10px 45px;
+  }
+}
+
 .dlf-load-button,
 .dlf-filter-button {
   color: #ffffff;
