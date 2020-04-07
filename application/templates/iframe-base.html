@@ -25,5 +25,10 @@
     {%- endblock -%}
     </div>
 
+    {% block bodyEnd %}
+    <script src="/static/javascripts/govuk/govuk-frontend-3.0.0.min.js"></script>
+    {# needs to come after govuk frontend #}
+    <script src="/static/javascripts/dl-frontend.js"></script>
+    {% endblock %}
   </body>
 </html>
