@@ -1,4 +1,4 @@
-import '../../govuk/vendor/polyfills/Function/prototype/bind';
+import '../../govuk/vendor/polyfills/Function/prototype/bind'
 
 // Back to top module as seen in govuk-design-system
 // https://github.com/alphagov/govuk-design-system/blob/master/src/javascripts/components/back-to-top.js
@@ -48,12 +48,12 @@ BackToTop.prototype.init = function (params) {
     // If the subnav or the footer not visible then fix the back to top link to follow the user
     if (subNavIsIntersecting || footerIsIntersecting) {
       this.$module.classList.remove('back-to-top--fixed')
-      if(this.classes) {
+      if (this.classes) {
         this.$module.classList.remove(this.classes)
       }
     } else {
       this.$module.classList.add('back-to-top--fixed')
-      if(this.classes) {
+      if (this.classes) {
         this.$module.classList.add(this.classes)
       }
     }
@@ -71,11 +71,11 @@ BackToTop.prototype.init = function (params) {
   observer.observe($subNav)
 }
 
-BackToTop.prototype.setupOptions = function(params) {
-  params = params || {};
-  this.footer_selector = params.footer_selector || ".app-footer";
-  this.head_selector = params.head_selector || ".app-subnav";
-  this.classes = params.classes || "";
-};
+BackToTop.prototype.setupOptions = function (params) {
+  params = params || {}
+  this.footer_selector = params.footer_selector || '.app-footer'
+  this.head_selector = params.head_selector || '.app-subnav'
+  this.classes = params.classes || ''
+}
 
 export default BackToTop

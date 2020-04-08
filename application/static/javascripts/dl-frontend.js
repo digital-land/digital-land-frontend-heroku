@@ -297,12 +297,12 @@
       // If the subnav or the footer not visible then fix the back to top link to follow the user
       if (subNavIsIntersecting || footerIsIntersecting) {
         this.$module.classList.remove('back-to-top--fixed');
-        if(this.classes) {
+        if (this.classes) {
           this.$module.classList.remove(this.classes);
         }
       } else {
         this.$module.classList.add('back-to-top--fixed');
-        if(this.classes) {
+        if (this.classes) {
           this.$module.classList.add(this.classes);
         }
       }
@@ -320,11 +320,11 @@
     observer.observe($subNav);
   };
 
-  BackToTop.prototype.setupOptions = function(params) {
+  BackToTop.prototype.setupOptions = function (params) {
     params = params || {};
-    this.footer_selector = params.footer_selector || ".app-footer";
-    this.head_selector = params.head_selector || ".app-subnav";
-    this.classes = params.classes || "";
+    this.footer_selector = params.footer_selector || '.app-footer';
+    this.head_selector = params.head_selector || '.app-subnav';
+    this.classes = params.classes || '';
   };
 
   // ====================================
