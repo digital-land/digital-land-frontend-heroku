@@ -47,9 +47,15 @@ BackToTop.prototype.init = function (params) {
 
     // If the subnav or the footer not visible then fix the back to top link to follow the user
     if (subNavIsIntersecting || footerIsIntersecting) {
-      this.$module.classList.remove('back-to-top--fixed', this.classes)
+      this.$module.classList.remove('back-to-top--fixed')
+      if(this.classes) {
+        this.$module.classList.remove(this.classes)
+      }
     } else {
-      this.$module.classList.add('back-to-top--fixed', this.classes)
+      this.$module.classList.add('back-to-top--fixed')
+      if(this.classes) {
+        this.$module.classList.add(this.classes)
+      }
     }
 
     // If the subnav is visible but you can see it all at once, then a back to top link is likely not as useful.
