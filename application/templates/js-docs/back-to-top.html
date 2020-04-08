@@ -25,7 +25,41 @@
 
       <p class="govuk-body">A component to help the user get back to the top of a long page.</p>
 
-      <h2 class="govuk-heading-l">Back to top banner example</h2>
+      <h2 class="govuk-heading-l">Back to top default example</h2>
+
+      <p class="govuk-body">The Back to top component is often used with a sub-nav menu element located on the left of the page.</p>
+
+      <div class="app-example-wrapper">
+        <div class="app-example">
+          <iframe 
+            title="Linking from the error summary to an answer that uses multiple fields example"
+            data-module="app-example-frame"
+            class="app-example__frame app-example__frame--resizable app-example__frame--l"
+            src="/js/back-to-top/example" loading="lazy" id="iFrameResizer3"
+            scrolling="auto" frameborder="0"></iframe>
+        </div>
+        <div class="app-tabs__heading">
+          <span>JS</span>
+        </div>
+        <div class="app-tabs__container">
+          <pre><code class="html">
+              {%- filter forceescape -%}
+<script>
+  var $btt = document.querySelector('[data-module*="back-to-top"]')
+  new window.DLFrontend.BackToTop($btt).init({
+    footer_selector: ".govuk-footer"
+  });
+</script>
+              {%- endfilter -%}
+            </code></pre>
+        </div>
+      </div>
+
+      <p class="govuk-body">Note the element with the <code>.back-to-top</code> class is located after the side nav.</p>
+
+      <p class="govuk-body">Alternatively, you can have the back to top component display as a banner at the bottom of the screen.</p>
+
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">Back to top banner example</h2>
 
       <p class="govuk-body">Here is an example of a long page with the back to top component a banner that is visible to the user as they scroll down the page. It works by defining a head and footer element. When the user scolls between these elements the banner will be displayed.</p>
 
@@ -35,7 +69,7 @@
             title="Linking from the error summary to an answer that uses multiple fields example"
             data-module="app-example-frame"
             class="app-example__frame app-example__frame--resizable app-example__frame--l"
-            src="/js/back-to-top/example" loading="lazy" id="iFrameResizer3"
+            src="/js/back-to-top/banner-example" loading="lazy" id="iFrameResizer3"
             scrolling="auto" frameborder="0"></iframe>
         </div>
         <div class="app-tabs__heading">

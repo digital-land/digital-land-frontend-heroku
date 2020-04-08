@@ -46,6 +46,10 @@ def back_to_top():
 def back_to_top_example():
     return render_template('js-docs/examples/back-to-top-example.html')
 
+@frontend.route('/js/back-to-top/banner-example')
+def back_to_top_banner_example():
+    return render_template('js-docs/examples/back-to-top-banner-example.html')
+
 # set the assetPath variable for use in 
 # jinja templates
 @frontend.context_processor
