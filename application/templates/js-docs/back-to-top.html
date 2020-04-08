@@ -39,11 +39,19 @@
             scrolling="auto" frameborder="0"></iframe>
         </div>
         <div class="app-tabs__heading">
-          <span>JS</span>
+          <span>HTML</span>
         </div>
         <div class="app-tabs__container">
           <pre><code class="html">
               {%- filter forceescape -%}
+<div class="back-to-top" data-module="back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+<!-- put script at end of body -->
 <script>
   var $btt = document.querySelector('[data-module*="back-to-top"]')
   new window.DLFrontend.BackToTop($btt).init({
@@ -73,11 +81,19 @@
             scrolling="auto" frameborder="0"></iframe>
         </div>
         <div class="app-tabs__heading">
-          <span>JS</span>
+          <span>HTML</span>
         </div>
         <div class="app-tabs__container">
           <pre><code class="html">
               {%- filter forceescape -%}
+<div data-module="back-to-top">
+  <a class="govuk-link govuk-link--no-visited-state back-to-top__link" href="#top">
+    <svg role="presentation" focusable="false" class="back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+  </a>
+</div>
+<!-- put script at end of body -->
 <script>
   var $btt = document.querySelector('[data-module*="back-to-top"]')
   new window.DLFrontend.BackToTop($btt).init({
