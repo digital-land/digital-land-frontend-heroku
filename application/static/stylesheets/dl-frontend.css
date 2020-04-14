@@ -7496,6 +7496,37 @@
   }
 }
 
+.org-list .org-list__item-title {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .org-list .org-list__item-title {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .org-list .org-list__item-title {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .org-list .org-list__item-title {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
 .dl-contents-section,
 .contents-section {
   position: relative;

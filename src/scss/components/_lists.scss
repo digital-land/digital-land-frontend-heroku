@@ -19,4 +19,8 @@
     @include govuk-responsive-padding(3, "bottom");
     border-bottom: 1px solid $govuk-border-colour;
   }
+
+  .org-list__item-title {
+    @include govuk-font($size: 19);
+  }
 }
