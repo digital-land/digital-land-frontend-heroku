@@ -7473,6 +7473,24 @@
   margin-top: -5px;
 }
 
+.org-list__item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+@media (min-width: 40.0625em) {
+  .org-list__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .org-list__item {
+    padding-bottom: 15px;
+  }
+}
+
 .dl-contents-section,
 .contents-section {
   position: relative;

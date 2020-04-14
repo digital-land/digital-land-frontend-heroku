@@ -9,3 +9,11 @@
 .org-count__wrapper {
   margin-top: -5px;
 }
+
+.org-list {
+  &__item {
+    @include govuk-responsive-margin(3, "bottom");
+    @include govuk-responsive-padding(3, "bottom");
+    border-bottom: 1px solid $govuk-border-colour;
+  }
+}
