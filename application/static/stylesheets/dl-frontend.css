@@ -7473,7 +7473,12 @@
   margin-top: -5px;
 }
 
+.org-list {
+  padding-left: 0;
+}
+
 .org-list__item {
+  list-style: none;
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #b1b4b6;

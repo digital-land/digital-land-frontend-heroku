@@ -11,7 +11,10 @@
 }
 
 .org-list {
+  padding-left: 0;
+
   &__item {
+    list-style: none;
     @include govuk-responsive-margin(3, "bottom");
     @include govuk-responsive-padding(3, "bottom");
     border-bottom: 1px solid $govuk-border-colour;
