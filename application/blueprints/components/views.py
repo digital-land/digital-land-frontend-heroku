@@ -46,6 +46,10 @@ def contents_section():
 def lists():
     return render_template('lists.html')
 
+@components.route('/lists/organisation-example')
+def organisation_list_example():
+    return render_template('organisation-list-example.html')
+
 @components.route('/pagination')
 def pagination():
     return render_template('publishing-components/pagination.html')

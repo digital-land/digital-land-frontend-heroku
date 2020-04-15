@@ -22,20 +22,31 @@
           List
         </h1>
       </div>
+  
+      <h2 class="govuk-heading-l">Organisation lists</h2>
+      <p class="govuk-body">A list layout useful for long lists that are grouped by an attribute, e.g. type. We use this pattern for organisations.</p>
+      <div class="app-example-wrapper">
+        <div class="app-example">
+          <iframe 
+            title="A list of organisations categorised by type example"
+            data-module="app-example-frame"
+            class="app-example__frame app-example__frame--resizable app-example__frame--l"
+            src="/component/lists/organisation-example" loading="lazy" id="iFrameResizer3"
+            scrolling="auto" frameborder="0"></iframe>
+        </div>
+        <div class="app-tabs__heading">
+          <span>HTML</span>
+        </div>
+        <div class="app-tabs__container">
+          <pre><code class="html">
+              {%- filter forceescape -%}
+{% include 'partials/list-organisations.html' %}
+              {%- endfilter -%}
+            </code></pre>
+        </div>
+      </div><!-- end app-example-wrapper -->
 
-      <h2 class="govuk-heading-m">Example</h2>
-      <div class="module-example">
-		{%- include 'partials/list-organisations.html' -%}
-      </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {%- include 'partials/list-organisations.html' -%}
-        {%- endfilter -%}
-      </code>
-      </pre>
+      <p class="govuk-body">This pattern is consistent with the <a href="https://www.gov.uk/government/organisations" class="govuk-link">list of departments</a> on GOV.UK.</p>
 
     </main>
   </div>
