@@ -999,12 +999,12 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 }
 
-.app-nav__wrap__list {
+.app-nav__list {
   padding: 0;
   list-style: none;
 }
 
-.app-nav__wrap__list > li {
+.app-nav__list > .app-nav__list-item {
   box-sizing: border-box;
   height: 53px;
   padding: 0 15px;
@@ -1014,37 +1014,35 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   -webkit-box-sizing: border-box;
 }
 
-.app-nav__wrap__list > li:hover {
-  border-bottom: 4px solid #5694ca;
-}
-
-.app-nav__wrap__list > li.app-nav--current-page {
+.app-nav__list > .app-nav__list-item.app-nav--current-page {
   border-bottom: 4px solid #1d70b8 !important;
 }
 
-.app-nav__wrap__list > li.app-nav--current-page a:hover {
+.app-nav__list > .app-nav__list-item.app-nav--current-page a:hover {
   color: #1d70b8;
+  text-decoration: none;
 }
 
-.app-nav__wrap__list > li.app-nav--current-page a:focus {
+.app-nav__list > .app-nav__list-item.app-nav--current-page a:focus {
   color: #0b0c0c;
 }
 
-.app-nav__wrap__list > li a {
+.app-nav__list > .app-nav__list-item a {
+  display: inline-block;
   font-weight: 700;
   color: #1d70b8;
   text-decoration: none;
 }
 
-.app-nav__wrap__list > li a:visited {
+.app-nav__list > .app-nav__list-item a:visited {
   color: #1d70b8;
 }
 
-.app-nav__wrap__list > li a:hover {
+.app-nav__list > .app-nav__list-item a:hover:not(:focus):not(:active) {
   text-decoration: underline;
 }
 
-.app-nav__wrap__list > li a:focus {
+.app-nav__list > .app-nav__list-item a:focus {
   outline: 3px solid transparent;
   color: #0b0c0c;
   background-color: #ffdd00;

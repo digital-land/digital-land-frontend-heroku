@@ -11,7 +11,6 @@ $toc-width-tablet: 210px;
 }
 
 .app-nav__wrap {
-  $navigation-height: 53px;
   box-sizing: border-box;
   @include govuk-font(19, $weight: bold);
   width: 100%;
@@ -19,53 +18,53 @@ $toc-width-tablet: 210px;
   @include govuk-media-query($from: tablet) {
     margin-left: -(govuk-spacing(3)); // aligns text with beginning of phase banner
   }
+}
 
-  &__list {
-    padding: 0;
-    list-style: none;
+$navigation-height: 53px;
 
-    & > li {
-      box-sizing: border-box;
-      height: $navigation-height;
-      padding: 0 govuk-spacing(3);
-      float: left;
-      line-height: $navigation-height;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
+.app-nav__list {
+  padding: 0;
+  list-style: none;
 
-      &:hover {
-        border-bottom: 4px solid govuk-colour("light-blue");
-      }
+  & > .app-nav__list-item {
+    box-sizing: border-box;
+    height: $navigation-height;
+    padding: 0 govuk-spacing(3);
+    float: left;
+    line-height: $navigation-height;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 
-      &.app-nav--current-page {
-        border-bottom: 4px solid govuk-colour("blue") !important;
+    &.app-nav--current-page {
+      border-bottom: 4px solid govuk-colour("blue") !important;
 
-        a:hover {
-          color: $govuk-link-colour;
-        }
-
-        a:focus {
-          color: $govuk-focus-text-colour;
-        }
-      }
-
-      a {
-        @include govuk-typography-weight-bold; // Override .govuk-link weight
+      a:hover {
         color: $govuk-link-colour;
         text-decoration: none;
+      }
 
-        &:visited {
-          color: $govuk-link-colour;
-        }
+      a:focus {
+        color: $govuk-focus-text-colour;
+      }
+    }
 
-        &:hover {
-          text-decoration: underline;
-        }
+    a {
+      display: inline-block;
+      @include govuk-typography-weight-bold; // Override .govuk-link weight
+      color: $govuk-link-colour;
+      text-decoration: none;
 
-        &:focus {
-          @include govuk-focused-text;
-          color: $govuk-focus-text-colour;
-        }
+      &:visited {
+        color: $govuk-link-colour;
+      }
+
+      &:hover:not(:focus):not(:active) {
+        text-decoration: underline;
+      }
+
+      &:focus {
+        @include govuk-focused-text;
+        color: $govuk-focus-text-colour;
       }
     }
   }
