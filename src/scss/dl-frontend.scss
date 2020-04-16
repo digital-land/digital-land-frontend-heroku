@@ -137,6 +137,11 @@ a {
       display: block;
     }
   }
+
+  .js-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .hub__la-list {

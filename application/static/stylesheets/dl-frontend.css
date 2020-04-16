@@ -8955,6 +8955,11 @@
   display: block;
 }
 
+.js-enabled .js-hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .hub__la-list .found {
   outline: 3px solid transparent;
   color: #0b0c0c;
