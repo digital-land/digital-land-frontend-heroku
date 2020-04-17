@@ -2411,18 +2411,7 @@
           </div>
         </div>
         
-        
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-        
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <h2 class="govuk-heading-l" id="download">Download the data</h2>
-            <p class="govuk-body">You can download the data on this page as:</p>
-            <ul class="govuk-list">
-              <li><a href="https://raw.githubusercontent.com/digital-land/organisation-collection/master/collection/organisation.csv">CSV</a></li>
-            </ul>
-          </div>
-        </div>
+        <p class="organisations__no-filter-match js-no-filter-list-matches">No organisations match that filter.</p>
         
         
  </main>
@@ -2432,7 +2421,6 @@
 {{ super() }}
 <script>
     const $form = document.querySelector('[data-filter="form"]');
-    console.log($form)
     new window.DLFrontend.FilterList($form).init()
 </script>
 {% endblock bodyEnd %}

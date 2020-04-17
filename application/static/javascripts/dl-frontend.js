@@ -721,6 +721,7 @@
     this.$form = $form;
     this.filterTimeout = null;
     this.$noMatches = document.querySelector('.js-no-filter-list-matches');
+    console.log(this.$noMatches);
   }
 
   FilterList.prototype.init = function () {
@@ -796,12 +797,14 @@
         listSection.classList.add('js-hidden');
       }
 
+      console.log(matchingCount);
       totalMatches += matchingCount;
     });
 
     // if no results show message
     if (this.$noMatches) {
-      if (totalMatches > 0) {
+      console.log(totalMatches);
+      if (totalMatches == 0) {
         this.$noMatches.classList.remove('js-hidden');
       } else {
         this.$noMatches.classList.add('js-hidden');

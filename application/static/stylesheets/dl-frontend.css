@@ -8939,6 +8939,40 @@
   }
 }
 
+.organisations__no-filter-match {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  display: none;
+  max-width: 100% !important;
+  text-align: center;
+}
+
+@media print {
+  .organisations__no-filter-match {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .organisations__no-filter-match {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .organisations__no-filter-match {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
 .js-enabled .hub-list__separator:first-of-type {
   display: none;
 }
@@ -8958,6 +8992,10 @@
 .js-enabled .js-hidden {
   display: none;
   visibility: hidden;
+}
+
+.js-enabled .organisations__no-filter-match {
+  display: block;
 }
 
 .hub__la-list .found {

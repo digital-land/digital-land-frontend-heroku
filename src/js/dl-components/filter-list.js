@@ -86,7 +86,7 @@ FilterList.prototype.updateListCounts = function (lists) {
 
   // if no results show message
   if (this.$noMatches) {
-    if (totalMatches > 0) {
+    if (totalMatches == 0) {
       this.$noMatches.classList.remove('js-hidden')
     } else {
       this.$noMatches.classList.add('js-hidden')

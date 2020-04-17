@@ -117,6 +117,13 @@ a {
   color: $govuk-secondary-text-colour;
 }
 
+.organisations__no-filter-match {
+  @include govuk-font($size: 19);
+  display: none;
+  max-width: 100% !important;
+  text-align: center;
+}
+
 // for covid-19 project
 
 .js-enabled {
@@ -141,6 +148,10 @@ a {
   .js-hidden {
     display: none;
     visibility: hidden;
+  }
+
+  .organisations__no-filter-match {
+    display: block;
   }
 }
 
