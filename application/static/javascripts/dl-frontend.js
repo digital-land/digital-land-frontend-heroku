@@ -769,7 +769,6 @@
   FilterList.prototype.matchSearchTerm = function (item, term) {
     // const itemLabels = item.dataset.filterItemLabels
     const itemLabels = item.querySelector('a').textContent;
-    console.log(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     item.classList.remove('js-hidden');
     var searchTermRegexp = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
     if (searchTermRegexp.exec(itemLabels) !== null) {
