@@ -7536,6 +7536,12 @@
   max-width: 200px;
 }
 
+@media (min-width: 40.0625em) {
+  .filter-list__input {
+    max-width: 400px;
+  }
+}
+
 .js-enabled .organisations__no-filter-match {
   display: block;
 }

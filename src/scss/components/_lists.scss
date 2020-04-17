@@ -32,6 +32,9 @@
 
 .filter-list__input {
   max-width: 200px;
+  @include govuk-media-query($from: tablet) {
+    max-width: 400px;
+  }
 }
 
 .js-enabled {
