@@ -7527,6 +7527,19 @@
   }
 }
 
+.filter-list__label {
+  display: inline;
+  padding-right: 5px;
+}
+
+.filter-list__input {
+  max-width: 200px;
+}
+
+.js-enabled .organisations__no-filter-match {
+  display: block;
+}
+
 .dl-contents-section,
 .contents-section {
   position: relative;
@@ -8992,10 +9005,6 @@
 .js-enabled .js-hidden {
   display: none;
   visibility: hidden;
-}
-
-.js-enabled .organisations__no-filter-match {
-  display: block;
 }
 
 .hub__la-list .found {

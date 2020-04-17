@@ -24,3 +24,18 @@
     @include govuk-font($size: 19);
   }
 }
+
+.filter-list__label {
+  display: inline;
+  padding-right: 5px;
+}
+
+.filter-list__input {
+  max-width: 200px;
+}
+
+.js-enabled {
+  .organisations__no-filter-match {
+    display: block;
+  }
+}
