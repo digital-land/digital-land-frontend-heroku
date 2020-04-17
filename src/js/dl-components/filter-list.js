@@ -20,6 +20,9 @@ FilterList.prototype.init = function (params) {
   const $input = $form.querySelector('input')
   const boundFilterViaTimeout = this.filterViaTimeout.bind(this)
   $input.addEventListener('keyup', boundFilterViaTimeout)
+
+  // make sure no matches message is initially hidden
+  this.$noMatches.classList.add('js-hidden')
 }
 
 FilterList.prototype.filterViaTimeout = function (e) {
