@@ -2421,6 +2421,9 @@
 {{ super() }}
 <script>
     const $form = document.querySelector('[data-filter="form"]');
-    new window.DLFrontend.FilterList($form).init()
+    new window.DLFrontend.FilterList($form).init({
+        list_section_selector: '.org-count',
+        count_wrapper_selector: '.org-count__wrapper'
+    })
 </script>
 {% endblock bodyEnd %}

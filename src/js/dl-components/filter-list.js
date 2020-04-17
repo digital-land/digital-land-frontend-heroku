@@ -8,7 +8,8 @@ function FilterList ($form) {
   this.$noMatches = document.querySelector('.js-no-filter-list-matches')
 }
 
-FilterList.prototype.init = function () {
+FilterList.prototype.init = function (params) {
+  this.setupOptions(params)
   const $form = this.$form
   // Form should only appear if the JS is working
   $form.classList.add('filter-organisations-list__form--active')
@@ -64,11 +65,13 @@ FilterList.prototype.matchSearchTerm = function (item, term) {
 
 FilterList.prototype.updateListCounts = function (lists) {
   var totalMatches = 0
+  const list_section_selector = this.list_section_selector
+  const count_wrapper_selector = this.count_wrapper_selector
 
   lists.forEach(function (list) {
     var matchingCount = list.querySelectorAll('[data-filter="item"]:not(.js-hidden)').length
-    var listSection = list.closest('.org-count')
-    var countWrapper = listSection.querySelector('.org-count__wrapper')
+    var listSection = list.closest(list_section_selector)
+    var countWrapper = listSection.querySelector(count_wrapper_selector)
     var listCount = countWrapper.querySelector('.js-list-count')
     var accessibleListCount = countWrapper.querySelector('.js-accessible-list-count')
 
@@ -92,6 +95,12 @@ FilterList.prototype.updateListCounts = function (lists) {
       this.$noMatches.classList.add('js-hidden')
     }
   }
+}
+
+FilterList.prototype.setupOptions = function (params) {
+  params = params || {}
+  this.list_section_selector = params.list_section_selector || '.list-count'
+  this.count_wrapper_selector = params.count_wrapper_selector || '.list-count__wrapper'
 }
 
 export default FilterList
