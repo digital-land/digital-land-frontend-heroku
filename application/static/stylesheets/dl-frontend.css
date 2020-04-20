@@ -8006,10 +8006,7 @@
 
 .dlf-pagination {
   display: block;
-  margin-top: 30px;
-  margin-right: -15px;
-  margin-bottom: 30px;
-  margin-left: -15px;
+  margin: 45px 0 30px;
 }
 
 .dlf-pagination__list {
@@ -8025,6 +8022,7 @@
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.25;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -8051,7 +8049,7 @@
 
 .dlf-pagination__link {
   display: block;
-  padding: 15px;
+  padding: 0 0 20px;
   text-decoration: none;
 }
 
@@ -8059,12 +8057,22 @@
   color: #1d70b8;
 }
 
-.dlf-pagination__link:hover, .dlf-pagination__link:active {
+.dlf-pagination__link:hover {
   background-color: #f3f2f1;
+}
+
+.dlf-pagination__link:focus, .dlf-pagination__link:active {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
 }
 
 .dlf-pagination__link-title {
   display: block;
+  padding-top: 15px;
+  border-top: 1px solid #b1b4b6;
 }
 
 .dlf-pagination__link-divider {
@@ -8124,6 +8132,7 @@
   width: .63em;
   height: .482em;
   margin-bottom: 1px;
+  fill: #b1b4b6;
 }
 
 @media print {

@@ -1,9 +1,6 @@
 .dlf-pagination {
   display: block;
-  margin-top: $govuk-gutter;
-  margin-right: -$govuk-gutter-half;
-  margin-bottom: $govuk-gutter;
-  margin-left: -$govuk-gutter-half;
+  margin: ($govuk-gutter * 1.5) 0 $govuk-gutter;
 }
 
 .dlf-pagination__list {
@@ -13,13 +10,14 @@
 
 .dlf-pagination__item {
   @include govuk-font($size: 16, $line-height: (20 / 16));
+  margin-bottom: 20px;
   list-style: none;
 }
 
 .dlf-pagination__link {
   @extend %govuk-link;
   display: block;
-  padding: $govuk-gutter-half;
+  padding: 0 0 20px;
   text-decoration: none;
 
   &:hover,
@@ -29,14 +27,20 @@
     color: $govuk-link-colour;
   }
 
-  &:hover,
-  &:active {
+  &:hover {
     background-color: govuk-colour("light-grey", $legacy: "grey-4");
+  }
+
+  &:focus,
+  &:active {
+    @include govuk-focused-text;
   }
 }
 
 .dlf-pagination__link-title {
   display: block;
+  padding-top: $govuk-gutter-half;
+  border-top: 1px solid $govuk-border-colour;
 }
 
 .dlf-pagination__link-divider {
@@ -54,6 +58,7 @@
   width: .63em;
   height: .482em;
   margin-bottom: 1px;
+  fill: govuk-colour("mid-grey");
 }
 
 .dlf-pagination__link-label {
