@@ -44,6 +44,10 @@ $list-indent: 25px;
     }
   }
 
+  .contents-list__list-item {
+    padding-top: 7px;
+  }
+
   p {
     margin: 0;
     @include govuk-font($size: 16);

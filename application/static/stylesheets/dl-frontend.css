@@ -7629,6 +7629,11 @@
   text-decoration: none;
 }
 
+.dl-contents-section .contents-list__list-item,
+.contents-section .contents-list__list-item {
+  padding-top: 7px;
+}
+
 .dl-contents-section p,
 .contents-section p {
   margin: 0;
