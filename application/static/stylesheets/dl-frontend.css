@@ -7047,7 +7047,6 @@
 
 @media (min-width: 40.0625em) {
   .hero {
-    margin: 0 -15px;
     margin-bottom: 30px;
   }
 }
@@ -7066,6 +7065,7 @@
 .hero__content .govuk-heading-xl,
 .hero__content .govuk-heading-l,
 .hero__content .govuk-body-l,
+.hero__content .govuk-body,
 .hero__content a {
   color: #ffffff;
 }

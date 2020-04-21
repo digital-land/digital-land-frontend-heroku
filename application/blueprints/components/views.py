@@ -26,6 +26,10 @@ def filter_group():
 def hero():
     return render_template('hero.html')
 
+@components.route('/hero/example')
+def hero_example():
+    return render_template('hero-example.html')
+
 @components.route('/highlight-box')
 def highlight_box():
     return render_template('highlight-box.html')
