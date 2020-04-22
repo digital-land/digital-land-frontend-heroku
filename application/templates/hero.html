@@ -1,5 +1,6 @@
 {% extends "dlf-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/design-system-example.html" import designSystemExample %}
 
 {% block topLevelNavItems %}
   {{ toplevelNavItem("Get started", "/") }}
@@ -25,26 +26,15 @@
 
       <p class="govuk-body">A component for producing a full width hero banner. Usually used on a landing page for a service, project or team.</p>
 
-      <div class="app-example-wrapper">
-        <div class="app-example">
-          <iframe 
-            title="A list of organisations categorised by type example"
-            data-module="app-example-frame"
-            class="app-example__frame app-example__frame--resizable app-example__frame--m"
-            src="/component/hero/example" loading="lazy" id="iFrameResizer3"
-            scrolling="auto" frameborder="0"></iframe>
-        </div>
-        <div class="app-tabs__heading">
-          <span>HTML</span>
-        </div>
-        <div class="app-tabs__container">
-          <pre><code class="html">
-              {%- filter forceescape -%}
-{% include 'partials/hero.html' %}
-              {%- endfilter -%}
-            </code></pre>
-        </div>
-      </div><!-- end app-example-wrapper -->
+    {{ designSystemExample({
+      "iframe": {
+        "title": "test",
+        "url": url_for('components.hero_example')
+      },
+      "partial": {
+        "name": 'partials/hero.html'
+      }
+    }) }}
 
     </main>
   </div>

@@ -1,0 +1,22 @@
+{% macro designSystemExample(params) %}
+<div class="app-example-wrapper">
+    <div class="app-example">
+        <iframe 
+        title={{ params.iframe.title }}
+        data-module="app-example-frame"
+        class="app-example__frame app-example__frame--resizable app-example__frame--{% if params.iframe.size %}{{ params.iframe.size }}{% else %}m{% endif %}"
+        src="{{ params.iframe.url }}" loading="lazy" id="iFrameResizer3"
+        scrolling="auto" frameborder="0"></iframe>
+    </div>
+    <div class="app-tabs__heading">
+        <span>HTML</span>
+    </div>
+    <div class="app-tabs__container">
+        <pre><code class="{% if params.partial.type %}{{ params.partial.type }}{% else %}html{% endif %}">
+            {%- filter forceescape -%}
+{% include params.partial.name %}
+            {%- endfilter -%}
+        </code></pre>
+    </div>
+</div><!-- end app-example-wrapper -->
+{% endmacro %}
