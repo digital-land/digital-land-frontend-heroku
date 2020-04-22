@@ -2,9 +2,9 @@
 <div class="app-example-wrapper">
     <div class="app-example">
         <iframe 
-        title={{ params.iframe.title }}
+        title="{{ params.iframe['title'] }}"
         data-module="app-example-frame"
-        class="app-example__frame app-example__frame--resizable app-example__frame--{% if params.iframe.size %}{{ params.iframe.size }}{% else %}m{% endif %}"
+        class="app-example__frame app-example__frame--resizable app-example__frame--{% if params.iframe['size'] %}{{ params.iframe['size'] }}{% else %}m{% endif %}"
         src="{{ params.iframe.url }}" loading="lazy" id="iFrameResizer3"
         scrolling="auto" frameborder="0"></iframe>
     </div>
