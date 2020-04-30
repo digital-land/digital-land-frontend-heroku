@@ -1,0 +1,22 @@
+.dlf-summary-card {
+  border: 1px solid $govuk-border-colour;
+
+  .dlf-summary-card__header {
+    padding: govuk-spacing(3);
+    background-color: govuk-colour("light-grey");
+  }
+
+  .dlf-summary-card__title {
+    @include govuk-font($size: 19, $weight: bold);
+    margin: 0;
+  }
+
+  .dlf-summary-card__body {
+    @include govuk-font($size: 19);
+    padding: govuk-spacing(3);
+
+    .govuk-list {
+      margin-bottom: 0;
+    }
+  }
+}

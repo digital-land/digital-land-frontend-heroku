@@ -34,6 +34,7 @@ $using-helvetica: false;
 @import "components/charts";
 @import "components/maps";
 @import "components/section-separators";
+@import "components/summary-cards";
 
 // import components from elsewhere e.g. MOJ
 @import "vendor-components/moj-sortable-table";
@@ -74,6 +75,14 @@ a {
 
 .highlight-text {
   color: govuk-colour("blue");
+}
+
+.govuk-link--no-underline {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 %block-text {
