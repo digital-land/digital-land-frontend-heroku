@@ -20,3 +20,28 @@
     }
   }
 }
+
+
+.dlf-inset-card {
+  padding-bottom: govuk-spacing(3);
+  border-bottom: 2px solid $govuk-border-colour;
+  background-color: govuk-colour("light-grey");
+
+  .dlf-inset-card__header {
+    padding: govuk-spacing(3) govuk-spacing(3) govuk-spacing(2);
+  }
+
+  .dlf-inset-card__title {
+    @include govuk-font($size: 19, $weight: bold);
+    margin: 0;
+  }
+
+  .dlf-inset-card__body {
+    @include govuk-font($size: 19);
+    padding: 0 govuk-spacing(3);
+
+    .govuk-list {
+      margin-bottom: 0;
+    }
+  }
+}

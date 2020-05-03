@@ -8833,6 +8833,84 @@
   margin-bottom: 0;
 }
 
+.dlf-inset-card {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #b1b4b6;
+  background-color: #f3f2f1;
+}
+
+.dlf-inset-card .dlf-inset-card__header {
+  padding: 15px 15px 10px;
+}
+
+.dlf-inset-card .dlf-inset-card__title {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media print {
+  .dlf-inset-card .dlf-inset-card__title {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-inset-card .dlf-inset-card__title {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .dlf-inset-card .dlf-inset-card__title {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.dlf-inset-card .dlf-inset-card__body {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding: 0 15px;
+}
+
+@media print {
+  .dlf-inset-card .dlf-inset-card__body {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-inset-card .dlf-inset-card__body {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .dlf-inset-card .dlf-inset-card__body {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.dlf-inset-card .dlf-inset-card__body .govuk-list {
+  margin-bottom: 0;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
