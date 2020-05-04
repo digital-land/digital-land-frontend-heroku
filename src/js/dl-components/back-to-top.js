@@ -24,10 +24,8 @@ BackToTop.prototype.init = function (params) {
   }
 
   var $subNavStyles = document.defaultView.getComputedStyle($subNav)
-  console.log($subNavStyles.getPropertyValue('margin-bottom'))
   if ($subNavStyles.getPropertyValue('margin-bottom').indexOf('px')) {
     if (parseInt($subNavStyles.getPropertyValue('margin-bottom').replace('px', '')) < 100) {
-      console.log('need to set margin')
       $subNav.style.marginBottom = '100px'
     }
   }

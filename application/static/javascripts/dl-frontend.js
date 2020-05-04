@@ -273,10 +273,8 @@
     }
 
     var $subNavStyles = document.defaultView.getComputedStyle($subNav);
-    console.log($subNavStyles.getPropertyValue('margin-bottom'));
     if ($subNavStyles.getPropertyValue('margin-bottom').indexOf('px')) {
       if (parseInt($subNavStyles.getPropertyValue('margin-bottom').replace('px', '')) < 100) {
-        console.log('need to set margin');
         $subNav.style.marginBottom = '100px';
       }
     }
@@ -319,18 +317,10 @@
       // If the subnav is visible but you can see it all at once, then a back to top link is likely not as useful.
       // We hide the link but make it focusable for screen readers users who might still find it useful.
       if (subNavIsIntersecting && subNavIntersectionRatio === 1) {
-        console.log("hide button");
         this.$module.classList.add('back-to-top--hidden');
       } else {
         this.$module.classList.remove('back-to-top--hidden');
       }
-
-      // var $subNav_pos = $subNav.getClientRects()
-      // var $subNav_bottom = $subNav_pos[0].bottom
-      // var viewport_bottom = window.scrollY + window.innerHeight
-      // console.log("vb", viewport_bottom)
-      // console.log("nb", $subNav_bottom)
-      // console.log(this.passedBottom($subNav))
     }.bind(this));
 
     observer.observe($footer);
