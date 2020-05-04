@@ -43,8 +43,9 @@
 {{ super() }}
 <script>
 // Initialise back to top
-var $backToTop = document.querySelector('[data-module="app-back-to-top"]')
-var $observedElement = document.querySelector('.app-subnav')
-new window.DLFrontend.BackToTop($backToTop, { $observedElement: $observedElement }).init()
+var $btt = document.querySelector('[data-module*="back-to-top"]')
+new window.DLFrontend.BackToTop($btt).init({
+  footer_selector: ".govuk-footer"
+});
 </script>
 {% endblock %}
