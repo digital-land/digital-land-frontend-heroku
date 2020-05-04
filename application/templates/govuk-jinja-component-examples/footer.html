@@ -6,12 +6,66 @@
 
 {% block govukComponentExample %}
 
-{{ govukFooter({}) }}
+{{ govukFooter({
+    "meta": {
+        "items": [
+        {
+            "href": "#",
+            "text": "Help"
+        },
+        {
+            "href": "#",
+            "text": "Cookies"
+        },
+        {
+            "href": "#",
+            "text": "Contact"
+        },
+        {
+            "href": "#",
+            "text": "Terms and conditions"
+        },
+        {
+            "href": "#",
+            "text": "Rhestr o Wasanaethau Cymraeg"
+        }
+        ],
+        "html": 'The <a href="https://github.com/digital-land/organisation-collection">organisation-collection</a> and <a href="https://github.com/digital-land/organisation">organisation</a> is <a href="https://github.com/digital-land/organisation/blob/master/LICENSE">open source</a>.'
+    }
+}) }}
 
 {% endblock %}
 
 {% block govukComponentJinja %}
 
-<pre><code class="nunjucks">{% raw %}{{ govukFooter({}) }}{% endraw %}</code></pre>
+<p class="govuk-body">Note, jinja templates need all keys to be double quoted (""). As below.</p>
+
+<pre><code class="nunjucks">{% raw %}{{ govukFooter({
+"meta": {
+    "items": [
+    {
+        "href": "#",
+        "text": "Help"
+    },
+    {
+        "href": "#",
+        "text": "Cookies"
+    },
+    {
+        "href": "#",
+        "text": "Contact"
+    },
+    {
+        "href": "#",
+        "text": "Terms and conditions"
+    },
+    {
+        "href": "#",
+        "text": "Rhestr o Wasanaethau Cymraeg"
+    }
+    ],
+    "html": 'The <a href="https://github.com/digital-land/organisation-collection">organisation-collection</a> and <a href="https://github.com/digital-land/organisation">organisation</a> is <a href="https://github.com/digital-land/organisation/blob/master/LICENSE">open source</a>.'
+}
+}) }}{% endraw %}</code></pre>
 
 {% endblock %}
