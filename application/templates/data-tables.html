@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
@@ -9,19 +9,9 @@
 {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Data tables{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-    {%- include 'menu-partials/component-menu.html' -%}
-
-    <div class="app-nav__content">
-        <main id="main-content" class="app-content" role="main">
-            <div class="app-content__header">
-                <span class="govuk-caption-xl">Component</span>
-                <h1 class="govuk-heading-xl">
-                    Data tables
-                </h1>
-            </div>
+{% block componentContent %}
 
             <div class="data-table__wrapper" data-module="data-table">
                 <div class="data-table-left-shadow"></div>
@@ -443,9 +433,6 @@
                 </div>
             </div>
 
-        </main>
-    </div>
-</div>
 {% endblock %}
 
 {% set includeJQuery = "true" %}

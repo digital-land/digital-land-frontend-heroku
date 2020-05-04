@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
@@ -9,251 +9,259 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Shielding hubs{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Hubs
-        </h1>
-      </div>
+  <div class="govuk-caption-s">Test caption</div>
+  <h2 class="govuk-heading-m">Example</h2>
 
-      <h2 class="govuk-heading-m">Example</h2>
-
-      <hr class="govuk-section-break hub-list__separator govuk-section-break--visible">
-
-      <div class="govuk-grid-row hub test-hub">
-        <div class="govuk-grid-column-full">
-          <span class="govuk-caption-l">Hub</span>
-          <h2 class="govuk-heading-l">Kent County Council</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
-          <ul class="govuk-list hub__la-list">
-            <li>
-              Ashford
-            </li>
-            <li>
-              <span class="found">Canterbury</span>
-            </li>
-            <li>
-              Dartford
-            </li>
-            <li>
-              Dover
-            </li>
-            <li>
-              Gravesham
-            </li>
-            <li>
-              Maidstone
-            </li>
-            <li>
-              Sevenoaks
-            </li>
-            <li>
-              Shepway
-            </li>
-            <li>
-              Swale
-            </li>
-            <li>
-              Thanet
-            </li>
-            <li>
-              Tonbridge and Malling
-            </li>
-            <li>
-              Tunbridge Wells
-            </li>
-          </ul>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <span class="govuk-caption-m">Local Resilience Forum</span>
-          <h3 class="govuk-heading-m">Kent</h3>
-          <span class="govuk-caption-m">Region</span>
-          <h3 class="govuk-heading-m">South East</h3>
-        </div>
-      </div>
-
-      <hr class="govuk-section-break hub-list__separator govuk-section-break--visible">
-
-      <div class="govuk-grid-row hub">
-        <div class="govuk-grid-column-full">
-          <span class="govuk-caption-l">Hub</span>
-          <h2 class="govuk-heading-l">Kent County Council</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
-          <ul class="govuk-list hub__la-list">
-            <li>
-              Ashford
-            </li>
-            <li>
-              <span class="found">Canterbury</span>
-            </li>
-            <li>
-              Dartford
-            </li>
-            <li>
-              Dover
-            </li>
-            <li>
-              Gravesham
-            </li>
-            <li>
-              Maidstone
-            </li>
-            <li>
-              Sevenoaks
-            </li>
-            <li>
-              Shepway
-            </li>
-            <li>
-              Swale
-            </li>
-            <li>
-              Thanet
-            </li>
-            <li>
-              Tonbridge and Malling
-            </li>
-            <li>
-              Tunbridge Wells
-            </li>
-          </ul>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <span class="govuk-caption-m">Local Resilience Forum</span>
-          <h3 class="govuk-heading-m">Kent</h3>
-          <span class="govuk-caption-m">Region</span>
-          <h3 class="govuk-heading-m">South East</h3>
-        </div>
-      </div>
-
-
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <span class="govuk-caption-l">Hub</span>
-          <h2 class="govuk-heading-l">Kent County Council</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
-          <ul class="govuk-list hub__la-list">
-            <li>
-              Ashford
-            </li>
-            <li>
-              <span class="found">Canterbury</span>
-            </li>
-            <li>
-              Dartford
-            </li>
-            <li>
-              Dover
-            </li>
-            <li>
-              Gravesham
-            </li>
-            <li>
-              Maidstone
-            </li>
-            <li>
-              Sevenoaks
-            </li>
-            <li>
-              Shepway
-            </li>
-            <li>
-              Swale
-            </li>
-            <li>
-              Thanet
-            </li>
-            <li>
-              Tonbridge and Malling
-            </li>
-            <li>
-              Tunbridge Wells
-            </li>
-          </ul>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <span class="govuk-caption-m">Local Resilience Forum</span>
-          <h3 class="govuk-heading-m">Kent</h3>
-          <span class="govuk-caption-m">Region</span>
-          <h3 class="govuk-heading-m">South East</h3>
-        </div>
-      </div>
-
-
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <span class="govuk-caption-l">Hub</span>
-          <h2 class="govuk-heading-l">Kent County Council</h2>
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
-          <ul class="govuk-list hub__la-list">
-            <li>
-              Ashford
-            </li>
-            <li>
-              <span class="found">Canterbury</span>
-            </li>
-            <li>
-              Dartford
-            </li>
-            <li>
-              Dover
-            </li>
-            <li>
-              Gravesham
-            </li>
-            <li>
-              Maidstone
-            </li>
-            <li>
-              Sevenoaks
-            </li>
-            <li>
-              Shepway
-            </li>
-            <li>
-              Swale
-            </li>
-            <li>
-              Thanet
-            </li>
-            <li>
-              Tonbridge and Malling
-            </li>
-            <li>
-              Tunbridge Wells
-            </li>
-          </ul>
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <span class="govuk-caption-m">Local Resilience Forum</span>
-          <h3 class="govuk-heading-m">Kent</h3>
-          <span class="govuk-caption-m">Region</span>
-          <h3 class="govuk-heading-m">South East</h3>
-        </div>
-      </div>
-
-    </main>
+  <div class="app-example-wrapper">
+    <div class="app-example">
+      <iframe 
+        title="Linking from the error summary to an answer that uses multiple fields example"
+        data-module="app-example-frame"
+        class="app-example__frame app-example__frame--resizable app-example__frame--xs"
+        src="/component/iframe" loading="lazy" id="iFrameResizer3"
+        scrolling="auto" frameborder="0"></iframe>
+    </div>
+    <div class="app-tabs__heading">
+      <span>HTML</span>
+    </div>
+    <div class="app-tabs__container">
+      <pre><code class="html">
+          {%- filter forceescape -%}
+            {%- include 'partials/hero.html' -%}
+          {%- endfilter -%}
+        </code></pre>
+    </div>
   </div>
-</div>
+
+  <hr class="govuk-section-break hub-list__separator govuk-section-break--visible">
+
+  <div class="govuk-grid-row hub test-hub">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Hub</span>
+      <h2 class="govuk-heading-l">Kent County Council</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
+      <ul class="govuk-list hub__la-list">
+        <li>
+          Ashford
+        </li>
+        <li>
+          <span class="found">Canterbury</span>
+        </li>
+        <li>
+          Dartford
+        </li>
+        <li>
+          Dover
+        </li>
+        <li>
+          Gravesham
+        </li>
+        <li>
+          Maidstone
+        </li>
+        <li>
+          Sevenoaks
+        </li>
+        <li>
+          Shepway
+        </li>
+        <li>
+          Swale
+        </li>
+        <li>
+          Thanet
+        </li>
+        <li>
+          Tonbridge and Malling
+        </li>
+        <li>
+          Tunbridge Wells
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-caption-m">Local Resilience Forum</span>
+      <h3 class="govuk-heading-m">Kent</h3>
+      <span class="govuk-caption-m">Region</span>
+      <h3 class="govuk-heading-m">South East</h3>
+    </div>
+  </div>
+
+  <hr class="govuk-section-break hub-list__separator govuk-section-break--visible">
+
+  <div class="govuk-grid-row hub">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Hub</span>
+      <h2 class="govuk-heading-l">Kent County Council</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
+      <ul class="govuk-list hub__la-list">
+        <li>
+          Ashford
+        </li>
+        <li>
+          <span class="found">Canterbury</span>
+        </li>
+        <li>
+          Dartford
+        </li>
+        <li>
+          Dover
+        </li>
+        <li>
+          Gravesham
+        </li>
+        <li>
+          Maidstone
+        </li>
+        <li>
+          Sevenoaks
+        </li>
+        <li>
+          Shepway
+        </li>
+        <li>
+          Swale
+        </li>
+        <li>
+          Thanet
+        </li>
+        <li>
+          Tonbridge and Malling
+        </li>
+        <li>
+          Tunbridge Wells
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-caption-m">Local Resilience Forum</span>
+      <h3 class="govuk-heading-m">Kent</h3>
+      <span class="govuk-caption-m">Region</span>
+      <h3 class="govuk-heading-m">South East</h3>
+    </div>
+  </div>
+
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Hub</span>
+      <h2 class="govuk-heading-l">Kent County Council</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
+      <ul class="govuk-list hub__la-list">
+        <li>
+          Ashford
+        </li>
+        <li>
+          <span class="found">Canterbury</span>
+        </li>
+        <li>
+          Dartford
+        </li>
+        <li>
+          Dover
+        </li>
+        <li>
+          Gravesham
+        </li>
+        <li>
+          Maidstone
+        </li>
+        <li>
+          Sevenoaks
+        </li>
+        <li>
+          Shepway
+        </li>
+        <li>
+          Swale
+        </li>
+        <li>
+          Thanet
+        </li>
+        <li>
+          Tonbridge and Malling
+        </li>
+        <li>
+          Tunbridge Wells
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-caption-m">Local Resilience Forum</span>
+      <h3 class="govuk-heading-m">Kent</h3>
+      <span class="govuk-caption-m">Region</span>
+      <h3 class="govuk-heading-m">South East</h3>
+    </div>
+  </div>
+
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">Hub</span>
+      <h2 class="govuk-heading-l">Kent County Council</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-l govuk-!-font-weight-bold">Councils in the hub:</p>
+      <ul class="govuk-list hub__la-list">
+        <li>
+          Ashford
+        </li>
+        <li>
+          <span class="found">Canterbury</span>
+        </li>
+        <li>
+          Dartford
+        </li>
+        <li>
+          Dover
+        </li>
+        <li>
+          Gravesham
+        </li>
+        <li>
+          Maidstone
+        </li>
+        <li>
+          Sevenoaks
+        </li>
+        <li>
+          Shepway
+        </li>
+        <li>
+          Swale
+        </li>
+        <li>
+          Thanet
+        </li>
+        <li>
+          Tonbridge and Malling
+        </li>
+        <li>
+          Tunbridge Wells
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <span class="govuk-caption-m">Local Resilience Forum</span>
+      <h3 class="govuk-heading-m">Kent</h3>
+      <span class="govuk-caption-m">Region</span>
+      <h3 class="govuk-heading-m">South East</h3>
+    </div>
+  </div>
 
 {% endblock %}
 

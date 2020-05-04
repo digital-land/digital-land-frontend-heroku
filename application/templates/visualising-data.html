@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 {% from "dl-macros/chart-macros.html" import horizontalBar %}
 
@@ -10,19 +10,9 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Visualising data{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
-
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Visualising data
-        </h1>
-      </div>
+{% block componentContent %}
 
       <p class="govuk-body">You can add stacked bars</p>
 
@@ -158,11 +148,5 @@
     </div>
   </div>
 </div>
-
-    </main>
-  </div>
-</div>
-
-
 
 {% endblock %}

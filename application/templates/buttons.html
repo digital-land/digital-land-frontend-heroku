@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
@@ -9,53 +9,37 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Buttons{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
+  <p class="govuk-body">All buttons should include the standard <code>govuk-button</code> class. For the style varieties add the extra classes listed.</p>
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Buttons
-        </h1>
-      </div>
-
-      <p class="govuk-body">All buttons should include the standard <code>govuk-button</code> class. For the style varieties add the extra classes listed.</p>
-
-      <div class="govuk-heading-m">.govuk-button .govuk-button--start</div>
-      <div class="govuk-form-group">
-        <button class="govuk-button govuk-button--start">Start now</button>
-      </div>
-
-      <div class="govuk-heading-m">.dlf-secondary-button</div>
-      <div class="govuk-form-group">
-        <button class="govuk-button dlf-secondary-button">Secondary</button>
-      </div>
-
-      <div class="govuk-heading-m">.dlf-filter-button</div>
-      <div class="govuk-form-group">
-        <button class="govuk-button dlf-filter-button">Filter</button>
-      </div>
-
-      <div class="govuk-heading-m">.link-align-button</div>
-      <p class="govuk-body">Use the link class to align links to a button. It is primarily used for secondary/destructive actions. It is useful for things like:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Resetting forms</li>
-        <li>Cancelling editable sections</li>
-        <li>Refreshing the lucky dip page</li>
-      </ul>
-      <div class="module-example">
-        <div class="govuk-form-group">
-          <button class="govuk-button">Save</button>
-          <a href="" class="link-align-btn">Cancel</a>
-        </div>
-      </div>
-
-    </main>
+  <div class="govuk-heading-m">.govuk-button .govuk-button--start</div>
+  <div class="govuk-form-group">
+    <button class="govuk-button govuk-button--start">Start now</button>
   </div>
-</div>
 
+  <div class="govuk-heading-m">.dlf-secondary-button</div>
+  <div class="govuk-form-group">
+    <button class="govuk-button dlf-secondary-button">Secondary</button>
+  </div>
+
+  <div class="govuk-heading-m">.dlf-filter-button</div>
+  <div class="govuk-form-group">
+    <button class="govuk-button dlf-filter-button">Filter</button>
+  </div>
+
+  <div class="govuk-heading-m">.link-align-button</div>
+  <p class="govuk-body">Use the link class to align links to a button. It is primarily used for secondary/destructive actions. It is useful for things like:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Resetting forms</li>
+    <li>Cancelling editable sections</li>
+    <li>Refreshing the lucky dip page</li>
+  </ul>
+  <div class="module-example">
+    <div class="govuk-form-group">
+      <button class="govuk-button">Save</button>
+      <a href="" class="link-align-btn">Cancel</a>
+    </div>
+  </div>
 {% endblock %}

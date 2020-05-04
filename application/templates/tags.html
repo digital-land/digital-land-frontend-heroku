@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 {% from "dl-macros/design-system-example.html" import designSystemExample %}
 
@@ -10,33 +10,19 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Tags{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Tags
-        </h1>
-      </div>
-
-      {{ designSystemExample({
-        "iframe": {
-          "title": "An example of the different govuk style tags",
-          "size": "s",
-          "url": url_for('components.tags_example')
-        },
-        "partial": {
-          "name": 'partials/tags.html'
-        }
-      }) }}
-
-    </main>
-  </div>
-</div>
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of the different govuk style tags",
+      "size": "s",
+      "url": url_for('components.tags_example')
+    },
+    "partial": {
+      "name": 'partials/tags.html'
+    }
+  }) }}
 
 {% endblock %}

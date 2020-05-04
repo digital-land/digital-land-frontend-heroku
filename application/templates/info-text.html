@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
@@ -9,38 +9,24 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Info text{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Info text
-        </h1>
-      </div>
+  <p class="govuk-body">This component is based on the <code>govuk-warning-text</code> component from the <a href="https://design-system.service.gov.uk/components/warning-text/">GOVUK design system</a>. It should be used when giving the user supplementary information.</p>
 
-      <p class="govuk-body">This component is based on the <code>govuk-warning-text</code> component from the <a href="https://design-system.service.gov.uk/components/warning-text/">GOVUK design system</a>. It should be used when giving the user supplementary information.</p>
-
-      <h2 class="govuk-heading-m">Example</h2>
-      <div class="module-example">
-        {% include 'partials/info-text.html' %}
-      </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {%- include 'partials/info-text.html' -%}
-        {%- endfilter -%}
-      </code>
-      </pre>
-
-    </main>
+  <h2 class="govuk-heading-m">Example</h2>
+  <div class="module-example">
+    {% include 'partials/info-text.html' %}
   </div>
-</div>
+
+  <h2 class="govuk-heading-m">The HTML you need</h2>
+  <pre>
+  <code class="html">
+    {%- filter forceescape -%}
+      {%- include 'partials/info-text.html' -%}
+    {%- endfilter -%}
+  </code>
+  </pre>
 
 {% endblock %}

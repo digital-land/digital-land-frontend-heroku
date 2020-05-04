@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 {% from "dl-macros/filter-group.html" import dlfFilterGroup %}
 
@@ -10,45 +10,35 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Filter group{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Filter group
-        </h1>
-      </div>
-
-      <h2 class="govuk-heading-m">Example</h2>
-      <div class="module-example">
-        <div class="govuk-form-group">
-          {% call dlfFilterGroup({
-            "title": "Location",
-            "is_open": False,
-            "selected": 0
-          }) %}
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="investigation-yes" name="investigation" type="radio" value="true">
-              <label class="govuk-label govuk-radios__label" for="investigation-yes">
-              UK
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="investigation-no" name="investigation" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="investigation-no">
-              Rest of World
-              </label>
-            </div>
-          </div>
-          {% endcall %}
+  <h2 class="govuk-heading-m">Example</h2>
+  <div class="module-example">
+    <div class="govuk-form-group">
+      {% call dlfFilterGroup({
+        "title": "Location",
+        "is_open": False,
+        "selected": 0
+      }) %}
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="investigation-yes" name="investigation" type="radio" value="true">
+          <label class="govuk-label govuk-radios__label" for="investigation-yes">
+          UK
+          </label>
         </div>
-      </div><!-- end of example -->
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="investigation-no" name="investigation" type="radio" value="false">
+          <label class="govuk-label govuk-radios__label" for="investigation-no">
+          Rest of World
+          </label>
+        </div>
+      </div>
+      {% endcall %}
+    </div>
+  </div><!-- end of example -->
 
       <h2 class="govuk-heading-m">Jinja macro example</h2>
 <pre><code class="nunjucks">{% raw %}{% call dlfFilterGroup({
@@ -96,10 +86,5 @@ Put HTML for radios or checkboxes here
   </fieldset>
 </details>
 {% endfilter %}</code></pre>
-
-    </main>
-  </div>
-
-</div>
 
 {% endblock %}

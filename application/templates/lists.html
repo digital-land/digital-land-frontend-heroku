@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 {% from "dl-macros/design-system-example.html" import designSystemExample %}
 
@@ -12,39 +12,25 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Lists{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          List
-        </h1>
-      </div>
-  
-      <h2 class="govuk-heading-l">Organisation lists</h2>
-      <p class="govuk-body">A list layout useful for long lists that are grouped by an attribute, e.g. type. We use this pattern for organisations.</p>
+  <h2 class="govuk-heading-l">Organisation lists</h2>
+  <p class="govuk-body">A list layout useful for long lists that are grouped by an attribute, e.g. type. We use this pattern for organisations.</p>
 
-      {{ designSystemExample({
-        "iframe": {
-          "title": "A list of organisations categorised by type example",
-          "size": "l",
-          "url": url_for('components.organisation_list_example')
-        },
-        "partial": {
-          "name": 'partials/list-organisations.html'
-        }
-      }) }}
+  {{ designSystemExample({
+    "iframe": {
+      "title": "A list of organisations categorised by type example",
+      "size": "l",
+      "url": url_for('components.organisation_list_example')
+    },
+    "partial": {
+      "name": 'partials/list-organisations.html'
+    }
+  }) }}
 
-      <p class="govuk-body">This pattern is consistent with the <a href="https://www.gov.uk/government/organisations" class="govuk-link">list of departments</a> on GOV.UK.</p>
-
-    </main>
-  </div>
-</div>
+  <p class="govuk-body">This pattern is consistent with the <a href="https://www.gov.uk/government/organisations" class="govuk-link">list of departments</a> on GOV.UK.</p>
 
 {% endblock %}
 

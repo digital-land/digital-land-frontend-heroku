@@ -1,4 +1,4 @@
-{% extends "dlf-base.html" %}
+{% extends "dl-components-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
 
 {% block topLevelNavItems %}
@@ -9,163 +9,149 @@
 {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block content %}
+{% block componentName %}Panels{% endblock %}
 
-<div class="app-nav__body govuk-width-container">
-  {%- include 'menu-partials/component-menu.html' -%}
+{% block componentContent %}
 
-  <div class="app-nav__content">
-    <main id="main-content" class="app-content" role="main">
-      <div class="app-content__header">
-        <span class="govuk-caption-xl">Component</span>
-        <h1 class="govuk-heading-xl">
-          Panels
-        </h1>
-      </div>
+  <p class="govuk-body">These examples show how the various status panels should look. There are 3 types. 1 each for
+    error, warning and success states.</p>
 
-      <p class="govuk-body">These examples show how the various status panels should look. There are 3 types. 1 each for
-        error, warning and success states.</p>
-
-      {% macro statusPanel(class, text) -%}
-      <div class="govuk-panel {{ class }}">
-        <h2 class="govuk-panel__title">Validation {{ text }}</h2>
-        {% if caller %} {{ caller() }} {% endif %}
-      </div>
-      {% endmacro %}
-
-      <h2 class="govuk-heading-m">Error panel example</h2>
-      <div class="module-example">
-        {%- call statusPanel("govuk-panel--error", "found errors") %}
-        <div class="govuk-panel__body">
-          <p>For<br><strong class="url">Borchester Council</strong></p>
-        </div>
-        {% endcall %}
-      </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {% call statusPanel("govuk-panel--error", "found errors") -%}
-          <div class="govuk-panel__body">
-            <p>For<br><strong class="url">Borchester Council</strong></p>
-          </div>
-          {%- endcall %}
-        {%- endfilter -%}
-      </code>
-      </pre>
-
-
-      <h2 class="govuk-heading-m">Warning panel example</h2>
-      <div class="module-example">
-        {%- call statusPanel("govuk-panel--warning", "found warnings") %}
-        <div class="govuk-panel__body">
-          <p>For<br><strong class="url">Borchester Council</strong></p>
-        </div>
-        {% endcall %}
-      </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {% call statusPanel("govuk-panel--warning", "found warnings") -%}
-          <div class="govuk-panel__body">
-            <p>For<br><strong class="url">Borchester Council</strong></p>
-          </div>
-          {%- endcall %}
-        {%- endfilter -%}
-      </code>
-      </pre>
-
-      <h2 class="govuk-heading-m">Success panel example</h2>
-      <div class="module-example">
-        {%- call statusPanel("govuk-panel--confirmation", "complete") %}
-        <div class="govuk-panel__body">
-          <p>For<br><strong class="url">Borchester Council</strong></p>
-        </div>
-        {% endcall %}
-      </div>
-
-      <h2 class="govuk-heading-m">The HTML you need</h2>
-      <pre>
-      <code class="html">
-        {%- filter forceescape -%}
-          {% call statusPanel("govuk-panel--confirmation", "complete") -%}
-          <div class="govuk-panel__body">
-            <p>For<br><strong class="url">Borchester Council</strong></p>
-          </div>
-          {%- endcall %}
-        {%- endfilter -%}
-      </code>
-      </pre>
-
-      <h2 class="govuk-heading-m">Metadata panel</h2>
-      <p class="govuk-body">Used on guidance pages. E.g. <a
-          href="https://www.gov.uk/government/publications/brownfield-land-registers-data-standard"
-          class="govuk-link">Brownfield guidance</a>.</p>
-      <div class="module-example">
-        <div class="metadata-panel">
-          <dl class="def-list--basic">
-            <dt>Applies to:</dt>
-            <dd>England</dd>
-          </dl>
-        </div>
-      </div>
-
-      <div class="module-example">
-        <div class="metadata-panel">
-          <dl class="def-list--basic">
-            <dt>Applies to:</dt>
-            <dd><a href="#">England</a></dd>
-          </dl>
-        </div>
-      </div>
-
-      <div class="module-example">
-        <div class="feedback-panel">
-          <h3 class="feedback-panel__heading">Is there a problem with this data?</h3>
-          <p>If you have spotted an issue with the data or have a question email the digital land team on
-            <a href="mailto:email@email.com">email@email.com</a>.</p>
-        </div>
-      </div>
-
-      <div class="module-example">
-        <div class="dlf-summary-card">
-          <div class="dlf-summary-card__header">
-            <h3 class="dlf-summary-card__title">Constituent districts</h3>
-          </div>
-          <div class="dlf-summary-card__body">
-            <ul class="govuk-list">
-                <li><a class="govuk-link--no-underline" href="#">City of Bradford Metropolitan District Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Calderdale Metropolitan Borough Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Kirklees Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Leeds City Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Wakefield Metropolitan District Council</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="module-example">
-        <div class="dlf-inset-card govuk-!-margin-top-3 govuk-!-margin-bottom-2">
-          <div class="dlf-inset-card__header">
-            <h3 class="dlf-inset-card__title">Constituent districts</h3>
-          </div>
-          <div class="dlf-inset-card__body">
-            <ul class="govuk-list">
-                <li><a class="govuk-link--no-underline" href="#">City of Bradford Metropolitan District Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Calderdale Metropolitan Borough Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Kirklees Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Leeds City Council</a></li>
-                <li><a class="govuk-link--no-underline" href="#">Wakefield Metropolitan District Council</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </main>
+  {% macro statusPanel(class, text) -%}
+  <div class="govuk-panel {{ class }}">
+    <h2 class="govuk-panel__title">Validation {{ text }}</h2>
+    {% if caller %} {{ caller() }} {% endif %}
   </div>
-</div>
+  {% endmacro %}
+
+  <h2 class="govuk-heading-m">Error panel example</h2>
+  <div class="module-example">
+    {%- call statusPanel("govuk-panel--error", "found errors") %}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {% endcall %}
+  </div>
+
+  <h2 class="govuk-heading-m">The HTML you need</h2>
+  <pre>
+  <code class="html">
+    {%- filter forceescape -%}
+      {% call statusPanel("govuk-panel--error", "found errors") -%}
+      <div class="govuk-panel__body">
+        <p>For<br><strong class="url">Borchester Council</strong></p>
+      </div>
+      {%- endcall %}
+    {%- endfilter -%}
+  </code>
+  </pre>
+
+
+  <h2 class="govuk-heading-m">Warning panel example</h2>
+  <div class="module-example">
+    {%- call statusPanel("govuk-panel--warning", "found warnings") %}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {% endcall %}
+  </div>
+
+  <h2 class="govuk-heading-m">The HTML you need</h2>
+  <pre>
+  <code class="html">
+    {%- filter forceescape -%}
+      {% call statusPanel("govuk-panel--warning", "found warnings") -%}
+      <div class="govuk-panel__body">
+        <p>For<br><strong class="url">Borchester Council</strong></p>
+      </div>
+      {%- endcall %}
+    {%- endfilter -%}
+  </code>
+  </pre>
+
+  <h2 class="govuk-heading-m">Success panel example</h2>
+  <div class="module-example">
+    {%- call statusPanel("govuk-panel--confirmation", "complete") %}
+    <div class="govuk-panel__body">
+      <p>For<br><strong class="url">Borchester Council</strong></p>
+    </div>
+    {% endcall %}
+  </div>
+
+  <h2 class="govuk-heading-m">The HTML you need</h2>
+  <pre>
+  <code class="html">
+    {%- filter forceescape -%}
+      {% call statusPanel("govuk-panel--confirmation", "complete") -%}
+      <div class="govuk-panel__body">
+        <p>For<br><strong class="url">Borchester Council</strong></p>
+      </div>
+      {%- endcall %}
+    {%- endfilter -%}
+  </code>
+  </pre>
+
+  <h2 class="govuk-heading-m">Metadata panel</h2>
+  <p class="govuk-body">Used on guidance pages. E.g. <a
+      href="https://www.gov.uk/government/publications/brownfield-land-registers-data-standard"
+      class="govuk-link">Brownfield guidance</a>.</p>
+  <div class="module-example">
+    <div class="metadata-panel">
+      <dl class="def-list--basic">
+        <dt>Applies to:</dt>
+        <dd>England</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="module-example">
+    <div class="metadata-panel">
+      <dl class="def-list--basic">
+        <dt>Applies to:</dt>
+        <dd><a href="#">England</a></dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="module-example">
+    <div class="feedback-panel">
+      <h3 class="feedback-panel__heading">Is there a problem with this data?</h3>
+      <p>If you have spotted an issue with the data or have a question email the digital land team on
+        <a href="mailto:email@email.com">email@email.com</a>.</p>
+    </div>
+  </div>
+
+  <div class="module-example">
+    <div class="dlf-summary-card">
+      <div class="dlf-summary-card__header">
+        <h3 class="dlf-summary-card__title">Constituent districts</h3>
+      </div>
+      <div class="dlf-summary-card__body">
+        <ul class="govuk-list">
+            <li><a class="govuk-link--no-underline" href="#">City of Bradford Metropolitan District Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Calderdale Metropolitan Borough Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Kirklees Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Leeds City Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Wakefield Metropolitan District Council</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="module-example">
+    <div class="dlf-inset-card govuk-!-margin-top-3 govuk-!-margin-bottom-2">
+      <div class="dlf-inset-card__header">
+        <h3 class="dlf-inset-card__title">Constituent districts</h3>
+      </div>
+      <div class="dlf-inset-card__body">
+        <ul class="govuk-list">
+            <li><a class="govuk-link--no-underline" href="#">City of Bradford Metropolitan District Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Calderdale Metropolitan Borough Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Kirklees Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Leeds City Council</a></li>
+            <li><a class="govuk-link--no-underline" href="#">Wakefield Metropolitan District Council</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
