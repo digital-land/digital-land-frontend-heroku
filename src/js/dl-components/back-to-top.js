@@ -23,6 +23,15 @@ BackToTop.prototype.init = function (params) {
     return
   }
 
+  var $subNavStyles = document.defaultView.getComputedStyle($subNav)
+  console.log($subNavStyles.getPropertyValue('margin-bottom'))
+  if ($subNavStyles.getPropertyValue('margin-bottom').indexOf('px')) {
+    if (parseInt($subNavStyles.getPropertyValue('margin-bottom').replace('px', '')) < 100) {
+      console.log('need to set margin')
+      $subNav.style.marginBottom = '100px'
+    }
+  }
+
   var footerIsIntersecting = false
   var subNavIsIntersecting = false
   var subNavIntersectionRatio = 0
@@ -69,6 +78,12 @@ BackToTop.prototype.init = function (params) {
 
   observer.observe($footer)
   observer.observe($subNav)
+}
+
+BackToTop.prototype.passedBottom = function ($el) {
+  var $elPos = $el.getClientRects()
+  var viewportBottom = window.scrollY + window.innerHeight
+  return $elPos < viewportBottom
 }
 
 BackToTop.prototype.setupOptions = function (params) {
