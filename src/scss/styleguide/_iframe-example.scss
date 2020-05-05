@@ -10,6 +10,13 @@
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==") repeat;
 }
 
+.app-example__toolbar {
+  padding: 6px 10px 8px;
+  border: 1px solid $govuk-border-colour;
+  border-bottom: 0;
+  @include govuk-font($size: 16);
+}
+
 .app-example__frame {
   display: block;
   width: 100%;
@@ -39,4 +46,21 @@
 
 .app-example__frame--xl {
   height: 550px;
+}
+
+.app-tabs__container {
+  padding: 20px;
+  border: 1px solid $govuk-border-colour;
+  background-color: govuk-colour("white");
+
+  // When used for tabs, position to underlap tabs
+  @include govuk-media-query($from: desktop) {
+    margin-top: -2px;
+  }
+
+  // undo currently (apr 2020) used margins for pres
+  pre {
+    margin: 0;
+    font-size: 16px;
+  }
 }

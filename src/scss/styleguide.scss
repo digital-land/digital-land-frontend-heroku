@@ -181,19 +181,3 @@ p code {
   }
 }
 
-.app-tabs__container {
-  padding: 20px;
-  border: 1px solid $govuk-border-colour;
-  background-color: govuk-colour("white");
-
-  // When used for tabs, position to underlap tabs
-  @include govuk-media-query($from: desktop) {
-    margin-top: -2px;
-  }
-
-  // undo currently (apr 2020) used margins for pres
-  pre {
-    margin: 0;
-    font-size: 16px;
-  }
-}

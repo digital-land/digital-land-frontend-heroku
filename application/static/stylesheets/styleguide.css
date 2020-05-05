@@ -1273,6 +1273,40 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJUlEQVQoU2P88ePHfwY0wMHBwYguxjgUFKI7GsTH5m4M3w1ChQAZTSeO0/AZpgAAAABJRU5ErkJggg==") repeat;
 }
 
+.app-example__toolbar {
+  padding: 6px 10px 8px;
+  border: 1px solid #b1b4b6;
+  border-bottom: 0;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .app-example__toolbar {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-example__toolbar {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .app-example__toolbar {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
 .app-example__frame {
   display: block;
   width: 100%;
@@ -1301,6 +1335,23 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 
 .app-example__frame--xl {
   height: 550px;
+}
+
+.app-tabs__container {
+  padding: 20px;
+  border: 1px solid #b1b4b6;
+  background-color: #ffffff;
+}
+
+@media (min-width: 48.0625em) {
+  .app-tabs__container {
+    margin-top: -2px;
+  }
+}
+
+.app-tabs__container pre {
+  margin: 0;
+  font-size: 16px;
 }
 
 .dlf-page-wide .govuk-header {
@@ -1447,21 +1498,4 @@ p code {
   width: 1px;
   height: calc(100% + 30px);
   background: #b1b4b6;
-}
-
-.app-tabs__container {
-  padding: 20px;
-  border: 1px solid #b1b4b6;
-  background-color: #ffffff;
-}
-
-@media (min-width: 48.0625em) {
-  .app-tabs__container {
-    margin-top: -2px;
-  }
-}
-
-.app-tabs__container pre {
-  margin: 0;
-  font-size: 16px;
 }

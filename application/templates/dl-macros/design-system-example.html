@@ -1,5 +1,8 @@
 {% macro designSystemExample(params) %}
 <div class="app-example-wrapper">
+    <div class="app-example__toolbar">
+        <a href="{{ params.iframe.url }}" class="govuk-link" target="_blank" rel="noopener noreferrer">Open example in new window</a>
+    </div>
     <div class="app-example">
         <iframe 
         title="{{ params.iframe['title'] }}"
