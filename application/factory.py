@@ -13,6 +13,7 @@ def create_app(config_filename):
     app.config.from_object(config_filename)
     register_errorhandlers(app)
     register_blueprints(app)
+    register_extensions(app)
     register_filters(app)
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 10
     return app
@@ -33,6 +34,10 @@ def register_blueprints(app):
     app.register_blueprint(frontend)
     from application.blueprints.components.views import components
     app.register_blueprint(components)
+
+def register_extensions(app):
+    from application.extensions import govuk_components
+    govuk_components.init_app(app)
 
 
 def register_filters(app):

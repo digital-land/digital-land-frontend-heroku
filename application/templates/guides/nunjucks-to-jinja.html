@@ -24,7 +24,7 @@
 
       <h2 class="govuk-heading-m">Paths</h2>
 
-      <p class="govuk-body">The nunjucks macros make use of relative paths, such as <code>./template.njk</code>.</p><p class="govuk-body">These need to be changed for jinja macros to be relative to the <span class="govuk-!-font-weight-bold">/templates</span> directory, such as <code>./govuk-jinja-components/button/template.jinja</code></p>
+      <p class="govuk-body">The nunjucks macros make use of relative paths, such as <code>./template.njk</code>.</p><p class="govuk-body">These need to be changed for jinja macros to be relative to the <span class="govuk-!-font-weight-bold">/templates</span> directory, such as <code>govuk-jinja-components/button/template.jinja</code></p>
 
       <h2 class="govuk-heading-m">If else loops</h2>
 
@@ -98,7 +98,7 @@ row.actions['items']|length</code></pre>
   {% if caller %}
     {% set caller_content = caller() %}
   {% endif %}
-    {%- include "./govuk-jinja-components/fieldset/template.jinja" -%}
+    {%- include "govuk-jinja-components/fieldset/template.jinja" -%}
 {% endmacro %}{% endraw %}</code></pre>
 
     <p class="govuk-body">And we can use it in the body of a template like this:</p>
