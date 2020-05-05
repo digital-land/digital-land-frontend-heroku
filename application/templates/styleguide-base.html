@@ -37,6 +37,42 @@
     </main>
 {% endblock %}
 
+{% block footer %}
+{{ govukFooter({
+    "classes": "app-footer app-footer--full",
+    "containerClasses" : "app-width-container",
+    "navigation": [
+      {
+        "title": "Related resources",
+        "columns": 1,
+        "items": [
+          {
+            "href": "https://design-system.service.gov.uk/",
+            "text": "GOV.UK Design System"
+          },
+          {
+            "href": "https://www.gov.uk/guidance/government-design-principles",
+            "text": "Government Design Principles"
+          },
+          {
+            "href": "https://www.gov.uk/service-manual",
+            "text": "GOV.UK Service Manual"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "items": [
+        {
+          "href": "https://github.com/digital-land/digital-land-frontend",
+          "text": "Code on github"
+        }
+      ],
+      "html": 'Built by the <a href="https://digital-land.github.io/about/" class="govuk-footer__link">MHCLG Digital land team</a>.'
+    }
+}) }}
+{% endblock %}
+
 {% block bodyEndScripts %}
 {{ super() }}
 
