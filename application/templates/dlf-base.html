@@ -38,6 +38,10 @@
 	{% block bodyEndScripts %}
 	{# needs to come after govuk frontend #}
 	<script src="/static/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
 	{% endblock %}
 
 {% endblock %}

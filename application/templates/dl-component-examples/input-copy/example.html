@@ -8,15 +8,9 @@
 {{ super() }}
 
 <script>
-// polyfill for browsers without NodeList forEach method
-if (window.NodeList && !NodeList.prototype.forEach) {
-   NodeList.prototype.forEach = Array.prototype.forEach;
-}
-
 const $inputCopyElements = document.querySelectorAll('[data-module*="input-copy"]')
 $inputCopyElements.forEach(function(el) {
     new window.DLFrontend.InputCopy(el).init()
 })
-  
 </script>
 {% endblock  %}
