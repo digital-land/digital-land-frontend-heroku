@@ -45,3 +45,28 @@
     }
   }
 }
+
+.dlf-inset-card--s {
+  padding-bottom: govuk-spacing(3);
+
+  .dlf-inset-card__header {
+    padding: govuk-spacing(3) govuk-spacing(3) govuk-spacing(1);
+  }
+
+  .dlf-inset-card__title {
+    @include govuk-font($size: 16, $weight: bold);
+  }
+
+  .dlf-inset-card__body {
+    @include govuk-font($size: 16);
+    padding: 0 govuk-spacing(3);
+
+    .govuk-link {
+      @include govuk-font($size: 16);
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

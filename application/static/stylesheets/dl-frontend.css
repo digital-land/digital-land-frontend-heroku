@@ -8911,6 +8911,112 @@
   margin-bottom: 0;
 }
 
+.dlf-inset-card--s {
+  padding-bottom: 15px;
+}
+
+.dlf-inset-card--s .dlf-inset-card__header {
+  padding: 15px 15px 5px;
+}
+
+.dlf-inset-card--s .dlf-inset-card__title {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__title {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-inset-card--s .dlf-inset-card__title {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__title {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.dlf-inset-card--s .dlf-inset-card__body {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  padding: 0 15px;
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__body {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-inset-card--s .dlf-inset-card__body {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__body {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.dlf-inset-card--s .dlf-inset-card__body .govuk-link {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__body .govuk-link {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-inset-card--s .dlf-inset-card__body .govuk-link {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .dlf-inset-card--s .dlf-inset-card__body .govuk-link {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.dlf-inset-card--s .dlf-inset-card__body li:last-child {
+  margin-bottom: 0;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
