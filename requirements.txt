@@ -1,6 +1,6 @@
 Click==7.0
 Flask==1.0.2
--e git+https://github.com/digital-land/govuk-jinja-components.git@23e4e97f3d929e59f01deee077159a118df1144e#egg=govuk_jinja_components
+-e git+https://github.com/digital-land/govuk-jinja-components.git@5bf4a6f07a310c3399b64f5bda566b8bbcad86d4#egg=govuk_jinja_components
 gunicorn==19.9.0
 itsdangerous==0.24
 Jinja2==2.10
