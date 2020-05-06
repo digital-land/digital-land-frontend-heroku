@@ -14,9 +14,9 @@
 
 {% block componentContent %}
 
-  <p class="govuk-body">Use this component when you want a user to be able to copy content easily.</p>
+<p class="govuk-body">Use this component when you want a user to be able to copy content easily.</p>
 
-  {{ designSystemExample({
+{{ designSystemExample({
     "iframe": {
       "title": "An example of the input copy element",
       "url": url_for('components.input_copy_example'),
@@ -27,7 +27,7 @@
     }
   }) }}
 
-  <div class="govuk-body">The <code>input</code> element must have a <code>readonly</code> attribute so that the content can not be accidentally changed before copying.</div>
-
+<div class="govuk-body">The <code>input</code> element must have a <code>readonly</code> attribute
+  so that the content can not be accidentally changed before copying.</div>
 
 {% endblock %}
