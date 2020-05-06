@@ -6,6 +6,7 @@ import SelectedCounter from "./dl-components/selected-counter";
 import ScrollableTables from "./dl-components/scrollable-table";
 import LinkableTable from "./dl-components/linkable-table";
 import FilterList from "./dl-components/filter-list";
+import InputCopy from "./dl-components/input-copy";
 
 export {
   BackToTop,
@@ -14,4 +15,5 @@ export {
   ScrollableTables,
   LinkableTable,
   FilterList,
+  InputCopy,
 };

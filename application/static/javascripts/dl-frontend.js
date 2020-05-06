@@ -833,9 +833,26 @@
     this.count_wrapper_selector = params.count_wrapper_selector || '.list-count__wrapper';
   };
 
+  // Similar approach to huffduffer
+  // if input has readonly content make it easy to copy
+  function InputCopy ($module) {
+    this.$module = $module;
+  }
+
+  InputCopy.prototype.init = function (params) {
+    this.$module.addEventListener('click', function (ev) {
+      var target = ev.target;
+      if (target.hasAttribute('readonly')) {
+        target.focus();
+        target.select();
+      }
+    });
+  };
+
   exports.BackToTop = BackToTop;
   exports.FilterCheckboxes = FilterCheckboxes;
   exports.FilterList = FilterList;
+  exports.InputCopy = InputCopy;
   exports.LinkableTable = LinkableTable;
   exports.ScrollableTables = ScrollableTables;
   exports.SelectedCounter = SelectedCounter;
