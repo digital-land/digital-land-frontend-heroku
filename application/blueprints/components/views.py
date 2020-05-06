@@ -44,6 +44,14 @@ def hub():
 def info_text():
     return render_template(f'{dl_component_template_dir}info-text.html')
 
+@components.route('/input-copy')
+def input_copy():
+    return render_template(f'{dl_component_template_dir}input-copy/index.html')
+
+@components.route('/input-copy/example')
+def input_copy_example():
+    return render_template(f'{dl_component_template_dir}input-copy/example.html')
+
 @components.route('/contents-section')
 def contents_section():
     return render_template(f'{dl_component_template_dir}contents.html')
