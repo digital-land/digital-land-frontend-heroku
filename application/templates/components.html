@@ -23,3 +23,14 @@
 </div>
 
 {% endblock %}
+
+{% block bodyEnd %}
+{{ super() }}
+<script>
+// Initialise back to top
+var $btt = document.querySelector('[data-module*="back-to-top"]')
+new window.DLFrontend.BackToTop($btt).init({
+  footer_selector: ".govuk-footer"
+});
+</script>
+{% endblock %}
