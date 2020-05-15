@@ -9131,6 +9131,10 @@
   max-width: 38em;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 .autocomplete__menu {
   font-family: "nta", Arial, sans-serif;
   font-weight: 400;

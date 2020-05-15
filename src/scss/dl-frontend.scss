@@ -63,6 +63,10 @@ a {
   max-width: 38em;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 // required for the Autocomplete if using
 // Govuk design system
 // --------------------------------------
