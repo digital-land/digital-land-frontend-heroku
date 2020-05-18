@@ -1,0 +1,34 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/design-system-example.html" import designSystemExample %}
+
+{% block pageTitle %}Lists - Digital land frontend design{% endblock %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Digital land header{% endblock %}
+
+{% block componentContent %}
+
+  <p class="govuk-body">The header component used across <a href="https://digital-land.github.io">digital-land.github.io</a></p>
+
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of the digtial land header component",
+      "size": "s",
+      "url": url_for('components.header_example')
+    },
+    "partial": {
+      "name": 'dl-partials/dl-header.html'
+    }
+  }) }}
+
+  <p class="govuk-body">This pattern is consistent with the <a href="https://www.gov.uk/government/organisations" class="govuk-link">list of departments</a> on GOV.UK.</p>
+
+{% endblock %}

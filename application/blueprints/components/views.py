@@ -40,6 +40,14 @@ def highlight_box():
 def hub():
     return render_template(f'{dl_component_template_dir}hub.html')
 
+@components.route('/header')
+def header():
+    return render_template(f'{dl_component_template_dir}header/index.html')
+
+@components.route('/header/example')
+def header_example():
+    return render_template(f'{dl_component_template_dir}header/example.html')
+
 @components.route('/info-text')
 def info_text():
     return render_template(f'{dl_component_template_dir}info-text.html')
