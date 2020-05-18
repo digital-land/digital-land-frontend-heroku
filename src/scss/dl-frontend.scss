@@ -122,6 +122,10 @@ a {
   word-break: break-all;
 }
 
+.text-max-width {
+  max-width: 38em;
+}
+
 .govuk-caption-s {
   @include govuk-font($size: 16);
 

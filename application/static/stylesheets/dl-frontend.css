@@ -9212,6 +9212,10 @@
   word-break: break-all;
 }
 
+.text-max-width {
+  max-width: 38em;
+}
+
 .govuk-caption-s {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
