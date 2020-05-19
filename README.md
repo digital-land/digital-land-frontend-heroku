@@ -11,7 +11,7 @@ Requirements
 - [Node](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/)
 - [Gulp](https://gulpjs.com/)
 
-Getting Started
+Getting started
 ===============
 
 Install Flask and python dependencies
@@ -25,6 +25,17 @@ Install front end build tool (gulp)
 Run the app
 
     flask run
+
+Environment variables
+===============
+
+Create a `.flaskenv` file and put these environment variables in it
+
+    FLASK_ENV=development
+    FLASK_CONFIG=config.DevelopmentConfig
+    FLASK_APP=application.wsgi:app
+    SECRET_KEY=doesnotmatter
+    MAPBOX_TOKEN=<<your-mapbox-token>>
 
 
 To do list
