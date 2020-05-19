@@ -78,6 +78,15 @@
   }
 }
 
+
+/// Data tables should have an associated caption as the first thing 
+/// after the opening <table> tag
+///
+/// Hide caption visually, but have it available for screen readers
+.data-table__caption {
+  @include govuk-visually-hidden;
+}
+
 .data-table-right-shadow,
 .data-table-left-shadow {
   // sass-lint:disable-block no-duplicate-properties
