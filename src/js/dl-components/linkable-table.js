@@ -55,9 +55,16 @@ LinkableTable.prototype.createCell = function (params) {
   if (params.linkIdx) {
     var _link = document.createElement('a')
     _link.setAttribute('href', params.linkHref)
-    _link.textContent = '#' + params.linkIdx
+
+    var a11yText = document.createElement('span')
+    a11yText.classList.add('govuk-visually-hidden')
+    a11yText.textContent = 'highlight row '
+    _link.append(a11yText)
+
+    var _linkContent = document.createTextNode('#' + params.linkIdx)
+    _link.append(_linkContent)
     _link.addEventListener('click', boundLinkToRowHandler)
-    console.log(_link)
+
     cell.append(_link)
   }
   return cell
