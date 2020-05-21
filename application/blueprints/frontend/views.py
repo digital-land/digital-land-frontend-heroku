@@ -65,6 +65,10 @@ def local_plans():
 # Guides
 ####################
 
+@frontend.route('/guide/which-frontend-assets-to-use')
+def frontend_fit_together():
+    return render_template('guides/how-frontends-fit-together.html')
+
 @frontend.route('/guide/how-to-use-own-projects')
 def include_in_projects():
     return render_template('guides/include-dl-frontend.html')

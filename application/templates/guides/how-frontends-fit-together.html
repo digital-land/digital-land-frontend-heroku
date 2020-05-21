@@ -1,0 +1,57 @@
+{% extends "styleguide-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block content %}
+
+<div class="app-nav__body govuk-width-container">
+  {%- include 'menu-partials/guide-menu.html' -%}
+
+  <div class="app-nav__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+        <h1 class="govuk-heading-xl">
+          Which frontend assets do I need to use?
+        </h1>
+      </div>
+
+      <div class="govuk-body">Digital land frontend includes compiled assets and the building blocks that produce the assets.</div>
+
+      <p class="govuk-body">Knowing frontend requirements of your project will help determine what you need to include.</p>
+      <p class="govuk-body">Broadly, there are 2 types of projects</p>
+      <ol class="govuk-list govuk-list--number">
+        <li>you only need to use the digital land components</li>
+        <li>you need custom css and to build custom components</li>
+      </ol>
+
+      <h2 class="govuk-heading-m">I only want to use the digital land components</h2>
+
+      <p class="govuk-body">Including all the compiled assets in your project will allow you to use all the digital land components as well as the GOVUK Design System components.</p>
+
+      <p class="govuk-body">To get the most from what is available, include</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+          <li><code>dl-frontend.css</code> - css for styling pages</li>
+          <li><code>dl-frontend.js</code> - available JS modules for progressively enhancing components</li>
+          <li><code>/dl-macros</code> - jinja macros to help produce the right HTML for components</li>
+          <li><code>/dl-partials</code> - HTML partials to include in your templates</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">I want to build custom components</h2>
+
+      <p class="govuk-body">Instead of including the compiled assets (<code>dl-frontend.css</code>,
+          <code>dl-frontend.js</code>) you will need to include the precompiled <code>scss</code> and <code>js modules</code>.</p>
+
+    <p class="govuk-body">Depending on your build process you might find <code>gulpfile.js</code>
+        useful. It is a task runner that will help you build assets.</p>
+
+        <h2 class="govuk-heading-l">What do digital land projects use?</h2>
+
+        <p class="govuk-body">This diagram shows which assets from the digital land frontend and
+            from GOVUK design system are used by the various digital land projects.</p>
+
+      <img src="/static/images/dl-frontend.svg" alt="Diagram showing how the digital land frontends fit together">
+  
+    </main>
+  </div>
+</div>
+{% endblock %}
