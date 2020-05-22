@@ -7910,7 +7910,7 @@
   padding: 20px;
   border: 1px solid #b1b4b6;
   background: #f3f2f1;
-  margin: 0 15px 30px;
+  margin: 0 0 30px;
   text-decoration: none;
 }
 
@@ -7923,7 +7923,7 @@
 
 @media (min-width: 40.0625em) {
   .highlight-box {
-    margin: 0 15px 30px;
+    margin: 0 0 30px;
   }
 }
 

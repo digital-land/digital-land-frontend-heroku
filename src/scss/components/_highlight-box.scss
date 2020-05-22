@@ -19,11 +19,10 @@
 .highlight-box {
   box-sizing: border-box;
   @include dlf-highlight-box-base;
-  margin: 0 $govuk-gutter-half $govuk-gutter;
+  margin: 0 0 $govuk-gutter;
   text-decoration: none;
-
   @include govuk-media-query($from: tablet) {
-    margin: 0 $govuk-gutter-half $govuk-gutter;
+    margin: 0 0 $govuk-gutter;
   }
 
   &:hover {

@@ -36,6 +36,10 @@ def hero_example():
 def highlight_box():
     return render_template(f'{dl_component_template_dir}highlight-box.html')
 
+@components.route('/highlight-box/double-example')
+def highlight_box_double_example():
+    return render_template(f'{dl_component_template_dir}highlight-box/double-example.html')
+
 @components.route('/hub')
 def hub():
     return render_template(f'{dl_component_template_dir}hub.html')
