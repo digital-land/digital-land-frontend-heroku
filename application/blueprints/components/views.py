@@ -16,6 +16,14 @@ def buttons():
 def contribution_bars():
     return render_template(f'{dl_component_template_dir}contribution-bars.html')
 
+@components.route('/collection-summary-card')
+def collection_summary_card():
+    return render_template(f'{dl_component_template_dir}collection-summary-card/index.html')
+
+@components.route('/collection-summary-card/example')
+def collection_summary_card_example():
+    return render_template(f'{dl_component_template_dir}collection-summary-card/example.html')
+
 @components.route('/data-tables')
 def data_tables():
     return render_template(f'{dl_component_template_dir}data-tables.html')

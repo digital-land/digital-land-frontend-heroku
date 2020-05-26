@@ -1,0 +1,33 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/design-system-example.html" import designSystemExample %}
+
+{% block pageTitle %}Lists - Digital land frontend design{% endblock %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Collection summary card{% endblock %}
+
+{% block componentContent %}
+
+  <p class="govuk-body"></p>
+
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of the collection summary card component",
+      "size": "s",
+      "url": url_for('components.collection_summary_card_example')
+    },
+    "partial": {
+      "name": 'dl-component-examples/collection-summary-card/partial.html'
+    }
+  }) }}
+
+
+{% endblock %}
