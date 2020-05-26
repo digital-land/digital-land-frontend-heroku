@@ -105,13 +105,20 @@ code {
 $code-block-text-colour: #dd1144;
 $code-block-bg-colour: #f8f8f8;
 
-p code {
+%code {
   padding: 0 5px;
 
   color: $code-block-text-colour;
   background-color: $code-block-bg-colour;
   font-family: monospace;
-  font-size: 19px;
+}
+
+p,
+li {
+  code {
+    @extend %code;
+    font-size: 19px;
+  }
 }
 
 // List items on index page

@@ -1408,11 +1408,16 @@ code {
   line-height: 1.31579em;
 }
 
-p code {
+p code,
+li code {
   padding: 0 5px;
   color: #dd1144;
   background-color: #f8f8f8;
   font-family: monospace;
+}
+
+p code,
+li code {
   font-size: 19px;
 }
 
