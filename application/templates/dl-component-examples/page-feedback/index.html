@@ -1,0 +1,44 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/design-system-example.html" import designSystemExample %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Page feedback{% endblock %}
+
+{% block componentContent %}
+
+{{ designSystemExample({
+    "iframe": {
+      "title": "An example of the page feedback prompt",
+      "url": url_for('components.page_feedback_example'),
+      "size": "xs"
+    },
+    "partial": {
+      "name": 'dl-component-examples/page-feedback/partial.html'
+    }
+  }) }}
+
+<div class="govuk-heading-m">Jinja macro available</div>
+
+<p class="govuk-body govuk-!-margin-bottom-1">Use</p>
+
+<pre class="govuk-!-margin-top-1">
+    <code class="jinja">
+    {%- raw -%}
+        {%- from "dl-macros/page-feedback/macro.jinja" import dlfPageFeedback -%}
+{{ dlfPageFeedback({
+    "text": "Do you have feedback about this page?",
+    "href": "#"
+}) }}
+    {%- endraw -%}
+    </code>
+</pre>
+
+{% endblock %}

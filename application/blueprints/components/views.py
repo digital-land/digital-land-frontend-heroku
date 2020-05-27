@@ -88,6 +88,14 @@ def organisation_list_example():
 def organisation_list_example_full():
     return render_template('organisation-list-example-full.html')
 
+@components.route('/page-feedback')
+def page_feedback():
+    return render_template(f'{dl_component_template_dir}/page-feedback/index.html')
+
+@components.route('/page-feedback/example')
+def page_feedback_example():
+    return render_template(f'{dl_component_template_dir}/page-feedback/example.html')
+
 @components.route('/pagination')
 def pagination():
     return render_template('publishing-components/pagination.html')
