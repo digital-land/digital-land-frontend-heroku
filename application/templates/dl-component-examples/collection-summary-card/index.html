@@ -12,11 +12,12 @@
   {{ toplevelNavItem("Javascripts", "/javascripts") }}
 {% endblock %}
 
-{% block componentName %}Collection summary card{% endblock %}
+{% block componentName %}Collection summary cards{% endblock %}
 
 {% block componentContent %}
 
-  <p class="govuk-body"></p>
+  <h3 class="govuk-heading-m">Limited summary</h3>
+  <p class="govuk-body">Limited summary showing details of last run.</p>
 
   {{ designSystemExample({
     "iframe": {
@@ -26,6 +27,20 @@
     },
     "partial": {
       "name": 'dl-component-examples/collection-summary-card/partial.html'
+    }
+  }) }}
+
+  <h3 class="govuk-heading-m">Full summary</h3>
+  <p class="govuk-body">Fuller summary showing all the details of a run.</p>
+
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of a fuller collection summary card component",
+      "size": "s",
+      "url": url_for('components.collection_summary_card_example_full')
+    },
+    "partial": {
+      "name": 'dl-component-examples/collection-summary-card/partial-full.html'
     }
   }) }}
 
