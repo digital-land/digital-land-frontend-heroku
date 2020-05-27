@@ -1,5 +1,6 @@
 {% extends "styleguide-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/page-feedback/macro.jinja" import dlfPageFeedback %}
 
 {% block content %}
 
@@ -136,10 +137,9 @@ Read the latest guidance on [Brownfield site registers](#some-url).
 {% endblock %}
 
 {% block footer %}
-  <div class="dlf-pg-feedback">
-    <div class="dlf-pg-feedback__prompt">
-      <a href="#" class="dlf-pg-feedback__link">Do you have feedback about this page?</a>
-    </div>
-  </div>
+  {{ dlfPageFeedback({
+    "text": "Do you have feedback about this page?",
+    "href": "#"
+  }) }}
   {{ super() }}
 {% endblock %}
