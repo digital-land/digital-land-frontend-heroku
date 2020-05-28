@@ -58,3 +58,11 @@
   </div>
 </div>
 {% endblock %}
+
+{% block footer %}
+  {{ dlfPageFeedback({
+    "text": "Do you have feedback about this page?",
+    "href": "mailto:digitalland@communities.gov.uk?subject=Feedback on digital land design, how frontends fit together page"
+  }) }}
+  {{ super() }}
+{% endblock %}
