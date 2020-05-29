@@ -9082,6 +9082,53 @@
   background: #d4351c;
 }
 
+.dl-timeline {
+  position: relative;
+  margin: 0 0 30px 12px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.dl-timeline:before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  bottom: 9px;
+  left: -4px;
+  border-left: 4px solid #6f777b;
+}
+
+.dl-timeline:after {
+  bottom: 0;
+}
+
+.dl-timeline .dl-timeline__entry-heading {
+  line-height: 1;
+}
+
+.dl-timeline:after,
+.dl-timeline__entry:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: -11px;
+  width: 10px;
+  height: 10px;
+  border: 4px solid #6f777b;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.dl-timeline:after {
+  background: #b1b4b6;
+}
+
+.dl-timeline__entry {
+  padding-left: 20px;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
