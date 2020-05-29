@@ -1,0 +1,29 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+{% from "dl-macros/design-system-example.html" import designSystemExample %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Timeline{% endblock %}
+
+{% block componentContent %}
+
+{{ designSystemExample({
+    "iframe": {
+      "title": "An example of the timeline component",
+      "url": url_for('components.timeline_example'),
+      "size": "l"
+    },
+    "partial": {
+      "name": 'dl-component-examples/timeline/partial.html'
+    }
+  }) }}
+
+
+{% endblock %}

@@ -128,6 +128,14 @@ def tags():
 def task_list():
     return render_template(f'{dl_component_template_dir}task-list.html')
 
+@components.route('/timeline')
+def timeline():
+    return render_template(f'{dl_component_template_dir}timeline/index.html')
+
+@components.route('/timeline/example')
+def timeline_example():
+    return render_template(f'{dl_component_template_dir}timeline/example.html')
+
 @components.route('/visualising-data')
 def visualising_data():
     return render_template(f'{dl_component_template_dir}visualising-data.html')
