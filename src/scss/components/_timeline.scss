@@ -1,0 +1,63 @@
+.dl-timeline {
+  position: relative;
+  margin: 0 0 $govuk-gutter 12px;
+  padding-bottom: $govuk-gutter;
+  padding-left: 0;
+  list-style-type: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    bottom: 9px;
+    left: -4px;
+    border-left: 4px solid govuk-colour("dark-grey");
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  .dl-timeline__entry-heading {
+    line-height: 1;
+  }
+}
+
+.dl-timeline:after,
+.dl-timeline__entry:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: -11px;
+  width: 10px;
+  height: 10px;
+  border: 4px solid govuk-colour("dark-grey");
+  border-radius: 50%;
+  background: govuk-colour("white");
+}
+
+.dl-timeline:after {
+  background: govuk-colour("mid-grey");
+}
+
+.dl-timeline__entry {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: 20px;
+  }
+}
+
+.dl-timeline__entry-heading {
+  margin-bottom: govuk-spacing(1);
+}
+
+.dl-timeline__entry__content {
+  @include govuk-font($size: 19);
+
+  p:not(.govuk-body) {
+    margin: 5px 0;
+  }
+}
+
