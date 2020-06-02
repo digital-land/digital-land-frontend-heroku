@@ -42,6 +42,22 @@
 }
 
 .dl-timeline__entry {
+  padding-bottom: 10px;
   padding-left: 20px;
+  @include govuk-media-query($from: tablet) {
+    padding-bottom: 20px;
+  }
+}
+
+.dl-timeline__entry-heading {
+  margin-bottom: govuk-spacing(1);
+}
+
+.dl-timeline__entry__content {
+  @include govuk-font($size: 19);
+
+  p:not(.govuk-body) {
+    margin: 5px 0;
+  }
 }
 

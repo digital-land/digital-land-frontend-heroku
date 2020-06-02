@@ -134,7 +134,11 @@ def timeline():
 
 @components.route('/timeline/example')
 def timeline_example():
-    return render_template(f'{dl_component_template_dir}timeline/example.html')
+    return render_template(f'{dl_component_template_dir}timeline/example.html', partial_str="dl-component-examples/timeline/partial.html")
+
+@components.route('/timeline/collections-example')
+def timeline_collections_example():
+    return render_template(f'{dl_component_template_dir}timeline/example.html', partial_str="dl-component-examples/timeline/collector-partial.html")
 
 @components.route('/visualising-data')
 def visualising_data():
