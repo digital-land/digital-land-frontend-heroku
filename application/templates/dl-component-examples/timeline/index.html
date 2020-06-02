@@ -12,7 +12,10 @@
 {% block componentName %}Timeline{% endblock %}
 
 {% block componentContent %}
+<span class="govuk-tag govuk-!-margin-bottom-2">Experimental</span>
+<p class="govuk-body">Use the timeline component to show an ordered record of what has happened.</p>
 
+<h2 class="govuk-heading-l">Activity timeline example</h2>
 {{ designSystemExample({
     "iframe": {
       "title": "An example of the timeline component",
@@ -24,16 +27,34 @@
     }
   }) }}
 
-  {{ designSystemExample({
-    "iframe": {
-      "title": "An example of the timeline component",
-      "url": url_for('components.timeline_collections_example'),
-      "size": "l"
-    },
-    "partial": {
-      "name": 'dl-component-examples/timeline/collector-partial.html'
-    }
+<h2 class="govuk-heading-l">Collector log example</h2>
+<p class="govuk-body">Use the timeline component when you are showing a sequence of log entries.</p>
+{{ designSystemExample({
+  "iframe": {
+    "title": "An example of the timeline component",
+    "url": url_for('components.timeline_collections_example'),
+    "size": "l"
+  },
+  "partial": {
+    "name": 'dl-component-examples/timeline/collector-partial.html'
+  }
+}) }}
+
+<p class="govuk-body">When using the timeline with entries in reverse chronological order should we alter the final point?</p>
+
+  <h3 class="govuk-heading-m">Research on this component</h3>
+
+  <p class="govuk-body">We need to do more research on this component. If you have used the timeline component, get in touch to share your research findings.</p>
+
+  <p class="govuk-body">We will keep an eye on other services that use the timeline and hopefully get a better inderstanding of how timelines are being used across government. For example, it is used by <a href="https://moj-design-system.herokuapp.com/components/timeline">MoJ</a>.</p>
+
+
+{% endblock %}
+
+{% block footer %}
+  {{ dlfPageFeedback({
+    "text": "Do you have feedback about this page?",
+    "href": "mailto:digitalland@communities.gov.uk?subject=Feedback on digital land timeline component"
   }) }}
-
-
+  {{ super() }}
 {% endblock %}
