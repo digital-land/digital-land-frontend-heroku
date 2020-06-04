@@ -1,3 +1,7 @@
 .collection-list {
   @extend %govuk-list;
+
+  > li:not(:last-child) {
+    margin-bottom: govuk-spacing(3);
+  }
 }

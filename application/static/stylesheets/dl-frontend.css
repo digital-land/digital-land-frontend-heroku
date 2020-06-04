@@ -9219,6 +9219,10 @@
   margin: 5px 0;
 }
 
+.collection-list > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
