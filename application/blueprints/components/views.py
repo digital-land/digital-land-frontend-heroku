@@ -28,6 +28,11 @@ def collection_summary_card_example():
 def collection_summary_card_example_full():
     return render_template(f'{dl_component_template_dir}collection-summary-card/example-full.html')
 
+@components.route('/collection-summary-card/collections-example')
+def collection_summary_card_collections_example():
+    return render_template(f'{dl_component_template_dir}collection-summary-card/collections-example.html')
+
+
 @components.route('/data-tables')
 def data_tables():
     return render_template(f'{dl_component_template_dir}data-tables.html')
