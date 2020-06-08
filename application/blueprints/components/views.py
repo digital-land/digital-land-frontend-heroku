@@ -32,6 +32,14 @@ def collection_summary_card_example_full():
 def collection_summary_card_collections_example():
     return render_template(f'{dl_component_template_dir}collection-summary-card/collections-example.html')
 
+@components.route('/data-item')
+def data_item():
+    return render_template(f'{dl_component_template_dir}data-item/index.html')
+
+@components.route('/data-item/example')
+def data_item_example():
+    return render_template(f'{dl_component_template_dir}_partial-loader.html', partial_name="dl-component-examples/data-item/partial.html")
+
 
 @components.route('/data-tables')
 def data_tables():

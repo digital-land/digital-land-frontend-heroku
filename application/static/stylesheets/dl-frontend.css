@@ -9219,6 +9219,142 @@
   margin: 5px 0;
 }
 
+.data-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.data-item__number {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.09375;
+  margin-right: 5px;
+}
+
+@media print {
+  .data-item__number {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-item__number {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 1.04167;
+  }
+}
+
+@media print {
+  .data-item__number {
+    font-size: 32pt;
+    line-height: 1.15;
+  }
+}
+
+.data-item__label {
+  display: block;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  margin-top: 3px;
+}
+
+@media print {
+  .data-item__label {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-item__label {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .data-item__label {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+.data-item--s .data-item__number {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.04167;
+}
+
+@media print {
+  .data-item--s .data-item__number {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-item--s .data-item__number {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.11111;
+  }
+}
+
+@media print {
+  .data-item--s .data-item__number {
+    font-size: 24pt;
+    line-height: 1.05;
+  }
+}
+
+.data-item--s .data-item__label {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .data-item--s .data-item__label {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .data-item--s .data-item__label {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .data-item--s .data-item__label {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.data-item--inline .data-item__label {
+  display: inline;
+}
+
 .collection-list > li:not(:last-child) {
   margin-bottom: 15px;
 }

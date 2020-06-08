@@ -1,0 +1,28 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Data item{% endblock %}
+
+{% block componentContent %}
+
+  <p class="govuk-body"></p>
+
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of the data item component",
+      "url": url_for('components.data_item_example')
+    },
+    "partial": {
+      "name": 'dl-component-examples/data-item/partial.html'
+    }
+  }) }}
+
+{% endblock %}
