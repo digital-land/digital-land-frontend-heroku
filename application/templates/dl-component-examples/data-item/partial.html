@@ -13,7 +13,10 @@
     <span class="data-item__label">New resources</span>
 </div>
 
-<div class="data-item data-item--inline data-item--s">
-    <span class="data-item__number">3</span>
-    <span class="data-item__label">New resources</span>
-</div>
+{%- from "dl-macros/data-item/macro.jinja" import dlfDataItem %}
+{{ dlfDataItem({
+    "number": "3",
+    "text": "New resources",
+    "classes": "data-item--inline data-item--s"
+    })
+}}
