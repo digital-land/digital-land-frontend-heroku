@@ -41,6 +41,12 @@
   background: govuk-colour("mid-grey");
 }
 
+.dl-timeline--dates {
+  .dl-timeline__entry:before {
+    margin-top: 4px;
+  }
+}
+
 .dl-timeline__entry {
   padding-bottom: 10px;
   padding-left: 20px;
@@ -50,7 +56,7 @@
 }
 
 .dl-timeline__entry-heading {
-  margin-bottom: govuk-spacing(1);
+  margin-bottom: govuk-spacing(2);
 }
 
 .dl-timeline__entry__content {

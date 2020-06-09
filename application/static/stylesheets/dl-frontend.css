@@ -9169,6 +9169,10 @@
   background: #b1b4b6;
 }
 
+.dl-timeline--dates .dl-timeline__entry:before {
+  margin-top: 4px;
+}
+
 .dl-timeline__entry {
   padding-bottom: 10px;
   padding-left: 20px;
@@ -9181,7 +9185,7 @@
 }
 
 .dl-timeline__entry-heading {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .dl-timeline__entry__content {
