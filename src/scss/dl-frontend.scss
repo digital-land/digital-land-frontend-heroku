@@ -12,6 +12,7 @@ $using-helvetica: false;
 @import "common/mhclg-branding";
 @import "common/site-full-width-container";
 @import "common/dl-header";
+@import "common/icons";
 
 // import Digital Land components
 @import "components/page-feedback";
@@ -148,6 +149,12 @@ a {
   text-align: center;
 }
 
+.govuk-warning-text__icon--error {
+  border-color:  $govuk-error-colour;
+  color: $govuk-error-colour;
+  background: transparent;
+}
+
 // for covid-19 project
 
 .js-enabled {
@@ -180,4 +187,5 @@ a {
     @include govuk-focused-text;
   }
 }
+
 

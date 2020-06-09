@@ -1,0 +1,28 @@
+.dlf-warning__icon--inline {
+  @include govuk-font($size: false, $weight: bold);
+
+  display: inline-block;
+
+  min-width: 25px;
+  min-height: 24px;
+  margin-right: 5px;
+  padding-top: 1px;
+
+  // When a user customises their colours the background colour will often be removed.
+  // Adding a border to the component keeps it's shape as a circle.
+  border: 3px solid govuk-shade(govuk-colour("red"), 30);
+  border-radius: 50%;
+
+  // use same colour shade as the error-tag (govuk-tag--red)
+  color: govuk-shade(govuk-colour("red"), 30);
+  background: transparent;
+
+  font-size: 1em;
+  line-height: 25px;
+
+  text-align: center;
+
+  // Prevent the exclamation mark from being included when the warning text
+  // is copied, for example.
+  user-select: none;
+}
