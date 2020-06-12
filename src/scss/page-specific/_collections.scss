@@ -5,3 +5,12 @@
     margin-bottom: govuk-spacing(3);
   }
 }
+
+.issue-list__item {
+  @include govuk-clearfix;
+  padding-bottom: 10px;
+}
+
+.issue-list__item__text-s {
+  @include govuk-font($size: 16);
+}

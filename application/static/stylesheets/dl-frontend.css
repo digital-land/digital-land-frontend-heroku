@@ -9394,6 +9394,47 @@
   margin-bottom: 15px;
 }
 
+.issue-list__item {
+  padding-bottom: 10px;
+}
+
+.issue-list__item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.issue-list__item__text-s {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+}
+
+@media print {
+  .issue-list__item__text-s {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .issue-list__item__text-s {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .issue-list__item__text-s {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
