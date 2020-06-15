@@ -27,6 +27,10 @@
   color: $govuk-secondary-text-colour;
 }
 
+.dlf-svg-heatmap text {
+  @include govuk-font($size: 14, $weight: lighter);
+}
+
 .heatmap__day {
   fill: govuk-colour("light-grey");
 }

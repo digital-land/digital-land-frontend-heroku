@@ -9474,6 +9474,36 @@
   }
 }
 
+.dlf-svg-heatmap text {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .dlf-svg-heatmap text {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .dlf-svg-heatmap text {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+  }
+}
+
+@media print {
+  .dlf-svg-heatmap text {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
 .heatmap__day {
   fill: #f3f2f1;
 }
