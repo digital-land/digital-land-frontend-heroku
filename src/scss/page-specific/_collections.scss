@@ -26,3 +26,19 @@
   margin-bottom: govuk-spacing(2);
   color: $govuk-secondary-text-colour;
 }
+
+.heatmap__day {
+  fill: govuk-colour("light-grey");
+}
+
+.heatmap__day--lower {
+  fill: govuk-tint(govuk-colour("light-grey"), 25);
+}
+
+.heatmap__day--mid {
+  fill: govuk-colour("blue");
+}
+
+.heatmap__day--higher {
+  fill: govuk-shade(govuk-colour("light-grey"), 25);
+}

@@ -9474,6 +9474,22 @@
   }
 }
 
+.heatmap__day {
+  fill: #f3f2f1;
+}
+
+.heatmap__day--lower {
+  fill: #f6f5f5;
+}
+
+.heatmap__day--mid {
+  fill: #1d70b8;
+}
+
+.heatmap__day--higher {
+  fill: #b6b6b5;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
