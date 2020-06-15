@@ -21,6 +21,8 @@
 }
 
 .related-stat-summary__heading {
+  @include govuk-font($size: 16);
   margin-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(2);
+  color: $govuk-secondary-text-colour;
 }

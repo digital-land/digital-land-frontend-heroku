@@ -9441,8 +9441,37 @@
 }
 
 .related-stat-summary__heading {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
   margin-top: 15px;
   margin-bottom: 10px;
+  color: #6f777b;
+}
+
+@media print {
+  .related-stat-summary__heading {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .related-stat-summary__heading {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .related-stat-summary__heading {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
 }
 
 [aria-sort] button,
