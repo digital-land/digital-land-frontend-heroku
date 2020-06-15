@@ -9478,16 +9478,28 @@
   fill: #f3f2f1;
 }
 
-.heatmap__day--lower {
+.dlf-svg-heatmap .heatmap__day--lower {
   fill: #6ca2d1;
 }
 
-.heatmap__day--mid {
+.dlf-svg-heatmap .heatmap__day--mid {
   fill: #1d70b8;
 }
 
-.heatmap__day--higher {
+.dlf-svg-heatmap .heatmap__day--higher {
   fill: #134978;
+}
+
+.dlf-svg-heatmap--red .heatmap__day--lower {
+  fill: #e37c6b;
+}
+
+.dlf-svg-heatmap--red .heatmap__day--mid {
+  fill: #d4351c;
+}
+
+.dlf-svg-heatmap--red .heatmap__day--higher {
+  fill: #8a2212;
 }
 
 [aria-sort] button,

@@ -31,14 +31,24 @@
   fill: govuk-colour("light-grey");
 }
 
-.heatmap__day--lower {
-  fill: govuk-tint(govuk-colour("blue"), 35);
+@mixin heatmap-fills($colour) {
+  .heatmap__day--lower {
+    fill: govuk-tint($colour, 35);
+  }
+
+  .heatmap__day--mid {
+    fill: $colour;
+  }
+
+  .heatmap__day--higher {
+    fill: govuk-shade($colour, 35);
+  }
 }
 
-.heatmap__day--mid {
-  fill: govuk-colour("blue");
+.dlf-svg-heatmap {
+  @include heatmap-fills(govuk-colour("blue"));
 }
 
-.heatmap__day--higher {
-  fill: govuk-shade(govuk-colour("blue"), 35);
+.dlf-svg-heatmap--red {
+  @include heatmap-fills(govuk-colour("red"));
 }
