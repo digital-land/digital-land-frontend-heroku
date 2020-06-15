@@ -32,7 +32,7 @@
 }
 
 .heatmap__day--lower {
-  fill: govuk-tint(govuk-colour("light-grey"), 25);
+  fill: govuk-tint(govuk-colour("blue"), 35);
 }
 
 .heatmap__day--mid {
@@ -40,5 +40,5 @@
 }
 
 .heatmap__day--higher {
-  fill: govuk-shade(govuk-colour("light-grey"), 25);
+  fill: govuk-shade(govuk-colour("blue"), 35);
 }
