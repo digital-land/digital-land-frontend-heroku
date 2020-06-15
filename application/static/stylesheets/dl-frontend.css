@@ -9479,7 +9479,7 @@
 }
 
 .heatmap__day--lower {
-  fill: #f6f5f5;
+  fill: #6ca2d1;
 }
 
 .heatmap__day--mid {
@@ -9487,7 +9487,7 @@
 }
 
 .heatmap__day--higher {
-  fill: #b6b6b5;
+  fill: #134978;
 }
 
 [aria-sort] button,
