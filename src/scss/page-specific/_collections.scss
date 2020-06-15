@@ -14,3 +14,13 @@
 .issue-list__item__text-s {
   @include govuk-font($size: 16);
 }
+
+.related-stat-summary {
+  padding-bottom: govuk-spacing(2);
+  border-bottom: 1px solid $govuk-border-colour;
+}
+
+.related-stat-summary__heading {
+  margin-top: govuk-spacing(3);
+  margin-bottom: govuk-spacing(2);
+}

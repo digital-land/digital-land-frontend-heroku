@@ -9435,6 +9435,16 @@
   }
 }
 
+.related-stat-summary {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.related-stat-summary__heading {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
