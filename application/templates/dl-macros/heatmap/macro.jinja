@@ -1,0 +1,67 @@
+
+{% macro heatMap(params) %}
+{% set svg_width = (params.weeks|length * 16) + 40 %}
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="{{svg_width}}" height="128" class="dlf-svg-heatmap{% if params.classes %} {{ params.classes }}{% endif %}"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(10, 20)">
+      {% for w in params.weeks %}
+        {% set x_pos = (loop.index - 1) * 16 + 10 %}
+        <g transform="translate({{ x_pos }}, 0)">
+            {% for d in w.keys() %}
+            {%- set y_pos = (loop.index - 1) * 15 -%}
+
+            {%- set percentage = (w[d]['count']/params.highest) * 100 -%}
+            {% set day_classes = "heatmap__day"  %}
+            {% if percentage > 0 %}
+            {% set day_classes = "heatmap__day heatmap__day--lower"  %}
+            {% endif %}
+            {% if percentage > 33 %}
+            {% set day_classes = "heatmap__day heatmap__day--mid"  %}
+            {% endif %}
+            {%- if percentage > 66 %}
+            {% set day_classes = "heatmap__day heatmap__day--higher"  %}
+            {% endif -%}
+
+            <a xlink:href="log/{{ d }}">
+            <rect class="day {{day_classes}}" width="12" height="12" x="16" y="{{ y_pos }}" fill="{{ w[d]['count'] }}" data-count="{{ w[d]['count'] }}" data-date="{{ d }}">
+                <title>{{ d }}: {{ w[d]['tooltip'] }}</title>
+            </rect>
+            </a>
+            {% endfor %}
+        </g>
+      {% endfor %}
+
+      {% set hm = namespace(current_month="", week_count=0) %}
+      {% for w in params.weeks %}
+        {% set first_day_of_week = w.keys()|first %}
+        {% if not first_day_of_week|get_month == hm.current_month %}
+        {% set hm.current_month = first_day_of_week|get_month %}
+        {% set label_pos = 10 + 16 + (hm.week_count * 16)  %}
+        <text x="{{ label_pos }}" y="-9" class="month">{{hm.current_month|map_month}}</text>
+        {% endif %}
+        {% set hm.week_count = hm.week_count + 1 %}
+
+      {% endfor %}
+        <text text-anchor="start" class="wday" dx="-10" dy="10" style="display: none;">Sun</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="25">Mon</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="41" style="display: none;">Tue</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="56">Wed</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="71" style="display: none;">Thu</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="85">Fri</text>
+        <text text-anchor="start" class="wday" dx="-10" dy="101" style="display: none;">Sat</text>
+        
+    </g>
+</svg>
+{% endmacro %}
+
+{# notes for timeline #}
+{# step through week by week #}
+  {# if first day of week has a new month #}
+    {# place a label (need filter to map  month number to name 06 - Jun) #}
+    {# set month to new #}
+    {# set week count to 1 #}
+  {# else #}
+    {# increase week count (this is used to x 15 for label placement) #}
+  {# draw days of week cubes #}

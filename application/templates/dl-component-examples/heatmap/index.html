@@ -1,0 +1,23 @@
+{% extends "dl-component-examples/_dl-component-base.html" %}
+{% from "dl-macros/nav-macros.html" import sublevelNavItem %}
+
+{% block topLevelNavItems %}
+  {{ toplevelNavItem("Get started", "/") }}
+  {{ toplevelNavItem("Components", "/component", true) }}
+  {{ toplevelNavItem("Content", "/publishing") }}
+  {{ toplevelNavItem("Jinja", "/jinja") }}
+  {{ toplevelNavItem("Javascripts", "/javascripts") }}
+{% endblock %}
+
+{% block componentName %}Heatmap{% endblock %}
+
+{% block componentContent %}
+
+{% from "dl-macros/heatmap/macro.jinja" import heatMap %}
+{{ heatMap({
+    "weeks": heatmap['new_resources']['weeks'],
+    "highest":heatmap['new_resources']['highest']
+    }) 
+}}
+
+{% endblock %}

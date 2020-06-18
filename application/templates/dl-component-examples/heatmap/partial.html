@@ -1,0 +1,8 @@
+{% from "dl-macros/heatmap/macro.jinja" import heatMap %}
+
+{{ heatmap }}
+{{ heatMap({
+    "weeks": heatmap['new_resources']['weeks'],
+    "highest":heatmap['new_resources']['highest']
+    }) 
+}}
