@@ -35,11 +35,14 @@ def register_blueprints(app):
     from application.blueprints.components.views import components
     app.register_blueprint(components)
 
+
 def register_extensions(app):
     from application.extensions import govuk_components
     govuk_components.init_app(app)
 
 
 def register_filters(app):
-    from application.filters import reduce_url_to_parent
+    from application.filters import reduce_url_to_parent, map_month, extract_month
     app.add_template_filter(reduce_url_to_parent)
+    app.add_template_filter(map_month)
+    app.add_template_filter(extract_month, name="get_month")
