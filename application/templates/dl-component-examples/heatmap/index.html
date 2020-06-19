@@ -12,6 +12,8 @@
 {% block componentName %}Heatmap{% endblock %}
 
 {% block componentContent %}
+<span class="govuk-tag govuk-!-margin-bottom-2">Experimental</span>
+<p class="govuk-body">Use the heatmap component to show activity over a period of time.</p>
 
 {{ designSystemExample({
     "iframe": {
@@ -21,5 +23,36 @@
     }
   }) }}
 
+<h2 class="govuk-heading-l">When to use</h2>
 
+<p class="govuk-body">Use this component when an action occurs at regular intervals and you want to show results of that action. It helps to highlight periods of increased activity and patterns.</p>
+
+<p class="govuk-body">For example, you may use it to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>show the number of times a transaction completed each day</li>
+    <li>track which days organisations publish a report</li>
+    <li>monitor your services to see if there are patterns of outages</li>
+</ul>
+
+<h3 class="govuk-heading-m">Requirements</h3>
+
+<p class="govuk-body">The heatmap component uses some filters to work out which month label to add. These bits of python help break a date, e.g. 2020-06-04, in to parts, e.g. 2020 and 06 and 04.</p>
+
+<p class="govuk-body">The filters needed are</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li><code>extract_day</code> &emdash; returns the number for the day of the month</li>
+    <li><code>extract_month</code> &emdash; returns the month number</li>
+    <li><code>month_map</code> &emdash; replaces month number with month label e.g. <strong>06</strong> becomes <strong>Jun</strong>.</li>
+</ul>
+
+{% endblock %}
+
+{% block footer %}
+  {{ dlfPageFeedback({
+    "text": "Do you have feedback about this page?",
+    "href": "mailto:digitalland@communities.gov.uk?subject=Feedback on digital land heatmap component"
+  }) }}
+  {{ super() }}
 {% endblock %}
