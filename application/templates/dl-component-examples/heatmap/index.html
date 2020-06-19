@@ -13,11 +13,13 @@
 
 {% block componentContent %}
 
-{% from "dl-macros/heatmap/macro.jinja" import heatMap %}
-{{ heatMap({
-    "weeks": heatmap['new_resources']['weeks'],
-    "highest":heatmap['new_resources']['highest']
-    }) 
-}}
+{{ designSystemExample({
+    "iframe": {
+      "title": "An example of the digtial land heatmap component",
+      "size": "s",
+      "url": url_for('components.heatmap_example')
+    }
+  }) }}
+
 
 {% endblock %}
