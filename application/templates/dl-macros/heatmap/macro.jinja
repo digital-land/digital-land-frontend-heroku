@@ -39,7 +39,7 @@
         {% if not first_day_of_week|get_month == hm.current_month %}
         {% set hm.current_month = first_day_of_week|get_month %}
         {% set label_pos = 10 + 16 + (hm.week_count * 16)  %}
-        <text x="{{ label_pos }}" y="-9" class="month">{{hm.current_month|map_month}}</text>
+        <text x="{{ label_pos }}" y="-9" class="month{% if first_day_of_week|extract_day > 20 %} govuk-visually-hidden{% endif %}">{{hm.current_month|map_month}}</text>
         {% endif %}
         {% set hm.week_count = hm.week_count + 1 %}
 

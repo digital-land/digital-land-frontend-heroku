@@ -42,7 +42,8 @@ def register_extensions(app):
 
 
 def register_filters(app):
-    from application.filters import reduce_url_to_parent, map_month, extract_month
+    from application.filters import reduce_url_to_parent, map_month, extract_day, extract_month
     app.add_template_filter(reduce_url_to_parent)
     app.add_template_filter(map_month)
     app.add_template_filter(extract_month, name="get_month")
+    app.add_template_filter(extract_day)
