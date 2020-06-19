@@ -11,6 +11,7 @@
         src="{{ params.iframe.url }}" loading="lazy" id="iFrameResizer3"
         scrolling="auto" frameborder="0"></iframe>
     </div>
+    {% if params.partial %}
     <div class="app-tabs__heading">
         <span>HTML</span>
     </div>
@@ -21,5 +22,6 @@
             {%- endfilter -%}
         </code></pre>
     </div>
+    {% endif %}
 </div><!-- end app-example-wrapper -->
 {% endmacro %}
