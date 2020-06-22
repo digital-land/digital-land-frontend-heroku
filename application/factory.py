@@ -16,6 +16,10 @@ def create_app(config_filename):
     register_extensions(app)
     register_filters(app)
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 10
+    print("===================")
+    print(app.root_path)
+    print(app.template_folder)
+    print("===================")
     return app
 
 
@@ -42,8 +46,11 @@ def register_extensions(app):
 
 
 def register_filters(app):
+    from application.filters import get_jinja_template_raw
+    app.add_template_filter(get_jinja_template_raw)
     from application.filters import reduce_url_to_parent, map_month, extract_day, extract_month
     app.add_template_filter(reduce_url_to_parent)
     app.add_template_filter(map_month)
     app.add_template_filter(extract_month, name="get_month")
     app.add_template_filter(extract_day)
+
