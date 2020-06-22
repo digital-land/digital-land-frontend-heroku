@@ -8,6 +8,14 @@ components = Blueprint('components', __name__, template_folder='templates', url_
 
 dl_component_template_dir = 'dl-component-examples/'
 
+def get_data(filename):
+    # read file
+    with open(f"application/data/{filename}.json", 'r') as f:
+        data=f.read()
+
+    # parse file
+    return json.loads(data)
+
 @components.route('/buttons')
 def buttons():
     return render_template(f'{dl_component_template_dir}buttons.html')
@@ -56,6 +64,21 @@ def hero():
 @components.route('/hero/example')
 def hero_example():
     return render_template(f'{dl_component_template_dir}hero/example.html')
+
+@components.route('/heatmap')
+def heatmap():
+    heatmap_example_data = get_data("heatmaps")
+    return render_template(f'{dl_component_template_dir}heatmap/index.html', heatmap=heatmap_example_data)
+
+
+@components.route('/heatmap/example')
+def heatmap_example():
+    heatmap_example_data = get_data("heatmaps")
+    return render_template(
+        f'{dl_component_template_dir}_partial-loader.html',
+        partial_name="dl-component-examples/heatmap/partial.html",
+        heatmap=heatmap_example_data)
+
 
 @components.route('/highlight-box')
 def highlight_box():

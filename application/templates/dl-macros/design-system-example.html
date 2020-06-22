@@ -13,13 +13,17 @@
     </div>
     {% if params.partial %}
     <div class="app-tabs__heading">
-        <span>HTML</span>
+        <span>{% if params.partial.type %}{{ params.partial.type|capitalize }}{% else %}HTML{% endif %}</span>
     </div>
     <div class="app-tabs__container">
         <pre><code class="{% if params.partial.type %}{{ params.partial.type }}{% else %}html{% endif %}">
+        {%- if params.partial.type == "jinja" -%}
+            {{- params.partial.path|get_jinja_template_raw }}
+        {%- else -%}
             {%- filter forceescape -%}
 {% include params.partial.name %}
             {%- endfilter -%}
+        {%- endif -%}
         </code></pre>
     </div>
     {% endif %}
