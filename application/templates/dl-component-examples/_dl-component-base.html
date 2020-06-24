@@ -28,7 +28,7 @@
 // Initialise back to top
 var $btt = document.querySelector('[data-module*="back-to-top"]')
 new window.DLFrontend.BackToTop($btt).init({
-  footer_selector: ".govuk-footer"
+  footer_selector: ".{{ backToTopSelector|default('govuk-footer') }}"
 });
 </script>
 {% endblock %}
