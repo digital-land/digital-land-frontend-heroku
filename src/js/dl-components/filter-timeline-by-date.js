@@ -61,25 +61,41 @@ FilterTimelineByDate.prototype.filterViaTimeout = function (e) {
   }, 250)
 }
 
+FilterTimelineByDate.prototype.areFiltersSet = function () {
+  const dateComponents = ['year', 'month', 'day']
+  const fObj = this.filterObj
+
+  for (let i = 0; i < 3; i++) {
+    if (fObj[dateComponents[i]]) {
+      return true
+    }
+  }
+  return false
+}
+
 FilterTimelineByDate.prototype.filterTimeline = function (e) {
   const currentInput = e.target
   this.filterObj[currentInput.dataset.filterTimelineType] = currentInput.value
 
-  // hide them all
-  this.timelineItems.forEach(function (item) {
-    item.classList.add('js-hidden')
-  })
+  if (this.areFiltersSet()) {
+    // hide them all
+    this.timelineItems.forEach(function (item) {
+      item.classList.add('js-hidden')
+    })
 
-  // unhide the items that match
-  const matchedItems = this.matchTimelineItems()
-  matchedItems.forEach(function (item) {
-    item.classList.remove('js-hidden')
-  })
+    // unhide the items that match
+    const matchedItems = this.matchTimelineItems()
+    matchedItems.forEach(function (item) {
+      item.classList.remove('js-hidden')
+    })
 
-  // show status area
-  this.$statusArea.classList.remove('js-hidden')
-  // update count
-  this.setCountMessage(matchedItems.length)
+    // show status area
+    this.$statusArea.classList.remove('js-hidden')
+    // update count
+    this.setCountMessage(matchedItems.length)
+  } else {
+    this.reset()
+  }
 }
 
 FilterTimelineByDate.prototype.matchTimelineItems = function () {
