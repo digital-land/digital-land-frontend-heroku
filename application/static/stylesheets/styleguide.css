@@ -1504,3 +1504,9 @@ li code {
   height: calc(100% + 30px);
   background: #b1b4b6;
 }
+
+.styleguide-gif {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #b1b4b6;
+}
