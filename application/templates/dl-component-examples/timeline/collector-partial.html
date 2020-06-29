@@ -33,9 +33,14 @@
                   </div>
                 </div>
               </div>
+              <div class="govuk-inset-text filter-timeline__status-area" aria-live="polite">
+                <span class="govuk-body">Filter applied: <span class="filter-timeline__count">0 items</span> matched.</span>
+                <a href="#log-timeline" class="govuk-visually-hidden">View updated timeline</a>
+                <a href="#" class="govuk-link filter-timeline__reset">Reset<span class="govuk-visually-hidden"> timeline filter</span></a>
+              </div>
             </fieldset>
         </div>
-        <ol class="dl-timeline dl-timeline--dates">
+        <ol class="dl-timeline dl-timeline--dates" id="log-timeline">
             <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="05" data-timeline-day="22">
                 <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-05-22</h3>
                 <div class="dl-timeline__entry__content">

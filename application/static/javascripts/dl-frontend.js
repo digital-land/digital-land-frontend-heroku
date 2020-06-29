@@ -866,6 +866,7 @@
 	  this.$module = $module;
 	  this.filterTimeout = null;
 	  this.$noMatches = document.querySelector('.js-no-filter-timeline-matches');
+	  this.$statusArea = $module.querySelector('.filter-timeline__status-area');
 	  this.filterObj = {
 	    year: '',
 	    month: '',
@@ -874,6 +875,7 @@
 	}
 
 	FilterTimelineByDate.prototype.init = function (params) {
+	  const that = this;
 	  this.setupOptions(params);
 	  // get timeline to filter
 	  this.getTimeline();
@@ -884,6 +886,13 @@
 	  this.$inputs.forEach(function (input) {
 	    input.addEventListener('keyup', boundFilterViaTimeout);
 	  });
+
+	  const $resetBtn = this.$statusArea.querySelector('.filter-timeline__reset');
+	  $resetBtn.addEventListener('click', function (e) {
+	    that.reset();
+	  });
+
+	  this.$statusArea.classList.add('js-hidden');
 
 	  // make sure no matches message is initially hidden
 	  if (this.$noMatches) {
@@ -925,6 +934,11 @@
 	  matchedItems.forEach(function (item) {
 	    item.classList.remove('js-hidden');
 	  });
+
+	  // show status area
+	  this.$statusArea.classList.remove('js-hidden');
+	  // update count
+	  this.setCountMessage(matchedItems.length);
 	};
 
 	FilterTimelineByDate.prototype.matchTimelineItems = function () {
@@ -951,6 +965,39 @@
 	    return true
 	  }
 	  return false
+	};
+
+	FilterTimelineByDate.prototype.setCountMessage = function (count) {
+	  const $count = this.$statusArea.querySelector('.filter-timeline__count');
+	  var countMessage = count + ' item';
+	  if (count !== 1) {
+	    countMessage = countMessage + 's';
+	  }
+	  $count.textContent = countMessage;
+	};
+
+	FilterTimelineByDate.prototype.reset = function () {
+	  // remove input values
+	  this.$inputs.forEach(function ($input) {
+	    $input.value = '';
+	  });
+	  // reset stored filter values
+	  this.defaulFilters();
+	  // show all items
+	  this.timelineItems.forEach(function (item) {
+	    item.classList.remove('js-hidden');
+	  });
+	  // back to initial view
+	  this.$statusArea.classList.add('js-hidden');
+	};
+
+	FilterTimelineByDate.prototype.defaulFilters = function () {
+	  // all filter options to empty
+	  this.filterObj = {
+	    year: '',
+	    month: '',
+	    day: ''
+	  };
 	};
 
 	FilterTimelineByDate.prototype.setupOptions = function (params) {
