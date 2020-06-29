@@ -158,6 +158,10 @@ a {
 
 // for covid-19 project
 
+.dl-timeline__filter {
+  display: none;
+}
+
 .js-enabled {
   .hub-list__separator:first-of-type {
     display: none;
@@ -180,6 +184,10 @@ a {
   .js-hidden {
     display: none;
     visibility: hidden;
+  }
+
+  .dl-timeline__filter {
+    display: block;
   }
 }
 

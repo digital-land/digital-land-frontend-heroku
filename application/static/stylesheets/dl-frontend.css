@@ -9804,6 +9804,10 @@
   background: transparent;
 }
 
+.dl-timeline__filter {
+  display: none;
+}
+
 .js-enabled .hub-list__separator:first-of-type {
   display: none;
 }
@@ -9823,6 +9827,10 @@
 .js-enabled .js-hidden {
   display: none;
   visibility: hidden;
+}
+
+.js-enabled .dl-timeline__filter {
+  display: block;
 }
 
 .hub__la-list .found {
