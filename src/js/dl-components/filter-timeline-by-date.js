@@ -6,7 +6,6 @@ import { convertNodeListToArray } from '../helpers/nodelist_to_array'
 function FilterTimelineByDate ($module) {
   this.$module = $module
   this.filterTimeout = null
-  this.$noMatches = document.querySelector('.js-no-filter-timeline-matches')
   this.$statusArea = $module.querySelector('.filter-timeline__status-area')
   this.filterObj = {
     year: '',
@@ -33,12 +32,8 @@ FilterTimelineByDate.prototype.init = function (params) {
     that.reset()
   })
 
+  // make sure message area hidden by default
   this.$statusArea.classList.add('js-hidden')
-
-  // make sure no matches message is initially hidden
-  if (this.$noMatches) {
-    this.$noMatches.classList.add('js-hidden')
-  }
 }
 
 FilterTimelineByDate.prototype.getTimeline = function () {
@@ -93,6 +88,12 @@ FilterTimelineByDate.prototype.filterTimeline = function (e) {
     this.$statusArea.classList.remove('js-hidden')
     // update count
     this.setCountMessage(matchedItems.length)
+
+    if (matchedItems.length === 0) {
+      this.timeline.classList.add('dl-timeline--empty')
+    } else {
+      this.timeline.classList.remove('dl-timeline--empty')
+    }
   } else {
     this.reset()
   }

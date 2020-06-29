@@ -9196,6 +9196,10 @@
   background: #b1b4b6;
 }
 
+.dl-timeline--empty:before, .dl-timeline--empty:after {
+  display: none;
+}
+
 .dl-timeline--dates .dl-timeline__entry:before {
   margin-top: 4px;
 }

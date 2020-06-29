@@ -41,6 +41,14 @@
   background: govuk-colour("mid-grey");
 }
 
+// handle empty state
+.dl-timeline--empty {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
 .dl-timeline--dates {
   .dl-timeline__entry:before {
     margin-top: 4px;
