@@ -1,7 +1,42 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" data-module="filter-timeline" data-timeline-selector="dl-timeline--dates">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Filter by date
+                </h1>
+              </legend>
+              <div class="govuk-date-input" id="timeline-filter">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="timeline-filter-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeline-filter-day" name="timeline-filter-day" type="text" pattern="[0-9]*" inputmode="numeric" data-filter-timeline-type="day">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="timeline-filter-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="timeline-filter-month" name="timeline-filter-month" type="text" pattern="[0-9]*" inputmode="numeric" data-filter-timeline-type="month">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="timeline-filter-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="timeline-filter-year" name="timeline-filter-year" type="text" pattern="[0-9]*" inputmode="numeric" data-filter-timeline-type="year">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+        </div>
         <ol class="dl-timeline dl-timeline--dates">
-            <li class="dl-timeline__entry">
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="05" data-timeline-day="22">
                 <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-05-22</h3>
                 <div class="dl-timeline__entry__content">
                     <div class="technical-summary-card technical-summary-card--compressed">
@@ -10,7 +45,7 @@
                     </div>
                 </div>
             </li>
-            <li class="dl-timeline__entry">
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="05" data-timeline-day="21">
                 <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-05-21</h3>
                 <div class="dl-timeline__entry__content">
                     <div class="technical-summary-card technical-summary-card--compressed">
@@ -20,7 +55,7 @@
                 </div>
                
             </li>
-            <li class="dl-timeline__entry">
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="05" data-timeline-day="20">
                 <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-05-20</h3>
                 <div class="dl-timeline__entry__content">
                     <div class="technical-summary-card technical-summary-card--compressed">
@@ -33,8 +68,50 @@
                     </div>
                 </div>
             </li>
-            <li class="dl-timeline__entry">
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="05" data-timeline-day="19">
                 <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-05-19</h3>
+                <div class="dl-timeline__entry__content">
+                    <div class="technical-summary-card technical-summary-card--compressed">
+                        <span class="dlf-warning__icon--inline" aria-hidden="true">!</span>
+                        <span><a href="#">Brownfield collector</a>.</span> 
+                        <span>3 issues with the endpoints.</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="04" data-timeline-day="22">
+                <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-04-22</h3>
+                <div class="dl-timeline__entry__content">
+                    <div class="technical-summary-card technical-summary-card--compressed">
+                        <span><a href="#">Brownfield collector</a>.</span> 
+                        <span>No new resources collected.</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="04" data-timeline-day="21">
+                <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-04-21</h3>
+                <div class="dl-timeline__entry__content">
+                    <div class="technical-summary-card technical-summary-card--compressed">
+                        <span><a href="#">Brownfield collector</a>.</span> 
+                        <span>3 new resources collected.</span>
+                    </div>
+                </div>
+               
+            </li>
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="04" data-timeline-day="20">
+                <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-04-20</h3>
+                <div class="dl-timeline__entry__content">
+                    <div class="technical-summary-card technical-summary-card--compressed">
+                        <span><strong class="govuk-tag govuk-tag--red">
+                            Error
+                          </strong>
+                          <a href="#">Brownfield collector</a>.
+                        </span> 
+                        <span>No run information available.</span>
+                    </div>
+                </div>
+            </li>
+            <li class="dl-timeline__entry" data-timeline-year="2020" data-timeline-month="04" data-timeline-day="19">
+                <h3 class="govuk-heading-m dl-timeline__entry-heading">2020-04-19</h3>
                 <div class="dl-timeline__entry__content">
                     <div class="technical-summary-card technical-summary-card--compressed">
                         <span class="dlf-warning__icon--inline" aria-hidden="true">!</span>

@@ -5,6 +5,7 @@ import ScrollableTables from './dl-components/scrollable-table'
 import LinkableTable from './dl-components/linkable-table'
 import FilterList from './dl-components/filter-list'
 import InputCopy from './dl-components/input-copy'
+import FilterTimelineByDate from './dl-components/filter-timeline-by-date'
 
 function polyfill (options) {
   // polyfill for browsers without NodeList forEach method
@@ -21,5 +22,6 @@ export {
   ScrollableTables,
   LinkableTable,
   FilterList,
-  InputCopy
+  InputCopy,
+  FilterTimelineByDate
 }

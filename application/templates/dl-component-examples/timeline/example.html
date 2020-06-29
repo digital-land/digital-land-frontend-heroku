@@ -3,3 +3,13 @@
 {% block example %}
 {% include partial_str %}
 {% endblock %}
+
+{% block bodyEnd %}
+{{ super() }}
+<script>
+    const $timelineFilterModules = document.querySelectorAll('[data-module*="filter-timeline"]')
+    $timelineFilterModules.forEach(timelineFilterModule => {
+        new window.DLFrontend.FilterTimelineByDate(timelineFilterModule).init()
+    })
+</script>
+{% endblock %}
