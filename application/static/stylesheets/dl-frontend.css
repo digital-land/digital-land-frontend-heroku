@@ -9474,6 +9474,13 @@
   }
 }
 
+.dlf-heatmap__container {
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
 .dlf-svg-heatmap text {
   font-family: "GDS Transport", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

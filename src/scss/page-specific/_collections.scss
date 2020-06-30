@@ -27,6 +27,14 @@
   color: $govuk-secondary-text-colour;
 }
 
+// same as github commits heatmap
+.dlf-heatmap__container {
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  flex-direction: column; // needed to make right aligned
+}
+
 .dlf-svg-heatmap text {
   @include govuk-font($size: 14, $weight: lighter);
 }
