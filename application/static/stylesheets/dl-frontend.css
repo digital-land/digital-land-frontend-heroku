@@ -9113,7 +9113,7 @@
   text-decoration: none;
 }
 
-.technical-summary-card__title a:hover {
+.technical-summary-card__title a:hover:not(:active):not(:focus) {
   text-decoration: underline;
 }
 
