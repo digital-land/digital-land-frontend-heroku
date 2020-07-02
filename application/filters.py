@@ -1,3 +1,5 @@
+import validators
+
 from application.filter.raw_template import get_jinja_template_raw
 
 
@@ -23,6 +25,37 @@ def float_to_int(v):
     if v:
         return int(float(v))
     return None
+
+
+def is_valid_uri(uri):
+    """
+    Check whether uri is valid, useful for links
+    """
+    if validators.url(uri):
+        return True
+    return False
+
+
+def pluralise(str, count, str_on='s', str_off=""):
+    """
+    Return string with plural suffix if count is not 1.
+    By default use 's' as the suffix.
+
+    * If count is 0, vote{{ "resource"|pluralise(count) }} display "resources".
+    * If count is 1, vote{{ "resource"|pluralise(count) }} display "resource".
+    * If count is 2, vote{{ "resource"|pluralise(count) }} display "resources".
+
+    Can provide args to customise plural suffix
+
+    * If count is 0, vote{{ "country"|pluralise(count, "ies", "y") }} display "countries".
+    * If count is 1, vote{{ "country"|pluralise(count, "ies", "y") }} display "country".
+    * If count is 2, vote{{ "country"|pluralise(count, "ies", "y") }} display "countries".
+    """
+    if not count == 1:
+        strip_count = -1*len(str_off) if len(str_off) > 0 else len(str)
+        return str[:strip_count]+str_on
+    else:
+        return str
 
 
 ###################
