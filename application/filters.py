@@ -1,14 +1,13 @@
-import os
-from flask import current_app as app
+from application.filter.raw_template import get_jinja_template_raw
 
 
-def get_jinja_template_raw(path):
-	if path:
-		template_file_path = os.path.join(app.root_path, app.template_folder, path)
-		if os.path.exists(template_file_path):
-			file = open(template_file_path, 'r') 
-			return file.read()
-	return None
+def slash_to_dash(text):
+    """
+    Given a string replace / with -
+    useful for making urls from strings with /s
+    e.g. 2020/06/04 becomes 2020-06-04
+    """
+    return text.replace("/", "-")
 
 
 def reduce_url_to_parent(url):
@@ -16,6 +15,19 @@ def reduce_url_to_parent(url):
 		return url.rsplit('/',1)[0]
 	return url
 
+
+def float_to_int(v):
+    """
+    Returns integer from float
+    """
+    if v:
+        return int(float(v))
+    return None
+
+
+###################
+# Heatmap         #
+###################
 
 def extract_day(date_str):
     if date_str:
