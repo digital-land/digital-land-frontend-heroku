@@ -13,18 +13,22 @@
               {% for d in w.keys() %}
               {%- set y_pos = (loop.index - 1) * 15 -%}
 
-              {%- set percentage = (w[d]['count']/params.highest) * 100 -%}
-              {% set day_classes = "heatmap__day"  %}
-              {% if percentage > 0 %}
-              {% set day_classes = "heatmap__day heatmap__day--lower"  %}
-              {% endif %}
-              {% if percentage > 33 %}
-              {% set day_classes = "heatmap__day heatmap__day--mid"  %}
-              {% endif %}
-              {%- if percentage > 66 %}
-              {% set day_classes = "heatmap__day heatmap__day--higher"  %}
-              {% endif -%}
+              {%- set day_classes = "heatmap__day" -%}
 
+              {#- no need to do this if no values -#}
+              {%- if not params.highest == 0 -%}
+                {%- set percentage = (w[d]['count']/params.highest) * 100 -%}
+                {% if percentage > 0 %}
+                {% set day_classes = "heatmap__day heatmap__day--lower"  %}
+                {% endif %}
+                {% if percentage > 33 %}
+                {% set day_classes = "heatmap__day heatmap__day--mid"  %}
+                {% endif %}
+                {%- if percentage > 66 %}
+                {% set day_classes = "heatmap__day heatmap__day--higher"  %}
+                {% endif -%}
+              {%- endif -%}
+              
               <a xlink:href="log/{{ d }}">
               <rect class="day {{day_classes}}" width="12" height="12" x="16" y="{{ y_pos }}" fill="{{ w[d]['count'] }}" data-count="{{ w[d]['count'] }}" data-date="{{ d }}">
                   <title>{{ d }}: {{ w[d]['tooltip'] }}</title>
