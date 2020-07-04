@@ -46,6 +46,8 @@ def register_filters(app):
     app.add_template_filter(get_jinja_template_raw)
     from application.filters import pluralise
     app.add_template_filter(pluralise)
+    from application.filters import map_organisation_id_filter
+    app.add_template_filter(map_organisation_id_filter, name="map_organisation")
     from application.filters import reduce_url_to_parent, map_month, extract_day, extract_month
     app.add_template_filter(reduce_url_to_parent)
     app.add_template_filter(map_month)
