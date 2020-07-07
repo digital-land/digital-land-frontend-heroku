@@ -19,6 +19,15 @@ def reduce_url_to_parent(url):
 	return url
 
 
+def commanum(v):
+    """
+    Returns readable number
+
+    For example, 1827942 => 1,827,942
+    """
+    return "{:,}".format(v)
+
+
 def float_to_int(v):
     """
     Returns integer from float
