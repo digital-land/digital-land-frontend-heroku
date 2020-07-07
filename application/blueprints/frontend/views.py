@@ -106,6 +106,10 @@ def accordion():
 def back_link():
     return render_template('govuk-jinja-component-examples/back-link.html')
 
+@frontend.route('/jinja/govuk-components/breadcrumbs')
+def breadcrumbs():
+    return render_template('govuk-jinja-component-examples/breadcrumbs.html')
+
 @frontend.route('/jinja/govuk-components/button')
 def button():
     return render_template('govuk-jinja-component-examples/button.html')

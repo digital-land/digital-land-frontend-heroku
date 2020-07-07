@@ -1,0 +1,50 @@
+{% extends "govuk-jinja-component-examples/_govuk-jinja-components-base.html" %}
+
+{% from "govuk-jinja-components/breadcrumbs/macro.jinja" import govukBreadcrumbs -%}
+
+{% set componentName = "Breadcrumbs" %}
+
+{% block govukComponentExample %}
+
+{{ govukBreadcrumbs({
+  "items": [
+    {
+      "text": "Home",
+      "href": "#",
+      "attributes": {
+        "test": "value"
+      }
+    },
+    {
+      "text": "Passports, travel and living abroad",
+      "href": "#"
+    },
+    {
+      "text": "Travel abroad",
+      "href": "#"
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+{% block govukComponentJinja %}
+
+<pre><code class="nunjucks">{% raw %}{{ govukBreadcrumbs({
+  "items": [
+    {
+      "text": "Home",
+      "href": "#"
+    },
+    {
+      "text": "Passports, travel and living abroad",
+      "href": "#"
+    },
+    {
+      "text": "Travel abroad",
+      "href": "#"
+    }
+  ]
+}) }}{% endraw %}</code></pre>
+
+{% endblock %}
