@@ -1,5 +1,12 @@
 {% macro designSystemExample(params) %}
-<div class="app-example-wrapper">
+
+{% if params.id %}
+  {% set exampleId = params.id %}
+{% else %}
+  {% set exampleId = "example-test-id" %}
+{% endif %}
+
+<div class="app-example-wrapper" data-module="app-tabs">
     <div class="app-example__toolbar">
         <a href="{{ params.iframe.url }}" class="govuk-link" target="_blank" rel="noopener noreferrer">Open example in new window</a>
     </div>
@@ -12,20 +19,44 @@
         scrolling="auto" frameborder="0"></iframe>
     </div>
     {% if params.partial %}
-    <div class="app-tabs__heading">
-        <span>{% if params.partial.type %}{{ params.partial.type|capitalize }}{% else %}HTML{% endif %}</span>
+    {% set multipleTabs = params.html and params.jinja %}
+
+    {%- if (multipleTabs) %}
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation"><a href="#{{ exampleId }}-html" role="tab" aria-controls="{{ exampleId }}-html" data-track="tab-html">HTML</a></li>
+      <li class="app-tabs__item js-tabs__item" role="presentation"><a href="#{{ exampleId }}-jinja" role="tab" aria-controls="{{ exampleId }}-jinja" data-track="tab-jinja">jinja</a></li>
+    </ul>
+    {% else %}
+    {% set tabType = "html" if params.partial and params.partial.html else "jinja" %}
+    {#- if at least one tab is set to true show the list -#}
+    {% if tabType %}
+    <ul class="app-tabs" role="tablist">
+      <li class="app-tabs__item js-tabs__item{{ " js-tabs__item--open" if (params.open) }}" role="presentation">
+        <a href="#{{ exampleId }}-{{ tabType }}" role="tab" aria-controls="{{ exampleId }}-{{ tabType }}">{{ "HTML" if params.partial and params.partial.html else "Jinja" }}</a>
+      </li>
+    </ul>
+    {% endif %}
+    {% endif %}
+
+    {# might want to change this when showing multiple tabs #}
+    {% set tabType = "html" if params.partial and params.partial.html else "jinja" %}
+    <div class="app-tabs__heading js-tabs__heading">
+        <a href="#{{ exampleId }}-{{tabType}}" role="tab" aria-controls="{{ exampleId }}-{{tabType}}">HTML</a>
     </div>
-    <div class="app-tabs__container">
-        <pre><code class="{% if params.partial.type %}{{ params.partial.type }}{% else %}html{% endif %}">
-        {%- if params.partial.type == "jinja" -%}
-            {{- params.partial.path|get_jinja_template_raw }}
-        {%- else -%}
-            {%- filter forceescape -%}
-{% include params.partial.name %}
-            {%- endfilter -%}
-        {%- endif -%}
-        </code></pre>
+    <div class="app-tabs__container js-tabs__container" id="{{ exampleId }}-{{tabType}}">
+        <div class="app-example__code">
+            <pre><code class="{% if params.partial.type %}{{ params.partial.type }}{% else %}html{% endif %}">
+            {%- if params.partial.type == "jinja" -%}
+                {{- params.partial.path|get_jinja_template_raw }}
+            {%- else -%}
+                {%- filter forceescape -%}
+    {% include params.partial.name %}
+                {%- endfilter -%}
+            {%- endif -%}
+            </code></pre>
+        </div>
     </div>
     {% endif %}
 </div><!-- end app-example-wrapper -->
 {% endmacro %}
+
