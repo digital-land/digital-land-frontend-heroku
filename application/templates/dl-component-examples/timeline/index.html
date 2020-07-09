@@ -23,6 +23,7 @@
       "size": "l"
     },
     "partial": {
+      "html": true,
       "name": 'dl-component-examples/timeline/partial.html'
     }
   }) }}
@@ -36,6 +37,7 @@
     "size": "l"
   },
   "partial": {
+    "html": true,
     "name": 'dl-component-examples/timeline/collector-partial.html'
   }
 }) }}
@@ -64,3 +66,14 @@
   }) }}
   {{ super() }}
 {% endblock %}
+
+{% block bodyEnd %}
+{{ super() }}
+<script>
+  // Initialise tabs
+var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+$tabs.forEach(function ($tab) {
+  new DLFrontend.AppTabs($tab).init()
+})
+</script>
+{% endblock bodyEnd %}
