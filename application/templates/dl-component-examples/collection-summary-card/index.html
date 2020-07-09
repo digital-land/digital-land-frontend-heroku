@@ -25,7 +25,8 @@
       "url": url_for('components.collection_summary_card_collections_example')
     },
     "partial": {
-      "name": 'dl-component-examples/collection-summary-card/collections-partial.html'
+      "name": 'dl-component-examples/collection-summary-card/collections-partial.html',
+      "html": true
     }
   }) }}
 
@@ -39,9 +40,21 @@
       "url": url_for('components.collection_summary_card_example_full')
     },
     "partial": {
+      "html": true,
       "name": 'dl-component-examples/collection-summary-card/partial-full.html'
     }
   }) }}
 
 
 {% endblock %}
+
+{% block bodyEnd %}
+{{ super() }}
+<script>
+  // Initialise tabs
+var $tabs = document.querySelectorAll('[data-module="app-tabs"]')
+$tabs.forEach(function ($tab) {
+  new DLFrontend.AppTabs($tab).init()
+})
+</script>
+{% endblock bodyEnd %}
