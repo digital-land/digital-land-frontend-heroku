@@ -46,8 +46,11 @@ def data_item():
 
 @components.route('/data-item/example')
 def data_item_example():
-    return render_template(f'{dl_component_template_dir}_partial-loader.html', partial_name="dl-component-examples/data-item/partial.html")
+    return render_template(f'{dl_component_template_dir}_partial-loader.html', partial_name="dl-component-examples/data-item/example.html")
 
+@components.route('/data-item/example-inline')
+def data_item_example_inline():
+    return render_template(f'{dl_component_template_dir}_partial-loader.html', partial_name="dl-component-examples/data-item/example-inline.html")
 
 @components.route('/data-tables')
 def data_tables():

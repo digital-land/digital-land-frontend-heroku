@@ -13,21 +13,48 @@
 
 {% block componentContent %}
 
-  <p class="govuk-body"></p>
+  <p class="govuk-body">Use the data item component when you want to display a number from some data.</p>
 
   {{ designSystemExample({
     "iframe": {
       "title": "An example of the data item component",
-      "url": url_for('components.data_item_example')
+      "url": url_for('components.data_item_example'),
+      "size": "s"
     },
     "partial": [
       {
         "type": "html",
-        "name": 'dl-component-examples/data-item/partial.html'
+        "name": 'dl-component-examples/data-item/example.html'
       },
       {
         "type": "jinja",
-        "path": 'dl-component-examples/data-item/partial.html'
+        "path": 'dl-component-examples/data-item/example.html'
+      }
+    ]
+  }) }}
+
+  <h3 class="govuk-heading-m">When not to use</h3>
+
+  <p class="govuk-body">This component shouldn't be used for any number on a page, it is intended to be used to display a significant piece of data or information.</p>
+
+  <h3 class="govuk-heading-m">Inline example</h3>
+
+  <p class="govuk-body">Add a <code>.data-item--inline</code> class if you need the data item to display inline.</p>
+
+  {{ designSystemExample({
+    "iframe": {
+      "title": "An example of the inline variation of the data item component",
+      "url": url_for('components.data_item_example_inline'),
+      "size": "s"
+    },
+    "partial": [
+      {
+        "type": "html",
+        "name": 'dl-component-examples/data-item/example-inline.html'
+      },
+      {
+        "type": "jinja",
+        "path": 'dl-component-examples/data-item/example-inline.html'
       }
     ]
   }) }}
