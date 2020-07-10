@@ -1,19 +1,23 @@
-<div class="data-item">
-    <span class="data-item__number">67</span>
-    <span class="data-item__label">New resources</span>
-</div>
-
-<div class="data-item">
-    <span class="data-item__number">0</span>
-    <span class="data-item__label">New resources</span>
-</div>
-
-<div class="data-item data-item--inline">
-    <span class="data-item__number">2</span>
-    <span class="data-item__label">New resources</span>
-</div>
-
 {%- from "dl-macros/data-item/macro.jinja" import dlfDataItem %}
+{{ dlfDataItem({
+    "number": "67",
+    "text": "New resources"
+    })
+}}
+
+{{ dlfDataItem({
+    "number": "0",
+    "text": "New resources"
+    })
+}}
+
+{{ dlfDataItem({
+    "number": "2",
+    "text": "New resources",
+    "classes": "data-item--inline"
+    })
+}}
+
 {{ dlfDataItem({
     "number": "3",
     "text": "New resources",
