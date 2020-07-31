@@ -6,6 +6,7 @@
 }
 
 .govuk-tag--warning {
+  color: govuk-shade(govuk-colour("dark-grey"), 20);
   background-color: govuk-colour("yellow");
 }
 
