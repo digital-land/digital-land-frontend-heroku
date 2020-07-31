@@ -197,4 +197,6 @@ a {
   }
 }
 
-
+.dl-found-item {
+  @include govuk-focused-text;
+}

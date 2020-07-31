@@ -7134,6 +7134,7 @@
 }
 
 .govuk-tag--warning {
+  color: #595f62;
   background-color: #ffdd00;
 }
 
@@ -9849,6 +9850,14 @@
 }
 
 .hub__la-list .found {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
+.dl-found-item {
   outline: 3px solid transparent;
   color: #0b0c0c;
   background-color: #ffdd00;
