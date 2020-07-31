@@ -1,6 +1,6 @@
 {% extends "dl-component-examples/_dl-component-base.html" %}
 {% from "dl-macros/nav-macros.html" import sublevelNavItem %}
-{% from "dl-macros/design-system-example.html" import designSystemExample %}
+{% from "dl-macros/design-system-example/design-system-example.jinja" import designSystemExample %}
 
 {% block topLevelNavItems %}
   {{ toplevelNavItem("Get started", "/") }}
@@ -20,9 +20,9 @@
       "size": "s",
       "url": url_for('components.tags_example')
     },
-    "partial": {
+    "partial": [{
       "name": 'partials/tags.html'
-    }
+    }]
   }) }}
 
 {% endblock %}
