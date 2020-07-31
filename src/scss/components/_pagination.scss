@@ -1,11 +1,22 @@
 .dlf-pagination {
   display: block;
   margin: ($govuk-gutter * 1.5) 0 $govuk-gutter;
+
+  &--flush {
+    margin-top: 0;
+  }
 }
+
 
 .dlf-pagination__list {
   margin: 0;
   padding: 0;
+
+  &--no-border {
+    .dlf-pagination__item:first-of-type .dlf-pagination__link-title {
+      border-top: 0;
+    }
+  }
 }
 
 .dlf-pagination__item {
