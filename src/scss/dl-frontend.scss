@@ -162,6 +162,10 @@ a {
   display: none;
 }
 
+.dl-js-enhancement {
+  display: none;
+}
+
 .js-enabled {
   .hub-list__separator:first-of-type {
     display: none;
@@ -187,6 +191,10 @@ a {
   }
 
   .dl-timeline__filter {
+    display: block;
+  }
+
+  .dl-js-enhancement {
     display: block;
   }
 }

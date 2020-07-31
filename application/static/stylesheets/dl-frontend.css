@@ -9824,6 +9824,10 @@
   display: none;
 }
 
+.dl-js-enhancement {
+  display: none;
+}
+
 .js-enabled .hub-list__separator:first-of-type {
   display: none;
 }
@@ -9846,6 +9850,10 @@
 }
 
 .js-enabled .dl-timeline__filter {
+  display: block;
+}
+
+.js-enabled .dl-js-enhancement {
   display: block;
 }
 
