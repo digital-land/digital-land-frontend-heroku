@@ -9662,6 +9662,16 @@
   max-width: 38em;
 }
 
+.govuk-header__menu-button {
+  top: 12px;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-header__menu-button {
+    top: 20px;
+  }
+}
+
 .no-wrap {
   white-space: nowrap;
 }
