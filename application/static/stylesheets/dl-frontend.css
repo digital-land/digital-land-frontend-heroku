@@ -9564,6 +9564,53 @@
   max-width: 100%;
 }
 
+.project-display .project-display__title {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.project-meta-data {
+  margin-bottom: 1.875em;
+}
+
+@media (min-width: 40.0625em) {
+  .project-meta-data {
+    margin-bottom: 1.57895em;
+  }
+}
+
+.pattern-display {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .pattern-display {
+    margin-bottom: 30px;
+  }
+}
+
+.pattern-display-single {
+  max-width: 150px;
+  border-radius: 5%;
+  background: #f3f2f1;
+}
+
+.pattern-icon {
+  max-width: 200px;
+  border-radius: 5%;
+  background: #f3f2f1;
+}
+
+.pattern-page-header {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .pattern-page-header {
+    margin-bottom: 30px;
+  }
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;

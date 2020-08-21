@@ -15,3 +15,47 @@
     max-width: 100%;
   }
 }
+
+// ---------------------------------------
+// Portfolio pages 
+// e.g. /portfolio/project/<project> pages
+// ---------------------------------------
+
+.project-display {
+  .project-display__title {
+    margin-top: 5px;
+    text-align: center;
+	}
+}
+
+.project-meta-data {
+  margin-bottom: govuk-em(30, 16);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-em(30, 19);
+  }
+}
+
+.pattern-display {
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.pattern-display-single {
+  max-width: 150px;
+  border-radius: 5%;
+  background: govuk-colour("light-grey");
+}
+
+.pattern-icon {
+  max-width: 200px;
+  border-radius: 5%;
+  background: govuk-colour("light-grey");
+}
+
+.pattern-page-header {
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.project-page-section {
+  @include govuk-responsive-margin(6, "top");
+}
