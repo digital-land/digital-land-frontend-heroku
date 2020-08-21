@@ -9556,6 +9556,114 @@
   fill: #8a2212;
 }
 
+.hugo-content blockquote {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  max-width: 29em;
+  margin: 0;
+  padding: 10px 15px 10px 2px;
+  border: 0;
+  background: #f3f2f1;
+}
+
+@media print {
+  .hugo-content blockquote {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .hugo-content blockquote {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .hugo-content blockquote {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+
+.hugo-content blockquote p {
+  padding-left: 15px;
+}
+
+@media (min-width: 40.0625em) {
+  .hugo-content blockquote p {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .hugo-content blockquote p {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 40.0625em) and (min-width: 40.0625em) {
+  .hugo-content blockquote p {
+    padding-left: 20px;
+  }
+}
+
+.hugo-content blockquote p:before {
+  content: "\201C";
+  margin-left: -15px;
+  float: left;
+  clear: both;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+}
+
+@media print {
+  .hugo-content blockquote p:before {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .hugo-content blockquote p:before {
+    font-size: 27px;
+    font-size: 1.6875rem;
+    line-height: 1.11111;
+  }
+}
+
+@media print {
+  .hugo-content blockquote p:before {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+.hugo-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.hugo-content blockquote p:last-child:after {
+  content: "\201D";
+}
+
+@media (min-width: 48.0625em) {
+  .hugo-content blockquote {
+    margin: 0;
+    padding-left: 5px;
+  }
+}
+
 .markdown-output .dlf-pagination__list {
   padding-left: 0 !important;
 }
