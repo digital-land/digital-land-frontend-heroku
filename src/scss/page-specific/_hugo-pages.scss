@@ -1,0 +1,8 @@
+// =======================
+// Digital land hugo hacks
+// =======================
+// some components need a few tweaking to work nicely with hugo output
+
+.markdown-output .dlf-pagination__list {
+  padding-left: 0 !important;
+}

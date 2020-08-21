@@ -1,3 +1,11 @@
+.govuk-body-l {
+  max-width: 30em !important;
+}
+
+.govuk-body {
+  max-width: 38em;
+}
+
 .dl-heading-section-break {
   padding-bottom: 1px;
   border-bottom: 3px solid $govuk-text-colour;

@@ -44,6 +44,8 @@ $using-helvetica: false;
 
 
 @import "page-specific/collections";
+@import "page-specific/hugo-pages";
+
 
 // import components from elsewhere e.g. MOJ
 @import "vendor-components/moj-sortable-table";

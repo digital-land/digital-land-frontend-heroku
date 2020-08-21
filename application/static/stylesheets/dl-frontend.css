@@ -6280,6 +6280,14 @@
   }
 }
 
+.govuk-body-l {
+  max-width: 30em !important;
+}
+
+.govuk-body {
+  max-width: 38em;
+}
+
 .dl-heading-section-break {
   padding-bottom: 1px;
   border-bottom: 3px solid #0b0c0c;
@@ -9546,6 +9554,10 @@
 
 .dlf-svg-heatmap--red .heatmap__day--higher {
   fill: #8a2212;
+}
+
+.markdown-output .dlf-pagination__list {
+  padding-left: 0 !important;
 }
 
 [aria-sort] button,
