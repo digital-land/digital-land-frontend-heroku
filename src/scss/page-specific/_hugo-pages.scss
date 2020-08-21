@@ -97,3 +97,49 @@
     overflow-wrap: break-word;
   }
 }
+
+// ---------------------------------------
+// blog post styles
+// ---------------------------------------
+
+.blog-post {
+  .byline {
+    color: govuk-colour("dark-grey");
+  }
+
+  footer a {
+    font-weight: bold;
+  }
+}
+
+.blog-post-preview {
+  padding: 30px 0;
+  border-top: 1px solid govuk-colour("mid-grey");
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+// previews?
+.markdown-output > .blog-post-preview {
+  margin-top: 3em;
+  padding: 0;
+  border-top: 0;
+
+  h2 {
+    // Sizing rules nabbed from %govuk-heading-m
+    @include govuk-font($size: 24, $weight: bold);
+    @include govuk-responsive-margin(4, "bottom");
+  }
+
+  .byline {
+    @include govuk-font($size: 16); // go back down from larger `.markdown-output p` font-size
+    max-width: none;
+  }
+
+  .byline__relations,
+  footer {
+    display: none;
+  }
+}

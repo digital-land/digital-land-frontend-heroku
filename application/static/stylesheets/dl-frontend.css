@@ -9685,6 +9685,104 @@
   overflow-wrap: break-word;
 }
 
+.blog-post .byline {
+  color: #6f777b;
+}
+
+.blog-post footer a {
+  font-weight: bold;
+}
+
+.blog-post-preview {
+  padding: 30px 0;
+  border-top: 1px solid #b1b4b6;
+}
+
+.blog-post-preview h2 {
+  margin-bottom: 0;
+}
+
+.markdown-output > .blog-post-preview {
+  margin-top: 3em;
+  padding: 0;
+  border-top: 0;
+}
+
+.markdown-output > .blog-post-preview h2 {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  margin-bottom: 15px;
+}
+
+@media print {
+  .markdown-output > .blog-post-preview h2 {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .markdown-output > .blog-post-preview h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .markdown-output > .blog-post-preview h2 {
+    font-size: 18pt;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .markdown-output > .blog-post-preview h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.markdown-output > .blog-post-preview .byline {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.14286;
+  max-width: none;
+}
+
+@media print {
+  .markdown-output > .blog-post-preview .byline {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .markdown-output > .blog-post-preview .byline {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media print {
+  .markdown-output > .blog-post-preview .byline {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.markdown-output > .blog-post-preview .byline__relations,
+.markdown-output > .blog-post-preview footer {
+  display: none;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
