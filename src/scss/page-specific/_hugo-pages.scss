@@ -6,3 +6,12 @@
 .markdown-output .dlf-pagination__list {
   padding-left: 0 !important;
 }
+
+// all hugo pages have a .hugo-content element
+// it is the same as the universal govuk #content element
+// we can use this as a hook to target hugo only hacks
+.hugo-content {
+  img {
+    max-width: 100%;
+  }
+}

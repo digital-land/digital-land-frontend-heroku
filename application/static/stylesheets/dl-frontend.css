@@ -9560,6 +9560,10 @@
   padding-left: 0 !important;
 }
 
+.hugo-content img {
+  max-width: 100%;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
