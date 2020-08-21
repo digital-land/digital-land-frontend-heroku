@@ -59,3 +59,41 @@
 .project-page-section {
   @include govuk-responsive-margin(6, "top");
 }
+
+// ---------------------------------------
+// Shortcode specifics
+// ---------------------------------------
+
+// used by the col-guidance shortcode
+.column-guidance-container {
+  @include govuk-responsive-margin(6, "bottom");
+
+  .column-heading {
+    @include govuk-font($size: 19);
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+}
+
+// used by the tech-block shortcode
+.tech-block {
+  padding: 15px;
+  overflow: auto;
+  border: 1px solid govuk-colour("mid-grey");
+  border-radius: 1px;
+  background: ("light-grey");
+
+  code {
+    // sass-lint:disable no-misspelled-properties no-duplicate-properties
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
