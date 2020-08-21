@@ -1,3 +1,6 @@
+// Should we be using NTA or helvetica?
+// $using-helvetica: true;
+
 // =======================
 // Digital land hugo hacks
 // =======================
@@ -13,6 +16,19 @@
 .hugo-content {
   img {
     max-width: 100%;
+  }
+
+  // CTA padding when followed by a (non govuk) heading
+  .highlight-box--cta {
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 20px;
+      padding-top: 15px;
+    }
   }
 }
 
@@ -141,5 +157,37 @@
   .byline__relations,
   footer {
     display: none;
+  }
+}
+
+// ---------------------------------------
+// Equal panels - used on homepage
+// ---------------------------------------
+
+// Equal panelling
+.equal-panels {
+  display: flex;
+  flex-direction: column;
+  @include govuk-media-query($from: tablet) {
+    flex-direction: row;
+  }
+
+  .equal-panels-single {
+    margin: 7.5px 15px;
+    padding: 15px;
+    background: govuk-colour("blue");
+    flex: 1 1 0;
+    @include govuk-media-query($from: tablet) {
+      margin: 0 15px;
+    }
+
+    p,
+    a {
+      color: govuk-colour("white");
+    }
+
+    & :last-child {
+      margin-bottom: 0;
+    }
   }
 }
