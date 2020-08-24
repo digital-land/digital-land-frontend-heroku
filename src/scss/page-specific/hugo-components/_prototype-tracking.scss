@@ -55,3 +55,39 @@
     }
   }
 }
+
+.prototype-update-container {
+  @include govuk-responsive-padding(6, "top");
+  @include govuk-responsive-padding(6, "bottom");
+  border-bottom: 1px solid $govuk-border-colour;
+
+  ul:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    @include govuk-responsive-margin(3, "top");
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.prototype-summary {
+  @include govuk-responsive-padding(6, "top");
+
+  .prototype-summary--heading {
+    margin-top: 0;
+
+    a {
+      color: $govuk-text-colour;
+    }
+  }
+
+  .prototype-progress-flag {
+    @include govuk-font($size: 16, $weight: bold);
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
