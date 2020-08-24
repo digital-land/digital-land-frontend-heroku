@@ -1,0 +1,200 @@
+// Should we be using NTA or helvetica?
+// $using-helvetica: true;
+
+
+// Import all hugo components
+@import "hugo-components/blockquote";
+@import "hugo-components/prototype-tracking";
+@import "hugo-components/markdown";
+
+
+// =======================
+// Digital land hugo hacks
+// =======================
+// some components need a few tweaking to work nicely with hugo output
+
+.markdown-output .dlf-pagination__list {
+  padding-left: 0 !important;
+}
+
+// all hugo pages have a .hugo-content element
+// it is the same as the universal govuk #content element
+// we can use this as a hook to target hugo only hacks
+.hugo-content {
+  img {
+    max-width: 100%;
+  }
+
+  // CTA padding when followed by a (non govuk) heading
+  .highlight-box--cta {
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+  }
+}
+
+// ---------------------------------------
+// Portfolio pages 
+// e.g. /portfolio/project/<project> pages
+// ---------------------------------------
+
+.project-display {
+  .project-display__title {
+    margin-top: 5px;
+    text-align: center;
+	}
+}
+
+.project-meta-data {
+  margin-bottom: govuk-em(30, 16);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-em(30, 19);
+  }
+}
+
+.pattern-display {
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.pattern-display-single {
+  max-width: 150px;
+  border-radius: 5%;
+  background: govuk-colour("light-grey");
+}
+
+.pattern-icon {
+  max-width: 200px;
+  border-radius: 5%;
+  background: govuk-colour("light-grey");
+}
+
+.pattern-page-header {
+  @include govuk-responsive-margin(6, "bottom");
+}
+
+.project-page-section {
+  @include govuk-responsive-margin(6, "top");
+}
+
+// ---------------------------------------
+// Shortcode specifics
+// ---------------------------------------
+
+// used by the col-guidance shortcode
+.column-guidance-container {
+  @include govuk-responsive-margin(6, "bottom");
+
+  .column-heading {
+    @include govuk-font($size: 19);
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+}
+
+// used by the tech-block shortcode
+.tech-block {
+  padding: 15px;
+  overflow: auto;
+  border: 1px solid govuk-colour("mid-grey");
+  border-radius: 1px;
+  background: ("light-grey");
+
+  code {
+    // sass-lint:disable no-misspelled-properties no-duplicate-properties
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-word-break: break-all;
+    overflow-wrap: break-word;
+  }
+}
+
+// ---------------------------------------
+// blog post styles
+// ---------------------------------------
+
+.blog-post {
+  .byline {
+    color: govuk-colour("dark-grey");
+  }
+
+  footer a {
+    font-weight: bold;
+  }
+}
+
+.blog-post-preview {
+  padding: 30px 0;
+  border-top: 1px solid govuk-colour("mid-grey");
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+// previews?
+.markdown-output > .blog-post-preview {
+  margin-top: 3em;
+  padding: 0;
+  border-top: 0;
+
+  h2 {
+    // Sizing rules nabbed from %govuk-heading-m
+    @include govuk-font($size: 24, $weight: bold);
+    @include govuk-responsive-margin(4, "bottom");
+  }
+
+  .byline {
+    @include govuk-font($size: 16); // go back down from larger `.markdown-output p` font-size
+    max-width: none;
+  }
+
+  .byline__relations,
+  footer {
+    display: none;
+  }
+}
+
+// ---------------------------------------
+// Equal panels - used on homepage
+// ---------------------------------------
+
+// Equal panelling
+.equal-panels {
+  display: flex;
+  flex-direction: column;
+  @include govuk-media-query($from: tablet) {
+    flex-direction: row;
+  }
+
+  .equal-panels-single {
+    margin: 7.5px 15px;
+    padding: 15px;
+    background: govuk-colour("blue");
+    flex: 1 1 0;
+    @include govuk-media-query($from: tablet) {
+      margin: 0 15px;
+    }
+
+    p,
+    a {
+      color: govuk-colour("white");
+    }
+
+    & :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

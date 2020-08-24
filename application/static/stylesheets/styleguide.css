@@ -478,6 +478,7 @@
 }
 
 .govuk-tag--warning {
+  color: #595f62;
   background-color: #ffdd00;
 }
 
@@ -1147,12 +1148,6 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 }
 
-@media (min-width: 40.0625em) {
-  .app-subnav {
-    margin-left: -15px;
-  }
-}
-
 .app-subnav__section {
   margin: 0 0 20px;
   padding: 0;
@@ -1160,8 +1155,8 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 .app-subnav__section-item {
-  padding: 8px 30px 8px 10px;
-  border-left: 4px solid transparent;
+  margin-bottom: 5px;
+  padding: 5px 0;
 }
 
 .app-subnav__link {
@@ -1185,8 +1180,13 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 .app-subnav__section-item--current {
-  border-left-color: #1d70b8;
-  background: #f8f8f8;
+  margin-left: -14px;
+  padding-left: 10px;
+  border-left: 4px solid #1d70b8;
+  background-color: govuk-color("white");
+}
+
+.app-subnav__section-item--current a {
   font-weight: bold;
 }
 
@@ -1232,6 +1232,40 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   .app-content {
     padding: 30px;
     padding-right: 0;
+  }
+}
+
+.app-subnav__theme {
+  margin: 0;
+  padding: 10px 15px 10px 0;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #6f777b;
+}
+
+@media print {
+  .app-subnav__theme {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .app-subnav__theme {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .app-subnav__theme {
+    font-size: 14pt;
+    line-height: 1.15;
   }
 }
 
