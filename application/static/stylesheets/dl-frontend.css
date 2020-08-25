@@ -10528,6 +10528,10 @@
   display: none;
 }
 
+.global-cookie-message {
+  display: none;
+}
+
 .js-enabled .hub-list__separator:first-of-type {
   display: none;
 }
@@ -10554,6 +10558,10 @@
 }
 
 .js-enabled .dl-js-enhancement {
+  display: block;
+}
+
+.js-enabled .global-cookie-message {
   display: block;
 }
 

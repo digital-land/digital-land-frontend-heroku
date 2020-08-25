@@ -175,6 +175,10 @@ a {
   display: none;
 }
 
+.global-cookie-message {
+  display: none;
+}
+
 .js-enabled {
   .hub-list__separator:first-of-type {
     display: none;
@@ -204,6 +208,10 @@ a {
   }
 
   .dl-js-enhancement {
+    display: block;
+  }
+
+  .global-cookie-message {
     display: block;
   }
 }
