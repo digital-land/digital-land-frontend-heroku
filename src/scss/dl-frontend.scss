@@ -168,7 +168,8 @@ a {
 // hide some elements and show if javascript enabled
 .dl-timeline__filter,
 .dl-js-enhancement,
-.global-cookie-message {
+.global-cookie-message,
+.cookie-message__confirmation {
   display: none;
 }
 
@@ -198,7 +199,8 @@ a {
 
   .dl-timeline__filter,
   .dl-js-enhancement,
-  .global-cookie-message {
+  .global-cookie-message,
+  .cookie-message__confirmation.saved {
     display: block;
   }
 }
@@ -211,4 +213,15 @@ a {
 
 .dl-found-item {
   @include govuk-focused-text;
+}
+
+// Cookie options saved panel
+// to do: make this info panel a component
+.cookie-message__confirmation {
+  border: 5px solid govuk-colour("blue");
+  color: $govuk-text-colour;
+
+  section {
+    padding: 20px;
+  }
 }

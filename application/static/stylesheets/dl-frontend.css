@@ -10522,7 +10522,8 @@
 
 .dl-timeline__filter,
 .dl-js-enhancement,
-.global-cookie-message {
+.global-cookie-message,
+.cookie-message__confirmation {
   display: none;
 }
 
@@ -10549,7 +10550,8 @@
 
 .js-enabled .dl-timeline__filter,
 .js-enabled .dl-js-enhancement,
-.js-enabled .global-cookie-message {
+.js-enabled .global-cookie-message,
+.js-enabled .cookie-message__confirmation.saved {
   display: block;
 }
 
@@ -10567,4 +10569,13 @@
   background-color: #ffdd00;
   box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
   text-decoration: none;
+}
+
+.cookie-message__confirmation {
+  border: 5px solid #1d70b8;
+  color: #0b0c0c;
+}
+
+.cookie-message__confirmation section {
+  padding: 20px;
 }
