@@ -10520,11 +10520,9 @@
   background: transparent;
 }
 
-.dl-timeline__filter {
-  display: none;
-}
-
-.dl-js-enhancement {
+.dl-timeline__filter,
+.dl-js-enhancement,
+.global-cookie-message {
   display: none;
 }
 
@@ -10549,11 +10547,9 @@
   visibility: hidden;
 }
 
-.js-enabled .dl-timeline__filter {
-  display: block;
-}
-
-.js-enabled .dl-js-enhancement {
+.js-enabled .dl-timeline__filter,
+.js-enabled .dl-js-enhancement,
+.js-enabled .global-cookie-message {
   display: block;
 }
 

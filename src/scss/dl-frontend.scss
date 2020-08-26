@@ -165,13 +165,10 @@ a {
   background: transparent;
 }
 
-// for covid-19 project
-
-.dl-timeline__filter {
-  display: none;
-}
-
-.dl-js-enhancement {
+// hide some elements and show if javascript enabled
+.dl-timeline__filter,
+.dl-js-enhancement,
+.global-cookie-message {
   display: none;
 }
 
@@ -199,11 +196,9 @@ a {
     visibility: hidden;
   }
 
-  .dl-timeline__filter {
-    display: block;
-  }
-
-  .dl-js-enhancement {
+  .dl-timeline__filter,
+  .dl-js-enhancement,
+  .global-cookie-message {
     display: block;
   }
 }
