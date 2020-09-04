@@ -10,3 +10,7 @@
   padding-bottom: 1px;
   border-bottom: 3px solid $govuk-text-colour;
 }
+
+.dl-small-text {
+  @include govuk-font($size: 16);
+}
