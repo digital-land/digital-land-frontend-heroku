@@ -65,7 +65,7 @@
   display: block;
   @include govuk-text-colour;
   @include govuk-font($size: 14);
-  padding-left: 8px;
+  //padding-left: 8px;
 }
 
 .filter-group__auto-filter {
