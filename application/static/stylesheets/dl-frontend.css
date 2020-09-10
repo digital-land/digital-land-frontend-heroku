@@ -9504,6 +9504,7 @@
 .local-plan-card {
   max-width: 630px;
   border: 1px solid #b1b4b6;
+  border-bottom-width: 4px;
 }
 
 .local-plan-card:after {
@@ -9561,7 +9562,7 @@
 }
 
 .local-plan-card__creators {
-  margin: 5px 0;
+  margin: 5px 0 0;
 }
 
 .local-plan-card__status .govuk-tag {
@@ -10421,6 +10422,15 @@
   border: 2px solid #ffffff;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.facet-search__showing {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.facet-search__showing > p {
+  margin-bottom: 10px;
 }
 
 [aria-sort] button,

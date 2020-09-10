@@ -1,6 +1,7 @@
 .local-plan-card {
   max-width: 630px;
   border: 1px solid $govuk-border-colour;
+  border-bottom-width: 4px;
   @include govuk-clearfix;
 }
 
@@ -26,11 +27,10 @@
 }
 
 .local-plan-card__creators {
-  margin: 5px 0;
+  margin: 5px 0 0;
 }
 
 .local-plan-card__status {
-
   .govuk-tag {
     margin-right: $govuk-gutter-half;
   }
