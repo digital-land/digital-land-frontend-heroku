@@ -9518,6 +9518,34 @@
 
 .local-plan-card__info {
   border-top: 1px solid #b1b4b6;
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+@media print {
+  .local-plan-card__info {
+    font-family: sans-serif;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .local-plan-card__info {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+@media print {
+  .local-plan-card__info {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
 }
 
 .local-plan-card__info > div:first-child {
@@ -9534,6 +9562,10 @@
 
 .local-plan-card__creators {
   margin: 5px 0;
+}
+
+.local-plan-card__status .govuk-tag {
+  margin-right: 15px;
 }
 
 .collection-list > li:not(:last-child) {
