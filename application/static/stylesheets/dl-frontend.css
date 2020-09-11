@@ -10433,6 +10433,22 @@
   margin-bottom: 10px;
 }
 
+@media (min-width: 40.0625em) {
+  .lp-details-section {
+    border-left: 1px solid #b1b4b6;
+  }
+}
+
+.lp-section-break {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .lp-section-break {
+    margin-bottom: 30px;
+  }
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;

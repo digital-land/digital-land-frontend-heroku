@@ -6,3 +6,13 @@
     margin-bottom: 10px;
   }
 }
+
+.lp-details-section {
+  @include govuk-media-query($from: tablet) {
+    border-left: 1px solid $govuk-border-colour;
+  }
+}
+
+.lp-section-break {
+  @include govuk-responsive-margin(6, "bottom");
+}
