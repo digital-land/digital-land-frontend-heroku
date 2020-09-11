@@ -16,3 +16,10 @@
 .lp-section-break {
   @include govuk-responsive-margin(6, "bottom");
 }
+
+.dl-document-preview {
+  width: 156px;
+  height: 198px;
+  border: 5px solid govuk-colour("light-grey");
+  background: govuk-colour("white");
+}

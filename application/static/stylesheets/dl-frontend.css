@@ -10449,6 +10449,13 @@
   }
 }
 
+.dl-document-preview {
+  width: 156px;
+  height: 198px;
+  border: 5px solid #f3f2f1;
+  background: #ffffff;
+}
+
 [aria-sort] button,
 [aria-sort] button:hover {
   position: relative;
